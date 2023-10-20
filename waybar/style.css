@@ -49,11 +49,14 @@ window#waybar {
 
 #battery.charging {
   /*border-bottom: 1px dotted #8fd4ff;*/
+    color: white;
+    background-color: green;
+    border-radius: 5px;
 }
 
 @keyframes blink {
   to {
-    background-color: #ff0000;
+    background-color: red;
     color: black;
   }
 }
