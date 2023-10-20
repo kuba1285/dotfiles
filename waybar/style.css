@@ -48,7 +48,7 @@ window#waybar {
 }
 
 #battery.charging {
-  border-bottom: 1px dotted #8fd4ff;
+  /*border-bottom: 1px dotted #8fd4ff;*/
 }
 
 @keyframes blink {
