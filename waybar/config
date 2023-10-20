@@ -5,7 +5,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-left": ["custom/menu", "hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
@@ -25,6 +25,11 @@
     //         "default": ""
     //     }
     // },
+    "custom/menu": {
+        "format": " rofi ",
+        "tooltip": false,
+        "on-click": "rofi -show"
+    },
     "hyprland/workspaces": {
          "format": "{name}",
          "on-scroll-up": "hyprctl dispatch workspace e+1",
@@ -172,4 +177,3 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
-
