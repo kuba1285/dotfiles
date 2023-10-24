@@ -14,4 +14,4 @@ echo "$chrome_flags" >> ~/opt/google/chrome/google-chrome
 
 ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
-sudo pacman -S git wget pavucontrol alsa-utils neofetch gtk4 alacritty dconf meson cmake seatd wl-clipboard ttf-font-awesome 
+sudo pacman -S git wget waybar pavucontrol alsa-utils neofetch gtk4 alacritty dconf meson cmake seatd wl-clipboard ttf-font-awesome 
