@@ -5,8 +5,8 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/menu", "hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
-    "modules-center": ["hyprland/window"],
+    "modules-left": ["custom/menu", "wayfire/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-center": ["wayfire/window"],
     "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
     // "sway/workspaces": {
@@ -24,18 +24,19 @@
     //         "focused": "",
     //         "default": ""
     //     }
-    // },
+    // },,
     "custom/menu": {
-        "format": "⏻",
-        "tooltip": false,
-        "on-click": "sleep 0.1 && rofi -show"
+	"format": "⏻",
+	"tooltip": false,
+	"on-click": "if pgrep -x rofi; then killall rofi;else sleep 0.1 && rofi -show;fi"
     },
-    "hyprland/workspaces": {
+
+    "wayfire/workspaces": {
          "format": "{name}",
          "on-scroll-up": "hyprctl dispatch workspace e+1",
          "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
-    "hyprland/window": {
+    "wayfire/window": {
         "separate-outputs": true
     },
     "keyboard-state": {
@@ -177,4 +178,3 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
-
