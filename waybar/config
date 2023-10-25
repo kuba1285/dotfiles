@@ -163,7 +163,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "if pgrep -x pavucontrol; then killall pavucontrol;else sleep 0.1 && pavucontrol;fi"
     },
     "custom/media": {
         "format": "{icon} {}",
@@ -178,3 +178,4 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
+
