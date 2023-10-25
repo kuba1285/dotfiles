@@ -5,7 +5,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/menu", "wayfire/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-left": ["custom/rofi", "wayfire/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": ["wayfire/window"],
     "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
@@ -25,7 +25,7 @@
     //         "default": ""
     //     }
     // },,
-    "custom/menu": {
+    "custom/rofi": {
 	"format": "⏻",
 	"tooltip": false,
 	"on-click": "if pgrep -x rofi; then killall rofi;else sleep 0.1 && rofi -show;fi"
