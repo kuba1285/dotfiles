@@ -8,6 +8,10 @@ yay -S google-chrome ttf-menlo-powerline-git
 
 fc-cache -vf
 
+git clone https://github.com/WayfireWM/wf-install
+cd wf-install
+./install.sh --prefix /opt/wayfire --stream master
+
 nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
 
 echo -e "$nw_lines" >> /etc/systemd/network/10-wlan0.network
