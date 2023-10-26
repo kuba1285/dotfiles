@@ -6,6 +6,8 @@ makepkg -si
 
 yay -S google-chrome ttf-menlo-powerline-git
 
+fc-cache -vf
+
 nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
 
 echo -e "$nw_lines" >> /etc/systemd/network/10-wlan0.network
