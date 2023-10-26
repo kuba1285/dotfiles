@@ -1,8 +1,5 @@
 #!/bin/bash
 
-systemctl enable iwd bluetooth systemd-timesyncd systemd-networkd systemd-resolved --now
-ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
