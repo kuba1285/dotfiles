@@ -1,5 +1,9 @@
 #!/bin/bash
 
+sudo pacman -S git wget man-db reflector waybar pavucontrol alsa-utils neofetch gtk4 dconf meson cmake seatd wl-clipboard ttf-font-awesome
+
+reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
+
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -19,5 +23,3 @@ chrome_flags="--force-dark-mode --enable-features=WebUIDarkMode --ozone-platform
 echo -e "$env_lines" >> /etc/environment
 echo -e "$nw_lines" >> /etc/systemd/network/10-wlan0.network
 echo "$chrome_flags" >> /opt/google/chrome/google-chrome
-
-sudo pacman -S wget man-db waybar pavucontrol alsa-utils neofetch gtk4 dconf meson cmake seatd wl-clipboard ttf-font-awesome
