@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S git wget man-db reflector waybar pavucontrol alsa-utils neofetch gtk4 dconf meson cmake seatd wl-clipboard ttf-font-awesome
+sudo pacman -S git wget man-db reflector waybar pavucontrol alsa-utils neofetch gtk4 meson cmake seatd wl-clipboard ttf-font-awesome
 
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
