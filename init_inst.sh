@@ -4,7 +4,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-yay -S google-chrome
+yay -S google-chrome ttf-menlo-powerline-git
 
 nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
 
