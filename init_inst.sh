@@ -1,6 +1,8 @@
 #!/bin/bash
 
-sudo pacman -S git wget man-db reflector waybar pavucontrol alsa-utils neofetch gtk4 meson cmake seatd wl-clipboard ttf-font-awesome
+sudo pacman -S git wget man-db blueman bluez bluez-utils reflector pacman-contrib waybar pavucontrol alsa-utils neofetch gtk4 meson cmake seatd wl-clipboard ttf-font-awesome
+
+sudo systemctl start bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
 
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
