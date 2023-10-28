@@ -1,21 +1,24 @@
 #!/bin/bash
 
-sudo pacman -S git wget man-db blueman bluez bluez-utils reflector pacman-contrib waybar pavucontrol alsa-utils neofetch gtk4 meson cmake seatd wl-clipboard ttf-font-awesome
+# update list
+sudo pacman -Syu
+
+sudo pacman -S --needed --noconfirm git wget man-db blueman bluez bluez-utils reflector pacman-contrib waybar pavucontrol alsa-utils neofetch gtk4 meson cmake seatd wl-clipboard ttf-font-awesome
 
 sudo systemctl start bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
 
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
-git clone https://aur.archlinux.org/yay.git
-cd yay
+git clone https://aur.archlinux.org/yay.git /tmp/yay &&
+cd /tmp/yay &&
 makepkg -si
 
-yay -S google-chrome ttf-menlo-powerline-git rofi-lbonn-wayland
+yay -S --noconfirm google-chrome ttf-menlo-powerline-git rofi-lbonn-wayland
 
 fc-cache -vf
 
-git clone https://github.com/WayfireWM/wf-install
-cd wf-install
+git clone https://github.com/WayfireWM/wf-install &&
+cd wf-install &&
 ./install.sh --prefix /opt/wayfire --stream master
 
 nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
