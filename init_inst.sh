@@ -3,7 +3,10 @@
 # update list
 sudo pacman -Syu
 
-sudo pacman -S --needed --noconfirm git wget man-db blueman bluez bluez-utils reflector pacman-contrib waybar pavucontrol alsa-utils neofetch gtk4 meson cmake seatd wl-clipboard ttf-font-awesome
+sudo pacman -S --needed --noconfirm git wget man-db blueman bluez bluez-utils reflector pacman-contrib waybar pavucontrol alsa-utils neofetch gtk4 wl-clipboard ttf-font-awesome
+
+# wayfire inst
+sudo pacman -S --needed --noconfirm meson cmake seatd
 
 sudo systemctl start bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
 
