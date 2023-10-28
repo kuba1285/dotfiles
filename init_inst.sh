@@ -9,8 +9,8 @@ sudo systemctl start bluetooth systemd-timesyncd systemd-networkd systemd-resolv
 
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
-git clone https://aur.archlinux.org/yay.git /tmp/yay &&
-cd /tmp/yay &&
+git clone https://aur.archlinux.org/yay.git &&
+cd yay &&
 makepkg -si
 
 yay -S --noconfirm google-chrome ttf-menlo-powerline-git rofi-lbonn-wayland
