@@ -8,7 +8,7 @@ sudo pacman -S --needed --noconfirm git wget wl-clipboard man-db blueman bluez b
 # wayfire dependencies
 sudo pacman -S --needed --noconfirm meson cmake seatd
 
-sudo systemctl start bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
+sudo systemctl enable bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
 
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
