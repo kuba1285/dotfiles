@@ -28,6 +28,6 @@ nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
 env_lines="GTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx"
 chrome_flags="--force-dark-mode --enable-features=WebUIDarkMode --ozone-platform-hint=auto --enable-features=TouchpadOverscrollHistoryNavigation --gtk-version=4"
 
-sudo echo -e "$env_lines" >> /etc/environment
-sudo echo -e "$nw_lines" >> /etc/systemd/network/10-wlan0.network
-sudo echo "$chrome_flags" >> /opt/google/chrome/google-chrome
+sudo echo -e "$env_lines" | sudo tee -a /etc/environment
+sudo echo -e "$nw_lines" | sudo tee -a /etc/systemd/network/10-wlan0.network
+sudo echo "$chrome_flags" | sudo tee -a /opt/google/chrome/google-chrome
