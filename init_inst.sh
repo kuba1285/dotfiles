@@ -30,10 +30,14 @@ git clone https://github.com/WayfireWM/wf-install &&
 cd wf-install &&
 ./install.sh --prefix /opt/wayfire --stream master
 
-nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
 env_lines="GTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx"
+nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
 chrome_flags="--force-dark-mode --enable-features=WebUIDarkMode --ozone-platform-hint=auto --enable-features=TouchpadOverscrollHistoryNavigation --gtk-version=4"
 
 sudo echo -e "$env_lines" | sudo tee -a /etc/environment
 sudo echo -e "$nw_lines" | sudo tee -a /etc/systemd/network/10-wlan0.network
 sudo echo "$chrome_flags" | sudo tee -a /opt/google/chrome/google-chrome
+
+# wayfire software cursor
+sc_lines="WLR_NO_HARDWARE_CURSORS=1"
+sudo echo -e "$sc_lines" | sudo tee -a /etc/environment
