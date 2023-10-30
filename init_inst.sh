@@ -5,20 +5,26 @@ sudo pacman -Syu
 
 sudo pacman -S --needed --noconfirm git nvidia wget wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib waybar ttf-font-awesome pavucontrol alsa-utils neofetch gtk4
 
-# wayfire dependencies
+reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
+
+# wayfire and waybar dependencies
 sudo pacman -S --needed --noconfirm glm meson cmake seatd mpd
 
 sudo systemctl enable bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
-
-reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
 git clone https://aur.archlinux.org/yay.git &&
 cd yay &&
 makepkg -si
 
-yay -S --noconfirm google-chrome ttf-menlo-powerline-git rofi-lbonn-wayland
+yay -S --noconfirm google-chrome archlinux-themes-sddm ttf-menlo-powerline-git rofi-lbonn-wayland
 
 fc-cache -vf
+
+#conf rewrite
+sudo sed -i -e "/^ *#Current=/c\ Current=archlinux-simplyblack" /usr/lib/sddm/sddm.conf.d/default.conf
+sudo sed -i -e "/^ *#DefaultTimeoutStartSec=90s/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
+sudo sed -i -e "/^ *#DefaultTimeoutStopSec=90s/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
+sudo sed -i -e "/^ *#Color/c\ Color" /etc/pacman.conf
 
 git clone https://github.com/WayfireWM/wf-install &&
 cd wf-install &&
