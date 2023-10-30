@@ -3,7 +3,7 @@
 # update list
 sudo pacman -Syu
 
-sudo pacman -S --needed --noconfirm git wget wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib waybar ttf-font-awesome pavucontrol alsa-utils neofetch gtk4
+sudo pacman -S --needed --noconfirm git nvidia wget wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib waybar ttf-font-awesome pavucontrol alsa-utils neofetch gtk4
 
 # wayfire dependencies
 sudo pacman -S --needed --noconfirm glm meson cmake seatd mpd
