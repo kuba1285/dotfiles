@@ -6,8 +6,9 @@ Operation=Upgrade
 Operation=Remove
 Type=Package
 Target=nvidia
+# rename to installed package
 Target=linux
-# rename to your kernel if needed
+# rename to your kernel
 
 [Action]
 Description=Update NVIDIA module in initcpio
