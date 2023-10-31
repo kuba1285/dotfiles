@@ -3,12 +3,15 @@
 # update list
 sudo pacman -Syu
 
-sudo pacman -S --needed --noconfirm git nvidia wget wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib waybar ttf-font-awesome pavucontrol alsa-utils neofetch gtk4
+sudo pacman -S --needed --noconfirm git nvidia wget wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib pavucontrol alsa-utils neofetch gtk4
 
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
-# wayfire and waybar dependencies
-sudo pacman -S --needed --noconfirm glm meson cmake seatd mpd
+# wayfire dependencies
+sudo pacman -S --needed --noconfirm glm meson cmake seatd
+
+# waybar dependencies
+sudo pacman -S --needed --noconfirm waybar mpd ttf-font-awesome
 
 sudo systemctl enable bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
 
