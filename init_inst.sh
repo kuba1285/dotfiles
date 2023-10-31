@@ -3,7 +3,7 @@
 # update list
 sudo pacman -Syu
 
-sudo pacman -S --needed --noconfirm git nvidia wget wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib pavucontrol alsa-utils neofetch gtk4
+sudo pacman -S --needed --noconfirm git nvidia wget firefox wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib pavucontrol alsa-utils neofetch gtk4
 
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
