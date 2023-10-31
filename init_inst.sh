@@ -7,7 +7,7 @@ sudo pacman -S --needed --noconfirm git nvidia wget wl-clipboard man-db blueman 
 
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
-# wayfire dependencies
+# wf-install dependencies
 sudo pacman -S --needed --noconfirm glm meson cmake seatd
 
 # waybar dependencies
