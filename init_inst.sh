@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd
-# update and install general pkg
+# general packages
 sudo pacman -Syu
 sudo pacman -S --needed --noconfirm nvidia neofetch git wget firefox wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib pavucontrol alsa-utils gtk4
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
@@ -13,15 +13,14 @@ makepkg -si
 yay -S --noconfirm google-chrome archlinux-themes-sddm ttf-menlo-powerline-git rofi-lbonn-wayland
 fc-cache -vf
 
-# waybar with the dependencies
+# add dm here as needed
+sudo systemctl enable iwd bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
+
+# waybar
 sudo pacman -S --needed --noconfirm waybar mpd ttf-font-awesome
 
-# add dm here as needed
-sudo systemctl enable bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
-
-# wf-install dependencies
+# wf-install
 sudo pacman -S --needed --noconfirm glm meson cmake seatd
-
 git clone https://github.com/WayfireWM/wf-install &&
 cd wf-install &&
 ./install.sh --prefix /opt/wayfire --stream master
@@ -38,7 +37,7 @@ nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
 sudo echo -e "$env_lines" | sudo tee -a /etc/environment
 sudo echo -e "$nw_lines" | sudo tee -a /etc/systemd/network/10-wlan0.network
 
-# software cursor with nvidia gpu
+# software cursor with nvidia
 sc_lines="WLR_NO_HARDWARE_CURSORS=1"
 sudo echo -e "$sc_lines" | sudo tee -a /etc/environment
 
