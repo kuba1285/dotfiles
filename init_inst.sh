@@ -27,7 +27,7 @@ fc-cache -vf
 #sudo sed -i -e "/^ *#Current=$/c\ Current=archlinux-simplyblack" /usr/lib/sddm/sddm.conf.d/default.conf
 #sudo sed -i -e "/^ *#DefaultTimeoutStartSec=/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
 #sudo sed -i -e "/^ *#DefaultTimeoutStopSec=/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
-#sudo sed -i -e "/^ *#Color$/c\ Color" /etc/pacman.conf
+#sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
 
 git clone https://github.com/WayfireWM/wf-install &&
 cd wf-install &&
