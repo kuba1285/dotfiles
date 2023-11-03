@@ -15,7 +15,7 @@ sudo pacman -S --needed --noconfirm waybar mpd ttf-font-awesome
 
 sudo systemctl enable bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
 
-git clone https://aur.archlinux.org/yay.git &&
+git clone https://aur.archlinux.org/yay-bin.git &&
 cd yay &&
 makepkg -si
 
