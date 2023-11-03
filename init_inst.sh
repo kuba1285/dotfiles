@@ -23,7 +23,7 @@ yay -S --noconfirm google-chrome archlinux-themes-sddm ttf-menlo-powerline-git r
 
 fc-cache -vf
 
-#conf rewrite
+# conf rewrite
 sudo sed -i -e "/^ *#Current=$/c\ Current=archlinux-simplyblack" /usr/lib/sddm/sddm.conf.d/default.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStartSec=/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStopSec=/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
