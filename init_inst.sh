@@ -3,11 +3,15 @@
 cd
 # update and install general pkg
 sudo pacman -Syu
-sudo pacman -S --needed --noconfirm git nvidia wget firefox wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib pavucontrol alsa-utils neofetch gtk4
+sudo pacman -S --needed --noconfirm nvidia neofetch git wget firefox wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib pavucontrol alsa-utils gtk4
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
-# wf-install dependencies
-sudo pacman -S --needed --noconfirm glm meson cmake seatd
+# aur
+git clone https://aur.archlinux.org/yay-bin.git &&
+cd yay-bin &&
+makepkg -si
+yay -S --noconfirm google-chrome archlinux-themes-sddm ttf-menlo-powerline-git rofi-lbonn-wayland
+fc-cache -vf
 
 # waybar with the dependencies
 sudo pacman -S --needed --noconfirm waybar mpd ttf-font-awesome
@@ -15,22 +19,18 @@ sudo pacman -S --needed --noconfirm waybar mpd ttf-font-awesome
 # add dm here as needed
 sudo systemctl enable bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
 
-git clone https://aur.archlinux.org/yay-bin.git &&
-cd yay-bin &&
-makepkg -si
-
-yay -S --noconfirm google-chrome archlinux-themes-sddm ttf-menlo-powerline-git rofi-lbonn-wayland
-fc-cache -vf
+# wf-install dependencies
+sudo pacman -S --needed --noconfirm glm meson cmake seatd
 
 git clone https://github.com/WayfireWM/wf-install &&
 cd wf-install &&
 ./install.sh --prefix /opt/wayfire --stream master
 
 # rewrite
-sudo sed -i -e "/^ *#Current=$/c\ Current=archlinux-simplyblack" /usr/lib/sddm/sddm.conf.d/default.conf
+sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStartSec=/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStopSec=/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
-sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
+sudo sed -i -e "/^ *#Current=$/c\ Current=archlinux-simplyblack" /usr/lib/sddm/sddm.conf.d/default.conf
 
 # append
 env_lines="GTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx"
