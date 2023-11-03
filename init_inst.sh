@@ -1,6 +1,6 @@
 #!/bin/bash
-cd
 
+cd
 # update list
 sudo pacman -Syu
 
