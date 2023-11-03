@@ -13,7 +13,7 @@ sudo pacman -S --needed --noconfirm glm meson cmake seatd
 # waybar dependencies
 sudo pacman -S --needed --noconfirm waybar mpd ttf-font-awesome
 
-# start daemons. as needed, add display manager here
+# as needed, add display manager here
 sudo systemctl enable bluetooth systemd-timesyncd systemd-networkd systemd-resolved paccache.timer --now
 
 git clone https://aur.archlinux.org/yay-bin.git &&
