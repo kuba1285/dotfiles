@@ -25,19 +25,19 @@ git clone https://github.com/WayfireWM/wf-install &&
 cd wf-install &&
 ./install.sh --prefix /opt/wayfire --stream master
 
-# rewrite
+# rewrite files
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStartSec=/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStopSec=/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
 sudo sed -i -e "/^ *#Current=$/c\ Current=archlinux-simplyblack" /usr/lib/sddm/sddm.conf.d/default.conf
 
-# append
+# append to files
 env_lines="GTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx"
 nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
 sudo echo -e "$env_lines" | sudo tee -a /etc/environment
 sudo echo -e "$nw_lines" | sudo tee -a /etc/systemd/network/10-wlan0.network
 
-# software cursor with nvidia
+# with nvidia gpu
 sc_lines="WLR_NO_HARDWARE_CURSORS=1"
 sudo echo -e "$sc_lines" | sudo tee -a /etc/environment
 
