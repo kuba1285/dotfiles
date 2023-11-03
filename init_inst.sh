@@ -3,7 +3,7 @@
 cd
 # general packages
 sudo pacman -Syu
-sudo pacman -S --needed --noconfirm nvidia neofetch git wget firefox wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib pavucontrol alsa-utils gtk4
+sudo pacman -S --needed --noconfirm neofetch git wget firefox wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib pavucontrol alsa-utils gtk4
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
 # aur
@@ -37,7 +37,8 @@ nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
 sudo echo -e "$env_lines" | sudo tee -a /etc/environment
 sudo echo -e "$nw_lines" | sudo tee -a /etc/systemd/network/10-wlan0.network
 
-# with nvidia gpu
+# nvidia
+sudo pacman -S --needed --noconfirm nvidia nvidia-settings
 sc_lines="WLR_NO_HARDWARE_CURSORS=1"
 sudo echo -e "$sc_lines" | sudo tee -a /etc/environment
 
