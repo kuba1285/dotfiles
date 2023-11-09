@@ -37,11 +37,16 @@ nw_lines="IPv6PrivacyExtensions=true\nIgnoreCarrierLoss=3s"
 sudo echo -e "$env_lines" | sudo tee -a /etc/environment
 sudo echo -e "$nw_lines" | sudo tee -a /etc/systemd/network/10-wlan0.network
 
+# nano syntax highlight
+ls -ld /usr/share/nano/* | awk '{print $9}' | sed 's/\//include /' > ~/.config/nano/nanorc
+# also work with
+#ls -ld /usr/share/nano/* | rev | cut -d " " -f 1 | rev | sed 's/\//include /' > ~/.config/nano/nanorc
+
 # nvidia
 sudo pacman -S --needed --noconfirm nvidia nvidia-settings
 sc_lines="WLR_NO_HARDWARE_CURSORS=1"
 sudo echo -e "$sc_lines" | sudo tee -a /etc/environment
 
-# also available in .config/chrome-flags.conf
+# also work with .config/chrome-flags.conf
 #chrome_flags="--force-dark-mode --enable-features=WebUIDarkMode --ozone-platform-hint=auto --enable-features=TouchpadOverscrollHistoryNavigation --gtk-version=4"
 #sudo echo "$chrome_flags" | sudo tee -a /opt/google/chrome/google-chrome
