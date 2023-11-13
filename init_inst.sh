@@ -3,7 +3,7 @@
 cd
 # general packages
 sudo pacman -Syu
-sudo pacman -S --needed --noconfirm neofetch lsd nerd-fonts git wget firefox wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib pavucontrol alsa-utils gtk4 lsd
+sudo pacman -S --needed --noconfirm neofetch lsd nerd-fonts git wget firefox wl-clipboard man-db blueman bluez bluez-utils reflector pacman-contrib pavucontrol alsa-utils gtk4
 reflector --sort rate --country jp --latest 10 --save /etc/pacman.d/mirrorlist
 
 # aur
