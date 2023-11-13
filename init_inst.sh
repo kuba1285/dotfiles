@@ -38,6 +38,7 @@ sudo echo -e "$env_lines" | sudo tee -a /etc/environment
 sudo echo -e "$nw_lines" | sudo tee -a /etc/systemd/network/10-wlan0.network
 
 # nano syntax highlight
+mkdir ~/.config/nano
 touch ~/.config/nano/nanorc
 ls -ld /usr/share/nano/* | awk '{print $9}' | sed 's/\//include /' > ~/.config/nano/nanorc
 # also work with
