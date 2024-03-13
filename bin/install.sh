@@ -154,7 +154,7 @@ if [[ $YN = y ]] ; then
     echo "${GREEN}OK${RESET} - Done."
 fi
 
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to stage the original files?"
+wait_yn "${YELLOW}ACITION${RESET} - Would you like to stage the files?"
 if [[ $YN = y ]] ; then
     source $BIN/stage.sh &>> $INSTLOG &
     show_progress $!
