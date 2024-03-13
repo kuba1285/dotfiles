@@ -33,18 +33,17 @@ sudo sed -i -e "/^ *#DefaultTimeoutStopSec=90s/c\ DefaultTimeoutStopSec=10s" /et
 sudo sed -i -e '/^ *exec -a/c\exec -a "$0" "$HERE/chrome" "$@" --gtk-version=4 --ozone-platform-hint=auto --enable-gpu-rasterization --enable-zero-copy \
 --enable-features=TouchpadOverscrollHistoryNavigation --disable-smooth-scrolling --enable-fluent-scrollbars' /opt/google/chrome/google-chrome
 
-if [[ $XDG_SESSION_TYPE = x11 ]] ; then
-  grep -q "bash ~/.config/polybar/scripts/wallpaper.sh" ~/.zshrc ||
-  sed -i "1ibash ~/.config/polybar/scripts/wallpaper.sh" ~/.zshrc
+grep -q "bash ~/.config/polybar/scripts/wallpaper.sh" ~/.zshrc ||
+sed -i "1ibash ~/.config/polybar/scripts/wallpaper.sh" ~/.zshrc
 
-  grep -q "xinput set-prop" ~/.xsessionrc ||
-  cat << EOF | tee -a ~/.xsessionrc
+grep -q "xinput set-prop" ~/.xsessionrc ||
+cat << EOF | tee -a ~/.xsessionrc
 xinput set-prop 11 318 1
 xinput --set-prop "Apple SPI Touchpad" "Coordinate Transformation Matrix" 4 0 0 0 4 0 0 0 1
 EOF
 
-  grep -q "CornerCoasting" /etc/X11/xorg.conf.d/51-synaptics-tweaks.conf ||
-  cat << EOF | sudo tee -a /etc/X11/xorg.conf.d/51-synaptics-tweaks.conf
+grep -q "CornerCoasting" /etc/X11/xorg.conf.d/51-synaptics-tweaks.conf ||
+cat << EOF | sudo tee -a /etc/X11/xorg.conf.d/51-synaptics-tweaks.conf
 Section "InputClass"
   Identifier "touchpad"
   Driver "synaptics"
