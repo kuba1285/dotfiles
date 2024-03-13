@@ -4,13 +4,6 @@
 chmod +x ~/.config/hypr/scripts/*
 chmod +x ~/.config/polybar/scripts/*
 
-# stage the .desktop file
-WLDIR=/usr/share/wayland-sessions
-if [ ! -d "$WLDIR" ] ; then
-    sudo mkdir $WLDIR
-fi 
-sudo cp $PARENT/src/hyprland.desktop $WLDIR
-
 # add VScode extensions
 mkdir ~/.vscode
 tar -xf $PARENT/src/extensions.tar.gz -C ~/.vscode/
