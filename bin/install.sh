@@ -5,7 +5,6 @@ BIN=$(cd $(dirname $0); pwd)
 PARENT=$(cd $(dirname $0)/../; pwd)
 INSTLOG="$BIN/install.log"
 LISTAPP="$BIN/list-app"
-LISTCUSTOM="$BIN/list-custom"
 LISTNVIDIA="$BIN/list-nvidia"
 SERVICES=(
     sddm
@@ -119,11 +118,6 @@ fi
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to install apps from the list?"
 if [[ $YN = y ]] ; then
     install_list $LISTAPP
-fi
-
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to install custom apps from the list?"
-if [[ $YN = y ]] ; then
-    install_list $LISTCUSTOM
 fi
 
 # Setup Nvidia if it was found
