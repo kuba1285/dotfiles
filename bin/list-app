@@ -1,6 +1,7 @@
 bat
 git-delta
 linux-headers
+neofetch
 hyfetch
 cowfortune
 make
@@ -8,6 +9,7 @@ patch
 google-chrome
 tty-clock
 ruby-fusuma
+xdotool
 dotool
 neovide
 tlp
@@ -34,7 +36,6 @@ polybar
 feh 
 i3lock
 rofi
-fish
 zsh-autosuggestions
 oh-my-zsh-git
 zsh-syntax-highlighting
@@ -63,7 +64,6 @@ python-pywalfox
 python-pywayland
 network-manager-applet
 visual-studio-code-bin
-neofetch
 gvfs 
 thunar-archive-plugin 
 file-roller
@@ -74,10 +74,8 @@ ttf-icomoon-feather
 noto-fonts-emoji 
 lxappearance 
 xfce4-settings
-nwg-look-bin
 sddm
 alsa-utils
-xdotool
 xorg-xinput
 picom-ftlabs-git
 ruby-fusuma-plugin-appmatcher
