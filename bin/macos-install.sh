@@ -69,6 +69,8 @@ else
     exit
 fi
 
+######{{ if eq .chezmoi.os "darwin" }}
+
 # Install CLI for Xcode
 echo -n "${CYAN}NOTE${RESET} - Now installing CLI for Xcode."
 xcode-select --install &>> $INSTLOG
@@ -105,6 +107,8 @@ if [[ $YN = y ]] ; then
     show_progress $!
     echo "${GREEN}OK${RESET} - Installed."
 fi
+
+######{{ end }}
 
 # Install custom app
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to install custom app?"
