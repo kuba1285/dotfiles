@@ -10,3 +10,20 @@ alias lt="eza -T -L 3 -a -I 'node_modules|.git|.cache' --icons"
 alias lta="eza -T -a -I 'node_modules|.git|.cache' --color=always --icons | less -r"
 alias vc='code' # gui code editor
 alias clear='paclear -s 5 -c yellow'
+
+{{ if eq .chezmoi.os "darwin" }}
+# Write from "Caveats" of 'brew (re)install python3'.
+# Python3
+export PATH="$PATH:/usr/local/bin/python3"
+# installed by pip3
+export PATH="$PATH:/usr/local/opt/python@3.12/libexec/bin"
+{{ end }}
+
+##termux only##
+cd $HOME/TVerRec*/unix/
+export PATH="$PATH:/root/bin"
+export PATH="$PATH:/root/go/bin"
+export PATH="$PATH:/root/.local/bin"
+fortune | pokemonsay
+neofetch --off
+##end##
