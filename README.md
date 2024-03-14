@@ -1,3 +1,5 @@
+--WIP--
+
 Just run:
 ```sh
 yes | pkg update && pkg install curl
