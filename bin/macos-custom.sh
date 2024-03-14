@@ -1,5 +1,6 @@
 #!/bin/bash
 
+##{{ if eq .chezmoi.os "darwin" }}
 cd
 git clone http://github.com/possatti/pokemonsay &>> $INSTLOG
 cd pokemonsay
@@ -20,3 +21,4 @@ cd 3d-ascii-viewer*
 make
 find ./models -name "*.mtl" -type f | xargs rm
 mv 3d-ascii-viewer models $HOME/bin/.
+##{{ end }}
