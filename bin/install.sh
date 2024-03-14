@@ -35,8 +35,10 @@ function set_colors() {
 # function that would show a progress bar to the user
 function show_progress() {
     while ps | grep $1 &> /dev/null ; do
-        echo -n "."
-        sleep 2
+        spin='⣾⣷⣯⣟⡿⢿⣻⣽'
+        i=$(( (i+1) %8 ))
+        printf "\r${spin:$i:1}"
+        sleep .1
     done
     echo -en "Done!\n"
     sleep 2
