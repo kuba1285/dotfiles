@@ -31,4 +31,3 @@ EOF
 termux-reload-settings
 
 yes | pkg install termux-x11-nightly
-exit
