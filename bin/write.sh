@@ -3,6 +3,7 @@
 grep -q "TMOUT=900" ~/.zshrc ||
 cat << EOF >> ~/.zshrc
 export PATH="\$PATH:$HOME/bin"
+neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
 
 neofetch
 TMOUT=900
@@ -14,6 +15,17 @@ I=\$((SEC%\$(echo \${#MODELS[@]})+1))
 }
 EOF
 
+{{ if eq .chezmoi.os "darwin" }}
+grep -q "TMOUT=900" ~/.bashrc ||
+cat << EOF >> ~/.bashrc
+bash $HOME/bin/change-wallpaper.sh
+EOF
+
+# yabai sudoers setting
+echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
+{{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
 grep -q "XMODIFIERS=@im=fcitx" /etc/environment ||
 cat << EOF | sudo tee -a /etc/environment
 GTK_IM_MODULE=fcitx
@@ -33,8 +45,15 @@ sudo sed -i -e "/^ *#DefaultTimeoutStopSec=90s/c\ DefaultTimeoutStopSec=10s" /et
 sudo sed -i -e '/^ *exec -a/c\exec -a "$0" "$HERE/chrome" "$@" --gtk-version=4 --ozone-platform-hint=auto --enable-gpu-rasterization --enable-zero-copy \
 --enable-features=TouchpadOverscrollHistoryNavigation --disable-smooth-scrolling --enable-fluent-scrollbars' /opt/google/chrome/google-chrome
 
-grep -q "bash ~/.config/polybar/scripts/wallpaper.sh" ~/.zshrc ||
-sed -i "1ibash ~/.config/polybar/scripts/wallpaper.sh" ~/.zshrc
+sed -i -e "/^\$script:downloadBaseDir = ''/c\$script:downloadBaseDir = '/data/data/com.termux/files/home/storage/movies'" $HOME/TVerRec*/conf/user_setting.ps1
+sed -i -e "/^\$script:downloadWorkDir = ''/c\$script:downloadWorkDir = '/tmp'" $HOME/TVerRec*/conf/user_setting.ps1
+sed -i -e "/^\$script:saveBaseDir = ''/c\$script:saveBaseDir = '/data/data/com.termux/files/home/storage/movies'" $HOME/TVerRec*/conf/user_setting.ps1
+sed -i -e "/^\$script:simplifiedValidation = \$false/c\$script:simplifiedValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
+sed -i -e "/^\$script:disableValidation = \$false/c\$script:disableValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
+
+
+grep -q "bash ~/.config/polybar/scripts/change-wallpaper.sh" ~/.zshrc ||
+sed -i "1ibash ~/.config/polybar/scripts/change-wallpaper.sh" ~/.zshrc
 
 grep -q "xinput set-prop" ~/.xsessionrc ||
 cat << EOF | tee -a ~/.xsessionrc
@@ -56,3 +75,4 @@ Section "InputClass"
     Option "CoastingFriction" "50"
 EndSection
 EOF
+{{ end }}
