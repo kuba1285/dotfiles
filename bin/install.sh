@@ -3,8 +3,8 @@
 # Define variables
 TVERREC_URL=https://github.com/dongaba/TVerRec/archive/refs/tags/v3.0.2.tar.gz
 ARCHIVE_NAME=$(basename $(echo $TVERREC_URL))
-BIN=$(cd $(dirname $0); pwd)
 PARENT=$(cd $(dirname $0)/../; pwd)
+BIN=$(cd $(dirname $0); pwd)
 INSTLOG="$BIN/install.log"
 LISTAPP="$BIN/list-app"
 LISTNVIDIA="$BIN/list-nvidia"
