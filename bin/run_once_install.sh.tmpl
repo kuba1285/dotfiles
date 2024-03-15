@@ -29,7 +29,7 @@ function show_progress() {
         spin='⣾⣷⣯⣟⡿⢿⣻⣽'
         i=$(( (i+1) %8 ))
         printf "\r${spin:$i:1}"
-        sleep .1
+        sleep 0.1
     done
     echo -en 'Done!\n'
     sleep 2
