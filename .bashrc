@@ -19,16 +19,20 @@ alias clear='paclear -s 5 -c yellow'
 export PATH="$PATH:$HOME/bin"
 
 {{ if eq .chezmoi.os "android" }}
+
 export PATH="$PATH:/root/bin"
 export PATH="$PATH:/root/go/bin"
 export PATH="$PATH:/root/.local/bin"
+
 {{ end }}
 
 {{ if eq .chezmoi.os "darwin" }}
+
 # Write from Caveats of 'brew (re)install python3'.
 export PATH="$PATH:/usr/local/bin/python3"
 # installed by pip3
 export PATH="$PATH:/usr/local/opt/python@3.12/libexec/bin"
+
 {{ end }}
 
 ##### run command #####
