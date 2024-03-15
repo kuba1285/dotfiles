@@ -126,26 +126,13 @@ skhd --start-service
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
-# Check for package manager
-if [ ! -f /sbin/yay ] ; then  
-    echo -n "${CYAN}NOTE${RESET} - Configuering yay."
-    cd
-    git clone https://aur.archlinux.org/yay.git &>> $INSTLOG
-    cd yay && makepkg -si --noconfirm &>> $INSTLOG &
-    show_progress $!
-    cd
-    rm -rf yay
-    if [ -f /sbin/yay ] ; then
-        echo "${GREEN}OK${RESET} - yay configured"
-        cd ..
-        echo -n "${CYAN}NOTE${RESET} - Updating yay."
-        yay -Suy --noconfirm &>> $INSTLOG &
-        show_progress $!
-    else
-        echo "${RED}ERROR${RESET} - yay install failed, please check the install.log"
-        exit
-    fi
-fi
+# Configure package manager
+echo -n "${CYAN}NOTE${RESET} - Configuering yay."
+cd
+git clone https://aur.archlinux.org/yay.git &>> $INSTLOG
+cd yay && makepkg -si --noconfirm &>> $INSTLOG &
+show_progress $!
+cd && rm -rf yay
 
 # Install listed pacakges
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to install apps from the list?"
