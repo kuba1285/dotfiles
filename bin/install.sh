@@ -18,19 +18,11 @@ SERVICES=(
 # set some colors
 function set_colors() {
     if [ -t 1 ]; then
-        RED=$(tput setaf 1)
-        GREEN=$(tput setaf 2)
-        YELLOW=$(tput setaf 3)
-        CYAN=$(tput setaf 6)
-        BOLD=$(tput bold)
-        RESET=$(tput sgr0)
+        RED=$(tput setaf 1); GREEN=$(tput setaf 2); YELLOW=$(tput setaf 3);
+        CYAN=$(tput setaf 6); BOLD=$(tput bold); RESET=$(tput sgr0)
     else
-        RED=""
-        GREEN=""
-        YELLOW=""
-        CYAN=""
-        BOLD=""
-        RESET=""
+        RED=""; GREEN=""; YELLOW="";
+        CYAN=""; BOLD=""; RESET=""
     fi
 }
 
