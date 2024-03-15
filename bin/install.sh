@@ -133,8 +133,7 @@ if [ ! -f /sbin/yay ] ; then
     echo -n "${CYAN}NOTE${RESET} - Configuering yay."
     cd
     git clone https://aur.archlinux.org/yay.git &>> $INSTLOG
-    cd yay
-    makepkg -si --noconfirm &>> $INSTLOG &
+    cd yay && makepkg -si --noconfirm &>> $INSTLOG &
     show_progress $!
     cd
     rm -rf yay
