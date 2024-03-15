@@ -7,7 +7,6 @@ curl -s https://raw.githubusercontent.com/kuba1285/dotfiles/master/bin/termux-in
 ```
 and then
 ```sh
-cd
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/bin init --apply kuba1285
 ```
 ### macOS
