@@ -18,8 +18,11 @@ cd $HOME/TVerRec*/unix/
 EOF
 {{ end }}
 
-
 {{ if eq .chezmoi.os "linux" }}
+cat << EOF >> ~/.bashrc
+neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
+EOF
+
 sed -i "1ibash $HOME/bin/change-wallpaper.sh" ~/.zshrc
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStartSec=90s/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
@@ -62,18 +65,4 @@ Section "InputClass"
     Option "CoastingFriction" "50"
 EndSection
 EOF
-
-cat << EOF >> ~/.bashrc
-neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
-EOF
 {{ end }}
-
-cat << EOF >> ~/.bashrc
-TMOUT=900
-TRAPALRM() {
-MODELS=(\$(ls -d $HOME/bin/models/*))
-SEC=\`date +%S\`
-I=\$((SEC%\$(echo \${#MODELS[@]})+1))
-3d-ascii-viewer -z 120 \${MODELS[\$I]}
-}
-EOF
