@@ -87,7 +87,7 @@ sudo ln -s $HOME/ $HOME/$USER-ln
 # Install apps for yay
 pacman -Syu --noconfirm sudo base-devel
 
-# Create user user with password user for yay
+# Create user for yay
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
 echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
