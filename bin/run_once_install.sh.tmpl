@@ -80,7 +80,9 @@ show_progress $!
 {{ if eq .chezmoi.os "linux" }}
 
 # Install apps for yay
-pacman -Syu --noconfirm sudo base-devel
+echo -n "${CYAN}NOTE${RESET} - Updating pacman and install apps for yay."
+pacman -Syu --noconfirm sudo base-devel &
+show_progress $!
 
 # Create a user for installing AUR
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
