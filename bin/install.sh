@@ -135,11 +135,6 @@ fi
 echo -n "${CYAN}NOTE${RESET} - Installing apps from list."
 install_list $LISTAPP
 
-# Install custom app
-echo -n "${CYAN}NOTE${RESET} - Installing custom app."
-source $BIN/custom.sh &>> $INSTLOG &
-show_progress $!
-
 # Install MBP audio driver
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to install MBP audio driver?"
 if [[ $YN = y ]] ; then
@@ -168,6 +163,11 @@ pacman -R --noconfirm xfdesktop xfwm4-themes
 sudo gpasswd -a $USER input
 fc-cache -fv &>> $INSTLOG
 {{ end }}
+
+# Install custom app
+echo -n "${CYAN}NOTE${RESET} - Installing custom app."
+source $BIN/custom.sh &>> $INSTLOG &
+show_progress $!
 
 # Copy Config Files
 echo -n "${CYAN}NOTE${RESET} - Copying config files."
