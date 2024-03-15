@@ -1,7 +1,8 @@
 cd
 termux-setup-storage
 yes | pkg upgrade
-yes | pkg install game-repo science-repo root-repo x11-repo termux-keyring termux-api termux-exec fakeroot git curl which proot proot-distro pulseaudio termux-x11-nightly
+yes | pkg install game-repo science-repo root-repo x11-repo termux-keyring termux-api termux-exec fakeroot git curl which proot proot-distro pulseaudio
+yes | pkg install termux-x11-nightly
 proot-distro install archlinux
 
 echo "sleep 3 && proot-distro login archlinux --user root --shared-tmp" >> $HOME/.bashrc
