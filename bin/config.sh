@@ -1,15 +1,5 @@
 #!/bin/bash
 
-{{ if eq .chezmoi.os "android" }}
-
-cat << EOF >> ~/.bashrc
-fortune | pokemonsay
-neofetch --off
-cd $HOME/TVerRec*/unix/
-EOF
-
-{{ end }}
-
 {{ if eq .chezmoi.os "darwin" }}
 
 cat << EOF >> ~/.bashrc
@@ -41,6 +31,7 @@ sudo gpasswd -a $USER input
 
 cat << EOF >> ~/.bashrc
 neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
+cd $HOME/TVerRec*/unix/
 EOF
 
 sed -i "1ibash $HOME/bin/change-wallpaper.sh" ~/.zshrc
