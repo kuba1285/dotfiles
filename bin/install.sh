@@ -139,7 +139,7 @@ cd && rm -rf yay
 echo -n "${CYAN}NOTE${RESET} - Installing apps from list."
 install_list $LISTAPP
 
-# Setup Nvidia if it was found
+# Setup Nvidia if found
 if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
     install_list $LISTNVIDIA
     # update config
