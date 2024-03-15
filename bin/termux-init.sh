@@ -1,7 +1,7 @@
 cd
 termux-setup-storage
 yes | pkg upgrade
-yes | pkg install termux-api termux-exec fakeroot git sudo curl which proot proot-distro pulseaudio x11-repo
+yes | pkg install termux-api termux-exec fakeroot git curl which proot proot-distro pulseaudio x11-repo
 proot-distro install archlinux
 
 echo "sleep 3 && proot-distro login archlinux --user root --shared-tmp" >> $HOME/.bashrc
