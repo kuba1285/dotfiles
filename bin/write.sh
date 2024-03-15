@@ -1,14 +1,17 @@
 #!/bin/bash
 
 {{ if eq .chezmoi.os "android" }}
+
 cat << EOF >> ~/.bashrc
 fortune | pokemonsay
 neofetch --off
 cd $HOME/TVerRec*/unix/
 EOF
+
 {{ end }}
 
 {{ if eq .chezmoi.os "darwin" }}
+
 cat << EOF >> ~/.bashrc
 bash $HOME/bin/change-wallpaper.sh
 neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
@@ -20,9 +23,11 @@ echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut
 # Enable services
 yabai --start-service
 skhd --start-service
+
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
+
 cat << EOF >> ~/.bashrc
 neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
 EOF
@@ -69,4 +74,5 @@ Section "InputClass"
     Option "CoastingFriction" "50"
 EndSection
 EOF
+
 {{ end }}
