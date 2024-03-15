@@ -37,6 +37,8 @@ skhd --start-service
 
 {{ if eq .chezmoi.os "linux" }}
 
+sudo gpasswd -a $USER input
+
 cat << EOF >> ~/.bashrc
 neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
 EOF
