@@ -10,6 +10,7 @@ alias lt="eza -T -L 3 -a -I 'node_modules|.git|.cache' --icons"
 alias lta="eza -T -a -I 'node_modules|.git|.cache' --color=always --icons | less -r"
 alias vc='code' # gui code editor
 alias clear='paclear -s 5 -c yellow'
+export PATH="$PATH:$HOME/bin"
 
 {{ if eq .chezmoi.os "darwin" }}
 # Write from Caveats of 'brew (re)install python3'.
