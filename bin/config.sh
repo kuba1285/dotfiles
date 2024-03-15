@@ -11,7 +11,7 @@ EOF
 echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
 
 # Write default
-source $BIN/parse-plist
+source $BIN/parse-plist &
 show_progress $!
 
 # A bootplug to match the binary format so that yabai can inject code into the Dock of arm64 binaries.
