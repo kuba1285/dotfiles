@@ -39,6 +39,8 @@ neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
 cd $HOME/TVerRec*/unix/
 EOF
 
+sed -i "1ibash $HOME/bin/change-wallpaper.sh" ~/.bashrc
+
 # Setup Nvidia if found
 if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
     install_list $LISTNVIDIA
@@ -48,7 +50,6 @@ if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
     echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
 fi
 
-sed -i "1ibash $HOME/bin/change-wallpaper.sh" ~/.zshrc
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStartSec=90s/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStopSec=90s/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
