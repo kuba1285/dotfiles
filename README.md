@@ -8,9 +8,7 @@ curl -s https://raw.githubusercontent.com/kuba1285/dotfiles/master/bin/termux-in
 and then:
 ```sh
 cd
-git clone https://github.com/kuba1285/dotfiles && cd dotfiles
-chmod +x ./bin/install.sh
-./bin/install.sh
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/bin init --apply kuba1285
 ```
 * About Brewfile
  1. Command line tools registered in Homebrew are "brew 'app-name'" (installed with the brew install command)
