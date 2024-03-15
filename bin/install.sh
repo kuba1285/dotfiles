@@ -99,15 +99,6 @@ cd yay && makepkg -si --noconfirm &>> $INSTLOG &
 show_progress $!
 cd && rm -rf yay
 
-# Setup Nvidia if found
-if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
-    install_list $LISTNVIDIA
-    sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
-    echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf &>> $INSTLOG
-    echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
-fi
-
 # Install listed pacakges
 echo -n "${CYAN}NOTE${RESET} - Installing apps from list."
 install_list $LISTAPP
@@ -121,6 +112,15 @@ if [[ $YN = y ]] ; then
     sudo ./install.cirrus.driver.sh &>> $INSTLOG &
     show_progress $!
     cd
+fi
+
+# Setup Nvidia if found
+if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
+    install_list $LISTNVIDIA
+    sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
+    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
+    echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf &>> $INSTLOG
+    echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
 fi
 
 # Enable services
