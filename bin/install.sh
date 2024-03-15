@@ -100,8 +100,6 @@ source $BIN/parse-plist
 sudo ln -s $HOME/Documents $HOME/Documents-ln
 sudo ln -s $HOME/Downloads $HOME/Downloads-ln
 sudo ln -s $HOME/ $HOME/$USER-ln
-brew bundle dump --force
-parse-plist > parse-plist
 
 # Enable services
 yabai --start-service
