@@ -12,7 +12,7 @@ alias vc='code' # gui code editor
 alias clear='paclear -s 5 -c yellow'
 
 {{ if eq .chezmoi.os "darwin" }}
-# Write from "Caveats" of 'brew (re)install python3'.
+# Write from Caveats of 'brew (re)install python3'.
 # Python3
 export PATH="$PATH:/usr/local/bin/python3"
 # installed by pip3
