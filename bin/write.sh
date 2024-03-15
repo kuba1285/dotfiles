@@ -24,18 +24,7 @@ echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
-cat << EOF | sudo tee -a /etc/environment
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-EOF
-
 sed -i "1ibash $HOME/bin/change-wallpaper.sh" ~/.zshrc
-
-cat << EOF | sudo tee -a /etc/systemd/network/*.network
-IPv6PrivacyExtensions=true
-IgnoreCarrierLoss=3s
-EOF
 
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStartSec=90s/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
@@ -48,6 +37,17 @@ sed -i -e "/^\$script:downloadWorkDir = ''/c\$script:downloadWorkDir = '/tmp'" $
 sed -i -e "/^\$script:saveBaseDir = ''/c\$script:saveBaseDir = '/data/data/com.termux/files/home/storage/movies'" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:simplifiedValidation = \$false/c\$script:simplifiedValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:disableValidation = \$false/c\$script:disableValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
+
+cat << EOF | sudo tee -a /etc/environment
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+EOF
+
+cat << EOF | sudo tee -a /etc/systemd/network/*.network
+IPv6PrivacyExtensions=true
+IgnoreCarrierLoss=3s
+EOF
 
 cat << EOF | tee -a ~/.xsessionrc
 xinput set-prop 11 318 1
