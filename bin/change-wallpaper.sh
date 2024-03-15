@@ -2,6 +2,7 @@
 
 
 {{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "android")) }}
+
 # Directory containing wallpapers
 WALLPAPER_DIR="$HOME/.config/swww/"
 # File to store the current wallpaper path
@@ -27,9 +28,11 @@ cp ~/.cache/wal/colors-kitty.conf ~/.config/kitty/
 #cp ~/.cache/wal/colors-rofi.rasi ~/.config/rofi/colors/colors-rofi.rasi
 # firefox
 #pywalfox update
+
 {{ end }}
 
 {{ if eq .chezmoi.os "darwin" }}
+
 function getDefinedVariables() {
 	loggedInUser=$(/usr/bin/stat -f%Su /dev/console)
 	wallpaper_store_path="/Users/${loggedInUser}/Library/Application Support/com.apple.wallpaper/Store/Index.plist"
@@ -123,4 +126,5 @@ function showVariables() {
 
 echo ""
 getDefinedVariables
+
 {{ end }}
