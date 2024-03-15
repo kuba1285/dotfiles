@@ -123,11 +123,9 @@ if [[ $YN = y ]] ; then
     cd
 fi
 
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to stage the files?"
-if [[ $YN = y ]] ; then
-    source $BIN/stage.sh &>> $INSTLOG &
-    show_progress $!
-fi
+echo -n "${CYAN}NOTE${RESET} - Stage the files."
+source $BIN/stage.sh &>> $INSTLOG &
+show_progress $!
 
 # Enable services
 echo -n "${CYAN}NOTE${RESET} - Enabling services."
