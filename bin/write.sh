@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat << EOF >> ~/.zshrc
+cat << EOF >> ~/.bashrc
 export PATH="\$PATH:$HOME/bin"
 neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
 
