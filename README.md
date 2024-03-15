@@ -1,15 +1,21 @@
 --WIP--
 
-Just run:
+### Termux
 ```sh
 yes | pkg update && pkg install curl
 curl -s https://raw.githubusercontent.com/kuba1285/dotfiles/master/bin/termux-init.sh | bash
 ```
-and then:
+and then
 ```sh
 cd
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/bin init --apply kuba1285
 ```
+### macOS
+```sh
+brew install chezmoi
+chezmoi init --apply johnmanjiro13
+```
+
 * About Brewfile
  1. Command line tools registered in Homebrew are "brew 'app-name'" (installed with the brew install command)
  2. Command line tools not registered in Homebrew are "tap 'app-name'" (installed with the brew tap command)
