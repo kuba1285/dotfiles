@@ -4,6 +4,7 @@ chmod +x ~/.config/polybar/scripts/*
 yay -R --noconfirm xfdesktop xfwm4-themes &>> $INSTLOG
 
 {{ if eq .chezmoi.os "linux" }}
+chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/.config/hypr/scripts/*
 
 # add VScode extensions
