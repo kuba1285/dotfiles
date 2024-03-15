@@ -30,7 +30,7 @@ function show_progress() {
         printf "\r${spin:$i:1}"
         sleep .1
     done
-    echo -en "Done!\n"
+    echo -en 'Done!\n'
     sleep 2
 }
 
