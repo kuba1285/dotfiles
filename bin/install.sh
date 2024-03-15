@@ -111,6 +111,7 @@ sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=
 ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 sed -i -e "/^ *#ja_JP.UTF-8 UTF-8/c\ja_JP.UTF-8 UTF-8" /etc/locale.gen
 locale-gen && echo "LANG=ja_JP.UTF-8" >> /etc/locale.conf
+sudo gpasswd -a $USER input
 
 # Configure package manager
 echo -n "${CYAN}NOTE${RESET} - Configuering yay."
@@ -157,8 +158,7 @@ for service in ${SERVICES[@]} ; do
     sleep 2
 done
 
-pacman -R --noconfirm xfdesktop xfwm4-themes
-sudo gpasswd -a $USER input
+yay -R --noconfirm xfdesktop xfwm4-themes
 fc-cache -fv &>> $INSTLOG
 {{ end }}
 
