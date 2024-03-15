@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 
-{{ if eq .chezmoi.os "android" }}
+{{ if eq .chezmoi.os "linux" }}
 
 # Directory containing wallpapers
 WALLPAPER_DIR="$HOME/.config/swww/"
