@@ -2,7 +2,7 @@
 
 ### Termux (Proot Arch Installation)
 ```sh
-yes | pkg update && pkg install curl
+yes | pkg upgrade && pkg install curl
 curl -s https://raw.githubusercontent.com/kuba1285/dotfiles/master/bin/termux-init.sh | bash
 ```
 ### Archlinux
