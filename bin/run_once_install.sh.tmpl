@@ -82,7 +82,7 @@ sudo ln -s $HOME/ $HOME/$USER-ln
 
 {{ end }}
 
-{{ if eq .chezmoi.os "android" }}
+{{ if eq .chezmoi.os "linux" }}
 
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
 echo user:user | chpasswd
