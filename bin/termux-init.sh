@@ -30,3 +30,4 @@ extra-keys = [ \\
 		]
 EOF
 termux-reload-settings
+exit
