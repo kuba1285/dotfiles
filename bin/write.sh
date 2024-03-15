@@ -24,6 +24,11 @@ echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut
 source $BIN/parse-plist
 show_progress $!
 
+# A bootplug to match the binary format so that yabai can inject code into the Dock of arm64 binaries.
+if [[ $(uname -m) == 'arm64' ]]; then
+    sudo nvram boot-args=-arm64e_preview_abi
+fi
+
 # Enable services
 yabai --start-service
 skhd --start-service
