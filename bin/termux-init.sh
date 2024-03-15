@@ -28,10 +28,4 @@ extra-keys = [ \\
 		]
 EOF
 termux-reload-settings
-
-$username=user
-users=("user user user user")
-for username in $users; do
-adduser --disabled-password --gecos "" "$username"
-yes user | passwd user
 exit
