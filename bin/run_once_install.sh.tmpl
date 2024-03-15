@@ -83,7 +83,7 @@ sudo ln -s $HOME/ $HOME/$USER-ln
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
-pacman -S --noconfirm sudo
+pacman -Syu --noconfirm sudo
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
 echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
