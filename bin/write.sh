@@ -1,6 +1,6 @@
 #!/bin/bash
 
-{{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "android")) }}
+{{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "darwin")) }}
 cat << EOF >> ~/.bashrc
 export PATH="\$PATH:$HOME/bin"
 neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
