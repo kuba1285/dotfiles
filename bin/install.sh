@@ -135,10 +135,8 @@ show_progress $!
 cd && rm -rf yay
 
 # Install listed pacakges
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to install apps from the list?"
-if [[ $YN = y ]] ; then
-    install_list $LISTAPP
-fi
+echo -n "${CYAN}NOTE${RESET} - Installing apps from list."
+install_list $LISTAPP
 
 # Setup Nvidia if it was found
 if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
@@ -151,11 +149,9 @@ if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
 fi
 
 # Install custom app
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to install custom app?"
-if [[ $YN = y ]] ; then
-    source $BIN/custom.sh &>> $INSTLOG &
-    show_progress $!
-fi
+echo -n "${CYAN}NOTE${RESET} - Installing custom app."
+source $BIN/custom.sh &>> $INSTLOG &
+show_progress $!
 
 # Install MBP audio driver
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to install MBP audio driver?"
@@ -168,33 +164,27 @@ if [[ $YN = y ]] ; then
     cd
 fi
 
-# Copy Config Files
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to copy config files?"
-if [[ $YN = y ]] ; then
-    cp -rT $PARENT/. ~/ &>> $INSTLOG &
-    show_progress $!
-fi
-
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to stage the files?"
 if [[ $YN = y ]] ; then
     source $BIN/stage.sh &>> $INSTLOG &
     show_progress $!
 fi
 
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to write to the config files?"
-if [[ $YN = y ]] ; then
-    source $BIN/write.sh &>> $INSTLOG &
-    show_progress $!
-fi
+# Copy Config Files
+echo -n "${CYAN}NOTE${RESET} - Copying config files."
+cp -rT $PARENT/. ~/ &>> $INSTLOG &
+show_progress $!
+
+echo -n "${CYAN}NOTE${RESET} - Wrinting to config files."
+source $BIN/write.sh &>> $INSTLOG &
+show_progress $!
 
 # Enable services
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to write to enable services?"
-if [[ $YN = y ]] ; then
-    for service in ${SERVICES[@]} ; do
-        sudo systemctl enable $service --now &>> $INSTLOG
-        sleep 2
-    done
-fi
+echo -n "${CYAN}NOTE${RESET} - Enabling services."
+for service in ${SERVICES[@]} ; do
+    sudo systemctl enable $service --now &>> $INSTLOG
+    sleep 2
+done
 
 pacman -R --noconfirm xfdesktop xfwm4-themes
 sudo gpasswd -a $USER input
