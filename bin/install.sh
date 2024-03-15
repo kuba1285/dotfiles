@@ -83,17 +83,17 @@ locale-gen && echo "LANG=ja_JP.UTF-8" >> /etc/locale.conf
 
 {{ if eq .chezmoi.os "darwin" }}
 # Install CLI for Xcode
-echo -n "${CYAN}NOTE${RESET} - Now installing CLI for Xcode."
+echo -n "${CYAN}NOTE${RESET} - Installing CLI for Xcode."
 xcode-select --install &>> $INSTLOG
 show_progress $!
 
 # Install rosetta
-echo -n "${CYAN}NOTE${RESET} - Now installing rosetta."
+echo -n "${CYAN}NOTE${RESET} - Installing rosetta."
 sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license &>> $INSTLOG
 show_progress $!
 
 # Install homebrew
-echo -n "${CYAN}NOTE${RESET} - Now installing Homebrew."
+echo -n "${CYAN}NOTE${RESET} - Installing Homebrew."
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &>> $INSTLOG
 show_progress $!
 
@@ -101,7 +101,7 @@ show_progress $!
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
 
 # Install app from Brewfile
-echo -n "${CYAN}NOTE${RESET} - Now installing Brewfile app."
+echo -n "${CYAN}NOTE${RESET} - Installing Brewfile app."
 brew bundle install --file $BIN/Brewfile &>> $INSTLOG
 show_progress $!
 
@@ -111,6 +111,7 @@ if [[ $(uname -m) == 'arm64' ]]; then
     show_progress $!
 fi
 
+# Write default
 source $BIN/parse-plist
 
 # Generate miscelenaeous file
