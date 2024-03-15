@@ -1,6 +1,5 @@
 cd
 termux-setup-storage
-yes | pkg update
 yes | pkg install termux-keyring termux-api termux-exec fakeroot git curl which proot proot-distro pulseaudio termux-x11-nightly
 proot-distro install archlinux
 
