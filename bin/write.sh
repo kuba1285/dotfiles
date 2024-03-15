@@ -13,8 +13,13 @@ cat << EOF >> ~/.bashrc
 bash $HOME/bin/change-wallpaper.sh
 neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
 EOF
+
 # yabai sudoers setting
 echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
+
+# Enable services
+yabai --start-service
+skhd --start-service
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
