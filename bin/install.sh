@@ -63,6 +63,7 @@ else
 fi
 
 {{ if eq .chezmoi.os "darwin" }}
+
 # Install CLI for Xcode
 echo -n "${CYAN}NOTE${RESET} - Installing CLI for Xcode."
 xcode-select --install &>> $INSTLOG
@@ -99,9 +100,11 @@ show_progress $!
 sudo ln -s $HOME/Documents $HOME/Documents-ln
 sudo ln -s $HOME/Downloads $HOME/Downloads-ln
 sudo ln -s $HOME/ $HOME/$USER-ln
+
 {{ end }}
 
 {{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "android")) }}
+
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
 echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
@@ -156,6 +159,7 @@ for service in ${SERVICES[@]} ; do
 done
 
 fc-cache -fv &>> $INSTLOG
+
 {{ end }}
 
 # Install custom app
