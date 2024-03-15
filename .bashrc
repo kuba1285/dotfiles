@@ -1,4 +1,4 @@
-function cheatsh() { curl "http://cheat.sh/$1"; }
+function cheat() { curl "http://cheat.sh/$1"; }
 eval "$(starship init $(ps -p $$ -o ucomm=))"
 alias less='bat'
 alias cat='bat --paging=never'
