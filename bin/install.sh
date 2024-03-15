@@ -75,13 +75,11 @@ else
 fi
 
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
-echo root:root | chpasswd
 echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
 ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 sed -i -e "/^ *#ja_JP.UTF-8 UTF-8/c\ja_JP.UTF-8 UTF-8" /etc/locale.gen
-locale-gen
-echo "LANG=ja_JP.UTF-8" >> /etc/locale.conf
+locale-gen && echo "LANG=ja_JP.UTF-8" >> /etc/locale.conf
 
 {{ if eq .chezmoi.os "darwin" }}
 # Install CLI for Xcode
