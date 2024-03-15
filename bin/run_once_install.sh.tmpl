@@ -72,12 +72,10 @@ function set_colors() {
 
 function show_progress() {
     while ps | grep $1 &> /dev/null ; do
-        spin='⣾⣷⣯⣟⡿⢿⣻⣽'
-        i=$(( (i+1) %8 ))
-        printf "\r${spin:$i:1}"
-        sleep 0.1
+        echo -n "."
+        sleep 2
     done
-    echo "${GREEN}OK${RESET} - Done!"
+    echo "Done!"
     sleep 2
 }
 
@@ -104,7 +102,6 @@ set_colors
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to start with the install?"
 if [[ $YN = y ]] ; then
     echo "${CYAN}NOTE${RESET} - Setup starting..."
-    sudo touch /tmp/inst.tmp
 else
     echo "${RED}ATTENTION${RESET} - Aborted. No changes were made to your system."
     exit
