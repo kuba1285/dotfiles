@@ -140,13 +140,13 @@ fc-cache -fv &>> $INSTLOG
 
 {{ end }}
 
-echo -n "${CYAN}NOTE${RESET} - Staging the files."
-source $BIN/stage.sh &>> $INSTLOG &
-show_progress $!
-
 # Install custom app
 echo -n "${CYAN}NOTE${RESET} - Installing custom app."
 source $BIN/custom.sh &>> $INSTLOG &
+show_progress $!
+
+echo -n "${CYAN}NOTE${RESET} - Staging the files."
+source $BIN/stage.sh &>> $INSTLOG &
 show_progress $!
 
 # Copy and write Config Files
