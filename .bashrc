@@ -22,8 +22,6 @@ export PATH="$PATH:/root/bin"
 export PATH="$PATH:/root/go/bin"
 export PATH="$PATH:/root/.local/bin"
 
-{{ end }}
-
 {{ if eq .chezmoi.os "darwin" }}
 
 # Write from Caveats of 'brew (re)install python3'.
