@@ -79,8 +79,8 @@ show_progress $!
 
 {{ if eq .chezmoi.os "linux" }}
 
-# Install apps for yay
-echo -n "${CYAN}NOTE${RESET} - Updating pacman and install apps for yay."
+# Install apps for AUR
+echo -n "${CYAN}NOTE${RESET} - Updating pacman and install apps for AUR."
 pacman -Syu --noconfirm sudo base-devel &
 show_progress $!
 
