@@ -3,7 +3,6 @@ termux-setup-storage
 yes | pkg upgrade
 yes | pkg install termux-api termux-exec fakeroot git sudo curl which proot proot-distro pulseaudio x11-repo
 proot-distro install archlinux
-yes | pkg install termux-x11-nightly
 
 echo "sleep 3 && proot-distro login archlinux --user root --shared-tmp" >> $HOME/.bashrc
 touch .hushlogin
@@ -30,4 +29,5 @@ extra-keys = [ \\
 		]
 EOF
 termux-reload-settings
+yes | pkg install termux-x11-nightly
 exit
