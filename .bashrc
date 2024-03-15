@@ -1,3 +1,4 @@
+##### prompt #####
 eval "$(starship init $(ps -p $$ -o ucomm=))"
 
 ##### functions #####
