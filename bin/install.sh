@@ -123,10 +123,6 @@ if [[ $YN = y ]] ; then
     cd
 fi
 
-echo -n "${CYAN}NOTE${RESET} - Stage the files."
-source $BIN/stage.sh &>> $INSTLOG &
-show_progress $!
-
 # Enable services
 echo -n "${CYAN}NOTE${RESET} - Enabling services."
 for service in ${SERVICES[@]} ; do
@@ -138,13 +134,17 @@ fc-cache -fv &>> $INSTLOG
 
 {{ end }}
 
+echo -n "${CYAN}NOTE${RESET} - Staging the files."
+source $BIN/stage.sh &>> $INSTLOG &
+show_progress $!
+
 # Install custom app
 echo -n "${CYAN}NOTE${RESET} - Installing custom app."
 source $BIN/custom.sh &>> $INSTLOG &
 show_progress $!
 
 # Copy and write Config Files
-echo -n "${CYAN}NOTE${RESET} - Configuring."
+echo -n "${CYAN}NOTE${RESET} - Setting configuration."
 cp -rT $PARENT/. ~/ &>> $INSTLOG &
 source $BIN/write.sh &>> $INSTLOG &
 show_progress $!
