@@ -162,15 +162,6 @@ if [[ $YN = y ]] ; then
     show_progress $!
 fi
 
-# Copy Config Files
-echo -n "${CYAN}NOTE${RESET} - Copying config files."
-cp -rT $PARENT/. ~/ &>> $INSTLOG &
-show_progress $!
-
-echo -n "${CYAN}NOTE${RESET} - Wrinting to config files."
-source $BIN/write.sh &>> $INSTLOG &
-show_progress $!
-
 # Enable services
 echo -n "${CYAN}NOTE${RESET} - Enabling services."
 for service in ${SERVICES[@]} ; do
@@ -182,6 +173,15 @@ pacman -R --noconfirm xfdesktop xfwm4-themes
 sudo gpasswd -a $USER input
 fc-cache -fv &>> $INSTLOG
 {{ end }}
+
+# Copy Config Files
+echo -n "${CYAN}NOTE${RESET} - Copying config files."
+cp -rT $PARENT/. ~/ &>> $INSTLOG &
+show_progress $!
+
+echo -n "${CYAN}NOTE${RESET} - Wrinting to config files."
+source $BIN/write.sh &>> $INSTLOG &
+show_progress $!
 
 chsh -s $(which zsh) $USER
 echo "${CYAN}NOTE${RESET} - Script had completed!"
