@@ -83,7 +83,7 @@ sudo ln -s $HOME/ $HOME/$USER-ln
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
-pacman -Syu --noconfirm sudo
+pacman -Syu --noconfirm sudo base-devel
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
 echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
@@ -93,7 +93,7 @@ locale-gen && echo "LANG=ja_JP.UTF-8" >> /etc/locale.conf
 
 # Configure package manager
 echo -n "${CYAN}NOTE${RESET} - Configuering yay."
-sudo -i -u user bash << EOF &>> $INSTLOG &
+sudo -i -u user bash << EOF
 cd
 git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -si --noconfirm &
