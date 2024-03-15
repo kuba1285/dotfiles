@@ -1,6 +1,5 @@
 #!/bin/bash
 
-grep -q "TMOUT=900" ~/.zshrc ||
 cat << EOF >> ~/.zshrc
 export PATH="\$PATH:$HOME/bin"
 neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
@@ -16,7 +15,6 @@ I=\$((SEC%\$(echo \${#MODELS[@]})+1))
 EOF
 
 {{ if eq .chezmoi.os "darwin" }}
-grep -q "TMOUT=900" ~/.bashrc ||
 cat << EOF >> ~/.bashrc
 bash $HOME/bin/change-wallpaper.sh
 EOF
@@ -26,14 +24,12 @@ echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
-grep -q "XMODIFIERS=@im=fcitx" /etc/environment ||
 cat << EOF | sudo tee -a /etc/environment
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 EOF
 
-grep -q "IgnoreCarrierLoss=3s" /etc/systemd/network/*.network ||
 cat << EOF | sudo tee -a /etc/systemd/network/*.network
 IPv6PrivacyExtensions=true
 IgnoreCarrierLoss=3s
@@ -51,17 +47,13 @@ sed -i -e "/^\$script:saveBaseDir = ''/c\$script:saveBaseDir = '/data/data/com.t
 sed -i -e "/^\$script:simplifiedValidation = \$false/c\$script:simplifiedValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:disableValidation = \$false/c\$script:disableValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
 
-
-grep -q "bash ~/.config/polybar/scripts/change-wallpaper.sh" ~/.zshrc ||
 sed -i "1ibash ~/.config/polybar/scripts/change-wallpaper.sh" ~/.zshrc
 
-grep -q "xinput set-prop" ~/.xsessionrc ||
 cat << EOF | tee -a ~/.xsessionrc
 xinput set-prop 11 318 1
 xinput --set-prop "Apple SPI Touchpad" "Coordinate Transformation Matrix" 4 0 0 0 4 0 0 0 1
 EOF
 
-grep -q "CornerCoasting" /etc/X11/xorg.conf.d/51-synaptics-tweaks.conf ||
 cat << EOF | sudo tee -a /etc/X11/xorg.conf.d/51-synaptics-tweaks.conf
 Section "InputClass"
   Identifier "touchpad"
