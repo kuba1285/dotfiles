@@ -10,6 +10,7 @@ EOF
 cat << EOF >> ~/.bashrc
 fortune | pokemonsay
 neofetch --off
+cd $HOME/TVerRec*/unix/
 EOF
 
 # yabai sudoers setting
