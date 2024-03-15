@@ -103,7 +103,7 @@ git clone https://aur.archlinux.org/yay.git &>> $INSTLOG
 cd yay && makepkg -si --noconfirm &>> $INSTLOG &
 show_progress $!
 cd && rm -rf yay
-EPF
+EOF
 
 # Install listed pacakges
 echo -n "${CYAN}NOTE${RESET} - Installing apps from list."
