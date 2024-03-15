@@ -6,16 +6,18 @@ bash $HOME/bin/change-wallpaper.sh
 neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
 EOF
 
+# yabai sudoers setting
+echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
+{{ end }}
+
 {{ if eq .chezmoi.os "android" }}
 cat << EOF >> ~/.bashrc
 fortune | pokemonsay
 neofetch --off
 cd $HOME/TVerRec*/unix/
 EOF
-
-# yabai sudoers setting
-echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
 {{ end }}
+
 
 {{ if eq .chezmoi.os "linux" }}
 sed -i "1ibash $HOME/bin/change-wallpaper.sh" ~/.zshrc
