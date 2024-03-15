@@ -3,7 +3,7 @@ termux-setup-storage
 yes | pkg install termux-keyring termux-api tsu termux-exec fakeroot git curl which proot proot-distro pulseaudio termux-x11-nightly
 proot-distro install archlinux
 
-echo "sleep 3 && proot-distro login archlinux --user user --shared-tmp" >> $HOME/.bashrc
+echo "sleep 3 && proot-distro login archlinux --user root --shared-tmp" >> $HOME/.bashrc
 touch .hushlogin
 
 mkdir -p ~/.shortcuts
