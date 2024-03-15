@@ -1,9 +1,13 @@
 #!/bin/bash
 
+{{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "android")) }}
 cat << EOF >> ~/.bashrc
 export PATH="\$PATH:$HOME/bin"
 neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
+EOF
+{{ end }}
 
+cat << EOF >> ~/.bashrc
 TMOUT=900
 TRAPALRM() {
 MODELS=(\$(ls -d $HOME/bin/models/*))
