@@ -3,7 +3,7 @@ termux-setup-storage
 yes | pkg install termux-keyring termux-api termux-exec fakeroot git curl which proot proot-distro pulseaudio termux-x11-nightly
 proot-distro install archlinux
 
-echo "sleep 3 && proot-distro login archlinux --user root --shared-tmp" >> $HOME/.bashrc
+echo "sleep 3 && proot-distro login archlinux --user user --shared-tmp" >> $HOME/.bashrc
 touch .hushlogin
 
 mkdir -p ~/.shortcuts
@@ -28,4 +28,8 @@ extra-keys = [ \\
 		]
 EOF
 termux-reload-settings
+
+useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
+echo user:user | chpasswd
+sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
 exit
