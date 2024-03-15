@@ -143,12 +143,9 @@ echo -n "${CYAN}NOTE${RESET} - Installing custom app."
 source $BIN/custom.sh &>> $INSTLOG &
 show_progress $!
 
-# Copy Config Files
-echo -n "${CYAN}NOTE${RESET} - Copying config files."
+# Copy and write Config Files
+echo -n "${CYAN}NOTE${RESET} - Configuring."
 cp -rT $PARENT/. ~/ &>> $INSTLOG &
-show_progress $!
-
-echo -n "${CYAN}NOTE${RESET} - Wrinting to config files."
 source $BIN/write.sh &>> $INSTLOG &
 show_progress $!
 
