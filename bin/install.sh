@@ -64,11 +64,6 @@ fi
 
 {{ if eq .chezmoi.os "darwin" }}
 
-# Install CLI for Xcode
-echo -n "${CYAN}NOTE${RESET} - Installing CLI for Xcode."
-xcode-select --install &>> $INSTLOG
-show_progress $!
-
 # Install rosetta
 echo -n "${CYAN}NOTE${RESET} - Installing Rosetta."
 sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license &>> $INSTLOG
