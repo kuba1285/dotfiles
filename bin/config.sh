@@ -39,6 +39,7 @@ neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
 cd $HOME/TVerRec*/unix/
 EOF
 
+# At the top of rc file
 sed -i "1ibash $HOME/bin/change-wallpaper.sh" ~/.bashrc
 
 # Setup Nvidia if found
