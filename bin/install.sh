@@ -79,10 +79,6 @@ if [[ $(uname -m) == 'arm64' ]]; then
     sudo nvram boot-args=-arm64e_preview_abi
 fi
 
-# Write default
-source $BIN/parse-plist
-show_progress $!
-
 # Generate misc file
 sudo ln -s $HOME/Documents $HOME/Documents-ln
 sudo ln -s $HOME/Downloads $HOME/Downloads-ln
