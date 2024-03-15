@@ -12,6 +12,17 @@ pipx install .
 
 {{ end }}
 
+# Install MBP audio driver
+wait_yn "${YELLOW}ACITION${RESET} - Would you like to install MBP audio driver?"
+if [[ $YN = y ]] ; then
+    cd
+    git clone https://github.com/davidjo/snd_hda_macbookpro.git &>> $INSTLOG
+    cd snd_hda_macbookpro/
+    sudo ./install.cirrus.driver.sh &>> $INSTLOG &
+    show_progress $!
+    cd
+fi
+
 go install github.com/orangekame3/paclear@latest
 
 cd
