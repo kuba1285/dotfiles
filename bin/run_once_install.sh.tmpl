@@ -82,7 +82,7 @@ show_progress $!
 
 # Install apps for AUR
 echo "${CYAN}NOTE${RESET} - Updating pacman and install apps for AUR."
-pacman -Syu --noconfirm sudo base-devel &
+pacman -Syu --noconfirm sudo base-devel &>> $INSTLOG &
 show_progress $!
 
 # Create a user for installing AUR
