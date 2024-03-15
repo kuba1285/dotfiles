@@ -1,25 +1,10 @@
 #!/bin/bash
 
-{{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "darwin")) }}
-cat << EOF >> ~/.bashrc
-export PATH="\$PATH:$HOME/bin"
-neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
-EOF
-{{ end }}
-
-cat << EOF >> ~/.bashrc
-TMOUT=900
-TRAPALRM() {
-MODELS=(\$(ls -d $HOME/bin/models/*))
-SEC=\`date +%S\`
-I=\$((SEC%\$(echo \${#MODELS[@]})+1))
-3d-ascii-viewer -z 120 \${MODELS[\$I]}
-}
-EOF
-
 {{ if eq .chezmoi.os "darwin" }}
 cat << EOF >> ~/.bashrc
+export PATH="\$PATH:$HOME/bin"
 bash $HOME/bin/change-wallpaper.sh
+neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
 EOF
 
 # yabai sudoers setting
@@ -28,7 +13,6 @@ echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut
 
 {{ if eq .chezmoi.os "linux" }}
 sed -i "1ibash $HOME/bin/change-wallpaper.sh" ~/.zshrc
-
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStartSec=90s/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStopSec=90s/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
@@ -70,4 +54,19 @@ Section "InputClass"
     Option "CoastingFriction" "50"
 EndSection
 EOF
+
+cat << EOF >> ~/.bashrc
+export PATH="\$PATH:$HOME/bin"
+neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
+EOF
 {{ end }}
+
+cat << EOF >> ~/.bashrc
+TMOUT=900
+TRAPALRM() {
+MODELS=(\$(ls -d $HOME/bin/models/*))
+SEC=\`date +%S\`
+I=\$((SEC%\$(echo \${#MODELS[@]})+1))
+3d-ascii-viewer -z 120 \${MODELS[\$I]}
+}
+EOF
