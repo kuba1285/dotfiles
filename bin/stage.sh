@@ -1,4 +1,4 @@
-#!/bin/bash
+#!{{ lookPath "bash" }}
 
 chmod +x ~/.config/polybar/scripts/*
 chmod +x ~/.config/hypr/scripts/*
