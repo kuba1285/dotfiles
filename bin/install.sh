@@ -81,7 +81,7 @@ sudo ln -s $HOME/ $HOME/$USER-ln
 
 {{ end }}
 
-{{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "android")) }}
+{{ if eq .chezmoi.os "android" }}
 
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
 echo user:user | chpasswd
@@ -90,6 +90,10 @@ ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 sed -i -e "/^ *#ja_JP.UTF-8 UTF-8/c\ja_JP.UTF-8 UTF-8" /etc/locale.gen
 locale-gen && echo "LANG=ja_JP.UTF-8" >> /etc/locale.conf
 sudo gpasswd -a $USER input
+
+{{ end }}
+
+{{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "android")) }}
 
 # Configure package manager
 echo -n "${CYAN}NOTE${RESET} - Configuering yay."
