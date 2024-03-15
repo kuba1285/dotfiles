@@ -149,7 +149,7 @@ show_progress $!
 
 # Copy and write Config Files
 echo -n "${CYAN}NOTE${RESET} - Setting configuration."
-cp -rT $PARENT/. ~/ &>> $INSTLOG &
+cp -rT $PARENT/. ~/
 source $BIN/write.sh &>> $INSTLOG &
 show_progress $!
 
