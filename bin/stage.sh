@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# make files exec
-chmod +x ~/.config/hypr/scripts/*
 chmod +x ~/.config/polybar/scripts/*
+chmod +x ~/.config/hypr/scripts/*
 
 # add VScode extensions
 mkdir ~/.vscode
