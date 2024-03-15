@@ -57,7 +57,7 @@ set_colors
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to start with the install?"
 if [[ $YN = y ]] ; then
     echo "${CYAN}NOTE${RESET} - Setup starting..."
-    sudo touch /tmp/hyprv.tmp
+    sudo touch /tmp/inst.tmp
 else
     exit
 fi
