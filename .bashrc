@@ -18,9 +18,6 @@ alias clear='paclear -s 5 -c yellow'
 
 ##### paths #####
 export PATH="$PATH:$HOME/bin"
-
-{{ if eq .chezmoi.os "android" }}
-
 export PATH="$PATH:/root/bin"
 export PATH="$PATH:/root/go/bin"
 export PATH="$PATH:/root/.local/bin"
