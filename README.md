@@ -13,7 +13,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/bin init --apply kuba1285
 ### macOS
 ```sh
 brew install chezmoi
-chezmoi init --apply johnmanjiro13
+chezmoi init --apply kuba1285
 ```
 
 * About Brewfile
