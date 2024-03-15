@@ -96,7 +96,7 @@ echo -n "${CYAN}NOTE${RESET} - Configuering yay."
 sudo -i -u user bash << EOF &
 cd &&
 git clone https://aur.archlinux.org/yay.git &&
-cd yay && makepkg -si --noconfirm &&
+cd yay && yes user | makepkg -si --noconfirm &&
 cd && rm -rf yay
 EOF
 show_progress $!
