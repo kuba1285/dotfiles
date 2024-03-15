@@ -1,6 +1,7 @@
+eval "$(starship init $(ps -p $$ -o ucomm=))"
+
 ##### functions #####
 function cheat() { curl "http://cheat.sh/$1"; }
-eval "$(starship init $(ps -p $$ -o ucomm=))"
 
 ##### aliases #####
 alias less='bat'
