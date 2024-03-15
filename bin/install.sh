@@ -158,7 +158,6 @@ for service in ${SERVICES[@]} ; do
     sleep 2
 done
 
-yay -R --noconfirm xfdesktop xfwm4-themes xdg-desktop-portal-gnome xdg-desktop-portal-gtk &>> $INSTLOG
 fc-cache -fv &>> $INSTLOG
 {{ end }}
 
