@@ -15,7 +15,6 @@ SERVICES=(
     mbpfan
 )
 
-# set some colors
 function set_colors() {
     if [ -t 1 ]; then
         RED=$(tput setaf 1); GREEN=$(tput setaf 2); YELLOW=$(tput setaf 3);
@@ -26,7 +25,6 @@ function set_colors() {
     fi
 }
 
-# function that would show a progress bar to the user
 function show_progress() {
     while ps | grep $1 &> /dev/null ; do
         spin='⣾⣷⣯⣟⡿⢿⣻⣽'
@@ -73,7 +71,7 @@ xcode-select --install &>> $INSTLOG
 show_progress $!
 
 # Install rosetta
-echo -n "${CYAN}NOTE${RESET} - Installing rosetta."
+echo -n "${CYAN}NOTE${RESET} - Installing Rosetta."
 sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license &>> $INSTLOG
 show_progress $!
 
@@ -83,7 +81,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/in
 show_progress $!
 
 # Homebrew path setting
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bashrc
 
 # Install app from Brewfile
 echo -n "${CYAN}NOTE${RESET} - Installing Brewfile app."
@@ -99,9 +97,9 @@ fi
 source $BIN/parse-plist
 
 # Generate misc file
-sudo ln -s /Users/$USER/Documents /Users/$USER/Documents-ln
-sudo ln -s /Users/$USER/Downloads /Users/$USER/Downloads-ln
-sudo ln -s /Users/$USER/ /Users/$USER/$USER-ln
+sudo ln -s $HOME/Documents $HOME/Documents-ln
+sudo ln -s $HOME/Downloads $HOME/Downloads-ln
+sudo ln -s $HOME/ $HOME/$USER-ln
 brew bundle dump --force
 parse-plist > parse-plist
 
