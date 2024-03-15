@@ -30,6 +30,8 @@ QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 EOF
 
+sed -i "1ibash ~/.config/polybar/scripts/change-wallpaper.sh" ~/.zshrc
+
 cat << EOF | sudo tee -a /etc/systemd/network/*.network
 IPv6PrivacyExtensions=true
 IgnoreCarrierLoss=3s
@@ -46,8 +48,6 @@ sed -i -e "/^\$script:downloadWorkDir = ''/c\$script:downloadWorkDir = '/tmp'" $
 sed -i -e "/^\$script:saveBaseDir = ''/c\$script:saveBaseDir = '/data/data/com.termux/files/home/storage/movies'" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:simplifiedValidation = \$false/c\$script:simplifiedValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:disableValidation = \$false/c\$script:disableValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
-
-sed -i "1ibash ~/.config/polybar/scripts/change-wallpaper.sh" ~/.zshrc
 
 cat << EOF | tee -a ~/.xsessionrc
 xinput set-prop 11 318 1
