@@ -2,7 +2,6 @@
 
 {{ if eq .chezmoi.os "darwin" }}
 cat << EOF >> ~/.bashrc
-export PATH="\$PATH:$HOME/bin"
 bash $HOME/bin/change-wallpaper.sh
 neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
 EOF
@@ -56,7 +55,6 @@ EndSection
 EOF
 
 cat << EOF >> ~/.bashrc
-export PATH="\$PATH:$HOME/bin"
 neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
 EOF
 {{ end }}
