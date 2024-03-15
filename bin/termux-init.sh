@@ -28,8 +28,4 @@ extra-keys = [ \\
 		]
 EOF
 termux-reload-settings
-
-useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
-echo user:user | chpasswd
-sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
 exit
