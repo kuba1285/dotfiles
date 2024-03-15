@@ -10,18 +10,23 @@ EOF
 # yabai sudoers setting
 echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
 
-# Write default
-source $BIN/parse-plist &
-show_progress $!
-
 # A bootplug to match the binary format so that yabai can inject code into the Dock of arm64 binaries.
 if [[ $(uname -m) == 'arm64' ]]; then
     sudo nvram boot-args=-arm64e_preview_abi
 fi
 
+# Generate misc file
+sudo ln -s $HOME/Documents $HOME/Documents-ln
+sudo ln -s $HOME/Downloads $HOME/Downloads-ln
+sudo ln -s $HOME/ $HOME/$USER-ln
+
 # Enable services
 yabai --start-service
 skhd --start-service
+
+# Write default
+source $BIN/parse-plist &
+show_progress $!
 
 {{ end }}
 
