@@ -74,14 +74,6 @@ echo -n "${CYAN}NOTE${RESET} - Installing Rosetta."
 sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license &>> $INSTLOG
 show_progress $!
 
-# Install homebrew
-echo -n "${CYAN}NOTE${RESET} - Installing Homebrew."
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &>> $INSTLOG
-show_progress $!
-
-# Homebrew path setting
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bashrc
-
 # Install app from Brewfile
 echo -n "${CYAN}NOTE${RESET} - Installing Brewfile app."
 brew bundle install --file $BIN/Brewfile &>> $INSTLOG
