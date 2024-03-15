@@ -102,43 +102,29 @@ echo "LANG=ja_JP.UTF-8" >> /etc/locale.conf
 echo -n "${CYAN}NOTE${RESET} - Now installing CLI for Xcode."
 xcode-select --install &>> $INSTLOG
 show_progress $!
-echo "${GREEN}OK${RESET} - Installed."
 
 # Install rosetta
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to install rosetta?"
-if [[ $YN = y ]] ; then
-    echo -n "${CYAN}NOTE${RESET} - Now installing rosetta."
-    sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license &>> $INSTLOG
-    show_progress $!
-    echo "${GREEN}OK${RESET} - Installed."
-fi
+echo -n "${CYAN}NOTE${RESET} - Now installing rosetta."
+sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license &>> $INSTLOG
+show_progress $!
 
 # Install homebrew
-if ! type brew &> /dev/null ; then
-    echo -n "${CYAN}NOTE${RESET} - Now installing Homebrew."
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &>> $INSTLOG
-    show_progress $!
-    echo "${GREEN}OK${RESET} - Installed."
+echo -n "${CYAN}NOTE${RESET} - Now installing Homebrew."
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" &>> $INSTLOG
+show_progress $!
 
-    # Homebrew path setting
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
-else
-    echo "${CYAN}NOTE${RESET} - Since Homebrew is already installed, skip this phase and proceed."
-fi
+# Homebrew path setting
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
 
 # Install app from Brewfile
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to install app from Brewfile?"
-if [[ $YN = y ]] ; then
-    echo -n "${CYAN}NOTE${RESET} - Now installing Brewfile app."
-    brew bundle install --file $BIN/Brewfile &>> $INSTLOG
-    show_progress $!
-    echo "${GREEN}OK${RESET} - Installed."
-fi
+echo -n "${CYAN}NOTE${RESET} - Now installing Brewfile app."
+brew bundle install --file $BIN/Brewfile &>> $INSTLOG
+show_progress $!
 
 # A bootplug to match the binary format so that yabai can inject code into the Dock of arm64 binaries.
 if [[ $(uname -m) == 'arm64' ]]; then
     sudo nvram boot-args=-arm64e_preview_abi
-    echo "${GREEN}OK${RESET} - A bootplug to match the binary format so that yabai can inject code into the Dock of arm64 binaries."
+    show_progress $!
 fi
 
 source $BIN/parse-plist
