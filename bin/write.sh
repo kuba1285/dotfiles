@@ -30,7 +30,7 @@ QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 EOF
 
-sed -i "1ibash ~/.config/polybar/scripts/change-wallpaper.sh" ~/.zshrc
+sed -i "1ibash $HOME/bin/change-wallpaper.sh" ~/.zshrc
 
 cat << EOF | sudo tee -a /etc/systemd/network/*.network
 IPv6PrivacyExtensions=true
