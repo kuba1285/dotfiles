@@ -19,11 +19,11 @@ export PATH="$PATH:/usr/local/bin/python3"
 export PATH="$PATH:/usr/local/opt/python@3.12/libexec/bin"
 {{ end }}
 
-##termux only##
+{{ if eq .chezmoi.os "android" }}
 cd $HOME/TVerRec*/unix/
 export PATH="$PATH:/root/bin"
 export PATH="$PATH:/root/go/bin"
 export PATH="$PATH:/root/.local/bin"
 fortune | pokemonsay
 neofetch --off
-##end##
+{{ end }}
