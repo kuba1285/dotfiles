@@ -11,6 +11,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/bin init --apply kuba1285
 ```
 ### macOS
 ```sh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install chezmoi
 chezmoi init --apply kuba1285
 ```
