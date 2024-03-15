@@ -34,6 +34,15 @@ show_progress $!
 
 sudo gpasswd -a $USER input
 
+# Setup Nvidia if found
+if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
+    install_list $LISTNVIDIA
+    sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
+    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
+    echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf &>> $INSTLOG
+    echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
+fi
+
 cat << EOF >> ~/.bashrc
 neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
 cd $HOME/TVerRec*/unix/
