@@ -4,7 +4,6 @@ cat << EOF >> ~/.zshrc
 export PATH="\$PATH:$HOME/bin"
 neowofetch --gap -30 --ascii \$(fortune -s | pokemonsay -w 30)"
 
-neofetch
 TMOUT=900
 TRAPALRM() {
 MODELS=(\$(ls -d $HOME/bin/models/*))
