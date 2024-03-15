@@ -25,6 +25,4 @@ cd $HOME/TVerRec*/unix/
 export PATH="$PATH:/root/bin"
 export PATH="$PATH:/root/go/bin"
 export PATH="$PATH:/root/.local/bin"
-fortune | pokemonsay
-neofetch --off
 {{ end }}
