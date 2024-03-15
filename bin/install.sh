@@ -101,7 +101,6 @@ show_progress $!
 # A bootplug to match the binary format so that yabai can inject code into the Dock of arm64 binaries.
 if [[ $(uname -m) == 'arm64' ]]; then
     sudo nvram boot-args=-arm64e_preview_abi
-    show_progress $!
 fi
 
 # Write default
