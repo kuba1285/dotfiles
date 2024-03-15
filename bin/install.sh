@@ -93,6 +93,7 @@ fi
 
 # Write default
 source $BIN/parse-plist
+show_progress $!
 
 # Generate misc file
 sudo ln -s $HOME/Documents $HOME/Documents-ln
