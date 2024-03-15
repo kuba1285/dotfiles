@@ -1,6 +1,6 @@
 source ~/.bashrc
 
-{{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "android")) }}
+{{ if eq .chezmoi.os "linux" }}
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
