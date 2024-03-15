@@ -114,7 +114,7 @@ fi
 # Write default
 source $BIN/parse-plist
 
-# Generate miscelenaeous file
+# Generate misc file
 sudo ln -s /Users/$USER/Documents /Users/$USER/Documents-ln
 sudo ln -s /Users/$USER/Downloads /Users/$USER/Downloads-ln
 sudo ln -s /Users/$USER/ /Users/$USER/$USER-ln
