@@ -99,10 +99,6 @@ show_progress $!
 sudo ln -s $HOME/Documents $HOME/Documents-ln
 sudo ln -s $HOME/Downloads $HOME/Downloads-ln
 sudo ln -s $HOME/ $HOME/$USER-ln
-
-# Enable services
-yabai --start-service
-skhd --start-service
 {{ end }}
 
 {{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "android")) }}
