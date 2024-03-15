@@ -34,6 +34,11 @@ show_progress $!
 
 sudo gpasswd -a $USER input
 
+cat << EOF >> ~/.bashrc
+neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
+cd $HOME/TVerRec*/unix/
+EOF
+
 # Setup Nvidia if found
 if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
     install_list $LISTNVIDIA
@@ -42,11 +47,6 @@ if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
     echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf &>> $INSTLOG
     echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
 fi
-
-cat << EOF >> ~/.bashrc
-neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
-cd $HOME/TVerRec*/unix/
-EOF
 
 sed -i "1ibash $HOME/bin/change-wallpaper.sh" ~/.zshrc
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
