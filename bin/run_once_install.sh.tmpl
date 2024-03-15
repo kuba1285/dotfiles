@@ -7,7 +7,13 @@ PARENT=$(cd $(dirname $0)/../; pwd)
 BIN=$(cd $(dirname $0); pwd)
 INSTLOG="$BIN/install.log"
 LISTAPP="$BIN/list-app"
-LISTNVIDIA="$BIN/list-nvidia"
+LISTNVIDIA=(
+    libva
+    libva-nvidia-driver-git
+    linux-headers
+    nvidia-dkms
+    nvidia-settings
+)
 SERVICES=(
     sddm
     bluetooth
