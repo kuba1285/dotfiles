@@ -94,7 +94,7 @@ locale-gen && echo "LANG=ja_JP.UTF-8" >> /etc/locale.conf
 
 # Configure package manager
 echo -n "${CYAN}NOTE${RESET} - Configuering yay."
-sudo -i -u user bash << EOF &
+sudo -i -u user bash << EOF &>> $INSTLOG &
 cd &&
 git clone https://aur.archlinux.org/yay.git &&
 cd yay && yes user | makepkg -si --noconfirm &&
