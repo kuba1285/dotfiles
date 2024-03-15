@@ -1,6 +1,7 @@
 #!/bin/bash
 
 {{ if eq .chezmoi.os "darwin" }}
+
 pipx install pywal
 pipx ensurepath
 
@@ -8,6 +9,7 @@ cd
 git clone https://github.com/Nellousan/px2ansi.git
 cd px2ansi
 pipx install .
+
 {{ end }}
 
 go install github.com/orangekame3/paclear@latest
