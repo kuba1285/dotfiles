@@ -5,7 +5,7 @@ yes | pkg install termux-api termux-exec fakeroot git tsu curl which proot proot
 yes | pkg install termux-x11-nightly
 proot-distro install archlinux
 
-grep -q "proot-distro" ~/.bashrc || echo "sleep 3 && proot-distro login archlinux --user root --shared-tmp" >> $HOME/.bashrc
+echo "sleep 3 && proot-distro login archlinux --user root --shared-tmp" >> $HOME/.bashrc
 touch .hushlogin
 
 mkdir -p ~/.shortcuts
