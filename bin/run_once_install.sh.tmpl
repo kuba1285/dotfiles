@@ -38,7 +38,7 @@ function show_progress() {
 function install_list() {
     while IFS= read -r app ; do
         echo -n "${CYAN}NOTE${RESET} - Now installing $app."
-        yay -S --noconfirm --needed $app
+        yay -S --noconfirm --needed $app &
         show_progress $!
     done < "$1"
 }
@@ -67,12 +67,12 @@ fi
 
 # Install rosetta
 echo -n "${CYAN}NOTE${RESET} - Installing Rosetta."
-sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license &>> $INSTLOG
+sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license &>> $INSTLOG &
 show_progress $!
 
 # Install app from Brewfile
 echo -n "${CYAN}NOTE${RESET} - Installing Brewfile app."
-brew bundle install --file $BIN/Brewfile &>> $INSTLOG
+brew bundle install --file $BIN/Brewfile &>> $INSTLOG &
 show_progress $!
 
 # Generate misc file
