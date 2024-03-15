@@ -21,7 +21,6 @@ export PATH="$PATH:/usr/local/opt/python@3.12/libexec/bin"
 {{ end }}
 
 {{ if eq .chezmoi.os "android" }}
-cd $HOME/TVerRec*/unix/
 export PATH="$PATH:/root/bin"
 export PATH="$PATH:/root/go/bin"
 export PATH="$PATH:/root/.local/bin"
