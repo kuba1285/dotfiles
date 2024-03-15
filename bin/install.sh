@@ -151,7 +151,7 @@ show_progress $!
 # Copy and write Config Files
 echo -n "${CYAN}NOTE${RESET} - Setting configuration."
 cp -rT $PARENT/. ~/
-source $BIN/write.sh &>> $INSTLOG &
+source $BIN/config.sh &>> $INSTLOG &
 show_progress $!
 
 chsh -s $(which zsh) $USER
