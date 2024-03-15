@@ -108,7 +108,7 @@ yabai --start-service
 skhd --start-service
 {{ end }}
 
-{{ if (or (eq .chezmoi.os "darwin") (eq .chezmoi.os "linux")) }}
+{{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "android")) }}
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
 echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
