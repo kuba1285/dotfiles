@@ -30,17 +30,6 @@ function set_colors() {
     fi
 }
 
-function show_progress() {
-    spin='⣾⣷⣯⣟⡿⢿⣻⣽'
-    while ps | grep $1 &> /dev/null ; do
-        i=$(( (i+1) %8 ))
-        printf "\r${spin:$i:1}"
-        sleep 0.1
-    done
-    echo "${GREEN}OK${RESET} - Done!"
-    sleep 2
-}
-
 function install_list() {
     while IFS= read -r app ; do
         yay -S --noconfirm --needed $app &>> $INSTLOG &
@@ -72,13 +61,11 @@ fi
 
 # Install rosetta
 echo "${CYAN}NOTE${RESET} - Installing Rosetta."
-sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license &>> $INSTLOG &
-show_progress $!
+sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license
 
 # Install app from Brewfile
 echo "${CYAN}NOTE${RESET} - Installing Brewfile app."
-brew bundle install --file $BIN/Brewfile &>> $INSTLOG &
-show_progress $!
+brew bundle install --file $BIN/Brewfile
 
 {{ end }}
 
@@ -87,7 +74,6 @@ show_progress $!
 # Install apps for AUR
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
 pacman -Syu --noconfirm sudo base-devel
-show_progress $!
 
 # Create user for AUR
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
@@ -96,23 +82,22 @@ sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=
 
 # Configure AUR
 echo "${CYAN}NOTE${RESET} - Configuering AUR."
-sudo -i -u user bash << EOF &>> $INSTLOG &
+sudo -i -u user bash << EOF
 cd &&
 git clone https://aur.archlinux.org/yay.git &&
 cd yay && yes user | makepkg -si --noconfirm &&
 cd && rm -rf yay
 EOF
-show_progress $!
 
 # Install listed pacakges
 echo "${CYAN}NOTE${RESET} - Installing apps from list."
 install_list $LISTAPP
-fc-cache -fv &>> $INSTLOG
+fc-cache -fv
 
 # Enable services
 echo "${CYAN}NOTE${RESET} - Enabling services."
 for service in ${SERVICES[@]} ; do
-    sudo systemctl enable $service --now &>> $INSTLOG
+    sudo systemctl enable $service --now
     sleep 2
 done
 
@@ -120,18 +105,15 @@ done
 
 # Install custom app
 echo "${CYAN}NOTE${RESET} - Installing custom app."
-source $BIN/custom.sh &>> $INSTLOG &
-show_progress $!
+source $BIN/custom.sh
 
 echo "${CYAN}NOTE${RESET} - Staging the files."
-source $BIN/stage.sh &>> $INSTLOG &
-show_progress $!
+source $BIN/stage.sh
 
 # Copy and write Config Files
 echo "${CYAN}NOTE${RESET} - Setting configuration."
 cp -rT $PARENT/. ~/
-source $BIN/config.sh &>> $INSTLOG &
-show_progress $!
+source $BIN/config.sh
 
 chsh -s $(which zsh) $USER
 echo "${GREEN}OK${RESET} - Script had completed!"
