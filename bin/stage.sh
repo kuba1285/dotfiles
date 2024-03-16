@@ -2,6 +2,8 @@
 
 chmod +x $HOME/.config/polybar/scripts/*
 chmod +x $HOME/.config/hypr/scripts/*
+chmod +x $HOME/bin/*
+
 yay -R --noconfirm xfdesktop xfwm4-themes
 
 # add VScode extensions
