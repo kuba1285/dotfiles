@@ -43,8 +43,6 @@ fi
 
 {{ if eq .chezmoi.os "linux" }}
 
-sudo gpasswd -a $USER input
-
 cat << EOF >> ~/.bashrc
 bash $HOME/bin/change-wallpaper.sh
 neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
