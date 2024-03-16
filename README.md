@@ -7,16 +7,13 @@ curl -s https://raw.githubusercontent.com/kuba1285/dotfiles/master/bin/termux-in
 ```
 ### Archlinux
 ```sh
-curl -fsLS get.chezmoi.io
-chezmoi init kuba1285
-chezmoi apply
+bash -c "$(curl -fsLS get.chezmoi.io)" && chezmoi apply
 ```
 ### macOS
 ```sh
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 brew install chezmoi
-chezmoi init kuba1285
-chezmoi apply
+bash -c "$(curl -fsLS get.chezmoi.io)" && chezmoi apply
 ```
 
 * About Brewfile
