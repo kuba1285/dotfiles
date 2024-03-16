@@ -69,7 +69,7 @@ brew bundle install --file $BIN/Brewfile
 
 # Install apps for AUR
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
-pacman -Syu --noconfirm wget sudo base-devel
+pacman -Syu --noconfirm wget sudo base-devel fontconfig
 
 # Create user for AUR
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
