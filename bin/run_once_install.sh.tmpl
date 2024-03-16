@@ -22,7 +22,6 @@ function install_list() {
         while IFS= read -r app ; do
             yay -S --noconfirm $app
         done < "$1"
-    fi
 }
 
 function wait_yn(){
