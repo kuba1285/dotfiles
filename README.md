@@ -7,7 +7,7 @@ curl -s https://raw.githubusercontent.com/kuba1285/dotfiles/master/bin/termux-in
 ```
 ### Archlinux
 ```sh
-sh -c "$(curl -fsLS get.chezmoi.io)"
+bash -c "$(curl -fsLS get.chezmoi.io)"
 chezmoi init kuba1285 && chezmoi apply
 ```
 ### macOS
