@@ -1,11 +1,5 @@
 #!{{ lookPath "bash" }}
 
-chmod +x $HOME/.config/polybar/scripts/*
-chmod +x $HOME/.config/hypr/scripts/*
-chmod +x $HOME/bin/*
-
-yay -R --noconfirm xfdesktop xfwm4-themes
-
 # add VScode extensions
 mkdir $HOME/.vscode
 tar -xf $HOME/src/extensions.tar.gz -C ~/.vscode/
