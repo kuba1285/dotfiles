@@ -1,11 +1,11 @@
 #!{{ lookPath "bash" }}
 
-chmod +x ~/.config/polybar/scripts/*
-chmod +x ~/.config/hypr/scripts/*
+chmod +x $HOME/.config/polybar/scripts/*
+chmod +x $HOME/.config/hypr/scripts/*
 yay -R --noconfirm xfdesktop xfwm4-themes
 
 # add VScode extensions
-mkdir ~/.vscode
+mkdir $HOME/.vscode
 tar -xf $HOME/src/extensions.tar.gz -C ~/.vscode/
 
 # Copy the SDDM theme
