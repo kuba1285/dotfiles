@@ -17,7 +17,7 @@
 	<name>Set as Theme</name>
 	<submenu></submenu>
 	<unique-id>1694723370824136-2</unique-id>
-	<command>python ~/.config/hypr/scripts/thunar_wall.py -i %f</command>
+	<command>python ~/.config/polybar/scripts/thunar_wall.py -i %f</command>
 	<description>Set as Wallpaper</description>
 	<range>*</range>
 	<patterns>*</patterns>
