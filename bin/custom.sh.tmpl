@@ -1,5 +1,8 @@
 #!{{ lookPath "bash" }}
 
+TVERREC_URL=https://github.com/dongaba/TVerRec/archive/refs/tags/v3.0.2.tar.gz
+ARCHIVE=$(basename $(echo $TVERREC_URL))
+
 {{ if eq .chezmoi.os "darwin" }}
 
 pipx install pywal
@@ -37,8 +40,8 @@ ln -s $HOME/powershell/pwsh /usr/bin/pwsh
 
 cd
 wget $TVERREC_URL
-tar xvzf $ARCHIVE_NAME
-rm $ARCHIVE_NAME
+tar xvzf $ARCHIVE
+rm $ARCHIVE
 
 cd $HOME/TVerRec*/conf/
 cp system_setting.ps1 user_setting.ps1
