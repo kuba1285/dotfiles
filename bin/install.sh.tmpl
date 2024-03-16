@@ -31,10 +31,12 @@ function set_colors() {
 }
 
 function show_progress() {
+    spin='⣾⣷⣯⣟⡿⢿⣻⣽'
     while ps | grep $1 &> /dev/null ; do
-        echo "."
-        sleep 2
-    done
+        i=$(( (i+1) %8 ))
+        printf "\r${spin:$i:1}"
+        sleep 0.1
+    done < "$1"
     echo "${GREEN}OK${RESET} - Done!"
     sleep 2
 }
