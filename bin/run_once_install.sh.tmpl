@@ -1,10 +1,11 @@
 #!{{ lookPath "bash" }}
 
+#PARENT=$(cd $(dirname $0)/../; pwd)
+#BIN=$(cd $(dirname $0); pwd)
+
 # Define variables
 TVERREC_URL=https://github.com/dongaba/TVerRec/archive/refs/tags/v3.0.2.tar.gz
 ARCHIVE_NAME=$(basename $(echo $TVERREC_URL))
-#PARENT=$(cd $(dirname $0)/../; pwd)
-#BIN=$(cd $(dirname $0); pwd)
 PARENT=$HOME
 BIN=$HOME/bin
 #LISTAPP="$BIN/list-app"
@@ -87,6 +88,7 @@ function wait_yn(){
 
 clear
 set_colors
+cd
 
 # give the user an option to exit
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to start with the install?"
