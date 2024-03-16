@@ -83,8 +83,12 @@ show_progress $!
 {{ if eq .chezmoi.os "linux" }}
 
 # Install apps for AUR
-echo "${CYAN}NOTE${RESET} - Updating pacman and install apps for AUR."
-pacman -Syu --noconfirm sudo base-devel &>> $INSTLOG &
+echo "${CYAN}NOTE${RESET} - Updating pacman."
+pacman -Syu --noconfirm &>> $INSTLOG &
+show_progress $!
+
+echo "${CYAN}NOTE${RESET} - Install apps for AUR."
+pacman -S sudo base-devel &>> $INSTLOG &
 show_progress $!
 
 # Create user for AUR
