@@ -122,6 +122,13 @@ for service in ${SERVICES[@]} ; do
     sleep 2
 done
 
+chmod +x $HOME/.config/polybar/scripts/*
+chmod +x $HOME/.config/hypr/scripts/*
+chmod +x $HOME/bin/*
+sudo gpasswd -a $USER input
+chsh -s $(which zsh) $USER
+yay -R --noconfirm xfdesktop xfwm4-themes
+
 {{ end }}
 
 # Install custom app
@@ -135,6 +142,4 @@ source $BIN/stage.sh
 echo "${CYAN}NOTE${RESET} - Setting configuration."
 source $BIN/config.sh
 
-chsh -s $(which zsh) $USER
-sudo gpasswd -a $USER input
 echo "${GREEN}OK${RESET} - Script had completed!"
