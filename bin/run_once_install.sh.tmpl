@@ -1,7 +1,7 @@
 #!{{ lookPath "bash" }}
 
 BIN=$HOME/bin
-LISTAPP=$(cat $BIN/list-termux)
+LISTAPP=$(cat "$BIN/list-termux" | xargs)
 SERVICES=(
     sddm
     bluetooth
