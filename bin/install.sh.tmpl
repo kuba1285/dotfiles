@@ -40,11 +40,10 @@ function show_progress() {
 }
 
 function install_list() {
-    while IFS= read -r app ; do
-        echo "${CYAN}NOTE${RESET} - Now installing $app."
-        yay -S --noconfirm --needed $app &>> $INSTLOG &
-        show_progress $!
-    done < "$1"
+        while IFS= read -r app ; do
+            yay -S --noconfirm --needed $app &>> $INSTLOG &
+            show_progress $!
+        done < "$1"
 }
 
 function wait_yn(){
