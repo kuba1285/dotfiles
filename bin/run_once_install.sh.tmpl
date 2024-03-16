@@ -1,5 +1,6 @@
 #!{{ lookPath "bash" }}
 
+LISTAPP="$BIN/list-termux"
 BIN=$HOME/bin
 SERVICES=(
     sddm
@@ -7,7 +8,6 @@ SERVICES=(
     tlp
     mbpfan
 )
-LISTAPP="$BIN/list-termux"
 
 function set_colors() {
     if [ -t 1 ] ; then
