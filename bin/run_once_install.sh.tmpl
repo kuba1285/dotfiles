@@ -8,47 +8,7 @@ TVERREC_URL=https://github.com/dongaba/TVerRec/archive/refs/tags/v3.0.2.tar.gz
 ARCHIVE_NAME=$(basename $(echo $TVERREC_URL))
 PARENT=$HOME
 BIN=$HOME/bin
-#LISTAPP="$BIN/list-app"
-LISTAPP=(
-base-devel
-bat
-bspwm
-cowfortune
-eza
-fakeroot
-fcitx5-im
-fcitx5-mozc
-feh
-git
-git-delta
-github-cli
-go
-kitty
-libuv
-lightdm
-neofetch
-networkmanager
-noto-fonts-cjk
-noto-fonts-emoji
-openssh
-picom
-plank
-pulseaudio
-python3
-starship
-ttf-icomoon-feather
-ttf-jetbrains-mono-nerd
-wget
-xclip
-xfce4
-xfce4-goodies
-xorg
-xorg-server
-zsh
-zsh-autosuggestions
-zsh-completions
-zsh-syntax-highlighting
-)
+LISTAPP="$BIN/list-app"
 LISTNVIDIA=(
     libva
     libva-nvidia-driver-git
@@ -115,7 +75,7 @@ brew bundle install --file $BIN/Brewfile
 
 # Install apps for AUR
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
-pacman -Syu --noconfirm sudo base-devel
+pacman -Syu --noconfirm wget sudo base-devel
 
 # Create user for AUR
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user
