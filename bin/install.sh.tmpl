@@ -32,10 +32,8 @@ function set_colors() {
 
 function show_progress() {
     while ps | grep $1 &> /dev/null ; do
-        spin='⣾⣷⣯⣟⡿⢿⣻⣽'
-        i=$(( (i+1) %8 ))
-        printf "\r${spin:$i:1}"
-        sleep 0.1
+        echo "."
+        sleep 2
     done
     echo "${GREEN}OK${RESET} - Done!"
     sleep 2
@@ -43,7 +41,7 @@ function show_progress() {
 
 function install_list() {
     while IFS= read -r app ; do
-        echo -n "${CYAN}NOTE${RESET} - Now installing $app."
+        echo "${CYAN}NOTE${RESET} - Now installing $app."
         yay -S --noconfirm --needed $app &>> $INSTLOG &
         show_progress $!
     done < "$1"
