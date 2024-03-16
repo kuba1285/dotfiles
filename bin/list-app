@@ -45,10 +45,9 @@ pipewire
 polkit-gnome 
 polybar
 python-pyamdgpuinfo
+python-pywal
 python-pywalfox
-python-pywayland
 python-requests 
-pywal-git
 qt5-base 
 qt5-graphicaleffects
 qt5-quickcontrols2
