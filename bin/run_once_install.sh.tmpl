@@ -152,7 +152,6 @@ source $BIN/stage.sh
 
 # Copy and write Config Files
 echo "${CYAN}NOTE${RESET} - Setting configuration."
-cp -rT $PARENT/. ~/
 source $BIN/config.sh
 
 chsh -s $(which zsh) $USER
