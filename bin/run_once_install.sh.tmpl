@@ -32,12 +32,6 @@ function set_colors() {
     fi
 }
 
-function install_list() {
-    while IFS= read -r app ; do
-        yay -S --noconfirm --needed $app
-    done < "$1"
-}
-
 function wait_yn(){
     YN="xxx"
     while [ $YN != 'y' ] && [ $YN != 'n' ] ; do
@@ -93,7 +87,9 @@ EOF
 
 # Install listed pacakges
 echo "${CYAN}NOTE${RESET} - Installing apps from list."
-install_list $LISTAPP
+for app in ${LISTAPP[@]} ; do
+    yay -S --noconfirm --needed $app
+done
 fc-cache -fv
 
 # Enable services
