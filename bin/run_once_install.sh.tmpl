@@ -1,13 +1,13 @@
 #!{{ lookPath "bash" }}
 
 BIN=$HOME/bin
-LISTAPP="$BIN/list-app"
 SERVICES=(
     sddm
     bluetooth
     tlp
     mbpfan
 )
+LISTAPP="$BIN/list-app"
 
 function set_colors() {
     if [ -t 1 ] ; then
