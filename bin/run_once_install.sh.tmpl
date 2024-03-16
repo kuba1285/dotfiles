@@ -1,46 +1,7 @@
 #!{{ lookPath "bash" }}
 
 BIN=$HOME/bin
-LISTAPP=(
-bat
-bspwm
-cowfortune
-eza
-fakeroot
-fcitx5-im
-fcitx5-mozc
-feh
-git
-git-delta
-github-cli
-go
-hyfetch
-kitty
-libuv
-lightdm
-neofetch
-networkmanager
-noto-fonts-cjk
-noto-fonts-emoji
-openssh
-picom
-plank
-pulseaudio
-python-pywal
-python3
-starship
-ttf-icomoon-feather
-ttf-jetbrains-mono-nerd
-xclip
-xfce4
-xfce4-goodies
-xorg
-xorg-server
-zsh
-zsh-autosuggestions
-zsh-completions
-zsh-syntax-highlighting
-)
+LISTAPP=$BIN/list-app
 SERVICES=(
 sddm
 bluetooth
@@ -54,6 +15,13 @@ function set_colors() {
         CYAN=$(tput setaf 6); BOLD=$(tput bold); RESET=$(tput sgr0)
     else
         RED=""; GREEN=""; YELLOW=""; CYAN=""; BOLD=""; RESET=""
+    fi
+}
+
+function install_list() {
+        while IFS= read -r app ; do
+            yay -S --noconfirm $app
+        done < "$1"
     fi
 }
 
@@ -110,9 +78,7 @@ EOF
 
 # Install listed pacakges
 echo "${CYAN}NOTE${RESET} - Installing apps from list."
-for app in ${LISTAPP[@]} ; do
-    yay -S --noconfirm --needed $app
-done
+install_list $LISTAPP
 fc-cache -fv
 
 # Enable services
