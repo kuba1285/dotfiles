@@ -136,4 +136,5 @@ echo "${CYAN}NOTE${RESET} - Setting configuration."
 source $BIN/config.sh
 
 chsh -s $(which zsh) $USER
+sudo gpasswd -a $USER input
 echo "${GREEN}OK${RESET} - Script had completed!"
