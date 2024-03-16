@@ -1,12 +1,51 @@
 #!{{ lookPath "bash" }}
 
 BIN=$HOME/bin
-LISTAPP=$(cat $BIN/list-termux)
+LISTAPP=(
+bat
+bspwm
+cowfortune
+eza
+fakeroot
+fcitx5-im
+fcitx5-mozc
+feh
+git
+git-delta
+github-cli
+go
+hyfetch
+kitty
+libuv
+lightdm
+neofetch
+networkmanager
+noto-fonts-cjk
+noto-fonts-emoji
+openssh
+picom
+plank
+pulseaudio
+python-pywal
+python3
+starship
+ttf-icomoon-feather
+ttf-jetbrains-mono-nerd
+xclip
+xfce4
+xfce4-goodies
+xorg
+xorg-server
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting
+)
 SERVICES=(
-    sddm
-    bluetooth
-    tlp
-    mbpfan
+sddm
+bluetooth
+tlp
+mbpfan
 )
 
 function set_colors() {
