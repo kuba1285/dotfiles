@@ -72,8 +72,7 @@ function set_colors() {
 
 function install_list() {
     while IFS= read -r app ; do
-        yay -S --noconfirm --needed $app &>> $INSTLOG &
-        show_progress $!
+        yay -S --noconfirm --needed $app
     done < "$1"
 }
 
