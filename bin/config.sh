@@ -33,7 +33,11 @@ yabai --start-service
 skhd --start-service
 
 # Write default
-source $BIN/parse-plist
+wait_yn "${YELLOW}ACITION${RESET} - Would you like to write default?"
+if [[ $YN = y ]] ; then
+    echo "${CYAN}NOTE${RESET} - Writing default."
+    source $BIN/parse-plist
+fi
 
 {{ end }}
 
