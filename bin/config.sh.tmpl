@@ -1,5 +1,13 @@
 #!{{ lookPath "bash" }}
 
+LISTNVIDIA=(
+    libva
+    libva-nvidia-driver-git
+    linux-headers
+    nvidia-dkms
+    nvidia-settings
+)
+
 {{ if eq .chezmoi.os "darwin" }}
 
 cat << EOF >> ~/.bashrc
