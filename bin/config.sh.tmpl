@@ -23,15 +23,6 @@ if [[ $(uname -m) == 'arm64' ]]; then
     sudo nvram boot-args=-arm64e_preview_abi
 fi
 
-# Generate misc file
-sudo ln -s $HOME/Documents $HOME/Documents-ln
-sudo ln -s $HOME/Downloads $HOME/Downloads-ln
-sudo ln -s $HOME/ $HOME/$USER-ln
-
-# Enable services
-yabai --start-service
-skhd --start-service
-
 # Write default
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to write default?"
 if [[ $YN = y ]] ; then
@@ -39,6 +30,14 @@ if [[ $YN = y ]] ; then
     source $BIN/parse-plist
 fi
 
+# Enable services
+yabai --start-service
+skhd --start-service
+
+# Generate misc file
+sudo ln -s $HOME/Documents $HOME/Documents-ln
+sudo ln -s $HOME/Downloads $HOME/Downloads-ln
+sudo ln -s $HOME/ $HOME/$USER-ln
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
@@ -73,15 +72,15 @@ sed -i -e "/^\$script:saveBaseDir = ''/c\$script:saveBaseDir = '/data/data/com.t
 sed -i -e "/^\$script:simplifiedValidation = \$false/c\$script:simplifiedValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:disableValidation = \$false/c\$script:disableValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
 
+cat << EOF | sudo tee -a /etc/systemd/network/*.network
+IPv6PrivacyExtensions=true
+IgnoreCarrierLoss=3s
+EOF
+
 cat << EOF | sudo tee -a /etc/environment
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
-EOF
-
-cat << EOF | sudo tee -a /etc/systemd/network/*.network
-IPv6PrivacyExtensions=true
-IgnoreCarrierLoss=3s
 EOF
 
 cat << EOF | tee -a ~/.xsessionrc
