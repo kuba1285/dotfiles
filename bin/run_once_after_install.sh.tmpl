@@ -63,6 +63,10 @@ brew bundle install --file $BIN/Brewfile
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
 pacman-mirrors --fasttrack && pacman -Syyu --noconfirm --needed wget aria2 sudo base-devel fontconfig
 
+sudo sed -i -e "/^\[options\]/c\\[options\]\n\XferCommand = \/usr\/bin\/aria2c --allow-overwrite=true --continue=true \
+--file-allocation=none --log-level=error \--max-tries=2 --max-connection-per-server=2 --max-file-not-found=5 \
+--min-split-size=5M --no-conf --remote-time=true --summary-interval=60 --timeout=5 --dir=\/ --out %o %u" /etc/pacman.conf
+
 # Create user for AUR
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user && echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
