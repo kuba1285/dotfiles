@@ -1,13 +1,5 @@
 #!{{ lookPath "bash" }}
 
-LISTNVIDIA=(
-    libva
-    libva-nvidia-driver-git
-    linux-headers
-    nvidia-dkms
-    nvidia-settings
-)
-
 cat << EOF >> ~/.bashrc
 bash $HOME/bin/change-wallpaper.sh
 neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
@@ -41,6 +33,14 @@ sudo ln -s $HOME/ $HOME/$USER-ln
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
+
+LISTNVIDIA=(
+    libva
+    libva-nvidia-driver-git
+    linux-headers
+    nvidia-dkms
+    nvidia-settings
+)
 
 mkdir -r $HOME/Documents $HOME/Downloads $HOME/Pictures
 chmod +x $HOME/.config/polybar/scripts/*
