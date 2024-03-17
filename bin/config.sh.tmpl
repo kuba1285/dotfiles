@@ -37,14 +37,14 @@ if [[ $YN = y ]] ; then
     source $BIN/parse-plist
 fi
 
-# Enable services
-yabai --start-service
-skhd --start-service
-
 # Generate misc file
 sudo ln -s $HOME/Documents $HOME/Documents-ln
 sudo ln -s $HOME/Downloads $HOME/Downloads-ln
 sudo ln -s $HOME/ $HOME/$USER-ln
+
+# Enable services
+yabai --start-service
+skhd --start-service
 
 {{ end }}
 
