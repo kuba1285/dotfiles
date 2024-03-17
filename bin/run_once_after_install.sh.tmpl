@@ -83,6 +83,13 @@ echo "${CYAN}NOTE${RESET} - Installing apps from list."
 install_list $LISTAPP
 fc-cache -fv
 
+# Install MBP audio driver
+if aplay --list-device | grep CS8409 >/dev/null ; then
+    cd
+    git clone https://github.com/davidjo/snd_hda_macbookpro.git
+    cd snd_hda_macbookpro/ && sudo ./install.cirrus.driver.sh
+fi
+
 # Enable services
 echo "${CYAN}NOTE${RESET} - Enabling services."
 for service in ${SERVICES[@]} ; do
