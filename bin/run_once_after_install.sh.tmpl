@@ -1,6 +1,6 @@
 #!{{ lookPath "bash" }}
 
-CORES=$(($(lscpu | grep 'CPU(s):' | rev | cut -d ' ' -f 1)+1))
+CORES=$(($(nproc)+1))
 BIN=$HOME/bin
 LISTAPP="$BIN/list-app"
 SERVICES=(
