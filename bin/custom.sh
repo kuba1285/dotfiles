@@ -18,7 +18,7 @@ pipx install .
 {{ if eq .chezmoi.os "linux" }}
 
 # Install MBP audio driver
-if aplay --list-device | grep CS8409 ; then
+if aplay --list-device | grep CS8409 >/dev/null ; then
     cd
     git clone https://github.com/davidjo/snd_hda_macbookpro.git
     cd snd_hda_macbookpro/ && sudo ./install.cirrus.driver.sh
