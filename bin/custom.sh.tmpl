@@ -43,10 +43,7 @@ tar xvzf powershell-7.2.13-linux-arm64.tar.gz
 ln -s $HOME/powershell/pwsh /usr/bin/pwsh
 
 cd
-wget $TVERREC_URL
-tar xvzf $ARCHIVE
-rm $ARCHIVE
-
+wget $TVERREC_URL && tar xvzf $ARCHIVE && rm $ARCHIVE
 cd $HOME/TVerRec*/conf/
 cp system_setting.ps1 user_setting.ps1
 cp $HOME/src/keyword.conf > keyword.conf
