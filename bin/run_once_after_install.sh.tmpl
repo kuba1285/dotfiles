@@ -62,7 +62,7 @@ brew bundle install --file $BIN/Brewfile
 
 # Install apps for AUR
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
-pacman -Syyu --noconfirm wget sudo base-devel fontconfig pacman-mirrors
+pacman -Syyu --noconfirm wget sudo base-devel fontconfig
 pacman-mirrors --fasttrack
 
 # Config for AUR
