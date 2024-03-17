@@ -1,5 +1,11 @@
 #!{{ lookPath "bash" }}
 
+# Write run commands
+cat << EOF >> ~/.bashrc
+bash $HOME/bin/change-wallpaper.sh
+neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
+EOF
+
 {{ if eq .chezmoi.os "darwin" }}
 
 # yabai sudoers setting
@@ -44,15 +50,14 @@ if [ -d /data/data/com.termux/files/home/storage/movies ] ; then
 fi
 
 mkdir -r $HOME/Documents $HOME/Downloads $HOME/Pictures
-chmod +x $HOME/.config/polybar/scripts/*
-chmod +x $HOME/bin/*
+chmod +x $HOME/.config/polybar/scripts/* $HOME/bin/*
 sudo gpasswd -a $USER input
 chsh -s $(which zsh) $USER
 
-sudo sed -i -e "/^ *#DefaultTimeoutStartSec=90s/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
-sudo sed -i -e "/^ *#DefaultTimeoutStopSec=90s/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
 sudo sed -i -e '/^ *exec -a/c\exec -a "$0" "$HERE/chrome" "$@" --gtk-version=4 --ozone-platform-hint=auto --enable-gpu-rasterization --enable-zero-copy \
 --enable-features=TouchpadOverscrollHistoryNavigation --disable-smooth-scrolling --enable-fluent-scrollbars' /opt/google/chrome/google-chrome
+sudo sed -i -e "/^ *#DefaultTimeoutStartSec=90s/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
+sudo sed -i -e "/^ *#DefaultTimeoutStopSec=90s/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
 
 # TverRec settings
 sed -i -e "/^\$script:downloadBaseDir = ''/c\$script:downloadBaseDir = '$DLDIR'" $HOME/TVerRec*/conf/user_setting.ps1
@@ -103,8 +108,3 @@ if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
 fi
 
 {{ end }}
-
-cat << EOF >> ~/.bashrc
-bash $HOME/bin/change-wallpaper.sh
-neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
-EOF
