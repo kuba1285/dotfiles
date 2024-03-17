@@ -76,6 +76,8 @@ wireplumber
 xclip
 xdotool
 xfce4-settings
+xorg
+xorg-server
 xorg-xinput
 zsh
 zsh-autosuggestions
