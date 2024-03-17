@@ -95,10 +95,8 @@ done
 echo "${CYAN}NOTE${RESET} - Installing custom app."
 source $BIN/custom.sh
 
-echo "${CYAN}NOTE${RESET} - Staging the files."
-source $BIN/stage.sh
-
 echo "${CYAN}NOTE${RESET} - Setting configuration."
+source $BIN/stage.sh
 source $BIN/config.sh
 
 echo "${GREEN}OK${RESET} - Script had completed!"
