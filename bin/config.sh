@@ -16,9 +16,9 @@ if [[ $(uname -m) == 'arm64' ]]; then
 fi
 
 # Write default
-wait_yn "${YELLOW}ACITION${RESET} - Would you like to write default?"
+wait_yn "${YELLOW}ACITION${RESET} - Would you like to do write-default?"
 if [[ $YN = y ]] ; then
-    echo "${CYAN}NOTE${RESET} - Writing default."
+    echo "${CYAN}NOTE${RESET} - Doing write-default."
     source $BIN/parse-plist
 fi
 
