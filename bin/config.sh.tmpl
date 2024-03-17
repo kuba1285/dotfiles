@@ -77,6 +77,7 @@ QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 EOF
 
+# X11 settings
 cat << EOF | tee -a ~/.xsessionrc
 xinput set-prop 11 318 1
 xinput --set-prop "Apple SPI Touchpad" "Coordinate Transformation Matrix" 3 0 0 0 3 0 0 0 1
