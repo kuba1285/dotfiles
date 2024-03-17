@@ -36,13 +36,6 @@ sudo ln -s $HOME/ $HOME/$USER-ln
 
 {{ if eq .chezmoi.os "linux" }}
 
-LISTNVIDIA=(
-    libva
-    libva-nvidia-driver-git
-    linux-headers
-    nvidia-dkms
-    nvidia-settings
-)
 DLDIR="$HOME/Downloads"
 
 if [ -d /data/data/com.termux/files/home/storage/movies ] ; then
@@ -96,16 +89,5 @@ Section "InputClass"
     Option "CoastingFriction" "50"
 EndSection
 EOF
-
-# Setup Nvidia if found
-if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
-    for app in ${LISTNVIDIA[@]} ; do
-        yay -S --noconfirm --needed $app
-    done
-    sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
-    echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
-    echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
-fi
 
 {{ end }}
