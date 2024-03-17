@@ -100,14 +100,12 @@ chsh -s $(which zsh) $USER
 
 {{ end }}
 
-# Install custom app
 echo "${CYAN}NOTE${RESET} - Installing custom app."
 source $BIN/custom.sh
 
 echo "${CYAN}NOTE${RESET} - Staging the files."
 source $BIN/stage.sh
 
-# Copy and write Config Files
 echo "${CYAN}NOTE${RESET} - Setting configuration."
 source $BIN/config.sh
 
