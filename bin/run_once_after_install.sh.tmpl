@@ -92,12 +92,6 @@ for service in ${SERVICES[@]} ; do
     sleep 2
 done
 
-chmod +x $HOME/.config/polybar/scripts/*
-chmod +x $HOME/.config/hypr/scripts/*
-chmod +x $HOME/bin/*
-sudo gpasswd -a $USER input
-chsh -s $(which zsh) $USER
-
 {{ end }}
 
 echo "${CYAN}NOTE${RESET} - Installing custom app."
