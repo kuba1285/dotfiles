@@ -3,6 +3,13 @@
 CORES=$(($(nproc)+1))
 BIN=$HOME/bin
 LISTAPP="$BIN/list-app"
+LISTNVIDIA=(
+    libva
+    libva-nvidia-driver-git
+    linux-headers
+    nvidia-dkms
+    nvidia-settings
+)
 SERVICES=(
     sddm
     bluetooth
@@ -79,6 +86,17 @@ EOF
 echo "${CYAN}NOTE${RESET} - Installing apps from list."
 install_list $LISTAPP
 fc-cache -fv
+
+# Setup Nvidia if found
+if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
+    for app in ${LISTNVIDIA[@]} ; do
+        yay -S --noconfirm --needed $app
+    done
+    sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
+    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
+    echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
+    echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
+fi
 
 # Install MBP audio driver
 if aplay --list-device | grep CS8409 >/dev/null ; then
