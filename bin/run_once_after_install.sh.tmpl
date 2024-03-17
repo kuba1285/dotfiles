@@ -83,7 +83,7 @@ fc-cache -fv
 # Enable services
 echo "${CYAN}NOTE${RESET} - Enabling services."
 for service in ${SERVICES[@]} ; do
-    sudo systemctl enable $service --now
+    sudo systemctl enable $service
     sleep 2
 done
 
@@ -92,7 +92,6 @@ chmod +x $HOME/.config/hypr/scripts/*
 chmod +x $HOME/bin/*
 sudo gpasswd -a $USER input
 chsh -s $(which zsh) $USER
-yay -R --noconfirm xfdesktop xfwm4-themes
 
 {{ end }}
 
