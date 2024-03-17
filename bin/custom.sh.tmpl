@@ -15,6 +15,8 @@ pipx install .
 
 {{ end }}
 
+{{ if eq .chezmoi.os "linux" }}
+
 # Install MBP audio driver
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to install MBP audio driver?"
 if [[ $YN = y ]] ; then
@@ -24,6 +26,8 @@ if [[ $YN = y ]] ; then
     sudo ./install.cirrus.driver.sh
     cd
 fi
+
+{{ end }}
 
 go install github.com/orangekame3/paclear@latest
 
