@@ -43,6 +43,10 @@ LISTNVIDIA=(
 )
 DLDIR="$HOME/Downloads"
 
+if [ -d /data/data/com.termux/files/home/storage/movies ] ; then
+    DLDIR="/data/data/com.termux/files/home/storage/movies"
+fi
+
 mkdir -r $HOME/Documents $HOME/Downloads $HOME/Pictures
 chmod +x $HOME/.config/polybar/scripts/*
 chmod +x $HOME/bin/*
