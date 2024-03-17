@@ -1,5 +1,6 @@
 #!{{ lookPath "bash" }}
 
+CORES=$(($(lscpu | grep 'CPU(s):' | rev | cut -d ' ' -f 1)+1))
 BIN=$HOME/bin
 LISTAPP="$BIN/list-app"
 SERVICES=(
@@ -63,6 +64,9 @@ brew bundle install --file $BIN/Brewfile
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
 sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
+sudo sed -i "/#MAKEFLAGS/s/2/$CORES/" /etc/makepkg.conf
+sudo sed -i '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
+
 pacman-mirrors --fasttrack && pacman -Syyu --noconfirm --needed wget sudo base-devel fontconfig
 
 # Create user for AUR
