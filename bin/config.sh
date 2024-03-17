@@ -70,9 +70,9 @@ sudo sed -i -e '/^ *exec -a/c\exec -a "$0" "$HERE/chrome" "$@" --gtk-version=4 -
 --enable-features=TouchpadOverscrollHistoryNavigation --disable-smooth-scrolling --enable-fluent-scrollbars' /opt/google/chrome/google-chrome
 
 # TverRec settings
-sed -i -e "/^\$script:downloadBaseDir = ''/c\$script:downloadBaseDir = '/data/data/com.termux/files/home/storage/movies'" $HOME/TVerRec*/conf/user_setting.ps1
+sed -i -e "/^\$script:downloadBaseDir = ''/c\$script:downloadBaseDir = '$DLDIR'" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:downloadWorkDir = ''/c\$script:downloadWorkDir = '/tmp'" $HOME/TVerRec*/conf/user_setting.ps1
-sed -i -e "/^\$script:saveBaseDir = ''/c\$script:saveBaseDir = '/data/data/com.termux/files/home/storage/movies'" $HOME/TVerRec*/conf/user_setting.ps1
+sed -i -e "/^\$script:saveBaseDir = ''/c\$script:saveBaseDir = '$DLDIR'" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:simplifiedValidation = \$false/c\$script:simplifiedValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:disableValidation = \$false/c\$script:disableValidation = \$true" $HOME/TVerRec*/conf/user_setting.ps1
 
