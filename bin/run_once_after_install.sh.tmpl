@@ -62,8 +62,7 @@ brew bundle install --file $BIN/Brewfile
 
 # Install apps for AUR
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
-pacman -Syyu --noconfirm reflector wget sudo base-devel fontconfig
-reflector --country 'Japan' --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+pacman -Syyu --noconfirm --needed wget sudo base-devel fontconfig
 
 # Config for AUR
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user && echo user:user | chpasswd
