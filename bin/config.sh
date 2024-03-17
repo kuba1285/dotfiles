@@ -49,17 +49,6 @@ chmod +x $HOME/bin/*
 sudo gpasswd -a $USER input
 chsh -s $(which zsh) $USER
 
-# Setup Nvidia if found
-if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
-    for app in ${LISTNVIDIA[@]} ; do
-        yay -S --noconfirm --needed $app
-    done
-    sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
-    echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
-    echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
-fi
-
 sudo sed -i -e "/^ *#DefaultTimeoutStartSec=90s/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStopSec=90s/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
 sudo sed -i -e '/^ *exec -a/c\exec -a "$0" "$HERE/chrome" "$@" --gtk-version=4 --ozone-platform-hint=auto --enable-gpu-rasterization --enable-zero-copy \
@@ -102,9 +91,20 @@ Section "InputClass"
 EndSection
 EOF
 
+# Setup Nvidia if found
+if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
+    for app in ${LISTNVIDIA[@]} ; do
+        yay -S --noconfirm --needed $app
+    done
+    sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
+    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
+    echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
+    echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
+fi
+
+{{ end }}
+
 cat << EOF >> ~/.bashrc
 bash $HOME/bin/change-wallpaper.sh
 neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
 EOF
-
-{{ end }}
