@@ -30,6 +30,7 @@ skhd --start-service
 sudo ln -s $HOME/Documents $HOME/Documents-ln
 sudo ln -s $HOME/Downloads $HOME/Downloads-ln
 sudo ln -s $HOME/ $HOME/$USER-ln
+
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
