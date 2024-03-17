@@ -1,10 +1,5 @@
 #!{{ lookPath "bash" }}
 
-cat << EOF >> ~/.bashrc
-bash $HOME/bin/change-wallpaper.sh
-neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
-EOF
-
 {{ if eq .chezmoi.os "darwin" }}
 
 # yabai sudoers setting
@@ -107,6 +102,9 @@ Section "InputClass"
 EndSection
 EOF
 
-
+cat << EOF >> ~/.bashrc
+bash $HOME/bin/change-wallpaper.sh
+neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
+EOF
 
 {{ end }}
