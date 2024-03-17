@@ -23,11 +23,11 @@ if [[ $YN = y ]] ; then
     cd
     git clone https://github.com/davidjo/snd_hda_macbookpro.git
     cd snd_hda_macbookpro/ && sudo ./install.cirrus.driver.sh
-    cd
 fi
 
 {{ end }}
 
+cd
 go install github.com/orangekame3/paclear@latest
 
 cd
