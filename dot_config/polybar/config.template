@@ -29,6 +29,9 @@ disabled = ${wal.color8}
 [wm]
 name = bspwm
 
+[settings]
+pseudo-transparency = false
+
 ######################################################
 [bar/first]
 width = 18%
