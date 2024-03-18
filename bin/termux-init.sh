@@ -4,6 +4,7 @@ yes | pkg install termux-keyring termux-api tsu termux-exec fakeroot git curl wh
 proot-distro install archlinux
 
 touch ~/.hushlogin
+
 cat << EOF >> $HOME/.bashrc
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 pacmd load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
