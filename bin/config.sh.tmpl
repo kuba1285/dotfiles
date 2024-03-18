@@ -90,7 +90,7 @@ chmod +x $HOME/.config/polybar/scripts/* $HOME/bin/*
 sudo gpasswd -a $USER input
 chsh -s $(which zsh) $USER
 
-mkdir -p ~/.vnc/passwd
-vncpasswd
+mkdir -p $HOME/.vnc/
+vncpasswd $HOME/.vnc/passwd
 
 {{ end }}
