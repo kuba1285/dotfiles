@@ -86,6 +86,7 @@ Section "InputClass"
 EndSection
 EOF
 
+mkdir -p ~/.vnc/passwd
 chmod +x $HOME/.config/polybar/scripts/* $HOME/bin/*
 sudo gpasswd -a $USER input
 chsh -s $(which zsh) $USER
