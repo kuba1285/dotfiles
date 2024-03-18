@@ -30,7 +30,7 @@ disabled = ${wal.color8}
 name = bspwm
 
 [settings]
-pseudo-transparency = false
+pseudo-transparency = true
 
 ######################################################
 [bar/first]
