@@ -4,7 +4,7 @@ import os
 import random
 
 # full path to your wallpaper folder
-wallpath = os.path.expanduser("~/.config/swww")
+wallpath = os.path.expanduser("~/Pictures")
 
 
 def change_wallpaper(folder_path):
@@ -26,11 +26,9 @@ def change_wallpaper(folder_path):
     # Generarte Pywal colorscheme
     os.system(f'wal -i {image_path}')
     #generate wallpaper.rofi 
-    os.system(f'cp {image_path} ~/.config/swww/wallpaper.rofi')
+    os.system(f'cp {image_path} ~/Pictures/wallpaper.rofi')
     # cava
     os.system(f'cp ~/.cache/wal/colors-cava ~/.config/cava/config')  
-    # hyprland
-    os.system(f'cp ~/.cache/wal/colors-hyprland.conf ~/.config/hypr/colors-hyprland.conf')
     # waybar
     os.system(f'cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/')  
     # kitty 
