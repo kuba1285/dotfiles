@@ -12,7 +12,7 @@ image_path = args["image"]
     # Generarte Pywal colorscheme
     os.system(f'wal -i {image_path}')
     #generate wallpaper.rofi 
-    os.system(f'cp {image_path} ~/.config/swww/wallpaper.rofi')
+    os.system(f'cp {image_path} ~/Pictures/wallpaper.rofi')
     # cava
     os.system(f'cp ~/.cache/wal/colors-cava ~/.config/cava/config')  
     # hyprland
