@@ -99,7 +99,7 @@ if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
     echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
 fi
 
-# Install MBP audio driver
+# Install MBP audio driver if CS8409 found
 if aplay --list-device | grep CS8409 >/dev/null ; then
     cd
     git clone https://github.com/davidjo/snd_hda_macbookpro.git
