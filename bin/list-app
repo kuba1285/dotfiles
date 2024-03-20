@@ -78,6 +78,7 @@ xfce4-settings
 xorg
 xorg-server
 xorg-xinput
+wpgtk
 zsh
 zsh-autosuggestions
 zsh-completions
