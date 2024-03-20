@@ -36,9 +36,9 @@ font-1 = Font Awesome 5 Free Solid:style=Regular:size=9;2
 font-2 = Font Awesome 5 Brands:style=Regular:size=13;2
 height = 26
 line-size = 2
-modules-left = menu xworkspaces cpu memory
+modules-left = menu xworkspaces cpu memory theme
 modules-center = xwindow
-modules-right = theme battery pulseaudio network tray datetime power
+modules-right = battery pulseaudio network tray datetime power
 padding = 3
 module-margin = 1.5
 
