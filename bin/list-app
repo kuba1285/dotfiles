@@ -49,7 +49,6 @@ polybar
 pulseaudio
 python3
 python-pywal
-python-pywalfox
 python-requests
 qt5-base
 qt5-graphicaleffects
