@@ -6,6 +6,7 @@ eza
 fakeroot
 fcitx5-im
 fcitx5-mozc
+firefox
 git
 git-delta
 github-cli
@@ -20,6 +21,7 @@ noto-fonts-emoji
 openssh
 pulseaudio
 python-pywal
+python-pywalfox
 python3
 sddm
 starship
