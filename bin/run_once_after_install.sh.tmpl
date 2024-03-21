@@ -70,7 +70,7 @@ sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
 sudo sed -i "/#MAKEFLAGS/s/2/$CORES/" /etc/makepkg.conf
 sudo sed -i '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
 
-wget http://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.23.orig.tar.xz
+wget https://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.34.orig.tar.gz
 tar xvf fakeroot_1.23.orig.tar.xz
 cd fakeroot-1.23/
 ./bootstrap
