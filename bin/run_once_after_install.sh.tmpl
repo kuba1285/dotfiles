@@ -119,6 +119,8 @@ for service in ${SERVICES[@]} ; do
 done
 
 chmod +x $EXECUTABLE
+sudo gpasswd -a $USER input
+chsh -s $(which zsh) $USER
 
 {{ end }}
 
@@ -128,7 +130,5 @@ source $BIN/custom.sh
 echo "${CYAN}NOTE${RESET} - Setting configuration."
 source $BIN/stage.sh
 source $BIN/config.sh
-
-chsh -s $(which zsh) $USER
 
 echo "${GREEN}OK${RESET} - Please log out and log back in for the changes to take effect."
