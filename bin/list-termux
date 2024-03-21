@@ -2,6 +2,7 @@ alsa-utils
 base-devel
 bat
 cowfortune
+dwm
 eza
 fakeroot
 fcitx5-im
@@ -32,8 +33,6 @@ ttf-icomoon-feather
 ttf-jetbrains-mono-nerd
 wget
 xclip
-xfce4
-xfce4-goodies
 xorg
 xorg-server
 zsh
