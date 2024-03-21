@@ -2,11 +2,6 @@
 
 CORES=$(($(nproc)+1))
 BIN=$HOME/bin
-EXECUTABLE=(
-$(echo $HOME/bin/*)
-$(echo $HOME/.config/bspwm/*)
-$(echo $HOME/.config/polybar/scripts/*)
-)
 LISTAPP="$BIN/list-termux"
 LISTNVIDIA=(
     libva
