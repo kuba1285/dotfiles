@@ -67,7 +67,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bashrc
 
 # Prepare for AUR
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
-pacman -Syyu --noconfirm --needed wget sudo base-devel fontconfig
+pacman -Syyu --noconfirm --needed wget alsa-utils sudo base-devel fontconfig
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user && echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
