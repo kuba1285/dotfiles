@@ -31,16 +31,12 @@ function set_colors() {
 }
 
 function install_list() {
-        while IFS= read -r app ; do
-            yay -S --noconfirm --needed $app
-        done < "$1"
+        while IFS= read -r app ; do yay -S --noconfirm --needed $app; done < "$1"
 }
 
 function wait_yn(){
     YN="xxx"
-    while [ $YN != 'y' ] && [ $YN != 'n' ] ; do
-        read -p "$1 [y/n]" YN
-    done
+    while [ $YN != 'y' ] && [ $YN != 'n' ] ; do read -p "$1 [y/n]" YN; done
 }
 
 clear
