@@ -2,6 +2,10 @@
 
 CORES=$(($(nproc)+1))
 BIN=$HOME/bin
+BINDIR=(
+$(echo $HOME/bin)
+$(echo $HOME/.config/polybar/scripts)
+)
 LISTAPP="$BIN/list-termux"
 LISTNVIDIA=(
     libva
