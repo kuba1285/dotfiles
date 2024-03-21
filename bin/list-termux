@@ -26,6 +26,7 @@ pulseaudio
 python-pywal
 python-pywalfox
 python3
+rofi
 sddm
 starship
 tigervnc
