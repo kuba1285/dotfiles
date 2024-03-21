@@ -62,13 +62,29 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bashrc
 
 # Prepare for AUR
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
-pacman -Syyu --noconfirm --needed wget fakeroot git alsa-utils bat eza git-delta starship sudo base-devel fontconfig
+pacman -Syyu --noconfirm --needed wget git alsa-utils bat eza git-delta starship sudo base-devel fontconfig
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user && echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
 sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
 sudo sed -i "/#MAKEFLAGS/s/2/$CORES/" /etc/makepkg.conf
 sudo sed -i '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
+
+wget http://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.23.orig.tar.xz
+tar xvf fakeroot_1.23.orig.tar.xz
+cd fakeroot-1.23/
+./bootstrap
+./configure --prefix=/opt/fakeroot
+--libdir=/opt/fakeroot/libs
+--disable-static
+--with-ipc=tcp
+make
+sudo make install
+/opt/fakeroot/bin/fakeroot
+exit
+pacman -R fakeroot
+cd /bin
+ln -s /opt/fakeroot/bin/fakeroot
 
 # Configure AUR
 echo "${CYAN}NOTE${RESET} - Configuering AUR."
