@@ -70,6 +70,7 @@ EOF
 cat << EOF | tee -a ~/.xsessionrc
 xinput set-prop 11 318 1
 xinput --set-prop "Apple SPI Touchpad" "Coordinate Transformation Matrix" 3 0 0 0 3 0 0 0 1
+xsetroot -cursor_name left_ptr
 EOF
 
 cat << EOF | sudo tee -a /etc/X11/xorg.conf.d/51-synaptics-tweaks.conf
