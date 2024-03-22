@@ -12,7 +12,7 @@ cd \$(dirname \$0)
 unset LD_PRELOAD
 # proot
 command="proot"
-command+=" --link2symlink -0"
+command+=" --sysvipc --link2symlink -0"
 # root directory folder
 command+=" -r /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/archlinux"
 # specify some directories
