@@ -70,30 +70,6 @@ sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
 sudo sed -i "/#MAKEFLAGS/s/2/$CORES/" /etc/makepkg.conf
 sudo sed -i '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
 
-cd /tmp
-wget http://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.31.orig.tar.gz
-tar xvf fakeroot_1.31.orig.tar.gz
-cd fakeroot-1.31/
-./bootstrap
-./configure --prefix=/opt/fakeroot \
-        --libdir=/opt/fakeroot/libs \
-        --disable-static \
-        --with-ipc=tcp
-make
-sudo make install
-OLDPATH="$PATH"
-export PATH="/opt/fakeroot/bin:$PATH"
-cd /tmp
-rm fakeroot_1.31.orig.tar.gz
-rm -rf fakeroot-1.31/
-git clone https://aur.archlinux.org/fakeroot-tcp.git
-cd fakeroot-tcp
-makepkg -si
-cd /tmp
-rm -rf fakeroot-tcp
-sudo rm -rf /opt/fakeroot
-export PATH="$OLDPATH"
-
 # Configure AUR
 echo "${CYAN}NOTE${RESET} - Configuering AUR."
 sudo -i -u user bash << EOF
