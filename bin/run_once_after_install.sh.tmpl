@@ -61,9 +61,9 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bashrc
 {{ if eq .chezmoi.os "linux" }}
     {{ if (.chezmoi.kernel.osrelease | lower | contains "proot") }}
 
-# Prepare for AUR
+# Configure AUR
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
-sudo pacman -Syyu --noconfirm --needed wget git alsa-utils bat eza git-delta starship sudo base-devel fontconfig
+pacman -Syyu --noconfirm --needed sudo wget git alsa-utils bat eza git-delta starship base-devel fontconfig
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user && echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
@@ -71,26 +71,25 @@ sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
 sudo sed -i "/#MAKEFLAGS/s/2/$CORES/" /etc/makepkg.conf
 sudo sed -i '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
 
-# Configure AUR
 echo "${CYAN}NOTE${RESET} - Configuering AUR."
 sudo -i -u user bash << EOF
 cd &&
-git clone https://aur.archlinux.org/yay.git && cd yay && yes user | makepkg -si --noconfirm &&
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
 cd && rm -rf yay
 EOF
 
-    {{ end }}
+    {{ else }}
 
 # Configure AUR
+sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
+sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
+sudo sed -i "/#MAKEFLAGS/s/2/$CORES/" /etc/makepkg.conf
+sudo sed -i '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
+
 echo "${CYAN}NOTE${RESET} - Configuering AUR."
 cd &&
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
 cd && rm -rf yay
-
-# Install listed pacakges
-echo "${CYAN}NOTE${RESET} - Installing apps from list."
-install_list $LISTAPP
-fc-cache -fv
 
 # Setup Nvidia if found
 if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
@@ -107,6 +106,13 @@ if aplay --list-device | grep CS8409 >/dev/null ; then
     git clone https://github.com/davidjo/snd_hda_macbookpro.git
     cd snd_hda_macbookpro/ && sudo ./install.cirrus.driver.sh
 fi
+
+    {{ end }}
+
+# Install listed pacakges
+echo "${CYAN}NOTE${RESET} - Installing apps from list."
+install_list $LISTAPP
+fc-cache -fv
 
 # Enable services
 echo "${CYAN}NOTE${RESET} - Enabling services."
