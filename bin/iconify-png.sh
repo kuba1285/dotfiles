@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -n "Name of Iconify PNG(without extension)?:"
+echo -n "PNG name(without extension)?:"
 read filename
 
 array=(16 32 128 256 512)
