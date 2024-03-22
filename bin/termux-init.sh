@@ -19,5 +19,4 @@ extra-keys = [ \\
 		]
 EOF
 termux-reload-settings
-useradd -U -m user
 exit
