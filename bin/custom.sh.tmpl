@@ -15,6 +15,16 @@ pipx install .
 
 {{ end }}
 
+{{ if eq .chezmoi.os "linux" }}
+
+cd
+mkdir powershell && cd powershell
+wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.13/powershell-7.2.13-linux-arm64.tar.gz
+tar xvzf powershell-7.2.13-linux-arm64.tar.gz
+ln -s $HOME/powershell/pwsh /usr/bin/pwsh
+
+{{ end }}
+
 cd
 go install github.com/orangekame3/paclear@latest
 
@@ -22,12 +32,6 @@ cd
 git clone http://github.com/possatti/pokemonsay
 cd pokemonsay
 ./install.sh
-
-cd
-mkdir powershell && cd powershell
-wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.13/powershell-7.2.13-linux-arm64.tar.gz
-tar xvzf powershell-7.2.13-linux-arm64.tar.gz
-ln -s $HOME/powershell/pwsh /usr/bin/pwsh
 
 cd
 wget $TVERREC_URL && tar xvzf $ARCHIVE && rm $ARCHIVE
