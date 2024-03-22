@@ -1,0 +1,36 @@
+<body bgcolor="black">
+<div id="container" style="height: 100vh;">
+    <video autoplay="true" id="videoElement" controls height="100%" width="100%">
+    </video>
+</div>
+<script>
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({
+    video: {
+      width: 3840,
+      height: 2160
+    },
+    audio: {
+      autoGainControl: false,
+      echoCancellation: false,
+      highpassFilter: false,
+      noiseSupression: false
+    }
+  }).then(function (stream) {
+    document.querySelector("#videoElement").srcObject = stream;
+  });
+}
+</script>
+<body>
+
+<!--
+In Chrome,
+From chrome://flags we disable:
+#enable-webrtc-allow-input-volume-adjustment
+#chrome-wide-echo-cancellation
+In Firefox, we disable:
+media.getusermedia.aec_enabled
+media.getusermedia.agc_enabled
+media.getusermedia.noise_enabled
+media.getusermedia.hpf_enabled
+--!>
