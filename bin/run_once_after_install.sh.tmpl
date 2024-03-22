@@ -59,6 +59,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bashrc
 {{ end }}
 
 {{ if eq .chezmoi.os "linux" }}
+    {{ if (.chezmoi.kernel.osrelease | lower | contains "proot") }}
 
 # Prepare for AUR
 echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
@@ -77,6 +78,14 @@ cd &&
 git clone https://aur.archlinux.org/yay.git && cd yay && yes user | makepkg -si --noconfirm &&
 cd && rm -rf yay
 EOF
+
+    {{ end }}
+
+# Configure AUR
+echo "${CYAN}NOTE${RESET} - Configuering AUR."
+cd &&
+git clone https://aur.archlinux.org/yay.git && cd yay && yes user | makepkg -si --noconfirm &&
+cd && rm -rf yay
 
 # Install listed pacakges
 echo "${CYAN}NOTE${RESET} - Installing apps from list."
