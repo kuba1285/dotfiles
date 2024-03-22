@@ -1,0 +1,2015 @@
+defaults write ".GlobalPreferences_m" "AppleLocale" -string "ja_JP"
+defaults write ".GlobalPreferences_m" "Sig_AppleLocale" -string "DirectoryTools(1050): 2022-08-06 20:35:03 (PDT)"
+defaults write ".GlobalPreferences_m" "Sig_AppleLanguages" -string "UserAccountUpdater(1099): 2022-08-06 20:35:11 (PDT)"
+defaults write "com.GoPro.goproapp" "NSWindow Frame NSNavPanelAutosaveName" -string "320 360 800 448 0 0 1440 900 "
+defaults write "com.GoPro.goproapp" "NSNavLastRootDirectory" -string "/Volumes/Untitled/DCIM/100GOPRO/2022-11-12"
+defaults write "com.GoPro.goproapp" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.GoPro.goproapp.GoProIDService" "GoProDesktopAppUserName" -string "kuba00001285@gmail.com"
+defaults write "com.HitPaw.watermarkRemover" "HockeySDKAutomaticallySendCrashReports" -bool False
+defaults write "com.HitPaw.watermarkRemover" "HockeySDKCrashReportActivated" -bool True
+defaults write "com.Logitech.Updater" "Allow automatic checks" -bool True
+defaults write "com.apple.AMPLibraryAgent" "have-shown-cloud-UI" -int 1
+defaults write "com.apple.AMPLibraryAgent" "devices-persistent-id" -int 3729545299090909152
+defaults write "com.apple.AMPLibraryAgent" "debugAssertCategoriesVersion" -int 3
+defaults write "com.apple.AMPLibraryAgent" "podcasts-migrated" -int 1
+defaults write "com.apple.AMPLibraryAgent" "storeSupportsUPP" -bool True
+defaults write "com.apple.AMPLibraryAgent" "storeSupportsPreviousPurchases" -bool True
+defaults write "com.apple.AMPLibraryAgent" "podcasts-persistent-id" -int -6068774285962735704
+defaults write "com.apple.AMPLibraryAgent" "imported-media-domains-modification-date" -string "Sun, 07 Aug 2022 03:54:17 GMT"
+defaults write "com.apple.AMPLibraryAgent" "debugAssertCategoriesEnabled" -int 0
+defaults write "com.apple.AMPLibraryAgent" "storeSupportsPasswordSettings" -bool True
+defaults write "com.apple.AMPLibraryAgent" "storeMediaTypeFlags" -int 3406
+defaults write "com.apple.AMPLibraryAgent" "books-persistent-id" -int 559235156574297230
+defaults write "com.apple.AMPLibraryAgent" "books-migrated" -int 1
+defaults write "com.apple.AMPLibraryAgent" "imported-media-domains" -int 15
+defaults write "com.apple.APFSUserAgent" "LastBootUUID" -string "D57DE917-0FDA-4655-9AFA-159F77B38644"
+defaults write "com.apple.Accessibility" "InvertColorsEnabled" -int 0
+defaults write "com.apple.Accessibility" "GrayscaleDisplay" -int 0
+defaults write "com.apple.Accessibility" "AXSClassicInvertColorsPreference" -int 0
+defaults write "com.apple.Accessibility" "KeyRepeatInterval" -float 0.083333333
+defaults write "com.apple.Accessibility" "EnhancedBackgroundContrastEnabled" -int 0
+defaults write "com.apple.Accessibility" "ApplicationAccessibilityEnabled" -int 0
+defaults write "com.apple.Accessibility" "DarkenSystemColors" -int 0
+defaults write "com.apple.Accessibility" "FullKeyboardAccessFocusRingEnabled" -int 1
+defaults write "com.apple.Accessibility" "GenericAccessibilityClientEnabled" -int 0
+defaults write "com.apple.Accessibility" "AccessibilityEnabled" -bool False
+defaults write "com.apple.Accessibility" "ReduceMotionAutoplayAnimatedImagesEnabled" -int 1
+defaults write "com.apple.Accessibility" "KeyRepeatEnabled" -int 1
+defaults write "com.apple.Accessibility" "KeyRepeatDelay" -float 0.5
+defaults write "com.apple.Accessibility" "DifferentiateWithoutColor" -int 0
+defaults write "com.apple.Accessibility" "FullKeyboardAccessEnabled" -int 0
+defaults write "com.apple.Accessibility" "BrailleInputDeviceConnected" -int 0
+defaults write "com.apple.Accessibility" "AutomationEnabled" -int 0
+defaults write "com.apple.Accessibility" "ReduceMotionEnabled" -int 0
+defaults write "com.apple.Accessibility" "SpeakThisEnabled" -int 0
+defaults write "com.apple.Accessibility" "VoiceOverTouchEnabled" -int 0
+defaults write "com.apple.Accessibility" "CommandAndControlEnabled" -int 0
+defaults write "com.apple.Accessibility-Settings.extension" "NSWindow Frame NSColorPanel" -string "0 81 224 278 0 0 2560 1600 "
+defaults write "com.apple.AccessibilityVisualsAgent" "NSWindow Frame AXVBrailleWindowFrame" -string "197 312 770 70 0 0 2560 1600 "
+defaults write "com.apple.ActivityMonitor" "NSWindow Frame main window" -string "1292 24 1244 1552 0 0 2560 1600 "
+defaults write "com.apple.ActivityMonitor" "SelectedTab" -int 1
+defaults write "com.apple.ActivityMonitor" "NSTableView Supports v2 cacheTableColumns" -bool True
+defaults write "com.apple.ActivityMonitor" "OpenMainWindow" -bool True
+defaults write "com.apple.ActivityMonitor" "ShowCategory" -int 102
+defaults write "com.apple.AdLib" "adprivacydMaxSegmentSendInterval" -string "259200"
+defaults write "com.apple.AdLib" "personalizedAdsMigrated" -bool True
+defaults write "com.apple.AdLib" "partiality-segment" -string "https://partiality.itunes.apple.com/WebObjects/MZPartiality.woa/wa/IAD/segment"
+defaults write "com.apple.AdLib" "CKDPIDSyncState" -int 0
+defaults write "com.apple.AdLib" "adprivacydSegmentInterval" -string "86397"
+defaults write "com.apple.AdLib" "allowIdentifierForAdvertising" -bool True
+defaults write "com.apple.AdLib" "allowApplePersonalizedAdvertising" -bool True
+defaults write "com.apple.AdPlatforms" "LatestPAVersion" -int 1
+defaults write "com.apple.AdPlatforms" "AppStorePAAvailable" -bool True
+defaults write "com.apple.AdPlatforms" "AdPlatformsPAAvailable" -bool True
+defaults write "com.apple.AdPlatforms" "ConfigSystemVersion" -int 1
+defaults write "com.apple.AddressBook" "ABMetaDataChangeCount" -int 196919
+defaults write "com.apple.AddressBook" "ABDefaultSourceID" -string "DF7CFF85-0BF4-48A7-94BB-7521D3FAA9D9"
+defaults write "com.apple.AddressBook" "ABVersion" -int 1419
+defaults write "com.apple.AddressBook" "ABBirthDayVisible" -bool True
+defaults write "com.apple.AppStore" "ASAcknowledgedOnboardingVersion" -int 5
+defaults write "com.apple.AppStore" "lastBootstrapTimeZone" -string "Asia/Tokyo"
+defaults write "com.apple.AppStore" "AVDesktopPlaybackControlsControllerShowsDurationInsteadOfTimeRemainingDefaultsKey" -bool True
+defaults write "com.apple.AppStore" "NSWindow Frame AppStoreMainWindow" -string "1295 -26 1000 432 0 0 2560 1600 "
+defaults write "com.apple.AppStore" "AutoPlayVideoSetting" -string "on"
+defaults write "com.apple.AppStore" "lastBootstrapDate" -float 732710570.310613
+defaults write "com.apple.AppStore" "UserSetAutoPlayVideoSetting" -bool False
+defaults write "com.apple.AppStore" "mostRecentTabIdentifier" -string "discover"
+defaults write "com.apple.AppStore" "MetricsSamplingLotteryWindowStart_pageRender" -float 687486924.851046
+defaults write "com.apple.AppleMediaServices" "AMSIncludeFullResponseInHARLogging" -bool False
+defaults write "com.apple.AppleMediaServices" "AMSDeviceBiometricsState" -int 1
+defaults write "com.apple.AppleMediaServices" "AMSMigratedToNewAccountStore" -bool True
+defaults write "com.apple.AppleMediaServices" "AMSLogHARData" -bool False
+defaults write "com.apple.AppleMediaServices" "AMSDidSetUpServerDataCache" -bool True
+defaults write "com.apple.AppleMediaServices" "AMSLastMigratedBuildVersion" -string "23C71"
+defaults write "com.apple.AppleMediaServices" "AMSIncludeFullRequestInHARLogging" -bool False
+defaults write "com.apple.AppleMediaServices" "AMSCleanedUpUserDefaultsDataAfterMigrationToStorage" -bool True
+defaults write "com.apple.AppleMediaServices" "AMSMigratedStorageToDefaultsForNonAMSInternal" -bool True
+defaults write "com.apple.AppleMediaServices.notbackedup" "AMSDidRetrieveDeviceOffers" -bool True
+defaults write "com.apple.AppleMediaServices.notbackedup" "AMSDidRetrieveDeviceOffersEligibility" -bool True
+defaults write "com.apple.AppleMultitouchMouse" "MouseOneFingerDoubleTapGesture" -int 0
+defaults write "com.apple.AppleMultitouchMouse" "MouseTwoFingerHorizSwipeGesture" -int 2
+defaults write "com.apple.AppleMultitouchMouse" "MouseVerticalScroll" -bool True
+defaults write "com.apple.AppleMultitouchMouse" "UserPreferences" -bool True
+defaults write "com.apple.AppleMultitouchMouse" "MouseMomentumScroll" -bool True
+defaults write "com.apple.AppleMultitouchMouse" "MouseButtonDivision" -int 55
+defaults write "com.apple.AppleMultitouchMouse" "MouseHorizontalScroll" -bool True
+defaults write "com.apple.AppleMultitouchMouse" "version" -int 1
+defaults write "com.apple.AppleMultitouchMouse" "MouseTwoFingerDoubleTapGesture" -int 3
+defaults write "com.apple.AppleMultitouchMouse" "MouseButtonMode" -string "OneButton"
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadHandResting" -bool True
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadPinch" -bool True
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadFourFingerVertSwipeGesture" -int 2
+defaults write "com.apple.AppleMultitouchTrackpad" "USBMouseStopsTrackpad" -int 0
+defaults write "com.apple.AppleMultitouchTrackpad" "ActuationStrength" -int 0
+defaults write "com.apple.AppleMultitouchTrackpad" "ActuateDetents" -int 1
+defaults write "com.apple.AppleMultitouchTrackpad" "FirstClickThreshold" -int 2
+defaults write "com.apple.AppleMultitouchTrackpad" "SecondClickThreshold" -int 2
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadHorizScroll" -int 1
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadFourFingerPinchGesture" -int 2
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadMomentumScroll" -bool True
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadRotate" -int 1
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadThreeFingerHorizSwipeGesture" -int 0
+defaults write "com.apple.AppleMultitouchTrackpad" "Clicking" -bool True
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadThreeFingerTapGesture" -int 0
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadTwoFingerDoubleTapGesture" -int 1
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadScroll" -bool True
+defaults write "com.apple.AppleMultitouchTrackpad" "DragLock" -bool False
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadFiveFingerPinchGesture" -int 2
+defaults write "com.apple.AppleMultitouchTrackpad" "ForceSuppressed" -bool False
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadThreeFingerVertSwipeGesture" -int 0
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadTwoFingerFromRightEdgeSwipeGesture" -int 3
+defaults write "com.apple.AppleMultitouchTrackpad" "UserPreferences" -bool True
+defaults write "com.apple.AppleMultitouchTrackpad" "version" -int 12
+defaults write "com.apple.AppleMultitouchTrackpad" "Dragging" -bool True
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadCornerSecondaryClick" -int 0
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadRightClick" -bool True
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadFourFingerHorizSwipeGesture" -int 2
+defaults write "com.apple.AppleMultitouchTrackpad" "TrackpadThreeFingerDrag" -bool False
+defaults write "com.apple.Automator" "ILMediaBrowserMediaType" -int 0
+defaults write "com.apple.Automator" "NSSplitView AMDocumentMajor Expanded Position" -int 381
+defaults write "com.apple.Automator" "AMSuppressWarningOnRunForAMApplicationWorkflowPersonality" -bool False
+defaults write "com.apple.Automator" "NSTableView Supports v2 AudioTable" -bool True
+defaults write "com.apple.Automator" "NSWindow Frame AMDocument" -string "1292 864 1220 688 0 0 2560 1600 "
+defaults write "com.apple.Automator" "NSWindow Frame NSNavPanelAutosaveName" -string "1668 686 469 228 0 0 2560 1600 "
+defaults write "com.apple.Automator" "AMLogTabViewSelectedIndex" -int 0
+defaults write "com.apple.Automator" "NSTableView Supports v2 " -bool True
+defaults write "com.apple.Automator" "NSNavLastRootDirectory" -string "~/Documents"
+defaults write "com.apple.Automator" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.apple.AvatarUI.Staryu" "AVTUIGlobalPreferencesFlushStickersCache" -bool True
+defaults write "com.apple.AvatarUI.Staryu" "AVTAvatarUILastCacheVersion" -int 342208000
+defaults write "com.apple.AvatarUI.Staryu" "AVTUISyncExportRequired" -bool True
+defaults write "com.apple.BKAgentService" "BKAgentServiceUseriCloudSetting" -bool False
+defaults write "com.apple.BatteryCenter.BatteryWidget" "localizedLargestString" -string "100"
+defaults write "com.apple.BiomeAgent" "LastCombinedBuild" -string "22F82-22F770820d"
+defaults write "com.apple.CallHistorySyncHelper" "CKStartupTime" -int 1697082203
+defaults write "com.apple.CharacterPaletteIM" "version" -int 1
+defaults write "com.apple.CharacterPaletteIM" "CVStartAsLargeWindow" -bool False
+defaults write "com.apple.CharacterPicker" "version" -int 1
+defaults write "com.apple.ClassKit-Settings.extension" "showClassKitPrefsPane" -bool False
+defaults write "com.apple.CloudKit" "AccountInfoValidationCounter" -int 1893
+defaults write "com.apple.ComfortSounds" "comfortSoundsEnabled" -bool False
+defaults write "com.apple.CoreGraphics" "DisplayUseForcedGray" -bool False
+defaults write "com.apple.CoreGraphics" "DisplayUseInvertedPolarity" -bool False
+defaults write "com.apple.Dictionary" "version" -int 3
+defaults write "com.apple.Dictionary" "NSWindow Frame find panel" -string "54 447 357 127 0 0 1440 900 "
+defaults write "com.apple.DictionaryServices" "DCSPreferenceVersion" -int 7
+defaults write "com.apple.DiskUtility" "NSWindow Frame MainWindow" -string "287 221 1106 544 0 0 1680 1050 "
+defaults write "com.apple.DiskUtility" "NSWindow Frame OperationProgress" -string "603 417 475 180 0 0 1680 1050 "
+defaults write "com.apple.Displays-Settings.extension" "showListByDefault" -bool True
+defaults write "com.apple.FamilyCircle" "FamilyMarqueeDarkMode" -string "file:/Users/mymac/Library/Caches/FamilyCircle/FamilyMarqueeDarkMode-ABB8AFD9-5771-421B-883B-BAF7F46641D7@1x.png"
+defaults write "com.apple.FamilyCircle" "FamilyMarqueeLightMode" -string "file:/Users/mymac/Library/Caches/FamilyCircle/FamilyMarqueeLightMode-ABB8AFD9-5771-421B-883B-BAF7F46641D7@1x.png"
+defaults write "com.apple.FolderActionsDispatcher" "folderActionsEnabled" -bool False
+defaults write "com.apple.FontBook" "showPreferredLanguages" -bool True
+defaults write "com.apple.FontBook" "NSWindow Frame font_preview_window" -string "1030 586 500 428 0 0 2560 1600 "
+defaults write "com.apple.FontBook" "showProviderManagedFonts" -bool False
+defaults write "com.apple.FontBook" "showKeyboardLanguages" -bool True
+defaults write "com.apple.FontBook" "DisplayState" -string "W3sibW9kZSI6eyJ0aWxlIjp7fX0sImxldmVsIjp7ImZhbWlseSI6e319fV0="
+defaults write "com.apple.FontBook" "showUserFonts" -bool True
+defaults write "com.apple.FontBook" "NSWindow Frame main_window-AppWindow-1" -string "780 475 1000 650 0 0 2560 1600 "
+defaults write "com.apple.FontBook" "showComputerFonts" -bool False
+defaults write "com.apple.FontBook" "sidebarMinWidth" -int 156
+defaults write "com.apple.FontRegistry.user" "Version" -string "23C71"
+defaults write "com.apple.GEO" "DefaultsSanitizedVersion" -int 20190107
+defaults write "com.apple.HIToolbox" "AppleFnUsageType" -int 1
+defaults write "com.apple.HIToolbox" "AppleCurrentKeyboardLayoutInputSourceID" -string "com.apple.keylayout.ABC"
+defaults write "com.apple.HearingAids" "HearingFeatureUsagePreference" -int 64
+defaults write "com.apple.Keyboard-Settings.extension" "NSWindow Frame NSSpellCheckerSubstitutionsPanel2" -string "1177 654 440 137 0 0 2560 1600 "
+defaults write "com.apple.LoginItems-Settings.extension" "NSWindow Frame NSNavPanelAutosaveName" -string "1244 576 800 476 0 0 2560 1600 "
+defaults write "com.apple.Maps" "kMapsWelcomeScreenKey" -int 3
+defaults write "com.apple.Maps" "__internal__searchBarPlaceholderV2-ja-JP" -string "マップで検索"
+defaults write "com.apple.Maps" "LastSuspendTime" -float 682286364.491413
+defaults write "com.apple.Maps" "MigratedFavoritesCollection" -bool True
+defaults write "com.apple.Maps" "lastUserActivity" -string "<MapsActivity: 0x60000353dd00> {
+    displayOptions =     {
+        mapType = Standard;
+        userTrackingMode = Follow;
+    };
+}"
+defaults write "com.apple.Maps" "AnnouncementsLastUpdated" -float 695242634.760822
+defaults write "com.apple.Maps" "MapsNotificationAuthPromptCount" -int 1
+defaults write "com.apple.Maps" "NavigationVoiceGuidanceLevelDriving" -int 2
+defaults write "com.apple.Maps" "MigratedARPConsentPreference" -bool True
+defaults write "com.apple.Maps" "MigratedOldFavorites" -bool True
+defaults write "com.apple.Maps" "dateLastUserActivity" -string "2022-08-15 19:59:05 +0000"
+defaults write "com.apple.Maps" "CKStartupTime" -int 1662517225
+defaults write "com.apple.Maps" "NavigationVoiceGuidanceLevelWalking" -int 2
+defaults write "com.apple.Maps" "LastAnnouncementsURL" -string "https://gspe35-ssl.ls.apple.com/config/announcements?environment=prod&hardware=MacBookAir10,1&lang=ja&os=osx&os_build=21G83&os_version=12.5.1"
+defaults write "com.apple.Maps" "MigratedNavigoAppPreferences" -bool True
+defaults write "com.apple.Maps" "AnnouncementsETag" -string ""c0c6bbb77ed28231b638ba3aa09e695a386e1742""
+defaults write "com.apple.Maps" "NavigationVoiceGuidanceLevelCycling" -int 2
+defaults write "com.apple.Maps.mapssyncd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.MassStorageCamera" "FilenamePrefix" -string "IMG_"
+defaults write "com.apple.MassStorageCamera" "NextFilenameCount" -int 0
+defaults write "com.apple.MobileSMS" "SSKeepAttachments" -int 0
+defaults write "com.apple.MobileSMS" "DeleteVerificationCodes" -bool False
+defaults write "com.apple.MobileSMS" "SSKeepMessages" -int 0
+defaults write "com.apple.MobileSMS" "CatalystPreferenceMigrationVersion" -int 1
+defaults write "com.apple.Music" "ILMediaBrowserMediaType" -int 0
+defaults write "com.apple.Music" "ILMediaBrowserSelectedGroup0" -string "com.apple.iTunes.384E18B57D4581AA"
+defaults write "com.apple.Music" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 507}"
+defaults write "com.apple.Music" "ILMediaBrowserSelectedGroup2" -string "com.apple.iTunes.384E18B57D4581AA"
+defaults write "com.apple.Music" "eqPrefsVersion" -int 1
+defaults write "com.apple.Music" "refreshedHLSKeysTime" -int 3792438689
+defaults write "com.apple.Music" "storeMediaTypeFlags" -int 3406
+defaults write "com.apple.Music" "dontAskForAllPlaylistItemRemoval" -bool True
+defaults write "com.apple.Music" "checkedHLSKeysTime" -int 3792537731
+defaults write "com.apple.Music" "storeSupportsCloudPurchases" -int 1
+defaults write "com.apple.Music" "debugAssertCategoriesVersion" -int 3
+defaults write "com.apple.Music" "ILMediaBrowserAudioSplitViewPosition" -int 140
+defaults write "com.apple.Music" "NSWindow Frame NSNavPanelAutosaveName" -string "440 392 800 507 0 0 1680 1050 "
+defaults write "com.apple.Music" "ILMediaBrowserMovieSplitViewPosition" -int 140
+defaults write "com.apple.Music" "controllableInterfaceGUID" -int -5557074134191432000
+defaults write "com.apple.Music" "storeSupportsPasswordSettings" -bool True
+defaults write "com.apple.Music" "notifications-warming-last-displayed-time" -int 731286688
+defaults write "com.apple.Music" "storeSupportsUPP" -bool True
+defaults write "com.apple.Music" "showWelcomeScreenState" -int 2
+defaults write "com.apple.Music" "whatsNewLevel" -int 1
+defaults write "com.apple.Music" "storeSupportsPreviousPurchases" -bool True
+defaults write "com.apple.Music" "NSTableView Supports v2 " -bool True
+defaults write "com.apple.Music" "library-url" -string "file:///Users/mymac/Music/Music/Music%20Library.musiclibrary/"
+defaults write "com.apple.Music" "preloadFilesIntoMemory" -bool False
+defaults write "com.apple.Music" "doesStoreSupportCloudMusicLibrary" -int 1
+defaults write "com.apple.Music" "userMaxConcurrentDownloads" -int 3
+defaults write "com.apple.Music" "NSApplicationCrashOnExceptions" -bool False
+defaults write "com.apple.Music" "firstLaunchShowWelcomeScreenState" -int 2
+defaults write "com.apple.Music" "debugAssertCategoriesEnabled" -int 0
+defaults write "com.apple.Music" "media-folder-url" -string "file:///Users/mymac/Music/Music/Media.localized/"
+defaults write "com.apple.Music" "imported-eq-presets" -int 1
+defaults write "com.apple.Music" "NSNavPanelMediaBrowserTypeForOpenModeKey" -int 0
+defaults write "com.apple.Music" "ILMediaBrowserSelectedGroupIndex0" -int 5
+defaults write "com.apple.Music" "ILMediaBrowserSelectedGroupIndex2" -int 2
+defaults write "com.apple.Music" "haveRadioState" -int 1
+defaults write "com.apple.Music" "encoderName" -string "AAC Encoder"
+defaults write "com.apple.Music" "NSTableView Supports v2 AudioTable" -bool True
+defaults write "com.apple.NewDeviceOutreach" "NDOMigrationVersion" -int 2
+defaults write "com.apple.NewDeviceOutreach" "lastStoredIntervalDaysValue" -float 46.2599
+defaults write "com.apple.NewDeviceOutreach" "8a752d79c4021aae4b25f404e5622761e7d7ba7f99e5a793b0b24ef2eb7fa233_CachedWarrantyValidityDuration" -int 28800
+defaults write "com.apple.NewDeviceOutreach" "lastStoredPairedDeviceCallAllowedValue" -bool True
+defaults write "com.apple.NewDeviceOutreach" "8a752d79c4021aae4b25f404e5622761e7d7ba7f99e5a793b0b24ef2eb7fa233_CachedWarrantyLocale" -string "ja_JP"
+defaults write "com.apple.NewDeviceOutreach" "8a752d79c4021aae4b25f404e5622761e7d7ba7f99e5a793b0b24ef2eb7fa233_CachedWarrantyVersion" -string "2"
+defaults write "com.apple.NewDeviceOutreach" "PostUpgradeOSVersionKey" -string "14.2.1"
+defaults write "com.apple.NewDeviceOutreach" "PostUpgradeActivityCompleted" -bool True
+defaults write "com.apple.Notes" "ICGenerateWidgetSnippetForFirstTimeLaunchTask" -bool True
+defaults write "com.apple.Notes" "DidRegenerateGalleryAttachmentNoteTitlesV2" -bool True
+defaults write "com.apple.Notes" "hasShownWelcomeScreen" -bool True
+defaults write "com.apple.Notes" "ICFixUnappliedEncryptedRecordsLaunchTask" -bool True
+defaults write "com.apple.Notes" "DidChooseToMigrateLocalAccount" -bool True
+defaults write "com.apple.Notes" "LastVacuumDate" -float 719237180.653127
+defaults write "com.apple.Notes" "DidMigrateLocalAccount" -bool True
+defaults write "com.apple.Notes" "ICUpdateAccountReferenceInAttachmentsAndMediaLaunchTask" -bool True
+defaults write "com.apple.Notes" "ICUpdateInlineDrawingsSectionLaunchTask" -bool True
+defaults write "com.apple.Notes" "NSWindow Frame Notes" -string "340 242 1000 656 0 0 1680 1050 "
+defaults write "com.apple.Notes" "NSWindow Frame ICMSingleNoteWindow" -string "28 340 500 500 0 0 1680 1050 "
+defaults write "com.apple.Notes" "canLaunchPages" -bool False
+defaults write "com.apple.Notes" "DidFixExcludedFromBackupFlagsV3" -bool True
+defaults write "com.apple.Notes" "ICUpdatePaperDocumentScansSectionLaunchTask" -bool True
+defaults write "com.apple.Notes" "CKStartupTime" -int 1699192597
+defaults write "com.apple.Notes" "DidDeleteCoherenceContextsFromGroupContainerLaunchTask" -bool True
+defaults write "com.apple.Notes" "DidFixGallerySubAttachments" -bool True
+defaults write "com.apple.Notes" "OSVersionStringOfLastRun_DidSetReindexEverythingFlagPerUpgrade_AttemptCounter" -int 3
+defaults write "com.apple.Notes" "ICRefreshHashtagStandardizedContentLaunchTask" -bool True
+defaults write "com.apple.Notes" "ICFixLegacyFolderAccountRelationshipLaunchTask" -bool True
+defaults write "com.apple.Notes" "OSVersionStringOfLastRun_DidSetReindexEverythingFlagPerUpgrade" -string "14-0-0"
+defaults write "com.apple.Notes" "ICUpdateDerivedChecklistAttributesLaunchTask" -bool True
+defaults write "com.apple.Passwords-Settings.extension" "WBSPrivacyProxyAvailabilityAccountType" -int 1
+defaults write "com.apple.Passwords-Settings.extension" "WBSPrivacyProxyAvailabilityServiceStatus" -int 0
+defaults write "com.apple.Passwords-Settings.extension" "WBSPrivacyProxyAvailabilitySubscriberTierUnavailableInUserCountry" -bool True
+defaults write "com.apple.Passwords-Settings.extension" "WBSPrivacyProxyAvailabilityActiveOnDefaultNetwork" -bool True
+defaults write "com.apple.Passwords-Settings.extension" "WBSPrivacyProxyAvailabilityTraffic" -int 33422572
+defaults write "com.apple.Passwords-Settings.extension" "WBSPrivacyProxyAvailabilitySubscriberTier" -bool False
+defaults write "com.apple.Passwords-Settings.extension" "DidReportHistorySettings" -bool True
+defaults write "com.apple.Photos" "LastKnownHasSharedLibraryPreview" -int 0
+defaults write "com.apple.Photos" "curatedLibraryInitialNavigationVersion" -int 1
+defaults write "com.apple.Photos" "curatedLibraryZoomLevel" -int 4
+defaults write "com.apple.Photos" "IPXDefaultIsRestoringViewControllers" -bool False
+defaults write "com.apple.Photos" "IPXDefaultShowLibraryChooserOnLaunch" -bool False
+defaults write "com.apple.Photos" "allPhotosPreferredIndividualItemsColumns" -int 5
+defaults write "com.apple.Photos" "IPXPluginHostClearVisualizeConstraints" -bool True
+defaults write "com.apple.Photos" "RecentlyDeletedItemsConfirmed" -bool True
+defaults write "com.apple.Photos" "LastCuratedLibraryFirstTimeExperienceReadinessLogged" -int 1
+defaults write "com.apple.Photos" "didShowCurationFooter" -bool True
+defaults write "com.apple.Photos" "storyTitleStyleNextIndex" -int 3
+defaults write "com.apple.Photos" "LastKnownHasSharedLibrary" -int 0
+defaults write "com.apple.Photos" "IPXDefaultDidPromoteiCloudPhotosInGettingStarted" -bool True
+defaults write "com.apple.Photos" "PXRootSettingsHideWIPAlerts" -bool False
+defaults write "com.apple.Photos" "IPXDefaultHasBeenLaunched" -bool True
+defaults write "com.apple.Photos" "IPXWhatsNewCurrentVersion" -int 6
+defaults write "com.apple.Photos" "userDefaultsPhotosGridVersion" -int 3
+defaults write "com.apple.Photos" "NSWindow Frame MainWindow" -string "658 48 851 740 0 0 2560 1600 "
+defaults write "com.apple.Photos" "NSScrollViewShouldScrollUnderTitlebar" -bool False
+defaults write "com.apple.Photos.PhotosReliveWidget" "PXRootSettingsHideWIPAlerts" -bool False
+defaults write "com.apple.Photos.PhotosReliveWidget" "LastKnownHasSharedLibrary" -int 0
+defaults write "com.apple.Photos.PhotosReliveWidget" "LastKnownHasSharedLibraryPreview" -int 0
+defaults write "com.apple.Preview" "PVImageSizeResolutionUnit" -int 10
+defaults write "com.apple.Preview" "NSWindow Frame NSColorPanel" -string "0 165 224 278 0 0 1440 900 "
+defaults write "com.apple.Preview" "PVPDFLastSidebarWidth" -int 205
+defaults write "com.apple.Preview" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.apple.Preview" "com.apple.AnnotationKit.userDefaultsVersion" -int 1
+defaults write "com.apple.Preview" "NSWindow Frame PVImageCorrection" -string "314 196 318 540 0 0 1440 900 "
+defaults write "com.apple.Preview" "com.apple.AnnotationKit.hasShadow" -bool False
+defaults write "com.apple.Preview" "com.apple.AnnotationKit.strokeIsDashed" -bool False
+defaults write "com.apple.Preview" "NSWindow Frame NSNavPanelAutosaveName" -string "320 360 800 448 0 0 1440 900 "
+defaults write "com.apple.Preview" "com.apple.AnnotationKit.arrowHeadStyle" -int 2
+defaults write "com.apple.Preview" "PVImageSizeSizeUnit" -int 2
+defaults write "com.apple.Preview" "com.apple.AnnotationKit.brushStyle" -int 0
+defaults write "com.apple.Preview" "com.apple.AnnotationKit.strokeWidth" -int 5
+defaults write "com.apple.Preview" "NSNavLastRootDirectory" -string "~/Documents/Website-main/img"
+defaults write "com.apple.Preview" "PVContactSheetThumbnailSize" -int 120
+defaults write "com.apple.Preview" "com.apple.AnnotationKit.highlightStyle" -int 765200
+defaults write "com.apple.QuickTimePlayerX" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.apple.QuickTimePlayerX" "AVDesktopPlaybackControlsControllerShowsDurationInsteadOfTimeRemainingDefaultsKey" -bool True
+defaults write "com.apple.QuickTimePlayerX" "MGRecentDocumentsSharedFileListIsValid" -bool True
+defaults write "com.apple.QuickTimePlayerX" "NSNavLastRootDirectory" -string "/Volumes/Untitled/DCIM/100MEDIA"
+defaults write "com.apple.QuickTimePlayerX" "NSWindow Frame NSNavPanelAutosaveName" -string "320 360 800 448 0 0 1440 900 "
+defaults write "com.apple.SFSymbols" "NSWindow Frame main" -string "1258 48 1253 1504 0 0 2560 1600 "
+defaults write "com.apple.Safari" "WBSPrivacyProxyAvailabilityActiveOnDefaultNetwork" -bool True
+defaults write "com.apple.Safari" "DidMigrateWebDriverAllowRemoteAutomation" -bool True
+defaults write "com.apple.Safari" "SearchProviderIdentifierMigratedToSystemPreference" -bool True
+defaults write "com.apple.Safari" "SidebarViewModeIdentifier" -int 0
+defaults write "com.apple.Safari" "DidGrantSearchProviderAccessToWebNavigationExtensions" -bool True
+defaults write "com.apple.Safari" "SkipLoadingEnabledContentBlockersAtLaunch" -bool True
+defaults write "com.apple.Safari" "WBSParsecABGroupIdentifier" -int 9
+defaults write "com.apple.Safari" "ShowSidebarInNewWindows" -bool True
+defaults write "com.apple.Safari" "DidMigrateLastSessionPlist" -bool True
+defaults write "com.apple.Safari" "LastKnownStartPageAppearance" -string "NSAppearanceNameVibrantDark"
+defaults write "com.apple.Safari" "DidMigrateAppExtensionPermissions" -bool True
+defaults write "com.apple.Safari" "WebKitPreferences.shouldAllowUserInstalledFonts" -bool False
+defaults write "com.apple.Safari" "WBSPerSiteSettingSyncInitialSyncCompletedKey" -bool True
+defaults write "com.apple.Safari" "WBSTranslationConsentedToFirstTimeAlertSettingsKey" -bool True
+defaults write "com.apple.Safari" "WBSPeriodicSyncSuccessesCount" -int 51
+defaults write "com.apple.Safari" "WebKitPreferences.pushAPIEnabled" -bool True
+defaults write "com.apple.Safari" "NSWindow Frame BrowserWindowFrame" -string "1292 48 1220 740 0 0 2560 1600 "
+defaults write "com.apple.Safari" "DidMigrateResourcesToSandbox" -bool True
+defaults write "com.apple.Safari" "ShowSidebarInTopSites" -bool False
+defaults write "com.apple.Safari" "WebKitPreferences.applePayEnabled" -bool True
+defaults write "com.apple.Safari" "SafariProfilesLastActiveProfileUUIDString" -string "DefaultProfile"
+defaults write "com.apple.Safari" "DidReportHistorySettings" -bool True
+defaults write "com.apple.Safari" "PrivateBrowsingRequiresAuthentication" -bool True
+defaults write "com.apple.Safari" "WBSPrivacyProxyAvailabilitySubscriberTier" -bool False
+defaults write "com.apple.Safari" "WBSPrivacyProxyAvailabilityAccountType" -int 1
+defaults write "com.apple.Safari" "LastOSVersionSafariWasLaunchedOn" -string "14.2.1"
+defaults write "com.apple.Safari" "DidShowWhatsNewInSafari16" -bool True
+defaults write "com.apple.Safari" "FaviconDatabaseDidEraseLegacyDatabase" -bool True
+defaults write "com.apple.Safari" "ShowRecentlyClosedTabsPreferenceKey" -bool False
+defaults write "com.apple.Safari" "DidMigrateSecureDefaultsToUserDefaults" -bool True
+defaults write "com.apple.Safari" "HideHighlightsEmptyItemViewPreferenceKey" -bool True
+defaults write "com.apple.Safari" "DidMigrateDownloadFolderToSandbox" -bool True
+defaults write "com.apple.Safari" "DidClearLegacySpotlightMetadataCaches" -bool True
+defaults write "com.apple.Safari" "HomePage" -string "https://www.apple.com/jp/startpage/"
+defaults write "com.apple.Safari" "HideStartPageSiriSuggestionsEmptyItemView" -bool True
+defaults write "com.apple.Safari" "WebKitPreferences.needsStorageAccessFromFileURLsQuirk" -bool False
+defaults write "com.apple.Safari" "com.apple.WebPrivacy.TrackingResourceRequestContentBlockerVersion" -string "qrsAAAGIbpXvoH3V5iQ="
+defaults write "com.apple.Safari" "WBSPrivacyProxyAvailabilitySubscriberTierAvailableInUserCountry" -bool False
+defaults write "com.apple.Safari" "DidMigrateToMoreRestrictiveFileURLPolicy" -bool True
+defaults write "com.apple.Safari" "SafariVersionForExperimentalFeatures" -string "17.2.1"
+defaults write "com.apple.Safari" "DidMigrateToCoreSpotlightBasedHistorySearch" -bool True
+defaults write "com.apple.Safari" "UniversalSearchFeatureNotificationHasBeenDisplayed" -bool True
+defaults write "com.apple.Safari" "LastSharedLinksMessageTraceTime" -float 705060123.681985
+defaults write "com.apple.Safari" "WebKitRespectStandardStyleKeyEquivalents" -bool True
+defaults write "com.apple.Safari" "SuccessfulLaunchTimestamp" -float 730790393.527676
+defaults write "com.apple.Safari" "SidebarSplitViewDividerPosition" -int 240
+defaults write "com.apple.Safari" "WBSOfflineSearchSuggestionsModelLastUsedLocaleIdentifierKey" -string "ja_JP"
+defaults write "com.apple.Safari" "DidMigrateStartPageDefaultSidebarVisibility" -bool True
+defaults write "com.apple.Safari" "HideStartPageFrecentsEmptyItemView" -bool True
+defaults write "com.apple.Safari" "SkipLoadingEnabledWebExtensionsAtLaunch" -bool True
+defaults write "com.apple.Safari" "WBSPrivacyProxyAvailabilityServiceStatus" -int 0
+defaults write "com.apple.Safari" "DidShowWhatsNewInSafari15" -bool True
+defaults write "com.apple.Safari" "WebKitPreferences.javaScriptCanOpenWindowsAutomatically" -bool True
+defaults write "com.apple.Safari" "LocalFileRestrictionsEnabled" -bool True
+defaults write "com.apple.Safari" "WebKitPreferences.allowsPictureInPictureMediaPlayback" -bool True
+defaults write "com.apple.Safari" "WBSOfflineSearchSuggestionsModelGoogleWasDefaultSearchEngineKey" -bool True
+defaults write "com.apple.Safari" "NSWindow Frame NSNavPanelAutosaveName" -string "502 549 435 195 0 0 1440 900 "
+defaults write "com.apple.Safari" "WBSPrivacyProxyAvailabilityTraffic" -int 33422572
+defaults write "com.apple.Safari" "WebKitPreferences.hiddenPageDOMTimerThrottlingAutoIncreases" -bool True
+defaults write "com.apple.Safari" "ShowBackgroundImageInFavorites" -bool False
+defaults write "com.apple.Safari" "ExtensionsEnabled" -bool True
+defaults write "com.apple.Safari" "DefaultBrowserPromptingState3" -int 4
+defaults write "com.apple.Safari" "NewestLaunchedSafariVersion" -string "617.1.17.11.12"
+defaults write "com.apple.Safari" "ShowTabGroupFavoritesPreferenceKey" -bool False
+defaults write "com.apple.Safari" "lastPasswordWarningManagerUpdateHasNewWarnings" -bool True
+defaults write "com.apple.Safari" "DidMigrateNewBookmarkSheetToReadingListDefault" -bool True
+defaults write "com.apple.Safari" "SkipLoadingEnabledAppExtensionsAtLaunch" -bool True
+defaults write "com.apple.Safari" "WebKitPreferences.shouldSuppressKeyboardInputDuringProvisionalNavigation" -bool True
+defaults write "com.apple.Safari" "NSNavLastRootDirectory" -string "~/Downloads"
+defaults write "com.apple.Safari" "WBSPrivacyProxyAvailabilitySubscriberTierUnavailableInUserCountry" -bool False
+defaults write "com.apple.Safari" "WebKitPreferences.invisibleMediaAutoplayNotPermitted" -bool True
+defaults write "com.apple.Safari" "LastApplicationCacheMessageTraceTime" -float 730790394.698511
+defaults write "com.apple.Safari.SafeBrowsing" "HasMigratedSafeBrowsingEnabledDefaults" -bool True
+defaults write "com.apple.Safari.SandboxBroker" "ShowDevelopMenu" -bool False
+defaults write "com.apple.Safari.SandboxBroker" "DidMigrateResourcesToSandbox" -bool True
+defaults write "com.apple.Safari.SandboxBroker" "DidMigrateDownloadFolderToSandbox" -bool True
+defaults write "com.apple.SafariBookmarksSyncAgent" "CloudBookmarksSupplementalClientIdentifier" -string "DF780FCB-C495-4387-A77A-E68DC54E54AB"
+defaults write "com.apple.SafariBookmarksSyncAgent" "NewestLaunchedSafariBookmarksSyncAgentVersion" -string "617.1.17.11.12"
+defaults write "com.apple.SafariBookmarksSyncAgent" "CKStartupTime" -int 1709843445
+defaults write "com.apple.SafariCloudHistoryPushAgent" "AcknowledgedPushNotifications" -bool False
+defaults write "com.apple.SafariCloudHistoryPushAgent" "UnacknowledgedPushNotifications" -bool True
+defaults write "com.apple.SafariServices" "SearchProviderIdentifierMigratedToSystemPreference" -bool True
+defaults write "com.apple.ScreenSharing" "DontQuitWhenLastWindowCloses" -bool False
+defaults write "com.apple.ScreenSharing" "MigratedTo112" -bool True
+defaults write "com.apple.ScreenSharing" "NSGrowBoxSurfaceEnabled" -bool True
+defaults write "com.apple.ScreenSharing" "lastRunMigrationVersion" -int 1
+defaults write "com.apple.ScreenSharing" "MigratedTo1011" -bool True
+defaults write "com.apple.ScreenSharing" "NSWindow Frame ConnectionsWindow" -string "48 48 2464 1504 0 0 2560 1600 "
+defaults write "com.apple.ScreenSharingSharedDefaults" "AllowOnlyContacts" -bool False
+defaults write "com.apple.ScreenSharingSharedDefaults" "BlockAllInviters" -bool False
+defaults write "com.apple.ScreenTimeAgent" "LastTimeZoneName" -string "Asia/Tokyo"
+defaults write "com.apple.ScreenTimeAgent" "AutomaticSyncEnableOccurred" -bool True
+defaults write "com.apple.ScreenTimeAgent" "CKStartupTime" -int 1709843445
+defaults write "com.apple.ScreenTimeAgent" "GenesisCloudMirroringImportOccurred" -bool True
+defaults write "com.apple.ScriptEditor2" "LastPreferencesIdentifier" -string "SEGeneralPreferences"
+defaults write "com.apple.ScriptEditor2" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.apple.ScriptEditor2" "NSTableView Supports v2 SEFormattingPreferences" -bool True
+defaults write "com.apple.ScriptEditor2" "DefaultLanguageType" -int 1634952050
+defaults write "com.apple.ScriptEditor2" "NSWindow Frame SEEventLogWindow" -string "930 797 700 378 0 0 2560 1600 "
+defaults write "com.apple.ScriptEditor2" "NSWindow Frame NSNavPanelAutosaveName" -string "1644 570 516 318 0 0 2560 1600 "
+defaults write "com.apple.ScriptEditor2" "NSNavLastRootDirectory" -string "~/Downloads"
+defaults write "com.apple.ScriptEditor2" "NumberOfEventLogEntries" -int 10
+defaults write "com.apple.ScriptEditor2" "NSWindow Frame SEPreferencesWindow" -string "971 919 491 298 0 0 2560 1600 "
+defaults write "com.apple.SetupAssistant" "PreviousSystemVersion" -string "14.1.2"
+defaults write "com.apple.SetupAssistant" "DidSeeSyncSetup2" -bool True
+defaults write "com.apple.SetupAssistant" "SkipExpressSettingsUpdating" -bool False
+defaults write "com.apple.SetupAssistant" "LastSeenDiagnosticsProductVersion" -string "14.1.2"
+defaults write "com.apple.SetupAssistant" "SkipFirstLoginOptimization" -bool False
+defaults write "com.apple.SetupAssistant" "DidSeeTermsOfAddress" -bool False
+defaults write "com.apple.SetupAssistant" "PreviousBuildVersion" -string "23B92"
+defaults write "com.apple.SetupAssistant" "DidSeeCloudSetup" -bool True
+defaults write "com.apple.SetupAssistant" "DidSeeApplePaySetup" -bool True
+defaults write "com.apple.SetupAssistant" "LastSeenCloudProductVersion" -string "14.2.1"
+defaults write "com.apple.SetupAssistant" "DidSeeScreenTime" -bool True
+defaults write "com.apple.SetupAssistant" "MiniBuddyShouldLaunchToResumeSetup" -bool False
+defaults write "com.apple.SetupAssistant" "DidSeeTouchIDSetup" -bool True
+defaults write "com.apple.SetupAssistant" "NSAddServicesToContextMenus" -bool False
+defaults write "com.apple.SetupAssistant" "DidSeeActivationLock" -bool True
+defaults write "com.apple.SetupAssistant" "DidSeeSyncSetup" -bool True
+defaults write "com.apple.SetupAssistant" "DidSeeAvatarSetup" -bool False
+defaults write "com.apple.SetupAssistant" "MiniBuddyLaunchReason" -int 0
+defaults write "com.apple.SetupAssistant" "DidSeeSiriSetup" -bool True
+defaults write "com.apple.SetupAssistant" "DidSeePrivacy" -bool True
+defaults write "com.apple.SetupAssistant" "LastPrivacyBundleVersion" -string "2"
+defaults write "com.apple.SetupAssistant" "DidSeeAppStore" -bool False
+defaults write "com.apple.SetupAssistant" "LastPreLoginTasksPerformedVersion" -string "14.2.1"
+defaults write "com.apple.SetupAssistant" "DidSeeAppearanceSetup" -bool True
+defaults write "com.apple.SetupAssistant" "LastSeenSyncProductVersion" -string "14.1.2"
+defaults write "com.apple.SetupAssistant" "LastSeeniCloudStorageServicesProductVersion" -string "14.2.1"
+defaults write "com.apple.SetupAssistant" "LastPreLoginTasksPerformedBuild" -string "23C71"
+defaults write "com.apple.SetupAssistant" "MiniBuddyLaunchedPostMigration" -bool False
+defaults write "com.apple.SetupAssistant" "DidSeeAccessibility" -bool True
+defaults write "com.apple.SetupAssistant" "LastSeenBuddyBuildVersion" -string "21G72"
+defaults write "com.apple.SetupAssistant" "DidSeeLockdownMode" -bool False
+defaults write "com.apple.SetupAssistant" "DidSeeiCloudLoginForStorageServices" -bool True
+defaults write "com.apple.Siri" "StatusMenuVisible" -bool False
+defaults write "com.apple.SoftwareUpdate" "AutoUpdateMajorOSVersion" -string "13"
+defaults write "com.apple.SpeakSelection" "TTSCachedBuildNumberKey" -string "10M5214"
+defaults write "com.apple.SpeakSelection" "TTSResourceCacheVersionKey" -int 3
+defaults write "com.apple.SpeechRecognitionCore" "AllowAudioDucking" -bool False
+defaults write "com.apple.Spotlight" "lastWindowPosition" -string "{{540, 410}, {600, 430}}"
+defaults write "com.apple.Spotlight" "NSStatusItem Preferred Position Item-0" -int 185
+defaults write "com.apple.Spotlight" "SPMessageTracingWindowHideCount" -int 10
+defaults write "com.apple.Spotlight" "NSStatusItem Visible Item-0" -bool True
+defaults write "com.apple.Spotlight" "__NSEnableTSMDocumentWindowLevel" -bool True
+defaults write "com.apple.Spotlight" "lastVisibleScreenRect" -string "{{0, 84}, {1680, 966}}"
+defaults write "com.apple.Spotlight" "showedFTE" -bool True
+defaults write "com.apple.Spotlight" "SPMessageTracingWindowShowCount" -int 10
+defaults write "com.apple.Spotlight" "useCount" -int 3
+defaults write "com.apple.Spotlight" "startTime" -float 731536275.516443
+defaults write "com.apple.StatusKitAgent" "CKStartupTime" -int 1709843445
+defaults write "com.apple.SystemProfiler" "PrefsVersion" -int 1
+defaults write "com.apple.TTY" "RTTSettingsVersionPreference" -int 2
+defaults write "com.apple.TTY" "TUSupportsRelayCallingPreference" -bool False
+defaults write "com.apple.TTY" "RTTContinuityRTTIsSupportedPreference" -bool False
+defaults write "com.apple.TTY" "TUIsRelayCallingEnabledPreference" -bool False
+defaults write "com.apple.TV" "ILMediaBrowserMediaType" -int 0
+defaults write "com.apple.TV" "ILMediaBrowserSelectedGroup0" -string "com.apple.iTunes.iTunes"
+defaults write "com.apple.TV" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 484}"
+defaults write "com.apple.TV" "storeMediaTypeFlags" -int 3406
+defaults write "com.apple.TV" "checkedHLSKeysTime" -int 3789424655
+defaults write "com.apple.TV" "NSWindow Frame VUIWindowFrameAutosaveName" -string "230 271 1220 720 0 0 1680 1050 "
+defaults write "com.apple.TV" "jsVersion" -string "17.3.2"
+defaults write "com.apple.TV" "storeSupportsCloudPurchases" -int 1
+defaults write "com.apple.TV" "debugAssertCategoriesVersion" -int 3
+defaults write "com.apple.TV" "lastSelectedTabBarItemIdentifier" -string "watchnow"
+defaults write "com.apple.TV" "ILMediaBrowserAudioSplitViewPosition" -int 140
+defaults write "com.apple.TV" "RetryOnLongBackgroundedTimeOut" -bool True
+defaults write "com.apple.TV" "ImageProxyReturnImageAfterWrittenToDisk" -bool True
+defaults write "com.apple.TV" "NSWindow Frame NSNavPanelAutosaveName" -string "440 424 800 484 0 0 1680 1050 "
+defaults write "com.apple.TV" "storeSupportsPasswordSettings" -bool True
+defaults write "com.apple.TV" "storeSupportsUPP" -bool True
+defaults write "com.apple.TV" "showWelcomeScreenState" -int 2
+defaults write "com.apple.TV" "hasRegisterdDeviceForOffer" -bool True
+defaults write "com.apple.TV" "whatsNewLevel" -int 1
+defaults write "com.apple.TV" "storeSupportsPreviousPurchases" -bool True
+defaults write "com.apple.TV" "VUIAssetCacheKey" -string "14.2.1"
+defaults write "com.apple.TV" "NSTableView Supports v2 " -bool True
+defaults write "com.apple.TV" "library-url" -string "file:///Users/mymac/Movies/TV/TV%20Library.tvlibrary/"
+defaults write "com.apple.TV" "KettleLastPromptLaunchNumberAfterGDPR" -int 4
+defaults write "com.apple.TV" "KettleFirstPromptLaunchNumberAfterGDPR" -int 2
+defaults write "com.apple.TV" "preloadFilesIntoMemory" -bool False
+defaults write "com.apple.TV" "lastSelectedSectionIdentifier" -string "watchnow"
+defaults write "com.apple.TV" "KettleNumberOfAppLaunch" -int 3
+defaults write "com.apple.TV" "NSApplicationCrashOnExceptions" -bool False
+defaults write "com.apple.TV" "userMaxConcurrentDownloads" -int 3
+defaults write "com.apple.TV" "debugAssertCategoriesEnabled" -int 0
+defaults write "com.apple.TV" "firstLaunchShowWelcomeScreenState" -int 2
+defaults write "com.apple.TV" "media-folder-url" -string "file:///Users/mymac/Movies/TV/Media.localized/"
+defaults write "com.apple.TV" "NSNavPanelMediaBrowserTypeForOpenModeKey" -int 0
+defaults write "com.apple.TV" "ILMediaBrowserSelectedGroupIndex0" -int 0
+defaults write "com.apple.TV" "NSTableView Supports v2 AudioTable" -bool True
+defaults write "com.apple.TelephonyUtilities" "CachedVCCaps" -int 17592188010496
+defaults write "com.apple.TelephonyUtilities" "GondolaLastAccountsChangedState" -bool True
+defaults write "com.apple.TelephonyUtilities" "GondolaSyncedVersion" -int 0
+defaults write "com.apple.TelephonyUtilities" "kLastIDSFirewallVersionDefaultsKey" -int 1
+defaults write "com.apple.TelephonyUtilities" "registeredProvidersVersion" -int 1
+defaults write "com.apple.Terminal" "HasMigratedDefaults" -bool True
+defaults write "com.apple.Terminal" "NSWindow Frame NSColorPanel" -string "1369 343 255 343 0 0 2560 1600 "
+defaults write "com.apple.Terminal" "SecureKeyboardEntry" -bool False
+defaults write "com.apple.Terminal" "Default Window Settings" -string "Basic"
+defaults write "com.apple.Terminal" "NSWindow Frame TTWindow Basic" -string "1292 51 1220 737 0 0 2560 1600 "
+defaults write "com.apple.Terminal" "ProfileCurrentVersion" -float 2.07
+defaults write "com.apple.Terminal" "FocusFollowsMouse" -bool True
+defaults write "com.apple.Terminal" "NSColorPickerPreferredRGBEntryMode" -int 2
+defaults write "com.apple.Terminal" "NSColorPanelMode" -string "6"
+defaults write "com.apple.Terminal" "DefaultProfilesVersion" -int 1
+defaults write "com.apple.Terminal" "NSWindow Frame TTAppPreferences" -string "1668 917 667 554 0 0 2560 1600 "
+defaults write "com.apple.Terminal" "NSFontPanelAttributes" -string "1, 0"
+defaults write "com.apple.Terminal" "Man Page Window Settings" -string "Man Page"
+defaults write "com.apple.Terminal" "TTAppPreferences Selected Tab" -int 2
+defaults write "com.apple.Terminal" "Startup Window Settings" -string "Basic"
+defaults write "com.apple.Terminal" "NSWindow Frame NSFontPanel" -string "2045 101 445 114 0 0 2560 1600 "
+defaults write "com.apple.TextEdit" "NSWindow Frame NSColorPanel" -string "0 81 224 278 0 0 2560 1600 "
+defaults write "com.apple.TextEdit" "NSFontSize" -string "18"
+defaults write "com.apple.TextEdit" "NSNavLastRootDirectory" -string "~/Downloads"
+defaults write "com.apple.TextEdit" "NSWindow Frame NSSpellCheckerSubstitutionsPanel2" -string "1456 782 440 137 0 0 2560 1600 "
+defaults write "com.apple.TextEdit" "NSFixedPitchFont" -string "Menlo-Regular"
+defaults write "com.apple.TextEdit" "NSFont" -string "Helvetica"
+defaults write "com.apple.TextEdit" "NSWindow Frame NSNavPanelAutosaveName" -string "1502 194 800 388 0 0 2560 1600 "
+defaults write "com.apple.TextEdit" "RichText" -int 0
+defaults write "com.apple.TextEdit" "NSNavPanelExpandedStateForSaveMode" -bool True
+defaults write "com.apple.TextEdit" "NSFixedPitchFontSize" -string "18"
+defaults write "com.apple.TextEdit" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.apple.TextEdit" "NSWindow Frame NSFontPanel" -string "791 707 445 239 0 0 2560 1600 "
+defaults write "com.apple.TextInputMenu" "visible" -bool True
+defaults write "com.apple.TextInputMenuAgent" "NSStatusItem Preferred Position Item-0" -int 297
+defaults write "com.apple.UsageTrackingAgent" "CKStartupTime" -int 1709843446
+defaults write "com.apple.UserAccountUpdater" "com.apple.HidLibraryFolderAlready" -bool True
+defaults write "com.apple.VoiceOver4.local" "SCRCUserDefaultsAllowAirPlay" -bool False
+defaults write "com.apple.VoiceOver4.local" "SCRCUserDefaultsPlannedShutdownSuccessful" -bool True
+defaults write "com.apple.VoiceOver4.local" "SCRCUserDefaultsUnplannedShutdownCount" -int 0
+defaults write "com.apple.Wallpaper-Settings.extension" "NSWindow Frame NSNavPanelAutosaveName" -string "940 595 800 476 0 0 2560 1600 "
+defaults write "com.apple.Wallpaper-Settings.extension" "LegacyYourPhotosMigrated" -bool True
+defaults write "com.apple.WatchListKit" "hasMigratedToNewBadgingSystem" -bool True
+defaults write "com.apple.WatchListKit" "storedConfigTimestamp" -int 1706579688
+defaults write "com.apple.WatchListKit" "lastKnownTVAppEnabledValue" -bool True
+defaults write "com.apple.WatchListKit" "AMSBagTracker_NowPlayingEnabledKey" -bool True
+defaults write "com.apple.WindowManager" "LastHeartbeatDateString.daily" -string "2024-03-22T06:29:56Z"
+defaults write "com.apple.WindowManager" "StageManagerHideWidgets" -bool False
+defaults write "com.apple.WindowManager" "HasDisplayedShowDesktopEducation" -bool True
+defaults write "com.apple.WindowManager" "LastDailyHeartbeatDateString" -string "2023-10-12T03:39:29Z"
+defaults write "com.apple.WindowManager" "GloballyEnabledEver" -bool True
+defaults write "com.apple.WindowManager" "HideDesktop" -bool True
+defaults write "com.apple.WindowManager" "AutoHide" -bool False
+defaults write "com.apple.WindowManager" "AppWindowGroupingBehavior" -int 1
+defaults write "com.apple.WindowManager" "GloballyEnabled" -bool False
+defaults write "com.apple.WindowManager" "StandardHideWidgets" -bool False
+defaults write "com.apple.WorkflowKit.BackgroundShortcutRunner" "CKStartupTime" -int 1709843446
+defaults write "com.apple.accounts.suggestions" "InitialLocalMigration" -bool True
+defaults write "com.apple.accounts.suggestions" "LocalDeviceID" -string "25D2E96F-A6FB-443E-8DBC-CFDF3CB47B59"
+defaults write "com.apple.accountsd" "LastSystemVersion" -string "23C71"
+defaults write "com.apple.amp.mediasharingd" "home-sharing-enabled" -int 0
+defaults write "com.apple.amp.mediasharingd" "public-sharing-enabled" -int 0
+defaults write "com.apple.amp.mediasharingd" "home-sharing-sequence-id" -int 100
+defaults write "com.apple.amp.mediasharingd" "home-sharing-computer-id" -string ""
+defaults write "com.apple.amp.mediasharingd" "home-sharing-group-id" -string ""
+defaults write "com.apple.amp.mediasharingd" "photo-sharing-enabled" -int 0
+defaults write "com.apple.amp.mediasharingd" "shared-library-id" -int 2552178892628819215
+defaults write "com.apple.amp.mediasharingd" "public-sharing-is-protected" -int 0
+defaults write "com.apple.amp.mediasharingd" "shared-library-machine-id" -int -5430794783186036008
+defaults write "com.apple.amp.mediasharingd" "shared-library-name" -string "my macのライブラリ"
+defaults write "com.apple.amsaccountsd" "CKStartupTime" -int 1696740660
+defaults write "com.apple.amsengagementd" "lastSyncBuildVersion" -string "22F82"
+defaults write "com.apple.amsengagementd" "AMSMetricsIdentifierZoneSubscriptionCreated" -bool True
+defaults write "com.apple.amsengagementd" "AMSMetricsIdentifierZoneCreated" -bool True
+defaults write "com.apple.amsengagementd" "AMSMetricsIdentifierDateLastSynced" -float 1711096308.251481
+defaults write "com.apple.amsengagementd" "TreatmentStoreForceSynchronization" -string "2024-03-22T08:31:46Z"
+defaults write "com.apple.amsengagementd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.amsengagementd" "AMSActivityObserverDateLastCheckedIn" -float 1711135766.173918
+defaults write "com.apple.amsengagementd" "AMSMetricsIdentifierUserRecordName" -string "_e4a6b24eb60dfde292c8fc5fd444f68c"
+defaults write "com.apple.animoji" "CKStartupTime" -int 1709843445
+defaults write "com.apple.ap.adprivacyd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.appleaccountd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.appstored" "BadgeCount" -int 0
+defaults write "com.apple.appstored" "14990088655029749272" -string "krKa19RueoObBjA6wj0kDA=="
+defaults write "com.apple.appstored" "ArcadeSubscriptionState" -string "Unsubscribed"
+defaults write "com.apple.appstored" "CurrentUpdateSource" -int 0
+defaults write "com.apple.appstored" "ArcadePayoutDeviceID" -string "A6A9EB5B-EDD5-44EF-A044-9D3407B9DA5A"
+defaults write "com.apple.appstored" "ArcadeDeviceID" -string "1DD2BD03-DB66-485A-B17A-C6EDFC1B3226"
+defaults write "com.apple.appstored" "ArcadeDeviceGUID" -string "183EEFDAC853"
+defaults write "com.apple.appstored" "LastOSBuildVersion" -string "23C71"
+defaults write "com.apple.appstored" "WelcomeNotificationLastAppStoreConnectionProductVersion" -string "14.2.1"
+defaults write "com.apple.archiveutility" "NSWindow Frame Progress Panel" -string "1097 1175 366 33 0 0 2560 1600 "
+defaults write "com.apple.archiveutility" "NSWindow Frame Progress Panel Frame" -string "1914 758 378 30 0 0 2560 1600 "
+defaults write "com.apple.assistant" "Experiment Identifiersiri_vox_tap_to_siri_behavior_experiment" -string "BC6F1669-C9C5-4295-870A-5321B985EDA1"
+defaults write "com.apple.assistant" "MultiUser Shared Data Needs Sync" -bool True
+defaults write "com.apple.assistant" "Is Trial config set to disable media entity sync" -bool True
+defaults write "com.apple.assistant" "Voice Trigger Needs Sync" -bool True
+defaults write "com.apple.assistant" "Last Known Analytics Store State" -int 0
+defaults write "com.apple.assistant" "Experiment Identifierinvocation_feedback_experiment" -string "33DC1D32-9EE2-4B18-99D5-56EB7DF2325D"
+defaults write "com.apple.assistant" "Has Set Up Key Value Subscription" -bool True
+defaults write "com.apple.assistant" "Is Trial config set to disable sync for FullUoD en_US devices" -bool False
+defaults write "com.apple.assistant" "Has Set Up MultiUser Shared Record Subscription" -bool True
+defaults write "com.apple.assistant" "Has Set Up Voice Trigger Subscription" -bool True
+defaults write "com.apple.assistant" "Has Set Up Account Status Subscription" -bool True
+defaults write "com.apple.assistant" "Experiment Identifiersiri_vox_sounds_experiment" -string "24905963-475E-49ED-868A-8127F13C31E5"
+defaults write "com.apple.assistant.backedup" "Cloud Sync User ID" -string "_2eea6274dba59981e167e088288196c6"
+defaults write "com.apple.assistant.backedup" "Session Language" -string "ja-JP"
+defaults write "com.apple.assistant.backedup" "Cloud Sync Enabled" -bool True
+defaults write "com.apple.assistant.backedup" "MultiUser VoiceIdentification Enabled" -bool False
+defaults write "com.apple.assistant.support" "Assistant Enabled" -bool False
+defaults write "com.apple.assistantd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.biomesyncd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.bird" "icloud-drive.account-migration-status.1365137353" -int 4
+defaults write "com.apple.bird" "CKStartupTime" -int 1706428077
+defaults write "com.apple.bird" "optimize-storage" -bool True
+defaults write "com.apple.bluetoothuserd" "lastLaunchBootSessionUUID" -string "D57DE917-0FDA-4655-9AFA-159F77B38644"
+defaults write "com.apple.bluetoothuserd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.bluetoothuserd" "LastOSLaunchVersion" -string "23C71"
+defaults write "com.apple.calaccessd" "CALNNotificationIconIdentifierVersion" -int 4
+defaults write "com.apple.calculator" "ViewPathDefaultsKey" -string "##BUILTIN##/BasicAndSci.calcview"
+defaults write "com.apple.calculator" "ViewDefaultsKey" -string "基本"
+defaults write "com.apple.calculator" "NSWindow Frame Calc_Main_Window" -string "1292 1231 232 321 0 0 2560 1600 "
+defaults write "com.apple.calculator" "NSWindow Frame Calc_History_Window" -string "869 1220 227 348 0 0 2560 1600 "
+defaults write "com.apple.chronod" "hasRemoteWidgets" -bool False
+defaults write "com.apple.chronod" "NetworkEnabledAfterBootNotification.lastLaunchBootSessionUUID" -string "D57DE917-0FDA-4655-9AFA-159F77B38644"
+defaults write "com.apple.classroom" "allowClassroomLockDevice-00000000-0000-0000-0000-000000000000:0" -bool True
+defaults write "com.apple.classroom" "allowClassroomScreenObservation-00000000-0000-0000-0000-000000000000:0-ask" -bool False
+defaults write "com.apple.classroom" "allowClassroomScreenObservation-00000000-0000-0000-0000-000000000000:0" -bool True
+defaults write "com.apple.classroom" "allowClassroomOpenApp-00000000-0000-0000-0000-000000000000:0-ask" -bool False
+defaults write "com.apple.classroom" "allowClassroomOpenURL-ask" -bool False
+defaults write "com.apple.classroom" "allowClassroomOpenURL" -bool True
+defaults write "com.apple.classroom" "allowClassroomLockDevice-00000000-0000-0000-0000-000000000000:0-ask" -bool False
+defaults write "com.apple.classroom" "allowClassroomOpenApp-00000000-0000-0000-0000-000000000000:0" -bool True
+defaults write "com.apple.classroom" "allowClassroomOpenURL-00000000-0000-0000-0000-000000000000:0-ask" -bool False
+defaults write "com.apple.classroom" "forceUnpromptedRemoteScreenObservation-00000000-0000-0000-0000-000000000000:0-ask" -bool False
+defaults write "com.apple.classroom" "allowClassroomOpenURL-00000000-0000-0000-0000-000000000000:0" -bool True
+defaults write "com.apple.classroom" "forceUnpromptedRemoteScreenObservation-00000000-0000-0000-0000-000000000000:0" -bool True
+defaults write "com.apple.classroom" "allowClassroomOpenApp" -bool True
+defaults write "com.apple.classroom" "allowClassroomOpenApp-ask" -bool False
+defaults write "com.apple.cloudd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.cloudd" "com.apple.private.cloudkit.shouldUseGeneratedDeviceID" -bool False
+defaults write "com.apple.cloudpaird" "MagicCloudPairingManateeUpgradedAccount" -bool True
+defaults write "com.apple.cloudpaird" "MagicCloudPairingMasterSubscriptionManateeID" -string "E56825AC-DA4B-4CD6-BA69-D8064182439D"
+defaults write "com.apple.cloudpaird" "CKStartupTime" -int 1709843446
+defaults write "com.apple.cloudpaird" "MagicCloudPairingAccessorySubscriptionManateeID" -string "47C3F3E1-98C4-415F-A461-30029AD55C8D"
+defaults write "com.apple.cloudphotod" "CKStartupTime" -int 1709843446
+defaults write "com.apple.commcenter.callservices" "last.known.icloud.id" -string "e43a527a00d995806268008ae98b9eaa6ee5741d"
+defaults write "com.apple.commcenter.data" "pw_ver" -int 2
+defaults write "com.apple.contextsync.subscriptions" "lastBootUUID" -string "D57DE917-0FDA-4655-9AFA-159F77B38644"
+defaults write "com.apple.contextsync.subscriptions" "rebootNotificationDelivered" -bool True
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Item-6" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Bluetooth" -bool True
+defaults write "com.apple.controlcenter" "NSStatusItem Preferred Position ScreenMirroring" -int 461
+defaults write "com.apple.controlcenter" "LastHeartbeatDateString.daily" -string "2024-03-22T06:29:55Z"
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Sound" -bool True
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Item-0" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Item-7" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Item-1" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Preferred Position StageManager" -int 455
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Item-8" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Visible NowPlaying" -bool True
+defaults write "com.apple.controlcenter" "NSStatusItem Visible AudioVideoModule" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Visible ScreenMirroring" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Item-2" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Preferred Position Sound" -int 406
+defaults write "com.apple.controlcenter" "NSStatusItem Visible StageManager" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Clock" -bool True
+defaults write "com.apple.controlcenter" "NSStatusItem Visible FocusModes" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Preferred Position WiFi" -int 217
+defaults write "com.apple.controlcenter" "NSStatusItem Preferred Position Battery" -int 255
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Battery" -bool True
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Item-3" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Preferred Position FocusModes" -int 461
+defaults write "com.apple.controlcenter" "NSStatusItem Preferred Position NowPlaying" -int 373
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Item-4" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Visible WiFi" -bool True
+defaults write "com.apple.controlcenter" "NSStatusItem Preferred Position BentoBox" -int 151
+defaults write "com.apple.controlcenter" "NSStatusItem Preferred Position Bluetooth" -int 341
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Shortcuts" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Visible Item-5" -bool False
+defaults write "com.apple.controlcenter" "NSStatusItem Visible BentoBox" -bool True
+defaults write "com.apple.corerecents.recentsd" "LastiCloudAccountPersonID" -string "1365137353"
+defaults write "com.apple.corerecents.recentsd" "LastiCloudAccountWasLoggedIn" -bool True
+defaults write "com.apple.coreservices.UASharedPasteboardProgressUI" "NSWindow Frame continuity-pasteboard-progress-window" -string "1231 921 399 79 0 0 1680 1050 "
+defaults write "com.apple.coreservices.uiagent" "NSWindow Frame CSUIGatekeeperProgressWindow" -string "1080 1185 400 70 0 0 2560 1600 "
+defaults write "com.apple.coreservices.uiagent" "CSUIHaveCenteredGatekeeperProgressWindow" -bool True
+defaults write "com.apple.coreservices.useractivityd" "kRemotePasteboardBlobName" -string "/var/folders/fj/hnqlr8552fl9x6ttz5dpcxtr0000gn/T/com.apple.useractivityd/shared-pasteboard/2E5B5692-D0C6-4F47-8877-F019719CBA9C"
+defaults write "com.apple.dataaccess.babysitter" "LastSystemVersion" -string "23C71"
+defaults write "com.apple.dataaccess.dataaccessd" "kDAMigrationBuildVersionKey" -string "23C71"
+defaults write "com.apple.diagnosticextensionsd" "directoriesCleanupDone" -bool True
+defaults write "com.apple.dock" "wvous-br-corner" -int 14
+defaults write "com.apple.dock" "showAppExposeGestureEnabled" -bool True
+defaults write "com.apple.dock" "autohide" -bool True
+defaults write "com.apple.dock" "tilesize" -int 74
+defaults write "com.apple.dock" "region" -string "JP"
+defaults write "com.apple.dock" "expose-group-apps" -bool False
+defaults write "com.apple.dock" "showMissionControlGestureEnabled" -bool True
+defaults write "com.apple.dock" "launchanim" -bool False
+defaults write "com.apple.dock" "version" -int 1
+defaults write "com.apple.dock" "mru-spaces" -bool False
+defaults write "com.apple.dock" "magnification" -bool False
+defaults write "com.apple.dock" "largesize" -int 128
+defaults write "com.apple.dock" "show-recents" -bool False
+defaults write "com.apple.dock" "trash-full" -bool True
+defaults write "com.apple.dock" "mod-count" -int 2084
+defaults write "com.apple.dock" "expose-animation-duration" -float 0.10000000149011612
+defaults write "com.apple.dock" "loc" -string "ja_JP:(null)"
+defaults write "com.apple.dock" "lastShowIndicatorTime" -float 732295136.593375
+defaults write "com.apple.donotdisturbd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.driver.AppleBluetoothMultitouch.mouse" "MouseOneFingerDoubleTapGesture" -int 0
+defaults write "com.apple.driver.AppleBluetoothMultitouch.mouse" "MouseTwoFingerHorizSwipeGesture" -int 2
+defaults write "com.apple.driver.AppleBluetoothMultitouch.mouse" "MouseVerticalScroll" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.mouse" "UserPreferences" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.mouse" "MouseMomentumScroll" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.mouse" "MouseButtonDivision" -int 55
+defaults write "com.apple.driver.AppleBluetoothMultitouch.mouse" "MouseHorizontalScroll" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.mouse" "MouseTwoFingerDoubleTapGesture" -int 3
+defaults write "com.apple.driver.AppleBluetoothMultitouch.mouse" "MouseButtonMode" -string "OneButton"
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadThreeFingerDrag" -bool False
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadPinch" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadFourFingerVertSwipeGesture" -int 2
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "USBMouseStopsTrackpad" -int 0
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadThreeFingerTapGesture" -int 0
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadHorizScroll" -int 1
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadFourFingerPinchGesture" -int 2
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadTwoFingerDoubleTapGesture" -int 1
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadMomentumScroll" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadRotate" -int 1
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadThreeFingerHorizSwipeGesture" -int 0
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "Clicking" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "UserPreferences" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "version" -int 5
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadScroll" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "DragLock" -bool False
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadFiveFingerPinchGesture" -int 2
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadThreeFingerVertSwipeGesture" -int 0
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadTwoFingerFromRightEdgeSwipeGesture" -int 3
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadHandResting" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "Dragging" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadCornerSecondaryClick" -int 0
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadRightClick" -bool True
+defaults write "com.apple.driver.AppleBluetoothMultitouch.trackpad" "TrackpadFourFingerHorizSwipeGesture" -int 2
+defaults write "com.apple.driver.AppleHIDMouse" "Button4Force" -int 0
+defaults write "com.apple.driver.AppleHIDMouse" "ScrollH" -int 1
+defaults write "com.apple.driver.AppleHIDMouse" "ButtonDominance" -int 1
+defaults write "com.apple.driver.AppleHIDMouse" "Button4" -int 0
+defaults write "com.apple.driver.AppleHIDMouse" "Button3" -int 0
+defaults write "com.apple.driver.AppleHIDMouse" "ScrollSSize" -int 30
+defaults write "com.apple.driver.AppleHIDMouse" "Button4Click" -int 0
+defaults write "com.apple.driver.AppleHIDMouse" "ScrollV" -int 1
+defaults write "com.apple.driver.AppleHIDMouse" "Button1" -int 1
+defaults write "com.apple.driver.AppleHIDMouse" "Button2" -int 1
+defaults write "com.apple.driver.AppleHIDMouse" "ScrollS" -int 4
+defaults write "com.apple.facetime.bag" "CacheTime" -int 3600
+defaults write "com.apple.facetime.bag" "Date" -float 732538996.924517
+defaults write "com.apple.facetime.bag" "URL" -string "https://init.ess.apple.com/WebObjects/VCInit.woa/wa/getBag?ix=3"
+defaults write "com.apple.fileproviderd" "com.apple.fileproviderd.did-drop-daemon-corespotlight-index" -int 1
+defaults write "com.apple.financed" "CKStartupTime" -int 1709843446
+defaults write "com.apple.finder" "SidebarTagsSctionDisclosedState" -bool False
+defaults write "com.apple.finder" "PreviewPaneGalleryWidth" -int 240
+defaults write "com.apple.finder" "BulkRenameAddTextTo" -int 0
+defaults write "com.apple.finder" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.apple.finder" "PreferencesWindow.LastSelection" -string "ADVD"
+defaults write "com.apple.finder" "_FXInputMethodLocation" -string "{{0, 777}, {1440, 39}}"
+defaults write "com.apple.finder" "FXICloudDriveDesktop" -bool False
+defaults write "com.apple.finder" "BulkRenameFindText" -string ""
+defaults write "com.apple.finder" "SidebarShowingiCloudDesktop" -bool False
+defaults write "com.apple.finder" "BulkRenamePlaceNumberAt" -int 0
+defaults write "com.apple.finder" "FXToolbarUpgradedToTenNine" -int 2
+defaults write "com.apple.finder" "ShowRemovableMediaOnDesktop" -bool True
+defaults write "com.apple.finder" "SidebariCloudDriveSectionDisclosedState" -bool False
+defaults write "com.apple.finder" "FXSidebarUpgradedSharedSearchToTwelve" -bool True
+defaults write "com.apple.finder" "DownloadsFolderListViewSettingsVersion" -int 1
+defaults write "com.apple.finder" "FXICloudDriveDeclinedUpgrade" -bool False
+defaults write "com.apple.finder" "FXPreferencesWindow.Location" -string "{{10, 1210}, {377, 380}}"
+defaults write "com.apple.finder" "PreviewPaneWidth" -int 240
+defaults write "com.apple.finder" "FXArrangeGroupViewBy" -string "Name"
+defaults write "com.apple.finder" "RecentsArrangeGroupViewBy" -string "Date Last Opened"
+defaults write "com.apple.finder" "FXPreferredSearchViewStyleVersion" -string "%00%00%00%01"
+defaults write "com.apple.finder" "BulkRenameReplaceText" -string ""
+defaults write "com.apple.finder" "CopyProgressWindowLocation" -string "{1914, 48}"
+defaults write "com.apple.finder" "BulkRenameAddTextText" -string ""
+defaults write "com.apple.finder" "SidebarShowingSignedIntoiCloud" -bool True
+defaults write "com.apple.finder" "ShowHardDrivesOnDesktop" -bool False
+defaults write "com.apple.finder" "NSWindow Frame GoToSheet" -string "1672 1270 460 180 0 0 2560 1600 "
+defaults write "com.apple.finder" "FXQuickActionsConfigUpgradeLevel" -int 3
+defaults write "com.apple.finder" "BulkRenameName" -string "ファイル "
+defaults write "com.apple.finder" "FXPreferredViewStyle" -string "icnv"
+defaults write "com.apple.finder" "FXConnectToBounds" -string "{{1292, 48}, {1220, 1504}}"
+defaults write "com.apple.finder" "SidebarWidth" -int 128
+defaults write "com.apple.finder" "ShowSidebar" -bool True
+defaults write "com.apple.finder" "TagsCloudSerialNumber" -int 3
+defaults write "com.apple.finder" "ShowPreviewPane" -bool True
+defaults write "com.apple.finder" "BulkRenameStartIndex" -int 1
+defaults write "com.apple.finder" "FXSidebarUpgradedToTenFourteen" -bool True
+defaults write "com.apple.finder" "LastTrashState" -bool True
+defaults write "com.apple.finder" "ShowExternalHardDrivesOnDesktop" -bool True
+defaults write "com.apple.finder" "GoToField" -string "/System/Library/Desktop Pictures/.wallpapers/"
+defaults write "com.apple.finder" "FK_AppCentricShowSidebar" -bool True
+defaults write "com.apple.finder" "FXSidebarUpgradedToTenTen" -bool True
+defaults write "com.apple.finder" "FXConnectToLastURL" -string "vnc://192.168.0.35:5901"
+defaults write "com.apple.finder" "FXICloudDriveEnabled" -bool False
+defaults write "com.apple.finder" "FXICloudDriveDocuments" -bool False
+defaults write "com.apple.finder" "EmptyTrashProgressWindowLocation" -string "{1292, 812}"
+defaults write "com.apple.finder" "_FXShowPosixPathInTitle" -bool True
+defaults write "com.apple.finder" "FXDesktopTouchBarUpgradedToTenTwelveOne" -int 1
+defaults write "com.apple.finder" "NSWindow Frame NSNavPanelAutosaveName" -string "1503 194 800 363 0 0 2560 1600 "
+defaults write "com.apple.finder" "FXICloudDriveFirstSyncDownComplete" -bool False
+defaults write "com.apple.finder" "SidebarDevicesSectionDisclosedState" -bool True
+defaults write "com.apple.finder" "FK_SidebarWidth" -int 143
+defaults write "com.apple.finder" "SearchRecentsSavedViewStyleVersion" -string "%00%00%00%01"
+defaults write "com.apple.finder" "FXPreferredGroupBy" -string "Name"
+defaults write "com.apple.finder" "PreviewPaneInfoExpanded" -bool True
+defaults write "com.apple.finder" "BulkRenameAddNumberTo" -int 0
+defaults write "com.apple.finder" "FXLastSearchScope" -string "SCcf"
+defaults write "com.apple.finder" "InspectorWindow.Location" -string "{10, 9}"
+defaults write "com.apple.finder" "TagsColumnWidth" -int 190
+defaults write "com.apple.finder" "SidebarPlacesSectionDisclosedState" -bool True
+defaults write "com.apple.finder" "FXToolbarUpgradedToTenEight" -int 1
+defaults write "com.apple.finder" "FXICloudLoggedIn" -bool True
+defaults write "com.apple.finder" "NSNavLastRootDirectory" -string "/Applications"
+defaults write "com.apple.finder" "FontSizeCategory" -string "DEFAULT"
+defaults write "com.apple.finder" "FXToolbarUpgradedToTenSeven" -int 1
+defaults write "com.apple.findmy.findmylocateagent" "Daemon::LastOSLaunchVersion" -string "23C71"
+defaults write "com.apple.findmy.findmylocateagent" "CKStartupTime" -int 1709843446
+defaults write "com.apple.findmy.findmylocateagent" "DataManager::isInitialized" -bool True
+defaults write "com.apple.findmy.findmylocateagent" "Daemon::LastLaunchBootSessionUUID" -string "D57DE917-0FDA-4655-9AFA-159F77B38644"
+defaults write "com.apple.findmy.fmfcore.notbackedup" "FMFGarbageCollectorIdentityKey" -string "1365137353"
+defaults write "com.apple.findmy.fmfcore.notbackedup" "FMFLimitedPrecisionPrefKey.limitedPrecision" -bool True
+defaults write "com.apple.findmy.fmipcore.notbackedup" "FMIPLimitedPrecisionPrefKey.limitedPrecision" -bool True
+defaults write "com.apple.findmy.fmipcore.notbackedup" "FMIPGarbageCollectorIdentityKey" -string "1365137353"
+defaults write "com.apple.frameworks.diskimages.diuiagent" "NSWindow Frame Progress Panel" -string "537 671 366 33 0 0 1440 900 "
+defaults write "com.apple.frameworks.diskimages.diuiagent" "NSWindow Frame Progress Panel Frame" -string "537 671 378 30 0 0 1440 900 "
+defaults write "com.apple.freeform" "CRLUserHasDataUserDefault" -bool True
+defaults write "com.apple.freeform" "CRLConnectICloudDialogShown" -int 13001000
+defaults write "com.apple.freeform" "CKStartupTime" -int 1673555508
+defaults write "com.apple.freeform" "NSWindow Frame CRLMacWindowController" -string "0 85 1243 725 0 0 1440 900 "
+defaults write "com.apple.freeform" "CRLRemoteDefaultsETag" -string ""b5-5ed719895ac55""
+defaults write "com.apple.freeform" "CRLWelcomeVersion" -int 65536
+defaults write "com.apple.freeform" "CRLFeatureHintVersion" -int 65536
+defaults write "com.apple.freeform" "CRLAnalyticsActiveUseDeviceID" -string "9946E591-ACE3-498C-8AE8-B081F229000E"
+defaults write "com.apple.freeform" "CRLUserHasUnsyncedDataUserDefault" -bool True
+defaults write "com.apple.gamecenter" "GKMaxRecentPlayersCount" -int 50
+defaults write "com.apple.gamecenter" "GKMaxRecentPlayersTime" -int 314496000
+defaults write "com.apple.gamed" "GKStoreFrontIdentifier" -string "143462-1,42"
+defaults write "com.apple.gamed" "GKActiveEnvironmentKeyV2" -int 5
+defaults write "com.apple.gamed" "CKStartupTime" -int 1709843446
+defaults write "com.apple.gamed" "GKPushEnvironmentKeyV2" -int 2
+defaults write "com.apple.gamed" "GKLastProtocolVersionUsedKeyV2" -string "6.14.23.5.14.21.5.5.2"
+defaults write "com.apple.gamed" "GKLoginCancelled" -int 0
+defaults write "com.apple.gamed" "natType" -int 2
+defaults write "com.apple.helpd" "PublicSpotlightIndex" -bool True
+defaults write "com.apple.helpviewer" "NSWindow Frame HelpViewer-AppWindow-1" -string "2156 425 394 538 0 0 2560 1600 "
+defaults write "com.apple.helpviewer" "NSWindow Frame SwiftUI.ModifiedContent<SwiftUI.ModifiedContent<HelpViewer.TipsContentView, SwiftUI._AppearanceActionModifier>, SwiftUI._PreferenceTransformModifier<SwiftUI.SceneBridge.ActivationConditionsPreferenceKey>>-1-AppWindow-1" -string "267 111 906 780 0 0 1440 900 "
+defaults write "com.apple.helpviewer" "WindowLocation" -bool True
+defaults write "com.apple.homed" "CKStartupTime" -int 1709843446
+defaults write "com.apple.homed" "kAssistantConfigurationNumberOfEntitiesKey" -int 6
+defaults write "com.apple.homed" "HMDCoreAnalyticsPeriodicReporterXPCCounterReportTime" -float 732827799.855259
+defaults write "com.apple.homed" "HMDCoreAnalyticsPeriodicReporterRemoteMessageCounterReportTime" -float 732702747.870555
+defaults write "com.apple.homed" "HMDHH2AutoMigrationRunOnCurrentBuildSoftwareVersionKey" -string "14.2.1 (23C71)"
+defaults write "com.apple.homed" "HMDHH2AutoMigrationRunOnCurrentBuildStartedOnHH1Key" -bool True
+defaults write "com.apple.homed" "HMDHomeManagerGenerationCounter" -int 997
+defaults write "com.apple.homed" "kAssistantConfigurationVersionKey" -int 118
+defaults write "com.apple.homed" "kHomesConfigured" -bool True
+defaults write "com.apple.homed" "HMDHH2AutoMigrationRunOnCurrentBuildFlagKey" -bool False
+defaults write "com.apple.homed" "HMDMetricsDeviceStateManagerLastStoredSoftwareVersionKey" -string "14.2.1 (23C71)"
+defaults write "com.apple.homed.notbackedup" "HMDBiomeDidMigrateFromDuetPreferenceKey" -bool True
+defaults write "com.apple.iCal" "first minute of day time range" -int 0
+defaults write "com.apple.iCal" "lastViewsTimeZone" -string "Asia/Tokyo"
+defaults write "com.apple.iCal" "migrationAttempts" -int 0
+defaults write "com.apple.iCal" "CALPrefLastTruthFileMigrationVersion" -int 1
+defaults write "com.apple.iCal" "RemindersLastMigratedSystemVersion" -string "21G83"
+defaults write "com.apple.iCal" "NSEventConcurrentProcessingEnabled" -string "YES"
+defaults write "com.apple.iCal" "enableTravelAdvisoriesForAutomaticBehavior" -bool True
+defaults write "com.apple.iCal" "LastCheckForIgnoredPseudoEvents" -float 695101038.111021
+defaults write "com.apple.iCal" "last selected calendar list item" -string "3C2FD88C-F948-4B99-9E5D-C89919FF4D3A"
+defaults write "com.apple.iCal" "iCal version" -int 150994944
+defaults write "com.apple.iCal" "privacyPaneHasBeenAcknowledgedVersion" -int 4
+defaults write "com.apple.iCal" "CalForceTruthFileRestoreHashKey" -string "16A1"
+defaults write "com.apple.iCal" "NSWindow Frame iCal" -string "48 48 2464 1504 0 0 2560 1600 "
+defaults write "com.apple.iCal" "NotificationSourceClientIdentifierVersion" -int 1
+defaults write "com.apple.iCal" "kCalDBLastSpotLightIndexVersion" -int 22
+defaults write "com.apple.iCal" "ShowDeclinedEvents" -bool False
+defaults write "com.apple.iCal" "BirthdayEventsGenerationLastLocale" -string "ja_JP"
+defaults write "com.apple.iCal" "last minute of day time range" -int 1440
+defaults write "com.apple.iCal" "CalDefaultCalendar" -string "UseLastSelectedAsDefaultCalendar"
+defaults write "com.apple.iCal" "NSDontMakeMainWindowKey" -string "NO"
+defaults write "com.apple.iCal" "LastReminderMigrationCleanupVersion" -int 1
+defaults write "com.apple.iCal" "CalendarSidebarShown" -bool False
+defaults write "com.apple.iCal" "BirthdayEventsGenerationAttemptsToResetKey" -int 0
+defaults write "com.apple.iCal" "PrefMigrationSeed" -int 4
+defaults write "com.apple.iCal" "NotificationsLastLocale" -string "ja_JP"
+defaults write "com.apple.iCal" "display birthdays calendar" -bool True
+defaults write "com.apple.iChat" "DidMarkGroupPhotosAsUnpurgeable" -bool True
+defaults write "com.apple.iChat" "DidCheckForDuplicateChats" -int 3
+defaults write "com.apple.iCloudNotificationAgent" "_ICQLegacyQuotaFollowupCleanup.2" -bool True
+defaults write "com.apple.iCloudNotificationAgent" "CKStartupTime" -int 1709843446
+defaults write "com.apple.iCloudNotificationAgent" "com.apple.iCloudNotification.sessionUUID" -string "D57DE917-0FDA-4655-9AFA-159F77B38644"
+defaults write "com.apple.iMovieApp" "FFSidebarModuleSortTypePref" -int 0
+defaults write "com.apple.iMovieApp" "FFUseOriginalOrOptimizedMediaPlayerQualityKey" -int 5
+defaults write "com.apple.iMovieApp" "FFTimePreserving" -bool False
+defaults write "com.apple.iMovieApp" "XSTREAM" -int 6
+defaults write "com.apple.iMovieApp" "maskedEffectShapeOscMode" -int 0
+defaults write "com.apple.iMovieApp" "FFOverrideConnectionsKey" -bool False
+defaults write "com.apple.iMovieApp" "FFDefaultStillDuration" -int 4
+defaults write "com.apple.iMovieApp" "FFMessageTracerLastLoggedDayKey" -float 1706578826.14291
+defaults write "com.apple.iMovieApp" "XSTREAM_READAHEAD" -int 0
+defaults write "com.apple.iMovieApp" "PEPlayerSelectedTool" -string "FFTransform2DTool"
+defaults write "com.apple.iMovieApp" "TLKTimelineLanesOptimizePerformance" -bool True
+defaults write "com.apple.iMovieApp" "TXFontManager::kDefaultFontSize" -string "48"
+defaults write "com.apple.iMovieApp" "TLKLegacyLayout" -bool False
+defaults write "com.apple.iMovieApp" "faceObservationOscSuperEllipseCurvature" -int 1
+defaults write "com.apple.iMovieApp" "FFPlayerWarnAboutExcessiveDiskDrops" -bool True
+defaults write "com.apple.iMovieApp" "FFTheaterDeviceID" -string "02AF4FB2-CB49-495D-8B50-59BD83B82363"
+defaults write "com.apple.iMovieApp" "Active Command Set" -string "/Applications/iMovie.app/Contents/Resources/ja.lproj/Default.commandset"
+defaults write "com.apple.iMovieApp" "faceObservationOscDrawsAsSuperEllipse" -bool True
+defaults write "com.apple.iMovieApp" "FFImportOrganizerFilmstripModule.itemSize-mediaImport" -int 80
+defaults write "com.apple.iMovieApp" "FFMessageTracerCloudTheaterTrailerTypeCountKey" -int 0
+defaults write "com.apple.iMovieApp" "NSTableView Supports v2 filmlist outline view" -bool True
+defaults write "com.apple.iMovieApp" "FFAssetProxyFallsBackToHighQuality" -bool True
+defaults write "com.apple.iMovieApp" "FFImportOrganizerFilmstripModule.frameDuration-mediaImport" -float 1.7976931348623157e+308
+defaults write "com.apple.iMovieApp" "FFMDTitleModuleShow4kOnly" -bool False
+defaults write "com.apple.iMovieApp" "transform2DOscMode" -int 1
+defaults write "com.apple.iMovieApp" "FFImportOrganizerFilmstripModule.favoriteFilter-mediaImport" -int 2
+defaults write "com.apple.iMovieApp" "Macintosh HD - file:///" -string "/Users/mymac/Documents"
+defaults write "com.apple.iMovieApp" "FFOrganizerFilmstrip_ArrangeType" -int 0
+defaults write "com.apple.iMovieApp" "NSTableView Supports v2 Music Detail Table View" -bool True
+defaults write "com.apple.iMovieApp" "OZLibrary::CacheKey" -string "ede6f3843ac3894a01a2240c5893db3e"
+defaults write "com.apple.iMovieApp" "XSTREAM_FEEDERRANGE" -int 32768
+defaults write "com.apple.iMovieApp" "Flexo.FFFileLock.LockIdentifier" -string "03A6714F-8D81-4047-9934-4798A1D64746"
+defaults write "com.apple.iMovieApp" "FFColumnSetCurrentSetName" -string "デフォルトの列セット"
+defaults write "com.apple.iMovieApp" "tap2DetectConfidenceThreshold" -float 0.75
+defaults write "com.apple.iMovieApp" "TLKItemLayerContentsOperations" -bool True
+defaults write "com.apple.iMovieApp" "FFMessageTracerCloudTheaterProjectTypeCountKey" -int 0
+defaults write "com.apple.iMovieApp" "FFPlayerQuality" -int 10
+defaults write "com.apple.iMovieApp" "TLKOptimizedZooming" -bool True
+defaults write "com.apple.iMovieApp" "FFMessageTracerLibraryOpenWithValidationKey" -int 1
+defaults write "com.apple.iMovieApp" "FFOrganizerFilmstrip_ClusterType" -int -1
+defaults write "com.apple.iMovieApp" "FFImportTargetEvent" -string "B11BCA73-38F8-4757-9051-7EF956B1965B"
+defaults write "com.apple.iMovieApp" "FFMessageTracerCloudTheaterAveDurationKey" -int 0
+defaults write "com.apple.iMovieApp" "FFMessageTracerLibraryOpenOkKey" -int 5
+defaults write "com.apple.iMovieApp" "faceObservationOscUsesLandmarks" -bool True
+defaults write "com.apple.iMovieApp" "FFOrganizerFilmstrip_FavoriteFilter" -int 3
+defaults write "com.apple.iMovieApp" "TLKOptimizedReload" -bool False
+defaults write "com.apple.iMovieApp" "TLKPerformanceMonitorEnabled" -bool False
+defaults write "com.apple.iMovieApp" "NSWindow Frame PEMediaImportWindowDimensions" -string "80 84 1280 816 0 0 1440 900 "
+defaults write "com.apple.iMovieApp" "FFSidebarModuleSortDirectionPref" -int 0
+defaults write "com.apple.iMovieApp" "FFImportFilmstripView" -bool True
+defaults write "com.apple.iMovieApp" "FFPlayerWarnAboutExcessiveHMDDrops" -bool True
+defaults write "com.apple.iMovieApp" "FFAVEditMode" -int 0
+defaults write "com.apple.iMovieApp" "analyzeAtContainerRate" -bool False
+defaults write "com.apple.iMovieApp" "FFMessageTracerCloudTheaterTotalClipCountKey" -int 0
+defaults write "com.apple.iMovieApp" "FFImportTargetLibrary" -string "3F20CD64-2E54-422A-95EF-FB43AFB16BEE"
+defaults write "com.apple.iMovieApp" "FFPlayerBackground" -int 3
+defaults write "com.apple.iMovieApp" "FFDefaultVideoTransition" -string "FxPlug:4731E73A-8DAC-4113-9A30-AE85B1761265"
+defaults write "com.apple.iMovieApp" "FFImportOrganizerFilmstripModule.audioHeight-mediaImport" -bool False
+defaults write "com.apple.iMovieApp" "TXFontManager::kDefaultFont" -string "Helvetica"
+defaults write "com.apple.iMovieApp" "FFiMovieUpgradeFirstRun" -bool False
+defaults write "com.apple.iMovieApp" "FFMessageTracerCloudTheaterClipTypeCountKey" -int 0
+defaults write "com.apple.iMovieApp" "FFMessageTracerLastLoggedWeekKey" -float 1706578826.141258
+defaults write "com.apple.iMovieApp" "XSTREAM_TRACE" -int 0
+defaults write "com.apple.iMovieApp" "FFWorkingSpaceForCurrentEditedProject" -int 0
+defaults write "com.apple.iMovieApp" "observationOscShowObjectType" -bool True
+defaults write "com.apple.icloud.fmfd" "numberOfFriendsFollowersKey" -int 0
+defaults write "com.apple.icloud.fmfd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.icloud.fmfd" "kFMFDStoredDataVersion" -int 1
+defaults write "com.apple.icloud.fmfd" "storedDSID" -string "1365137353"
+defaults write "com.apple.icloud.fmfd" "lazyInitTimeSecsStoredKey" -int 543600
+defaults write "com.apple.icloud.fmfd" "kFMFDlastLoggedInPrsId" -string "1365137353"
+defaults write "com.apple.icloud.fmfd.notbackedup" "kKeychainUtilMigrationVersionKey" -int 1
+defaults write "com.apple.icloud.searchpartyuseragent" "PayloadCacheMarkedPurgeable" -bool True
+defaults write "com.apple.icloud.searchpartyuseragent" "CKStartupTime" -int 1709843445
+defaults write "com.apple.icloud.searchpartyuseragent" "PersistenceLayerVersion" -int 27
+defaults write "com.apple.icloud.searchpartyuseragent" "sharesremovalservice::findmyappstate" -bool True
+defaults write "com.apple.icloud.searchpartyuseragent" "LastOSLaunchVersion" -string "23C71"
+defaults write "com.apple.icloud.searchpartyuseragent" "lastLaunchBootSessionUUID" -string "D57DE917-0FDA-4655-9AFA-159F77B38644"
+defaults write "com.apple.icloud.searchpartyuseragent" "lastLaunchLocale" -string "ja"
+defaults write "com.apple.icloud.searchpartyuseragent" "sharesremovalservice::findmydevicestate" -bool False
+defaults write "com.apple.icloud.searchpartyuseragent" "FMIPStateManager.fmipState" -bool True
+defaults write "com.apple.iclouddrive.features" "iCloudDrive-on-FPFS-last-boot-uuid" -string "13620AC8-4870-4E36-9510-ADBA50135BE3"
+defaults write "com.apple.iclouddrive.features" "iCloudDrive-on-FPFS" -bool True
+defaults write "com.apple.iclouddrive.features" "iCloudDrive-moved-to-FPFS" -bool True
+defaults write "com.apple.iclouddrive.features" "iCloudDrive-on-FPFS-last-boot-timestamp" -int 1688274707
+defaults write "com.apple.identityservicesd" "hasRegIdentityContainer" -int 1
+defaults write "com.apple.identityservicesd" "peer-id-manager-cleanup-interval" -float 732538999.391369
+defaults write "com.apple.identityservicesd" "persister-migration-personal-session-token-cache-v4" -bool True
+defaults write "com.apple.identityservicesd" "ReRegisteredForDevices" -int 1720
+defaults write "com.apple.identityservicesd" "persister-migration-com.apple.identityservicesd.invitation.store" -bool True
+defaults write "com.apple.identityservicesd" "DidCleanLegacyAccountPrefs" -bool True
+defaults write "com.apple.identityservicesd" "LastKeyGeneration" -float 1697082291.090498
+defaults write "com.apple.identityservicesd" "AuthenticationDelegateResponseTime" -float 681536158.266076
+defaults write "com.apple.identityservicesd" "ImportedLegacyIMAccounts" -bool True
+defaults write "com.apple.identityservicesd" "persister-migration-com.apple.identityservicesd.waking-push-priority" -bool True
+defaults write "com.apple.identityservicesd" "hasUnregIdentityContainer" -int 1
+defaults write "com.apple.identityservicesd" "MigratedToNewDisabledState" -bool True
+defaults write "com.apple.identityservicesd" "ReRegisteredForDevicesHash" -string "E4DB27F6C6ABCC49E416FDD3B3A78970A6441FBEC394AF35D902421668FB26AD"
+defaults write "com.apple.identityservicesd" "ImportedLegacyIDSAccounts2" -bool True
+defaults write "com.apple.identityservicesd" "triggeredRemoteSessionVersion" -int 1
+defaults write "com.apple.identityservicesd" "CKStartupTime" -int 1709843445
+defaults write "com.apple.identityservicesd" "GDRRequestMadeForRelayRepair" -bool True
+defaults write "com.apple.identityservicesd" "persister-migration-com.apple.identityservices.userStore" -bool True
+defaults write "com.apple.identityservicesd" "performed-user-intent-migrate" -bool True
+defaults write "com.apple.ids" "IDSKTAccountKeyFetchMetricDeviceIDExpirationDefault" -float 1680320300.000664
+defaults write "com.apple.ids" "IDSKTAccountKeyFetchMetricDeviceIDDefault" -string "AE195FEE-6FC8-447E-9BDB-F8A2B87C3998"
+defaults write "com.apple.imagecapture" "loggingLevel" -int 3073
+defaults write "com.apple.imagent" "IMChatVocabularyUpdaterDidPerformInitialUpdateKey" -bool True
+defaults write "com.apple.imagent" "CKStartupTime" -int 1709843445
+defaults write "com.apple.imdpersistence.IMDPersistenceAgent" "LogAllIOErrors" -bool True
+defaults write "com.apple.imessage" "PreviewTranscodingWasInitializedToDefaultValue" -bool True
+defaults write "com.apple.imessage" "PreviewTranscodingQualityOnWiFiWasInitializedToDefaultValue" -bool True
+defaults write "com.apple.imessage" "PreviewTranscodingEnabled" -bool False
+defaults write "com.apple.imessage" "DidDoInitialDisableHashtagImages" -bool True
+defaults write "com.apple.imessage.bag" "CacheTime" -int 6365
+defaults write "com.apple.imessage.bag" "Date" -float 732538996.94964
+defaults write "com.apple.imessage.bag" "URL" -string "https://init-p01md.apple.com/bag?ix=2"
+defaults write "com.apple.inputmethod.Kotoeri" "JIMPrefConvertWithPunctuationKey" -bool False
+defaults write "com.apple.inputmethod.Kotoeri" "JIMDictionaryTrainerLastProcessedFileID" -int 0
+defaults write "com.apple.inputmethod.Kotoeri" "JIMPrefVersionKey" -int 1
+defaults write "com.apple.inputmethod.Kotoeri" "JIMDictionaryTrainerLastProcessedRecordNumber" -int 0
+defaults write "com.apple.internal.ck" "HasSetUpRecordZoneSubscription" -bool True
+defaults write "com.apple.ipTelephony" "ImsLoggingEnabled" -bool True
+defaults write "com.apple.itunescloud" "ICDefaultsKeyLastActiveAccountDSID" -int 1365137353
+defaults write "com.apple.itunescloud" "ICDefaultsKeySocialProfileSupported" -bool True
+defaults write "com.apple.itunescloud" "ICDefaultsKeySharedControlsCapability" -bool True
+defaults write "com.apple.itunescloud.daemon" "ICDDefaultsKeyKnownActiveAccountDSID" -string "1365137353"
+defaults write "com.apple.itunesstored" "AccountsNotificationPlugin.ActiveStorefrontIdentifier" -string "143462-9,42"
+defaults write "com.apple.keyboardservicesd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.knowledge-agent" "CKStartupTime" -int 1709843446
+defaults write "com.apple.knowledge-agent" "ScreenTimeSyncDisabled" -bool False
+defaults write "com.apple.knowledge-agent" "kCDIntentDeletionPendingDeletesQueued" -bool False
+defaults write "com.apple.loginwindow" "TALLogoutReason" -string "Restart"
+defaults write "com.apple.loginwindow" "oneTimeSSMigrationComplete" -bool True
+defaults write "com.apple.loginwindow" "MiniBuddyLaunch" -bool False
+defaults write "com.apple.madrid" "IMCloudKitStartingInitialSync" -bool False
+defaults write "com.apple.madrid" "IMCloudKitACAccountRepairMigrationVersion" -int 1
+defaults write "com.apple.madrid" "CloudKitIsRemovedFromBackup" -bool False
+defaults write "com.apple.madrid" "CloudKitIsEligibleForTruthZone" -bool True
+defaults write "com.apple.madrid" "CloudKitEligibleToToggleMiCSwitch" -bool True
+defaults write "com.apple.madrid" "IMCloudKitSyncControllerSyncTypeKey" -int 0
+defaults write "com.apple.madrid" "CloudKitCheckedMiCSwitchEligibilityOnImagentLaunch" -bool True
+defaults write "com.apple.madrid" "CloudKitSyncingEnabled" -bool False
+defaults write "com.apple.madrid" "IMCloudKitLastSyncErrors" -string "Errors(2 total)|0: MessagesCloudSync.SyncCoordinatorError|0: MessagesCloudSync.SyncCoordinatorError"
+defaults write "com.apple.madrid" "IMCloudKitSyncControllerSyncRecordTypeKey" -int 0
+defaults write "com.apple.madrid" "IMCloudKitSyncJobStateKey" -int 0
+defaults write "com.apple.madrid" "IMCloudKitStartingPeriodicSync" -bool False
+defaults write "com.apple.madrid" "IMCloudKitSyncControllerSyncStateKey" -int 0
+defaults write "com.apple.madrid" "IMCloudKitSyncPaused" -bool False
+defaults write "com.apple.madrid" "IMCloudKitSyncTypeKey" -int 2
+defaults write "com.apple.madrid" "MiCDeviceIdentifier" -string "C219803E-BF7F-4237-8544-905C5C0AD10C"
+defaults write "com.apple.madrid" "hasEnabledMiCByDefault" -int 1
+defaults write "com.apple.madrid" "IMCloudKitAccountStatusKey" -int 3
+defaults write "com.apple.madrid" "IMCloudKitStartingEnabledSettingChange" -bool False
+defaults write "com.apple.madrid" "CKMOCAccountsMatch" -bool True
+defaults write "com.apple.madrid" "SyncJobAttempt" -int 1
+defaults write "com.apple.madrid" "initialSyncRecordHasBeenWritten" -bool True
+defaults write "com.apple.madrid" "CloudKitHasAvailableRecordsToDownload" -bool False
+defaults write "com.apple.madrid" "SyncJobStarted" -string "Periodic"
+defaults write "com.apple.madrid" "IMCloudKitStartingDisableDevices" -bool False
+defaults write "com.apple.madrid" "IMCloudKitSyncStatusKey" -int 0
+defaults write "com.apple.madrid" "oneTimeMOCAccountCheckV2" -bool True
+defaults write "com.apple.madrid" "CloudKitLastDownloadProgress" -int 0
+defaults write "com.apple.mail" "FavoritesManagerDefaultKeyHasLaunchedWithSidebarFavorites" -bool True
+defaults write "com.apple.mail" "MailShowFlags" -bool True
+defaults write "com.apple.mail" "NSWindow Frame Compose Window" -string "196 264 836 779 0 0 1680 1050 "
+defaults write "com.apple.mail" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.apple.mail" "LastAttachedDir" -string "/Users/mymac/Downloads"
+defaults write "com.apple.mail" "FavoriteMailboxDraftsAutomaticallyAdded" -bool True
+defaults write "com.apple.mail" "IMAPServerPrefixesMirrorFilesystem" -bool True
+defaults write "com.apple.mail" "MessageListNextMessageDirection" -int 1
+defaults write "com.apple.mail" "PollTime" -int -1
+defaults write "com.apple.mail" "kDefaultsKeyLastVerifiedMessageID" -int 832
+defaults write "com.apple.mail" "ShowPriorityControl" -bool False
+defaults write "com.apple.mail" "maxSizeKB" -int 5000000
+defaults write "com.apple.mail" "com.apple.mail.searchableIndex.lastProcessedAttachmentIDKey" -int 1029
+defaults write "com.apple.mail" "IndexTrash" -bool True
+defaults write "com.apple.mail" "ShowCcHeader" -bool True
+defaults write "com.apple.mail" "SpellCheckingBehavior" -string "InlineSpellCheckingEnabled"
+defaults write "com.apple.mail" "NSWindow Frame NSNavPanelAutosaveName" -string "-250 -248 800 448 0 0 1440 900 "
+defaults write "com.apple.mail" "NSWindow Frame SetupAssistant" -string "266 467 578 442 0 0 1680 1050 "
+defaults write "com.apple.mail" "expiresAfterSeconds" -int 2592000
+defaults write "com.apple.mail" "UserDidCollapseFavoritesSectionKey" -bool False
+defaults write "com.apple.mail" "FavoriteMailboxSentAutomaticallyAdded" -bool True
+defaults write "com.apple.mail" "ShowBccHeader" -bool False
+defaults write "com.apple.mail" "FavoriteMailboxInboxAutomaticallyAdded" -bool True
+defaults write "com.apple.mail" "MailUpgraderPrePersistenceVersion" -int 21
+defaults write "com.apple.mail" "NSNavLastRootDirectory" -string "~/Downloads"
+defaults write "com.apple.mail" "LibraryCompressionUpgradeState" -int 1
+defaults write "com.apple.mail" "AttachmentMIMESnipUpgradeState" -int 4
+defaults write "com.apple.mail" "HasSetupIndexingDefaults" -bool True
+defaults write "com.apple.mail" "minSizeKB" -int 20000
+defaults write "com.apple.mail" "FavoritesVersion" -int 3
+defaults write "com.apple.mail" "FavoriteMailboxVIPsAutomaticallyAdded" -bool True
+defaults write "com.apple.mail" "FavoriteMailboxFlaggedAutomaticallyAdded" -bool True
+defaults write "com.apple.mail" "ShowReplyToHeader" -bool False
+defaults write "com.apple.mail" "FlagColorToDisplay" -int 1
+defaults write "com.apple.mail" "CKStartupTime" -int 1701388257
+defaults write "com.apple.mail" "MailUpgraderVersion" -int 30
+defaults write "com.apple.mail" "WebContinuousSpellCheckingEnabled" -bool True
+defaults write "com.apple.mail-shared" "AddressDisplayMode" -int 0
+defaults write "com.apple.mail-shared" "AlertForNonmatchingDomains" -bool False
+defaults write "com.apple.mail-shared" "ExpandPrivateAliases" -bool True
+defaults write "com.apple.mediaaccessibility" "__Inverted__-MADisplayFilterType" -int 512
+defaults write "com.apple.mediaaccessibility" "__Color__-MADisplayFilterType" -int 1
+defaults write "com.apple.mediaaccessibility" "__Inverted__-MADisplayFilterCategoryEnabled" -int 0
+defaults write "com.apple.mediaaccessibility" "__Color__-MADisplayFilterCategoryEnabled" -int 0
+defaults write "com.apple.mediaanalysisd" "SceneAnalysisProgressPercentage" -int 0
+defaults write "com.apple.mediaanalysisd" "OCRAnalysisProgressPercentage" -int 0
+defaults write "com.apple.mediaanalysisd" "FaceAnalysisProgressPercentage" -int 0
+defaults write "com.apple.mediaanalysisd" "VisualSearchAnalysisProgressPercentage" -int 0
+defaults write "com.apple.mediaanalysisd" "MediaAnalysisProgressPercentage" -int 0
+defaults write "com.apple.mediaanalysisd" "PrioritizedFaceAnalysisProgressPercentage" -int 0
+defaults write "com.apple.mediaanalysisd" "PreheatAttempts" -int 0
+defaults write "com.apple.menuextra.clock" "ShowDate" -int 0
+defaults write "com.apple.menuextra.clock" "ShowDayOfWeek" -bool True
+defaults write "com.apple.menuextra.clock" "ShowAMPM" -bool True
+defaults write "com.apple.messages.nicknames" "NicknameScrutinyDoNotHandle" -bool False
+defaults write "com.apple.messages.nicknames" "NicknameAppleIDAndiCloudAccountMatchAndExist" -bool True
+defaults write "com.apple.messages.nicknames" "ReuploadLocalNicknamesVersion" -int 1
+defaults write "com.apple.messages.nicknames" "NicknameiCloudAccountSignedInStatusKey" -bool True
+defaults write "com.apple.mlhost" "cloud.lastSuccessTimestamp" -float 731207011.598163
+defaults write "com.apple.mlhost" "telemetry.lastTimestamp" -int 731721600
+defaults write "com.apple.mlhost.CloudWorker" "CKStartupTime" -int 1709093745
+defaults write "com.apple.mmcs" "report.LastFailedCheckDate" -string "01/01/2001, 09:00:00.0000"
+defaults write "com.apple.mmcs" "report.LastSuccessfulCheckTime" -float 732800768.833037
+defaults write "com.apple.mmcs" "report.LastSuccessfulCheckDate" -string "03/22/2024, 20:46:08.8330"
+defaults write "com.apple.mmcs" "report.TTL" -int 3600
+defaults write "com.apple.mmcs" "report.sha256" -string "fvj0Y/Ybu1pq0r4NxXw3eP51exujUkEAd7LllbkTdK8="
+defaults write "com.apple.mobileipod" "EnhancedAudioAvailable" -bool False
+defaults write "com.apple.mobileslideshow.photo-picker" "AssetSource" -int 0
+defaults write "com.apple.mobileslideshow.photo-picker" "curatedLibraryInitialNavigationVersion" -int 1
+defaults write "com.apple.mobileslideshow.photo-picker" "userDefaultsPhotosGridVersion" -int 3
+defaults write "com.apple.mobileslideshow.photospicker" "curatedLibraryInitialNavigationVersion" -int 1
+defaults write "com.apple.mobileslideshow.photospicker" "userDefaultsPhotosGridVersion" -int 3
+defaults write "com.apple.mobiletimerd" "MTAlarmStorageVersion" -float 3.0999999046325684
+defaults write "com.apple.mobiletimerd" "MTTimerDefaultDuration" -int 900
+defaults write "com.apple.mobiletimerd" "MTTimerStorageVersion" -int 2
+defaults write "com.apple.ncprefs" "content_visibility" -int 2
+defaults write "com.apple.ncprefs" "sort_order" -int 0
+defaults write "com.apple.ncprefs" "version" -int 1
+defaults write "com.apple.networkserviceproxy" "NSPLastGeohash" -string "xn77"
+defaults write "com.apple.notificationcenterui" "fontStyle" -int 0
+defaults write "com.apple.notificationcenterui" "last-analytics-stamp" -float 732352619.056405
+defaults write "com.apple.onetimepasscodes" "DeleteVerificationCodes" -bool False
+defaults write "com.apple.parsecd" "PARDefaultsVersion" -int 4
+defaults write "com.apple.parsecd" "PARTestSeed" -int 48
+defaults write "com.apple.passd" "PDUpgradeTasksVersion" -int 2
+defaults write "com.apple.passd" "PDDefaultPaymentPassUniqueIdentifier" -string "04NMOIS0OAyUdll5QN-WGnyDWqs="
+defaults write "com.apple.passd" "CKStartupTime" -int 1709843445
+defaults write "com.apple.passd" "PDUpgradeTasksRetryCount" -int 0
+defaults write "com.apple.photoanalysisd" "PHALastSettingsReportMonth" -int 3
+defaults write "com.apple.photolibraryd" "kPLPhotoStreamMPSStateHandledKey" -bool True
+defaults write "com.apple.photolibraryd" "CKStartupTime" -int 1659987919
+defaults write "com.apple.photos.shareddefaults" "CPLDefaultDownload" -string "Default"
+defaults write "com.apple.photos.shareddefaults" "iCloudPhotoLibraryLastResetWelcomePromptDBVersion" -int 12200
+defaults write "com.apple.photos.shareddefaults" "downloadAndKeepOriginals" -bool False
+defaults write "com.apple.photos.shareddefaults" "DiskSpaceWasLow" -bool False
+defaults write "com.apple.photos.shareddefaults" "deviceLibraryConfiguration" -int 0
+defaults write "com.apple.preference.general" "version" -int 1
+defaults write "com.apple.preferences.extensions.CredentialProvider" "userHasOrdered" -bool True
+defaults write "com.apple.preferences.extensions.PhotoEditing" "userHasOrdered" -bool True
+defaults write "com.apple.preferences.extensions.PhotoProjects" "userHasOrdered" -bool True
+defaults write "com.apple.preferences.extensions.QuickLook" "userHasOrdered" -bool True
+defaults write "com.apple.preferences.extensions.ServicesWithUI" "userHasOrdered" -bool True
+defaults write "com.apple.preferences.extensions.ShareMenu" "userHasOrdered" -bool True
+defaults write "com.apple.preferences.extensions.XcodeSourceEditor" "userHasOrdered" -bool True
+defaults write "com.apple.preferences.sharing.SharingPrefsExtension" "legacySharingUIStatus" -bool False
+defaults write "com.apple.preferences.sharing.SharingPrefsExtension" "homeSharingUIStatus" -bool False
+defaults write "com.apple.preferences.sharing.SharingPrefsExtension" "mediaSharingUIStatus" -bool False
+defaults write "com.apple.protectedcloudstorage.protectedcloudkeysyncing" "knownWState" -bool False
+defaults write "com.apple.protectedcloudstorage.protectedcloudkeysyncing" "initialWState" -bool False
+defaults write "com.apple.protectedcloudstorage.protectedcloudkeysyncing" "CKStartupTime" -int 1709843446
+defaults write "com.apple.protectedcloudstorage.protectedcloudkeysyncing" "registrySyncIdentifier" -string "DEC25274-CAB7-4BB1-B037-4143A6163257"
+defaults write "com.apple.quicklook.QuickLookUIService" "AVDesktopPlaybackControlsControllerShowsDurationInsteadOfTimeRemainingDefaultsKey" -bool True
+defaults write "com.apple.quicklook.ThumbnailsAgent" "QLMTCacheSizeLastCheckAbsoluteTime" -float 732781811.751457
+defaults write "com.apple.rapport" "familySyncedName" -string "myのMacBook Air"
+defaults write "com.apple.rapport" "frMaxReachedLastSecs" -float 695253313.842261
+defaults write "com.apple.rapport" "oneTimeDateRequestedResetCompleted" -bool True
+defaults write "com.apple.rapport" "frPruneLastSecs" -float 732824201.142695
+defaults write "com.apple.rapport" "pdFriendSyncStart" -float 731580723.655067
+defaults write "com.apple.remindd" "extraneousAlarmsCollectorContainerDeemedClean" -bool True
+defaults write "com.apple.remindd" "isDatabaseMigrated" -bool True
+defaults write "com.apple.remindd" "ThrottlingPolicyCurrentBatchCount" -int 0
+defaults write "com.apple.remindd" "preferredDefaultListID" -string "x-apple-reminderkit://REMCDList/8C900533-D814-4B8D-882B-0516482BFF15"
+defaults write "com.apple.remindd" "cloudKitSchemaCatchUpSyncLastSuccessBuildVersion" -string "23A344"
+defaults write "com.apple.remindd" "CloudKitLastSyncSinceInternetReachable" -float 732435066.957942
+defaults write "com.apple.remindd" "ThrottlingPolicyCurrentLevelIndex" -int 0
+defaults write "com.apple.remindd" "cloudKitSchemaCatchUpSyncSchedulingState" -int 0
+defaults write "com.apple.remindd" "ThrottlingPolicyStartTime" -float 732766809.062131
+defaults write "com.apple.remindd" "spotlightIndexVersion" -int 6
+defaults write "com.apple.remindd" "SubscriptionIDsLastModifiedDate" -float 732212463.807125
+defaults write "com.apple.remindd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.remindd" "CloudConfigurationPath" -string "/System/Library/PrivateFrameworks/ReminderKit.framework/Versions/A/Resources/CloudConfigurations/Normal.plist"
+defaults write "com.apple.remindd" "staledFileAttachmentCleanupContainerDeemedClean" -bool True
+defaults write "com.apple.remindd" "useExtraneousAlarmBackOffThrottleInterval" -bool True
+defaults write "com.apple.remindd" "lastDatabaseMigrationSystemBuildVersion" -string "21G72"
+defaults write "com.apple.remindd.babysitter" "LastSystemVersion" -string "23C71"
+defaults write "com.apple.routined" "SMDefaultsBootInfo" -string "D57DE917-0FDA-4655-9AFA-159F77B38644"
+defaults write "com.apple.routined" "RTDefaultsIntermittentGNSSDailySessionCount" -int 0
+defaults write "com.apple.routined" "PlaceInferenceMetricsClientQueryCount0" -int 60
+defaults write "com.apple.routined" "RTDefaultsAuthorizedLocationIsFirstRunSinceSwUpdate" -bool False
+defaults write "com.apple.routined" "RTDefaultsLearnedLocationEngineLocationOfInterestMetricsSubmitted" -bool False
+defaults write "com.apple.routined" "RTDefaultsIntermittentGNSSDailyLongSessionCount" -int 0
+defaults write "com.apple.routined" "LastAssetContentVersionDownloaded" -int 11
+defaults write "com.apple.routined" "PlaceInferenceMetricsClientQueryCount1" -int 41
+defaults write "com.apple.routined" "RTDefaultsIntermittentGNSSDailyLongestSessionDuration" -int 0
+defaults write "com.apple.routined" "RTDefaultsDeviceMetricCurrentReachability" -int 1
+defaults write "com.apple.routined" "RTDefaultsSuggestionsManagerSystemVersion" -string "14.2.1"
+defaults write "com.apple.routined" "CKStartupTime" -int 1709843446
+defaults write "com.apple.routined" "RTDefaultsIntermittentGNSSDailyDuration" -int 0
+defaults write "com.apple.routined" "RTDefaultsInitiatorServiceRecentCloudKitBootstrapSuccess" -bool True
+defaults write "com.apple.routined" "RTDefaultsABTestDeviceSeed" -string "DC744FD2-4300-4A68-AF6A-F5B3E3337936"
+defaults write "com.apple.screencapture" "last-analytics-stamp" -float 732352619.055015
+defaults write "com.apple.screensaver" "tokenRemovalAction" -int 0
+defaults write "com.apple.scriptmenu" "ScriptMenuEnabled" -bool True
+defaults write "com.apple.scriptmenu" "PutAppScriptsFirst" -bool True
+defaults write "com.apple.scriptmenu" "ShowLibraryScripts" -bool True
+defaults write "com.apple.secureelementservice.aapp" "SBIconVisibility" -bool False
+defaults write "com.apple.security.KCN" "absentCircleWithNoReason" -bool False
+defaults write "com.apple.security.KCN" "lastCircleStatus" -int 2
+defaults write "com.apple.security.KCN" "pendingApplicationReminderInterval" -int 86400
+defaults write "com.apple.security.cloudkeychainproxy3.keysToRegister" "EnsurePeerRegistration" -bool False
+defaults write "com.apple.security.cloudkeychainproxy3.keysToRegister" "DSID" -string ""
+defaults write "com.apple.security.cloudkeychainproxy3.keysToRegister" "KeyAccountUUID" -string ""
+defaults write "com.apple.security.sosaccount" "SOSEnabled" -bool False
+defaults write "com.apple.seeding" "EnableProfiles" -bool True
+defaults write "com.apple.seeding" "DeviceIdentifier" -string "A0FE809F-58B6-4260-9E02-23650DCDC350"
+defaults write "com.apple.seeding" "HasRunMigration" -bool True
+defaults write "com.apple.seserviced" "keysync.recovery.blob.view.was.upgraded" -bool True
+defaults write "com.apple.seserviced" "keysync.retry.error" -int 0
+defaults write "com.apple.seserviced" "keysync.recovery.required" -bool False
+defaults write "com.apple.seserviced" "sekeysyncmanager.bootsessionuuid" -string "D57DE917-0FDA-4655-9AFA-159F77B38644"
+defaults write "com.apple.settings.PrivacySecurity.extension" "NSWindow Frame NSNavPanelAutosaveName" -string "880 864 800 448 0 0 2560 1600 "
+defaults write "com.apple.sharingd" "AirDropRandomHashUUIDKey4" -string "AFED0F28-81F2-48C2-BA04-FEE9CB5AA745"
+defaults write "com.apple.sharingd" "HashManager-LastDeviceIDHashKey" -int 3835580357333230519
+defaults write "com.apple.sharingd" "OneTimeAirDropReset2" -bool True
+defaults write "com.apple.sharingd" "AirDropRandomHashUUIDKey2" -string "C50D7EA6-9392-4123-A5A9-641F638D95CD"
+defaults write "com.apple.sharingd" "HashManager-StoredDatabaseVersionKey" -int 3
+defaults write "com.apple.sharingd" "AutoUnlockPresentedBluetoothError" -bool False
+defaults write "com.apple.sharingd" "AutoUnlockPresentedWiFiError" -bool False
+defaults write "com.apple.sharingd" "AirDropRandomHashUUIDKey3" -string "29E3B4F2-3451-4CE6-8D25-8A6D07903E76"
+defaults write "com.apple.sharingd" "AirDropRandomHashUUIDKey1" -string "953566D9-9874-4156-B405-07E09E2FCF98"
+defaults write "com.apple.shortcuts" "CKStartupTime" -int 1709843446
+defaults write "com.apple.siri.VoiceShortcuts" "VCLSDatabaseUUIDKey" -string "9FDF585D-9069-463A-B3D5-5BA9A9F4D36B"
+defaults write "com.apple.siri.VoiceShortcuts" "VCLSDataSequenceKey" -int 11997
+defaults write "com.apple.siri.media-indexer" "MISpanMatcherType" -int 0
+defaults write "com.apple.siri.shortcuts" "WFServicesShortcutsMigrated" -bool True
+defaults write "com.apple.siri.shortcuts" "WFDidUnconflictShortcuts" -bool True
+defaults write "com.apple.siri.shortcuts" "LegacyShortcutsZoneSubscriptionUnsubscribed" -bool True
+defaults write "com.apple.siri.shortcuts" "WFDefaultShortcutsVersion" -int 2
+defaults write "com.apple.siri.shortcuts" "ShareSheetShortcutsPresent" -bool False
+defaults write "com.apple.siri.shortcuts" "WFInitialBiomeStreamWritesKey" -bool True
+defaults write "com.apple.siri.shortcuts" "WFLastSyncedFlagsHash" -int 3735928557
+defaults write "com.apple.siriactionsd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.siriknowledged" "CKStartupTime" -int 1709843446
+defaults write "com.apple.sms" "hasMigratedSMSRelayForMIC" -bool True
+defaults write "com.apple.sociallayerd" "CKStartupTime" -int 1709843445
+defaults write "com.apple.sociallayerd.CloudKit.ckwriter" "accountLastKnownUserRecordID" -string "_9446b2aa54b3be61c64466361e602f79"
+defaults write "com.apple.sociallayerd.CloudKit.ckwriter" "accountAvailable" -int 1
+defaults write "com.apple.sociallayerd.CloudKit.ckwriter" "version" -int 7
+defaults write "com.apple.sociallayerd.CloudKit.ckwriter" "writerDone" -bool False
+defaults write "com.apple.speech.recognition.AppleSpeechRecognition.prefs" "DictationIMUpgradedTo10_15" -bool True
+defaults write "com.apple.speech.recognition.AppleSpeechRecognition.prefs" "DictationIMUpgradedTo10_16" -bool True
+defaults write "com.apple.spotlight.mdwrite" "MigratedKeychain" -bool True
+defaults write "com.apple.stockholm" "PKWalletShouldAutomaticallyRegisterKey" -bool False
+defaults write "com.apple.stockholm" "RemoteAdminV2" -bool True
+defaults write "com.apple.stockholm" "MaxPaymentCards" -int 16
+defaults write "com.apple.stockholm" "PKDisableCloudKitEnvironmentChangeHandlingKey" -bool False
+defaults write "com.apple.stocks.detailintents" "CKStartupTime" -int 1704986540
+defaults write "com.apple.stocks.detailintents" "active_watchlist" -string "watchlist"
+defaults write "com.apple.stocks.widget" "newsletter_manager_subscription" -string "UNKNOWN"
+defaults write "com.apple.stocks.widget" "active_watchlist" -string "watchlist"
+defaults write "com.apple.stocks.widget" "CKStartupTime" -int 1709843446
+defaults write "com.apple.stocks.widget" "newsletter_manager_include" -int 0
+defaults write "com.apple.studentd" "LastDateProviderSessionToken" -string "1709843446"
+defaults write "com.apple.studentd" "DeviceIdentifier" -string "17948891-92C0-4396-9A16-E9D023D0F79E"
+defaults write "com.apple.suggestd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.suggestd" "DeviceIdentifier" -string "1491FAC8-EA07-48F7-9F81-DED3AA1FF309"
+defaults write "com.apple.suggestions" "findToShowMigrationPerformed" -bool True
+defaults write "com.apple.suggestions" "SuggestionsAllowGeocode" -bool True
+defaults write "com.apple.suggestions" "spToLearnMigrationPerformed" -bool True
+defaults write "com.apple.syncdefaultsd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.systempreferences" "ThirdPartyCount" -int 0
+defaults write "com.apple.systempreferences.AppleIDSettings" "CKStartupTime" -int 1706428077
+defaults write "com.apple.systempreferences.SpotlightIndexExtension" "ThirdPartyCount" -int 0
+defaults write "com.apple.systemsettings.extensions" "sessionUUID" -string "418FBF0D-060F-4ED9-920D-F8A41492E0B0"
+defaults write "com.apple.systemuiserver" "__NSEnableTSMDocumentWindowLevel" -bool True
+defaults write "com.apple.systemuiserver" "last-analytics-stamp" -float 732352619.170958
+defaults write "com.apple.textInput.keyboardServices.textReplacement" "KSCKDidSetupRecordZoneProd-TextReplacements" -bool True
+defaults write "com.apple.textInput.keyboardServices.textReplacement" "KSDidPushAllLocalRecordsOnce-2" -bool True
+defaults write "com.apple.textInput.keyboardServices.textReplacement" "KSLastKnownUserID-TextReplacements" -string "_a136c02825ffe0487a750fa6952c490a"
+defaults write "com.apple.textInput.keyboardServices.textReplacement" "KSCKSubscriptionProd-TextReplacements" -bool True
+defaults write "com.apple.textInput.keyboardServices.textReplacement" "KSDidPushMigrationStatusOnce-2" -bool True
+defaults write "com.apple.textInput.keyboardServices.textReplacement" "kTRCKSyncCount" -int 1
+defaults write "com.apple.textInput.keyboardServices.textReplacement" "KSSampleShortcutWasImported_CK" -bool True
+defaults write "com.apple.textInput.keyboardServices.textReplacement" "kDidMigrateToUUIDRecordName" -bool False
+defaults write "com.apple.textInput.keyboardServices.textReplacement" "KSDidMigrateToCloudKitOnCloud" -bool True
+defaults write "com.apple.tipsd" "SearchItemIndexerSchemaVersion" -int 1
+defaults write "com.apple.tipsd" "TPSDidRevertArchivedTipStatuses" -bool True
+defaults write "com.apple.tipsd" "ConsecutiveNotificationsCount" -int 5
+defaults write "com.apple.tipsd" "DeliveryInfoVersion" -string "93c6896f754a03411af465c9f2c13f6b7a997aa25af2e6900d25024dc4eeecfe"
+defaults write "com.apple.tipsd" "TPSWelcomeNotificationReminderState" -int 1
+defaults write "com.apple.tipsd" "TPSWelcomeNotificationViewedVersion" -string "14"
+defaults write "com.apple.tipsd" "TPSLastMajorVersion" -string "14"
+defaults write "com.apple.tipsd" "TPSOfflineLastProcessedRemoteContentIdentifier" -string "ja-93c6896f754a03411af465c9f2c13f6b7a997aa25af2e6900d25024dc4eeecfe"
+defaults write "com.apple.tipsd" "TPSTipsAppInstalled" -bool True
+defaults write "com.apple.tipsd" "TPSWaitingToShowWelcomeNotification" -bool False
+defaults write "com.apple.transparencyd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.triald" "CKStartupTime" -int 1709843446
+defaults write "com.apple.universalaccess" "login" -bool False
+defaults write "com.apple.universalaccess" "switchCoalescePressesDuration" -int 0
+defaults write "com.apple.universalaccess" "lastNightShiftEnabled" -bool False
+defaults write "com.apple.universalaccess" "switchAutoScanPanelInterval" -float 0.5
+defaults write "com.apple.universalaccess" "showWindowTitlebarIcons" -bool False
+defaults write "com.apple.universalaccess" "grayscale" -bool False
+defaults write "com.apple.universalaccess" "hudNotifiedConstrast" -int 0
+defaults write "com.apple.universalaccess" "closeViewZoomDisplayID" -int 0
+defaults write "com.apple.universalaccess" "sessionChange" -bool False
+defaults write "com.apple.universalaccess" "headMouseSensitivity" -float 0.5
+defaults write "com.apple.universalaccess" "switchHideUITimeout" -int 15
+defaults write "com.apple.universalaccess" "switchHoldBeforeRepeatDuration" -int 3
+defaults write "com.apple.universalaccess" "showToolbarButtonShapes" -bool False
+defaults write "com.apple.universalaccess" "lastNightShiftActive" -bool True
+defaults write "com.apple.universalaccess" "customFonts" -bool False
+defaults write "com.apple.universalaccess" "increaseContrast" -bool False
+defaults write "com.apple.universalaccess" "mouseDriverCursorSize" -float 2.4426636695861816
+defaults write "com.apple.universalaccess" "lastNightShiftDate" -string "20240131"
+defaults write "com.apple.universalaccess" "selectedTab" -int 15
+defaults write "com.apple.universalaccess" "switchAutoScanElementInterval" -float 0.5
+defaults write "com.apple.universalaccess" "switchSweepingCursorSpeed" -int 5
+defaults write "com.apple.universalaccess" "slowKey" -bool False
+defaults write "com.apple.universalaccess" "differentiateWithoutColor" -bool False
+defaults write "com.apple.universalaccess" "liveSpeechEnabled" -bool False
+defaults write "com.apple.universalaccess" "reduceMotion" -bool False
+defaults write "com.apple.universalaccess" "slowKeyDelay" -int 250
+defaults write "com.apple.universalaccess" "switchMinimumPressDuration" -int 0
+defaults write "com.apple.universalaccess" "closeViewZoomFactor" -int 1
+defaults write "com.apple.universalaccess" "keyboardAccessFocusRingTimeout" -int 15
+defaults write "com.apple.universalaccess" "reduceTransparency" -bool False
+defaults write "com.apple.universalaccess" "stickyKey" -bool False
+defaults write "com.apple.universalaccess" "contrast" -int 0
+defaults write "com.apple.universalaccess" "grayscaleMigrated" -bool True
+defaults write "com.apple.universalaccess" "useStickyKeysShortcutKeys" -bool False
+defaults write "com.apple.universalaccess" "lastNightShiftMode" -int 0
+defaults write "com.apple.universalaccess" "classicInvertColor" -bool False
+defaults write "com.apple.universalaccess" "restoreTrueToneEnabled" -bool False
+defaults write "com.apple.universalaccess" "hoverTextEnabled" -bool False
+defaults write "com.apple.universalaccess" "whiteOnBlack" -bool False
+defaults write "com.apple.universalaccess" "closeViewHotkeysEnabled" -bool False
+defaults write "com.apple.universalaccess" "switchFirstElementDelay" -int 0
+defaults write "com.apple.universalaccess" "voiceOverOnOffKey" -bool False
+defaults write "com.apple.universalaccess" "headMouseTolerance" -int 0
+defaults write "com.apple.universalaccessAuthWarning" "2::/Applications/Logi Options.app/Contents/Support/LogiMgrDaemon.app/Contents/MacOS/LogiMgrDaemon" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "2::com.logitech.manager.daemon" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::net.meisterapps.mirrormeisterios" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "1::org.virtualbox.app.VirtualBox" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "/Applications/Clipy.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/Applications/Mirror to Smart TVs.app/Contents/MacOS/Mirror to Smart TVs" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/Applications/MirrorMeister.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/Applications/iTerm.app/Contents/MacOS/iTerm2" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::com.alexandrudenk.MirrorCast" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::us.electronic.mas.juststream" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "/usr/local/Cellar/yabai/6.0.14/bin/yabai" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/Applications/Mirror for LG TV.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "1::/Applications/iTerm.app/Contents/MacOS/iTerm2" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "/usr/local/Cellar/yabai/6.0.14/bin" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "/Applications/VNC Viewer.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "2::/Applications/VirtualBox.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "/Applications/VNC Viewer.app/Contents/MacOS/vncviewer" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::com.hegenberg.BetterTouchTool" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/Applications/JustStream.app/Contents/MacOS/JustStream" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "1::/Applications/VirtualBox.app/Contents/MacOS/VirtualBox" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "/usr/local/Cellar/skhd/0.3.9/bin" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::com.googlecode.iterm2" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/var/folders/fj/hnqlr8552fl9x6ttz5dpcxtr0000gn/T/AppTranslocation/F8A3F7E5-2479-4D0B-B0AD-88EF01DAB698/d/BetterTouchTool.app/Contents/MacOS/BetterTouchTool" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/Applications/Mirror for LG TV.app/Contents/MacOS/Mirror for LG TV" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "/Applications/Clipy.app/Contents/MacOS/Clipy" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "1::/Applications/VirtualBox.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/var/folders/fj/hnqlr8552fl9x6ttz5dpcxtr0000gn/T/AppTranslocation/F8A3F7E5-2479-4D0B-B0AD-88EF01DAB698/d/BetterTouchTool.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "1::/usr/local/Cellar/sketchybar/2.20.1/bin/sketchybar" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/Applications/MirrorMeister.app/Contents/MacOS/MirrorMeister" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "com.realvnc.vncviewer" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "1::com.googlecode.iterm2" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/Applications/iTerm.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "2::/Applications/Logi Options.app/Contents/Support/LogiMgrDaemon.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "com.clipy-app.Clipy" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/Applications/JustStream.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "/usr/local/Cellar/skhd/0.3.9/bin/skhd" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::/Applications/Mirror to Smart TVs.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "2::org.virtualbox.app.VirtualBox" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "2::/Applications/VirtualBox.app/Contents/MacOS/VirtualBox" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "1::/Applications/iTerm.app" -bool True
+defaults write "com.apple.universalaccessAuthWarning" "3::tv.airbeam.mirrorforlgtvnm" -bool True
+defaults write "com.apple.visualintelligence" "sendOCRText" -bool True
+defaults write "com.apple.visualintelligence" "enableBooksDomain" -bool True
+defaults write "com.apple.visualintelligence" "enableLandmarkDomain" -bool True
+defaults write "com.apple.visualintelligence" "enablePhotosApp" -bool True
+defaults write "com.apple.visualintelligence" "firstTimeExperience" -bool True
+defaults write "com.apple.visualintelligence" "enableCoarseClassification" -bool True
+defaults write "com.apple.visualintelligence" "initialized" -bool True
+defaults write "com.apple.visualintelligence" "enablePetsDomain" -bool True
+defaults write "com.apple.visualintelligence" "enableScreenshots" -bool True
+defaults write "com.apple.visualintelligence" "debugUI" -bool False
+defaults write "com.apple.visualintelligence" "enableSafariApp" -bool True
+defaults write "com.apple.visualintelligence" "sendLocationInfo" -bool True
+defaults write "com.apple.visualintelligence" "enableAlbumsDomain" -bool True
+defaults write "com.apple.visualintelligence" "enableQuickLook" -bool True
+defaults write "com.apple.visualintelligence" "bypassAvailability" -bool False
+defaults write "com.apple.visualintelligence" "enableNatureDomain" -bool True
+defaults write "com.apple.visualintelligence" "enableArtDomain" -bool True
+defaults write "com.apple.voicebankingd" "CKStartupTime" -int 1709843446
+defaults write "com.apple.voicetrigger" "Accessory Media Playback Status" -bool True
+defaults write "com.apple.voicetrigger" "Accessory Alarm Playback Status" -bool False
+defaults write "com.apple.voicetrigger" "Accessory Timer Playback Status" -bool False
+defaults write "com.apple.voicetrigger.notbackedup" "Power Logging Current Language" -string "ja-JP"
+defaults write "com.apple.voicetrigger.notbackedup" "Power Logging Current Asset Config Version" -string "15.1.Premium"
+defaults write "com.apple.wallpaper" "StoreIndexMigrationVersion" -int 1
+defaults write "com.apple.wallpaper" "SonomaFirstRunMigrationPerformed" -bool True
+defaults write "com.apple.wallpaper" "SystemWallpaperURL" -string "file:///Library/Application%20Support/com.apple.idleassetsd/Customer/4KSDR240FPS/FE876489-CBD5-479B-A8F0-1B67F0741CEA.mov"
+defaults write "com.apple.weather" "com.apple.weather.units.gizmo.hash" -int -1209206848241078851
+defaults write "com.apple.weather" "com.apple.app-analytics.crash-detection.will-terminate" -bool True
+defaults write "com.apple.weather" "wdsAuthToken" -string "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJzdWIiOiJBcHBsZSIsImlhdCI6MTcwOTUxMDQwMCwibmJmIjoxNzA5NTEwNDAwLCJpc3MiOiJBcHBsZSIsImV4cCI6MTcxMjE4ODgwMH0.vl77sDu0T-_0qDA6KjCxhqS0rxOJ6NOfd8keimT5U46WVSMck_CjKqAkT2OvSUFP0Z22sE9jcyi80k5i1y3Abw"
+defaults write "com.apple.weather" "environment-app-launch-count" -int 2
+defaults write "com.apple.weather" "weather.coherence.force_migrate_3" -bool False
+defaults write "com.apple.weather" "modules.location.lastViewedLocation" -string "current"
+defaults write "com.apple.weather" "weather.coherence.remove_coherence_container_3" -bool False
+defaults write "com.apple.weather" "AegirRenderingReset" -bool True
+defaults write "com.apple.weather" "weather.notificationsOptIn.severe_weather_feature_launch_count" -int 2
+defaults write "com.apple.weather" "weather.reportWeather.tip_dismissed_in_session" -bool False
+defaults write "com.apple.weather.sensitive" "reportWeatherIdentifier" -string "C0ADECE6-B22F-43FD-BDF3-099F4ECDD1A4"
+defaults write "com.apple.weather.sensitive" "userIdentifier" -string "1CEC66D9-D89B-414C-92CE-08105530917B"
+defaults write "com.apple.weather.sensitive" "privateUserIdentifier" -string "4F6D299D-5BA0-4276-B1C2-7A965118799F"
+defaults write "com.apple.weather.widget" "wdsAuthToken" -string "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJzdWIiOiJBcHBsZSIsImlhdCI6MTcwOTc2OTYwMCwibmJmIjoxNzA5NzY5NjAwLCJpc3MiOiJBcHBsZSIsImV4cCI6MTcxMjQ0ODAwMH0.6rISVzOfQ5jDaFJ0adzDla55BRaHSoH7fFPivP8NvEd46D-KC5G6I3auS_yjVv777u3UVEZKLVbV7_a49tG5fA"
+defaults write "com.apple.weather.widget" "weather.identity.all.reset_on_next_launch" -bool False
+defaults write "com.apple.weather.widget" "com.apple.app-analytics.crash-detection.will-terminate" -bool False
+defaults write "com.apple.weather.widget" "weather.identity.private.reset_on_next_launch" -bool False
+defaults write "com.apple.weather.widget" "weather.identity.report_weather.reset_on_next_launch" -bool False
+defaults write "com.apple.weatherd" "com.apple.app-analytics.crash-detection.will-terminate" -bool False
+defaults write "com.apple.widgets" "ShowAddSheetOnboardingBanner" -bool False
+defaults write "com.apple.xpc.activity2" "ProductBuildVersion" -string "23C71"
+defaults write "com.bearisdriving.BGM.App" "SelectedMusicPlayerID" -string "7B62B5BF-CF90-4938-84E3-F16DEDC3F608"
+defaults write "com.bearisdriving.BGM.App" "StatusBarIcon" -int 0
+defaults write "com.clipy-app.Clipy" "loginItem" -bool True
+defaults write "com.clipy-app.Clipy" "kCPYMigrateNewKeyCombo" -bool True
+defaults write "com.clipy-app.Clipy" "SUScheduledCheckInterval" -int 86400
+defaults write "com.clipy-app.Clipy" "SUHasLaunchedBefore" -bool True
+defaults write "com.clipy-app.Clipy" "suppressAlertForLoginItem" -bool True
+defaults write "com.clipy-app.Clipy" "SUEnableAutomaticChecks" -bool True
+defaults write "com.clipy-app.Clipy" "SUFeedURL" -string "https://clipy-app.com/appcast.xml"
+defaults write "com.colliderli.iina" "SUEnableAutomaticChecks" -bool True
+defaults write "com.colliderli.iina" "NSWindow Frame NSColorPanel" -string "0 81 224 278 0 0 2560 1600 "
+defaults write "com.colliderli.iina" "SUSendProfileInfo" -bool False
+defaults write "com.colliderli.iina" "NSFullScreenMenuItemEverywhere" -bool False
+defaults write "com.colliderli.iina" "SUHasLaunchedBefore" -bool True
+defaults write "com.colliderli.iina" "NSWindow Frame IINAPreferenceWindow" -string "1292 24 1244 764 0 0 2560 1600 "
+defaults write "com.colliderli.iina" "SUAutomaticallyUpdate" -bool True
+defaults write "com.colliderli.iina" "iinaLastPlayedFilePosition" -float 0.06492222222222223
+defaults write "com.colliderli.iina" "SUUpdateGroupIdentifier" -int 1377322523
+defaults write "com.colliderli.iina" "keepOpenOnFileEnd" -bool False
+defaults write "com.colliderli.iina" "controlBarPositionVertical" -float 0.10000000149011612
+defaults write "com.colliderli.iina" "softVolume" -int 100
+defaults write "com.colliderli.iina" "controlBarPositionHorizontal" -float 0.5
+defaults write "com.colliderli.iina" "NSWindow Frame IINAWelcomeWindow" -string "960 600 640 400 0 0 2560 1600 "
+defaults write "com.colliderli.iina" "MainWindowLastPosition" -string "{{640, 520}, {1920, 1080}}"
+defaults write "com.colliderli.iina" "alwaysOpenInNewWindow" -bool False
+defaults write "com.cool-retro-term.cool-retro-term" "QQControlsFileDialog.sidebarSplit" -float 111.60000000000001
+defaults write "com.cool-retro-term.cool-retro-term" "QQControlsFileDialog.height" -int 0
+defaults write "com.cool-retro-term.cool-retro-term" "QQControlsFileDialog.sidebarWidth" -int 80
+defaults write "com.cool-retro-term.cool-retro-term" "QQControlsFileDialog.sidebarVisible" -bool True
+defaults write "com.cool-retro-term.cool-retro-term" "QQControlsFileDialog.width" -int 0
+defaults write "com.crowdcafe.windowmagnet" "launchAtLogin" -bool True
+defaults write "com.crowdcafe.windowmagnet" "usageCount" -int 75
+defaults write "com.crowdcafe.windowmagnet" "appAlreadyLaunchedKey" -bool True
+defaults write "com.electron.nfov" "NSFullScreenMenuItemEverywhere" -bool False
+defaults write "com.electron.nfov" "NSTreatUnknownArgumentsAsOpen" -string "NO"
+defaults write "com.electron.nfov.helper" "NSScrollViewRubberbanding" -bool False
+defaults write "com.google.Chrome" "NSTableView Supports v2 AudioTable" -bool True
+defaults write "com.google.Chrome" "ILMediaBrowserMediaType" -int 0
+defaults write "com.google.Chrome" "NSNavPanelMediaBrowserTypeForOpenModeKey" -int 1
+defaults write "com.google.Chrome" "NSWindow Frame NSSpellCheckerSubstitutionsPanel2" -string "692 407 440 137 0 0 1680 1050 "
+defaults write "com.google.Chrome" "ILMediaBrowserAudioSplitViewPosition" -int 140
+defaults write "com.google.Chrome" "NSWindow Frame NSNavPanelAutosaveName" -string "400 717 516 167 0 0 2560 1600 "
+defaults write "com.google.Chrome" "NSTableView Supports v2 " -bool True
+defaults write "com.google.Chrome" "PMPrintingExpandedStateForPrint2" -bool False
+defaults write "com.google.Chrome" "LastRunAppBundlePath" -string "/Applications/Google Chrome.app"
+defaults write "com.google.Chrome" "NSNavLastRootDirectory" -string "~/Downloads"
+defaults write "com.google.Chrome" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 484}"
+defaults write "com.google.Keystone.Agent" "checkInterval" -int 18000
+defaults write "com.googlecode.iterm2" "NoSyncIgnoreSystemWindowRestoration" -bool True
+defaults write "com.googlecode.iterm2" "NoSyncRestoreWindowsCount" -int 0
+defaults write "com.googlecode.iterm2" "NoSyncNeverRemindPrefsChangesLostForFile_selection" -int 2
+defaults write "com.googlecode.iterm2" "Default Bookmark Guid" -string "F917F63D-03C0-4E93-BFD1-E41D5C57E330"
+defaults write "com.googlecode.iterm2" "NSOverlayScrollersFallBackForAccessoryViews" -bool False
+defaults write "com.googlecode.iterm2" "HotkeyMigratedFromSingleToMulti" -bool True
+defaults write "com.googlecode.iterm2" "SeparateStatusBarsPerPane" -bool False
+defaults write "com.googlecode.iterm2" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.googlecode.iterm2" "AlternateMouseScroll" -bool True
+defaults write "com.googlecode.iterm2" "NoSyncInstallationId" -string "55EE1539-9E5B-4610-9F9F-4FCF6C8585D9"
+defaults write "com.googlecode.iterm2" "SeparateWindowTitlePerTab" -bool True
+defaults write "com.googlecode.iterm2" "SoundForEsc" -bool False
+defaults write "com.googlecode.iterm2" "SUFeedAlternateAppNameKey" -string "iTerm"
+defaults write "com.googlecode.iterm2" "NoSyncNextAnnoyanceTime" -float 730548337.943105
+defaults write "com.googlecode.iterm2" "SUFeedURL" -string "https://iterm2.com/appcasts/final_modern.xml?shard=68"
+defaults write "com.googlecode.iterm2" "VisualIndicatorForEsc" -bool False
+defaults write "com.googlecode.iterm2" "NSQuotedKeystrokeBinding" -string ""
+defaults write "com.googlecode.iterm2" "PrefsCustomFolder" -string "/Users/mymac/.config/iterm2/"
+defaults write "com.googlecode.iterm2" "QuitWhenAllWindowsClosed" -bool True
+defaults write "com.googlecode.iterm2" "HideActivityIndicator" -bool True
+defaults write "com.googlecode.iterm2" "ApplePressAndHoldEnabled" -bool False
+defaults write "com.googlecode.iterm2" "AppleAntiAliasingThreshold" -int 1
+defaults write "com.googlecode.iterm2" "OpenNoWindowsAtStartup" -bool False
+defaults write "com.googlecode.iterm2" "StretchTabsToFillBar" -bool False
+defaults write "com.googlecode.iterm2" "HideScrollbar" -bool True
+defaults write "com.googlecode.iterm2" "WindowNumber" -bool False
+defaults write "com.googlecode.iterm2" "LoadPrefsFromCustomFolder" -bool True
+defaults write "com.googlecode.iterm2" "iTerm Version" -string "3.4.23"
+defaults write "com.googlecode.iterm2" "kCPKSelectionViewShowHSBTextFieldsKey" -bool False
+defaults write "com.googlecode.iterm2" "NoSyncHaveUsedCopyMode" -bool True
+defaults write "com.googlecode.iterm2" "NoSyncLastOSVersion" -string "Version 14.2.1 (Build 23C71)"
+defaults write "com.googlecode.iterm2" "NSWindow Frame NSNavPanelAutosaveName" -string "952 725 800 448 0 0 2560 1600 "
+defaults write "com.googlecode.iterm2" "Default Arrangement Name" -string "Arrangement 1"
+defaults write "com.googlecode.iterm2" "OpenBookmark" -bool False
+defaults write "com.googlecode.iterm2" "HideTabNumber" -bool True
+defaults write "com.googlecode.iterm2" "SUEnableAutomaticChecks" -bool True
+defaults write "com.googlecode.iterm2" "NoSyncPermissionToShowTip" -bool False
+defaults write "com.googlecode.iterm2" "AppleScrollAnimationEnabled" -int 0
+defaults write "com.googlecode.iterm2" "NSWindow Frame NSColorPanel" -string "0 81 224 278 0 0 2560 1600 "
+defaults write "com.googlecode.iterm2" "NSScrollViewShouldScrollUnderTitlebar" -bool False
+defaults write "com.googlecode.iterm2" "NSNavLastRootDirectory" -string "~/.config"
+defaults write "com.googlecode.iterm2" "NSWindow Frame iTerm Window 0" -string "48 48 2464 1504 0 0 2560 1600 "
+defaults write "com.googlecode.iterm2" "NSWindow Frame iTerm Window 1" -string "1715 0 845 1600 0 0 2560 1600 "
+defaults write "com.googlecode.iterm2" "HapticFeedbackForEsc" -bool False
+defaults write "com.googlecode.iterm2" "AppleSmoothFixedFontsSizeThreshold" -int 1
+defaults write "com.googlecode.iterm2" "EnableDivisionView" -bool False
+defaults write "com.googlecode.iterm2" "SUSendProfileInfo" -bool False
+defaults write "com.googlecode.iterm2" "DimInactiveSplitPanes" -bool False
+defaults write "com.googlecode.iterm2" "OpenArrangementAtStartup" -bool True
+defaults write "com.googlecode.iterm2" "AppleWindowTabbingMode" -string "manual"
+defaults write "com.googlecode.iterm2" "SplitPaneDimmingAmount" -float 0.39691899271844655
+defaults write "com.googlecode.iterm2" "TabStyleWithAutomaticOption" -int 5
+defaults write "com.googlecode.iterm2" "SmartPlacement" -bool False
+defaults write "com.googlecode.iterm2" "NoSyncLastSystemPythonVersionRequirement" -string "1.17"
+defaults write "com.googlecode.iterm2" "NoSyncLaunchExperienceControllerRunCount" -int 214
+defaults write "com.googlecode.iterm2" "SUHasLaunchedBefore" -bool True
+defaults write "com.googlecode.iterm2" "ShowPaneTitles" -bool False
+defaults write "com.googlecode.iterm2" "NSScrollAnimationEnabled" -bool False
+defaults write "com.googlecode.iterm2" "NoSyncNeverRemindPrefsChangesLostForFile" -bool True
+defaults write "com.googlecode.iterm2" "DimOnlyText" -bool False
+defaults write "com.googlecode.iterm2" "StatusBarPosition" -int 0
+defaults write "com.googlecode.iterm2" "DefaultTabStopWidth" -int 4
+defaults write "com.googlecode.iterm2" "NSRepeatCountBinding" -string ""
+defaults write "com.googlecode.iterm2" "TabsHaveCloseButton" -bool True
+defaults write "com.googlecode.iterm2" "DimBackgroundWindows" -bool False
+defaults write "com.googlecode.iterm2" "kCPKSelectionViewPreferredModeKey" -int 0
+defaults write "com.googlecode.iterm2" "ShowFullScreenTabBar" -bool False
+defaults write "com.googlecode.iterm2" "NoSyncTipOfTheDayEligibilityBeganTime" -float 730260947.443895
+defaults write "com.googlecode.iterm2" "PreventEscapeSequenceFromClearingHistory" -bool False
+defaults write "com.gopro.GoPro" "mainwindow.pos" -string "@Point(107 68)"
+defaults write "com.gopro.GoPro" "mainwindow.size" -string "@Size(1280 720)"
+defaults write "com.gopro.GoPro" "mainwindow.maximized" -bool False
+defaults write "com.gopro.GoPro-Player" "MSAppCenter310CrashesUserDefaultsMigratedKey" -bool True
+defaults write "com.gopro.GoPro-Player" "MSAppCenterAnalyticsIsEnabled" -bool False
+defaults write "com.gopro.GoPro-Player" "MSAppCenter310AnalyticsUserDefaultsMigratedKey" -bool True
+defaults write "com.gopro.GoPro-Player" "MSAppCenter310AppCenterUserDefaultsMigratedKey" -bool True
+defaults write "com.gopro.GoPro-Player" "NSWindow Frame NSNavPanelAutosaveName" -string "320 360 800 448 0 0 1440 900 "
+defaults write "com.gopro.GoPro-Player" "MSAppCenterCrashesIsEnabled" -bool False
+defaults write "com.gopro.GoPro-Player" "MSAppCenterInstallId" -string "A8EAD034-B251-41DA-9C56-527DC7045908"
+defaults write "com.gopro.GoPro-Player" "NSNavLastRootDirectory" -string "/Volumes/Untitled/DCIM/101MEDIA"
+defaults write "com.gopro.GoPro-Player" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.gopro.desktop-suite" "AutoLaunchGDA" -bool True
+defaults write "com.gopro.desktop-suite" "AppVersion" -string "2.7.0.874"
+defaults write "com.gopro.desktop-suite" "AutoPlayVideos" -bool False
+defaults write "com.gopro.desktop-suite" "gopro_desktop_new" -int 0
+defaults write "com.gopro.desktop-suite" "total_gopro_desktop_new" -int 1
+defaults write "com.gopro.desktop-suite" "LocalStorageDomain_ALERT_CARD_LAST_VIEWED" -string "1668616171"
+defaults write "com.gopro.desktop-suite" "AutoSyncCameraDateTime" -bool True
+defaults write "com.gopro.desktop-suite" "LaunchCounter" -int 16
+defaults write "com.gopro.desktop-suite" "LocalStorageDomain_storyteller_state" -string "{"source_gumis":[],"item_moment_map":{},"moment_order":[],"selected_duration":30,"selected_song_id":false,"selected_outro_id":0,"selected_outro_duration":3,"selected_outro_filepath":"/Users/mymac/Library/Application Support/com.GoPro.goproapp.GoProMusicService/Videos/Quik/Quik_1080p.mp4","selected_outro_banner":"/Users/mymac/Library/Application Support/com.GoPro.goproapp.GoProMusicService/Videos/Quik/Quik_banner.svg"}"
+defaults write "com.gopro.desktop-suite" "GoProPlusCountryList" -string "AD;AE;AF;AG;AI;AM;AQ;AR;AS;AT;AU;AW;AX;BA;BB;BE;BG;BH;BM;BN;BO;BQ;BR;BS;BT;BW;BY;BZ;CA;CC;CH;CK;CL;CO;CR;CW;CX;CY;CZ;DE;DJ;DK;DM;DO;EC;EE;EG;ER;ES;ET;FI;FJ;FK;FM;FO;FR;GB;GD;GE;GF;GG;GI;GL;GP;GR;GS;GT;GU;GY;HK;HM;HN;HR;HT;HU;IE;IL;IM;IN;IS;IT;JE;JM;JO;JP;KE;KH;KI;KN;KR;KW;KY;LA;LB;LC;LI;LK;LT;LU;LV;MC;MD;ME;MF;MK;MN;MO;MP;MQ;MS;MT;MU;MV;MX;MZ;NA;NC;NF;NI;NL;NO;NP;NZ;OM;PA;PE;PF;PG;PH;PK;PL;PR;PS;PT;PW;PY;QA;RE;RO;RS;SA;SB;SC;SE;SG;SI;SJ;SK;SM;SR;SV;SX;TC;TF;TH;TL;TM;TN;TO;TR;TT;TV;TW;TZ;UA;UG;UM;US;UY;VA;VC;VE;VG;VI;VN;VU;WS;YE;ZA;ZW"
+defaults write "com.gopro.desktop-suite" "AllowSendAnalyticsDate" -int 1665546585
+defaults write "com.gopro.desktop-suite" "FeatureFlags" -string "{}"
+defaults write "com.gopro.desktop-suite" "FirstRun" -bool False
+defaults write "com.gopro.desktop-suite" "AllowSendAnalytics" -bool False
+defaults write "com.gopro.desktop-suite" "LastFirmwareCatalogCheckTime" -string "2022-11-14T10:39:04.692350Z"
+defaults write "com.gopro.desktop-suite" "com.gopro.LastBILLINGNotificationHandledTime" -string "2022-11-16T16:29:31UTC"
+defaults write "com.gopro.desktop-suite" "UseHardwareAcceleration" -bool True
+defaults write "com.gopro.desktop-suite" "GoProStudioInstalled" -bool False
+defaults write "com.gopro.desktop-suite" "LastMusicCatalogCheckTime" -string "2022-11-16T16:29:29.178108Z"
+defaults write "com.gopro.desktop-suite" "UploadToCloudOnBattery" -bool False
+defaults write "com.gopro.desktop-suite" "GoProUserAgentString" -string "GoPro Desktop App/2.7.0.874 (Mac 10.16.0; MacBookAir10,1; Apple M1)"
+defaults write "com.gopro.desktop-suite" "ResetQdaOnNextLaunch" -bool False
+defaults write "com.gopro.desktop-suite" "AutoDownloadUpdates" -bool True
+defaults write "com.gyroflow-xyz.Gyroflow" "leftPanelSize" -int 255
+defaults write "com.gyroflow-xyz.Gyroflow" "renderQueue" -string "[]"
+defaults write "com.gyroflow-xyz.Gyroflow" "initialOffset" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "showFeatures" -bool True
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-3-pitch" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "folder-video" -string "/Volumes/Untitled/DCIM/101MEDIA/"
+defaults write "com.gyroflow-xyz.Gyroflow" "preserveOtherTracks" -bool False
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-1-smoothness_roll" -float 0.5
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-2-time_constant" -float 6.959423828125001
+defaults write "com.gyroflow-xyz.Gyroflow" "lens-opened" -bool True
+defaults write "com.gyroflow-xyz.Gyroflow" "parallelRenders" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "maxSyncPoints" -int 3
+defaults write "com.gyroflow-xyz.Gyroflow" "videoSpeedAffectsZooming" -bool True
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-1-smoothness_yaw" -float 0.5
+defaults write "com.gyroflow-xyz.Gyroflow" "exportAudio" -bool True
+defaults write "com.gyroflow-xyz.Gyroflow" "adaptiveZoom" -int 4
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-1-second_pass" -int 1
+defaults write "com.gyroflow-xyz.Gyroflow" "previewPipeline" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "keyframeDistance" -int 1
+defaults write "com.gyroflow-xyz.Gyroflow" "marginPixels" -int 20
+defaults write "com.gyroflow-xyz.Gyroflow" "useGravityVectors" -bool False
+defaults write "com.gyroflow-xyz.Gyroflow" "uiScaling" -int 2
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothingMethod" -int 1
+defaults write "com.gyroflow-xyz.Gyroflow" "timePerSyncpoint" -float 1.5
+defaults write "com.gyroflow-xyz.Gyroflow" "height" -int 788
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-1-smoothness_pitch" -float 0.5
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-1-max_smoothness" -int 1
+defaults write "com.gyroflow-xyz.Gyroflow" "sync_lpf" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "rightPanelSize" -int 255
+defaults write "com.gyroflow-xyz.Gyroflow" "padWithBlack" -bool False
+defaults write "com.gyroflow-xyz.Gyroflow" "showOF" -bool True
+defaults write "com.gyroflow-xyz.Gyroflow" "croppingMode" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "defaultSuffix" -string "_stabilized"
+defaults write "com.gyroflow-xyz.Gyroflow" "checkNegativeInitialOffset" -bool False
+defaults write "com.gyroflow-xyz.Gyroflow" "processingResolution" -int 3
+defaults write "com.gyroflow-xyz.Gyroflow" "featherPixels" -int 5
+defaults write "com.gyroflow-xyz.Gyroflow" "renderBackground" -string "#111111"
+defaults write "com.gyroflow-xyz.Gyroflow" "synchronization-opened" -bool False
+defaults write "com.gyroflow-xyz.Gyroflow" "backgroundMode" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "videoSpeedAffectsSmoothing" -bool True
+defaults write "com.gyroflow-xyz.Gyroflow" "gpudecode" -bool True
+defaults write "com.gyroflow-xyz.Gyroflow" "safeAreaGuide" -bool False
+defaults write "com.gyroflow-xyz.Gyroflow" "correctionAmount" -int 1
+defaults write "com.gyroflow-xyz.Gyroflow" "timelineChart" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "defaultCodec" -int 1
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-3-roll" -int 180
+defaults write "com.gyroflow-xyz.Gyroflow" "theme" -int 1
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-1-per_axis" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "visibility" -int 4
+defaults write "com.gyroflow-xyz.Gyroflow" "previewResolution" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "experimentalAutoSyncPoints" -bool False
+defaults write "com.gyroflow-xyz.Gyroflow" "x" -int 0
+defaults write "com.gyroflow-xyz.Gyroflow" "syncSearchSize" -int 5
+defaults write "com.gyroflow-xyz.Gyroflow" "width" -int 1440
+defaults write "com.gyroflow-xyz.Gyroflow" "y" -int 28
+defaults write "com.gyroflow-xyz.Gyroflow" "lang" -string "en"
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-3-yaw" -int 180
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-1-smoothness" -int 1
+defaults write "com.gyroflow-xyz.Gyroflow" "smoothing-1-alpha_0_1s" -float 0.1
+defaults write "com.hegenberg.BTTRelaunch" "BTTCrashRestartTime" -float 732801246.819277
+defaults write "com.hegenberg.BetterTouchTool" "BTTDidRegisterForUpdateStats" -string "4.430"
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_333_build_43333" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.hegenberg.BetterTouchTool" "BTTDontRestartAfterSleep" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "BTTLastClamshellState" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "windowRightMaximizePercent" -float 0.33
+defaults write "com.hegenberg.BetterTouchTool" "BTTDrawingStartPos" -string "{848.73828125, 929.640625}"
+defaults write "com.hegenberg.BetterTouchTool" "BTTNotchbarSavedVisibilityForceHidden" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_203_build_2423" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTAbnormalTerminationCount" -int 0
+defaults write "com.hegenberg.BetterTouchTool" "NSColorPickerPreferredRGBEntryMode" -int 2
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_3_952_build_2117" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_318_build_43180" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTDidUpdateBTTRemoteSettings" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTTBWasVisibleBeforeSleep" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "version" -string "4.430"
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_317_build_43170" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTDisabledLegacyUI" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTWindowSnappingHighPerformanceMode" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_430_build_44300" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "dValues" -string "6a"
+defaults write "com.hegenberg.BetterTouchTool" "NSWindow Frame SUUpdateAlert" -string "970 901 620 398 0 0 2560 1600 "
+defaults write "com.hegenberg.BetterTouchTool" "NSWindow Frame UndockedConfig" -string "1120 200 267 519 0 0 1440 900 "
+defaults write "com.hegenberg.BetterTouchTool" "NSWindow Frame NSColorPanel" -string "0 160 224 291 0 0 2560 1600 "
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_388_build_43880" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTNormalTermination" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "checkForCrashreports" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "v054DefaultsChanged" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "SUFeedURL" -string "https://updates.folivora.ai/highsierra_new.xml"
+defaults write "com.hegenberg.BetterTouchTool" "BTTDidShowLaunchDaemonUpdate" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "NSStatusItem Preferred Position BetterTouchTool" -int 406
+defaults write "com.hegenberg.BetterTouchTool" "BTTSecureInputWarningShown" -int 1
+defaults write "com.hegenberg.BetterTouchTool" "twoFingerDoubleTapDelay" -float 0.5
+defaults write "com.hegenberg.BetterTouchTool" "useAppleRemotePlugin" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "BTTLastViewMode" -int 1
+defaults write "com.hegenberg.BetterTouchTool" "SUAutomaticallyUpdate" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTSettingsToOpen" -string "BTTSettingsSimple"
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_272_build_42713" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "SUHasLaunchedBefore" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTPrefsWindowFrame" -string "1292 48 1220 1504 0 0 2560 1600 "
+defaults write "com.hegenberg.BetterTouchTool" "launchOnStartup" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTBSTInstalled" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "BTTDidCompressOld" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_410_build_44100" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_144_build_2358" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "windowSnappingEnabled" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "NSColorPickerSlidersDefaults" -string "1"
+defaults write "com.hegenberg.BetterTouchTool" "BTTDidCheckLicenseStatus" -float 730408326.988373
+defaults write "com.hegenberg.BetterTouchTool" "didRestartAfterEventTapFault" -int -1
+defaults write "com.hegenberg.BetterTouchTool" "windowLeftMaximizePercent" -float 0.66
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_155_build_2369" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "uuidl" -string "06A50B9360A123A160E1C58BA01DA80DC93ED037"
+defaults write "com.hegenberg.BetterTouchTool" "06A50B9360A123A160E1C58BA01DA80DC93ED037" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTMigratedToSQLLite" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTLastWakeRestartTime" -float 732691526.122985
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_356_build_43560" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_258_build_42570" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "showPrefsAtNextLaunch" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "BTTLastSelectedTriggerType" -int 1
+defaults write "com.hegenberg.BetterTouchTool" "SUUpdateGroupIdentifier" -int 3315462849
+defaults write "com.hegenberg.BetterTouchTool" "BTTDidCheckScreenRecording" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "SHOWEDHIDEMENUBARWARNING" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_384_build_43841" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTAllowDowngrades" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_184_build_2403" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTWasDisabledBeforeSleep" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "NSWindow Frame BTTPrefs" -string "1292 48 1220 1504 0 0 2560 1600 "
+defaults write "com.hegenberg.BetterTouchTool" "NSColorPanelMode" -string "1"
+defaults write "com.hegenberg.BetterTouchTool" "BTTPerformWakeAction" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_017_build_2232" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTIdentifierX" -string "7089221ecd6e82f718b2aa5ca83eb601"
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_062_build_2278" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTOriginalDefaultBrowser" -string "com.google.Chrome"
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_048_build_2266" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTDSVGO" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTNumberOfStarts" -int 10942
+defaults write "com.hegenberg.BetterTouchTool" "BTTConvertedDevices" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTDidResetInputMonitoring" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "NSWindow Frame NSNavPanelAutosaveName" -string "1022 1074 516 167 0 0 2560 1600 "
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_4_001_build_2214" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTLastConfigWidth" -int 230
+defaults write "com.hegenberg.BetterTouchTool" "BTTHashes" -string "C422AA08A78995C085B515CA4C57D3DF9919D2D3::9D7E11B98A91A3CFC7B601D056E05F5FB430EC7E::84B1AB4B40CAFB6B58D8B89DEC6C6804A97C785D::B38F6CD317E3E2DAEFD1CEF64801D9A91C425D9C::71B9D233CE39FA7773249C7D8BD3CEE083E7D340::74CEC8DDEA2CDB6806FAEE0F56F2497C2F89E809::::"
+defaults write "com.hegenberg.BetterTouchTool" "btt_data_store.version_3_834_build_1981" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTRemoteEnabled" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "BTTUpdatedToBTRCapable" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "tpThreeFingerDoubleTapDelay" -float 0.5
+defaults write "com.hegenberg.BetterTouchTool" "BTTTouchBarVisible" -bool False
+defaults write "com.hegenberg.BetterTouchTool" "NSNavLastRootDirectory" -string "~/bin"
+defaults write "com.hegenberg.BetterTouchTool" "BTTLastConnectedWifi" -string "BCW710J-86650-A"
+defaults write "com.hegenberg.BetterTouchTool" "alreadyAskedForInitialWindowSnappingSettings" -bool True
+defaults write "com.hegenberg.BetterTouchTool" "BTTAppListCollapsed" -bool False
+defaults write "com.hegenberg.bettertouchtool-setapp" "BTTRelaunchDidRelaunchBTT" -float 732801246.843061
+defaults write "com.install4j.jdownloader2.uninstaller" "AppleWindowTabbingMode" -string "manual"
+defaults write "com.logitech.Logi-Options" "NSWindow Frame NSNavPanelAutosaveName" -string "0 84 800 448 0 0 1440 900 "
+defaults write "com.logitech.Logi-Options" "NSWindow Frame com.logitech.options.mainwindow" -string "220 110 1000 680 0 0 1440 900 "
+defaults write "com.logitech.manager.daemon" "Cid_6b01b_1d81596c" -string "D3812087957C7AB59BC11775A4096FF08EEFEA781E798C6AFFB26D2BBA431B4C"
+defaults write "com.logitech.manager.daemon" "Cid_6b015_ed03ac1f" -string "6E4425DAAFD662E70506D9874B5E55B8D8D0BEADAF1948B556E9B21657EE23CE"
+defaults write "com.logitech.manager.daemon" "LastConnectTime_6b015_ed03ac1f" -int 1710311982
+defaults write "com.logitech.manager.daemon" "LastConnectTime_6b01b_1d81596c" -int 1709682935
+defaults write "com.logitech.manager.devinfo" "DEVNAME_6b01b_/Bluetooth/ddec291382b2" -string "M585/M590"
+defaults write "com.logitech.manager.devinfo" "SERNUM-/Bluetooth/ed-5e-ca-36-66-28" -int 439116
+defaults write "com.logitech.manager.devinfo" "DEVNAME_6b34c_/Bluetooth/ed5eca366628" -string "Keyboard K370/K375"
+defaults write "com.logitech.manager.devinfo" "DEVNAME_6b015_/Bluetooth/eb21330f17a2" -string "M720 Triathlon"
+defaults write "com.logitech.manager.devinfo" "SERNUM-/Bluetooth/dd-ec-29-13-82-b2" -int 438299
+defaults write "com.logitech.manager.devinfo" "SERNUM-/Bluetooth/eb-21-33-0f-17-a2" -int 438293
+defaults write "com.logitech.manager.setting.0006b015" "DPILastSwitchDirection" -string "none"
+defaults write "com.logitech.manager.setting.0006b015" "DPISwitchPrecisionMode" -bool False
+defaults write "com.logitech.manager.setting.0006b015" "newSoftwareNotificationHasRun" -bool True
+defaults write "com.logitech.manager.setting.0006b015" "DPILastSwitchControlID" -int 0
+defaults write "com.logitech.manager.setting.0006b015" "profilesEnabled" -bool False
+defaults write "com.logitech.manager.setting.0006b015" "currentSettingsGroup" -string ""
+defaults write "com.logitech.manager.setting.0006b015" "deviceName" -string "M720 Triathlon"
+defaults write "com.logitech.manager.setting.0006b015" "scrollingSpeed" -int 100
+defaults write "com.logitech.manager.setting.0006b015" "scrollDirectionNatural" -bool False
+defaults write "com.logitech.manager.setting.0006b015" "secondaryClick" -bool True
+defaults write "com.logitech.manager.setting.0006b015" "specialKeyGestures" -bool True
+defaults write "com.logitech.manager.setting.0006b015" "DPISwitchAlternateValue" -int 50
+defaults write "com.logitech.manager.setting.0006b015" "DPISwitchToggle" -int 0
+defaults write "com.logitech.manager.setting.0006b015" "enableMuteMicrophoneOsd" -bool True
+defaults write "com.logitech.manager.setting.0006b015" "settingsMergedVersion" -string "9.60.116"
+defaults write "com.logitech.manager.setting.0006b015" "deviceUIRestartedCount" -int 0
+defaults write "com.logitech.manager.setting.0006b015" "trackingSpeed" -int 50
+defaults write "com.logitech.manager.setting.0006b015" "secondaryClickValue" -int 5
+defaults write "com.logitech.manager.setting.0006b015" "smoothScrolling" -bool True
+defaults write "com.logitech.manager.setting.0006b01b" "DPILastSwitchDirection" -string "none"
+defaults write "com.logitech.manager.setting.0006b01b" "DPISwitchPrecisionMode" -bool False
+defaults write "com.logitech.manager.setting.0006b01b" "DPILastSwitchControlID" -int 0
+defaults write "com.logitech.manager.setting.0006b01b" "profilesEnabled" -bool False
+defaults write "com.logitech.manager.setting.0006b01b" "currentSettingsGroup" -string ""
+defaults write "com.logitech.manager.setting.0006b01b" "deviceName" -string "M585/M590"
+defaults write "com.logitech.manager.setting.0006b01b" "scrollingSpeed" -int 61
+defaults write "com.logitech.manager.setting.0006b01b" "scrollDirectionNatural" -bool False
+defaults write "com.logitech.manager.setting.0006b01b" "secondaryClick" -bool True
+defaults write "com.logitech.manager.setting.0006b01b" "specialKeyGestures" -bool True
+defaults write "com.logitech.manager.setting.0006b01b" "DPISwitchAlternateValue" -int 50
+defaults write "com.logitech.manager.setting.0006b01b" "DPISwitchToggle" -int 0
+defaults write "com.logitech.manager.setting.0006b01b" "enableMuteMicrophoneOsd" -bool True
+defaults write "com.logitech.manager.setting.0006b01b" "settingsMergedVersion" -string "9.60.116"
+defaults write "com.logitech.manager.setting.0006b01b" "trackingSpeed" -int 50
+defaults write "com.logitech.manager.setting.0006b01b" "secondaryClickValue" -int 5
+defaults write "com.logitech.manager.setting.0006b01b" "smoothScrolling" -bool True
+defaults write "com.logitech.manager.setting.0006b34c" "useFKeysAsStandard" -bool False
+defaults write "com.logitech.manager.setting.0006b34c" "alwaysStayInMacKeyboardLayout" -bool True
+defaults write "com.logitech.manager.setting.0006b34c" "specialKeyGestures" -bool False
+defaults write "com.logitech.manager.setting.0006b34c" "enableMuteMicrophoneOsd" -bool True
+defaults write "com.logitech.manager.setting.0006b34c" "settingsMergedVersion" -string "9.60.116"
+defaults write "com.logitech.manager.setting.0006b34c" "deviceName" -string "Keyboard K370/K375"
+defaults write "com.logitech.manager.setting.0006b34c" "enableCapsLockOsd" -bool True
+defaults write "com.logitech.manager.setting.0006b34c" "enableCapsLockMenuBarIcon" -bool True
+defaults write "com.logitech.manager.setting.0006b34c" "profilesEnabled" -bool False
+defaults write "com.logitech.manager.setting.ffff" "launchDictation" -bool True
+defaults write "com.logitech.manager.setting.ffff" "logCollectionEnabled" -bool False
+defaults write "com.logitech.manager.setting.ffff" "logCollectionEnabledTime" -string ""
+defaults write "com.logitech.manager.setting.ffff" "settingsMergedVersion" -string "9.60.116"
+defaults write "com.logitech.manager.setting.ffff" "systemHasRestarted" -bool True
+defaults write "com.logitech.manager.setting.ffff" "automaticCheckUpdates" -bool True
+defaults write "com.logitech.manager.setting.ffff" "touchpadDoubleClickSpeed" -int 80
+defaults write "com.logitech.manager.setting.ffff" "newSoftwareCampaignStatus" -string "active"
+defaults write "com.logitech.manager.setting.ffff" "touchpadOneFingerDragLock" -bool False
+defaults write "com.logitech.manager.setting.ffff" "firstRunRequestSent" -bool True
+defaults write "com.logitech.manager.setting.ffff" "mouseScrollingInertia" -bool True
+defaults write "com.logitech.manager.setting.ffff" "sso.refresh_token" -string ""
+defaults write "com.logitech.manager.setting.ffff" "firstRunRequestSentVersion" -string "9.60"
+defaults write "com.logitech.manager.setting.ffff" "touchpadOneFingerDrag" -bool False
+defaults write "com.logitech.manager.setting.ffff" "touchpadScrolling" -bool True
+defaults write "com.logitech.manager.setting.ffff" "sso.automatic.signout" -bool True
+defaults write "com.logitech.manager.setting.ffff" "com.logitech.user_privileges_501" -bool True
+defaults write "com.logitech.manager.setting.ffff" "settingsOSVersion" -string "142"
+defaults write "com.logitech.manager.setting.ffff" "touchpadScrollingInertia" -bool True
+defaults write "com.logitech.manager.setting.ffff" "mouseScrolling" -bool True
+defaults write "com.logitech.manager.setting.ffff" "SSOOnboardingHasRun" -bool True
+defaults write "com.logitech.manager.setting.ffff" "mouseDoubleClickSpeed" -int 80
+defaults write "com.logitech.manager.setting.ffff" "uiRestartedCounter" -int 3
+defaults write "com.logitech.manager.setting.ffff" "lowBatteryOsd" -bool True
+defaults write "com.logitech.manager.setting.ffff" "mezzyReceiverConnected" -bool False
+defaults write "com.logitech.manager.setting.ffff" "NewSoftwareReleaseNotificationShowOnceOnStartKey" -bool True
+defaults write "com.logitech.manager.setting.ffff" "hostId" -string "f98c90b833eeb3cc72346e9b7a71fc6f_mainoMacBook-Air.local"
+defaults write "com.logitech.manager.setting.ffff" "hothInstallationShown" -bool False
+defaults write "com.logitech.manager.setting.ffff" "SSOLoginNotificationPresented" -bool True
+defaults write "com.logitech.manager.setting.ffff" "CampingnNotificationDaemonStartedCounterKey" -int 59
+defaults write "com.logitech.manager.setting.ffff" "newSoftwareCampaign" -string "public beta"
+defaults write "com.logitech.manager.setting.ffff" "DeveloperModeOn" -bool False
+defaults write "com.logitech.manager.setting.ffff" "showFlowIconOnMenuBar" -bool True
+defaults write "com.microsoft.VSCode" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.microsoft.VSCode" "NSNavLastRootDirectory" -string "~/bin"
+defaults write "com.microsoft.VSCode" "NSTreatUnknownArgumentsAsOpen" -string "NO"
+defaults write "com.microsoft.VSCode" "NSForceRightToLeftWritingDirection" -bool False
+defaults write "com.microsoft.VSCode" "NSWindow Frame NSNavPanelAutosaveName" -string "1644 308 516 188 0 0 2560 1600 "
+defaults write "com.microsoft.VSCode" "AppleTextDirection" -bool True
+defaults write "com.microsoft.VSCode" "NSFullScreenMenuItemEverywhere" -bool False
+defaults write "com.qtproject" "FileDialog.viewMode" -string "Detail"
+defaults write "com.qtproject" "FileDialog.lastVisited" -string "file:///Users/mymac/Downloads"
+defaults write "com.qtproject" "FileDialog.qtVersion" -string "6.3.0"
+defaults write "com.ruanniu.Qt" "HitPaw Watermark Remover_version" -string "1.3.5.0"
+defaults write "com.tenorshare.RemoveWatermark" "CurrentVersion" -string "1.3.5.0"
+defaults write "com.tenorshare.RemoveWatermark" "VideoDir" -string "/Users/mymac/Downloads"
+defaults write "com.tenorshare.RemoveWatermark" "Language" -string "Japanese"
+defaults write "com.tenorshare.RemoveWatermark" "IsFirstNewGuidelines" -string "false"
+defaults write "com.tiddlywiki" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.tiddlywiki" "NSNavLastRootDirectory" -string "~"
+defaults write "com.tiddlywiki" "LastRunAppBundlePath" -string "/Applications/TiddlyDesktop.app"
+defaults write "com.tiddlywiki" "NSWindow Frame NSNavPanelAutosaveName" -string "1517 576 800 448 0 0 2560 1600 "
+defaults write "com.utmapp.UTM" "DisplayFixed" -bool False
+defaults write "com.utmapp.UTM" "com_apple_SwiftUI_Settings_selectedTabIndex" -int 0
+defaults write "com.utmapp.UTM" "NSWindowAssertWhenDisplayCycleLimitReached" -bool False
+defaults write "com.utmapp.UTM" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "com.utmapp.UTM" "NSWindow Frame NSNavPanelAutosaveName" -string "880 564 800 448 0 0 2560 1600 "
+defaults write "com.utmapp.UTM" "NSStatusItem Visible Item-0" -bool False
+defaults write "com.utmapp.UTM" "NSWindow Frame home" -string "1240 48 1271 1504 0 0 2560 1600 "
+defaults write "com.utmapp.UTM" "ShowMenuIcon" -bool False
+defaults write "com.utmapp.UTM" "NoSaveScreenshot" -bool False
+defaults write "com.utmapp.UTM" "NSWindow Frame com_apple_SwiftUI_Settings_window" -string "830 595 600 430 0 0 2560 1600 "
+defaults write "com.utmapp.UTM" "ReleaseNotesLastVersion" -string "4.4.5"
+defaults write "com.utmapp.UTM" "NSNavLastRootDirectory" -string "~/Downloads"
+defaults write "com.xbarapp.app" "NSAutomaticQuoteSubstitutionEnabled" -bool False
+defaults write "com.yourcompany.cool-retro-term" "NSWindow Frame NSColorPanel" -string "0 81 224 278 0 0 2560 1600 "
+defaults write "cx.c3.theunarchiver" "NSWindow Frame mainWindow" -string "1914 384 598 22 0 0 2560 1600 "
+defaults write "cx.c3.theunarchiver" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "cx.c3.theunarchiver" "NSWindow Frame prefsWindow" -string "754 833 600 410 0 0 2560 1600 "
+defaults write "cx.c3.theunarchiver" "NSNavLastRootDirectory" -string "~/Downloads"
+defaults write "cx.c3.theunarchiver" "NSWindow Frame NSNavPanelAutosaveName" -string "439 243 800 414 0 0 1680 1050 "
+defaults write "cx.c3.theunarchiver" "isFreshInstall" -bool True
+defaults write "cx.c3.theunarchiver" "LaunchCount" -int 919
+defaults write "cx.c3.theunarchiver" "TUConfigInformationBannerViewedCount" -int 1
+defaults write "ddddxxx.LyricsX" "MSAppCenter310CrashesUserDefaultsMigratedKey" -bool True
+defaults write "ddddxxx.LyricsX" "MSAppCenter310AnalyticsUserDefaultsMigratedKey" -bool True
+defaults write "ddddxxx.LyricsX" "SUHasLaunchedBefore" -bool True
+defaults write "ddddxxx.LyricsX" "MSAppCenter310AppCenterUserDefaultsMigratedKey" -bool True
+defaults write "ddddxxx.LyricsX" "MSAppCenterAppDidReceiveMemoryWarning" -bool True
+defaults write "ddddxxx.LyricsX" "MSAppCenterInstallId" -string "E0F897BA-EE63-430F-B238-E43E206CE321"
+defaults write "ddddxxx.LyricsX" "NSWindow Frame KaraokeWindow" -string "0 0 2560 1600 0 0 2560 1600 "
+defaults write "ddddxxx.LyricsX" "MenuBarLyricsEnabled" -int 1
+defaults write "diagnostics_agent" "lastSuccess" -float 681536156.485735
+defaults write "familycircled" "FamilyMarqueeHasEverBeenCalled" -bool True
+defaults write "knowledge-agent" "CKStartupTime" -int 1671850481
+defaults write "knowledge-agent" "ScreenTimeSyncDisabled" -bool False
+defaults write "loginwindow" "BuildVersionStampAsString" -string "23C71"
+defaults write "loginwindow" "SystemVersionStampAsNumber" -int 235012352
+defaults write "loginwindow" "SystemVersionStampAsString" -string "14.2.1"
+defaults write "loginwindow" "BuildVersionStampAsNumber" -int 48367840
+defaults write "mbuseragent" "CKStartupTime" -int 1671850481
+defaults write "net.meisterapps.mirrormeisterios" "shouldRestartWithHappyFlowScreenRecordingCheck" -bool False
+defaults write "net.meisterapps.mirrormeisterios" "MirroringSourceChanges" -int 1
+defaults write "net.meisterapps.mirrormeisterios" "isOnboardingCompleted" -bool True
+defaults write "net.meisterapps.mirrormeisterios" "MirroringSessions-Short" -int 1
+defaults write "net.meisterapps.mirrormeisterios" "supportNativePlayers" -bool True
+defaults write "net.meisterapps.mirrormeisterios" "enableAudio" -bool False
+defaults write "net.meisterapps.mirrormeisterios" "videoStreamHeight" -int 1080
+defaults write "net.meisterapps.mirrormeisterios" "trialState" -string "Purchased"
+defaults write "net.meisterapps.mirrormeisterios" "key_for_1ca354cb-75e7-d52b-d32a-e4596f99f7a4" -string "6c4317829175981bf0521f01dfae9763"
+defaults write "net.meisterapps.mirrormeisterios" "launchCount" -int 2
+defaults write "org.gimp.gimp-2.10:" "NSViewUsesAutomaticLayerBackingStores" -bool False
+defaults write "org.gimp.gimp-2.10:" "NSTreatUnknownArgumentsAsOpen" -string "NO"
+defaults write "org.inkscape.Inkscape" "/org/gtk/settings/file-chooser/show-hidden" -bool False
+defaults write "org.inkscape.Inkscape" "/org/gtk/settings/file-chooser/sort-column" -string "name"
+defaults write "org.inkscape.Inkscape" "/org/gtk/settings/file-chooser/location-mode" -string "path-bar"
+defaults write "org.inkscape.Inkscape" "/org/gtk/settings/file-chooser/type-format" -string "category"
+defaults write "org.inkscape.Inkscape" "NSTreatUnknownArgumentsAsOpen" -string "NO"
+defaults write "org.inkscape.Inkscape" "/org/gtk/settings/file-chooser/date-format" -string "regular"
+defaults write "org.inkscape.Inkscape" "/org/gtk/settings/file-chooser/show-size-column" -bool True
+defaults write "org.inkscape.Inkscape" "/org/gtk/settings/file-chooser/sort-directories-first" -bool False
+defaults write "org.inkscape.Inkscape" "/org/gtk/settings/file-chooser/show-type-column" -bool True
+defaults write "org.inkscape.Inkscape" "/org/gtk/settings/file-chooser/sort-order" -string "ascending"
+defaults write "org.inkscape.Inkscape" "/org/gtk/settings/file-chooser/sidebar-width" -int 161
+defaults write "org.jdownloader.launcher" "AppleWindowTabbingMode" -string "manual"
+defaults write "org.jdownloader.launcher" "NSAppSleepDisabled" -bool True
+defaults write "org.jdownloader.launcher" "NSRequiresAquaSystemAppearance" -bool False
+defaults write "org.mozilla.firefox" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "org.mozilla.firefox" "NSNavLastRootDirectory" -string "~/Desktop"
+defaults write "org.mozilla.firefox" "NSTreatUnknownArgumentsAsOpen" -string "NO"
+defaults write "org.mozilla.firefox" "NSWindow Frame NSNavPanelAutosaveName" -string "428 438 800 448 0 0 1680 1050 "
+defaults write "org.mozilla.firefox" "NSWindow Frame NSColorPanel" -string "1449 195 224 278 0 0 1680 1050 "
+defaults write "org.mozilla.firefox" "NSFullScreenMenuItemEverywhere" -bool False
+defaults write "org.sparkle-project.Sparkle.Autoupdate" "NSWindow Frame SUStatusFrame" -string "640 707 400 135 0 0 1680 1050 "
+defaults write "org.torproject.torbrowser" "NSFullScreenMenuItemEverywhere" -bool False
+defaults write "org.torproject.torbrowser" "NSTreatUnknownArgumentsAsOpen" -string "NO"
+defaults write "org.torproject.torbrowser" "NSNavLastRootDirectory" -string "~/Downloads"
+defaults write "org.torproject.torbrowser" "NSWindow Frame NSNavPanelAutosaveName" -string "625 641 430 188 0 0 1680 1050 "
+defaults write "org.videolan.vlc" "ILMediaBrowserAudioSplitViewPosition" -int 140
+defaults write "org.videolan.vlc" "NSWindow Frame NSNavPanelAutosaveName" -string "440 424 800 484 0 0 1680 1050 "
+defaults write "org.videolan.vlc" "VLCPreferencesVersion" -int 4
+defaults write "org.videolan.vlc" "NSNavLastRootDirectory" -string "~/Downloads"
+defaults write "org.videolan.vlc" "ILMediaBrowserSelectedGroup0" -string "com.apple.iTunes.5E0F66DA6B4FF22B"
+defaults write "org.videolan.vlc" "SUHasLaunchedBefore" -bool True
+defaults write "org.videolan.vlc" "NSWindow Frame videoeffects" -string "330 379 755 312 0 0 1680 1050 "
+defaults write "org.videolan.vlc" "NSWindow Frame SUUpdateAlert" -string "530 510 620 398 0 0 1680 1050 "
+defaults write "org.videolan.vlc" "SUEnableAutomaticChecks" -bool True
+defaults write "org.videolan.vlc" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 484}"
+defaults write "org.videolan.vlc" "NSTableView Supports v2 " -bool True
+defaults write "org.videolan.vlc" "ILMediaBrowserSelectedGroup2" -string "com.apple.iTunes.384E18B57D4581AA"
+defaults write "org.videolan.vlc" "NSTableView Supports v2 sprefs_hotkeys_view" -bool True
+defaults write "org.videolan.vlc" "NSNavPanelMediaBrowserTypeForOpenModeKey" -int 1
+defaults write "org.videolan.vlc" "NSWindow Frame mainwindow" -string "1474 724 1037 64 0 0 2560 1600 "
+defaults write "org.videolan.vlc" "ILMediaBrowserSelectedGroupIndex0" -int 2
+defaults write "org.videolan.vlc" "ILMediaBrowserMediaType" -int 0
+defaults write "org.videolan.vlc" "ILMediaBrowserSelectedGroupIndex2" -int 2
+defaults write "org.videolan.vlc" "NSWindow Frame SUStatusFrame" -string "640 707 400 135 0 0 1680 1050 "
+defaults write "org.videolan.vlc" "NSWindow Frame VLCFullscreenControls" -string "1038 236 483 84 0 0 2560 1600 "
+defaults write "org.videolan.vlc" "NSWindow Frame prefs" -string "332 311 775 513 0 0 1440 900 "
+defaults write "org.videolan.vlc" "NSWindow Frame sprefs" -string "129 139 600 648 0 0 1440 900 "
+defaults write "org.videolan.vlc" "SUAutomaticallyUpdate" -bool True
+defaults write "org.videolan.vlc" "VideoEffectSelectedProfile" -int 0
+defaults write "org.videolan.vlc" "DisplayTimeAsTimeRemaining" -string "YES"
+defaults write "org.videolan.vlc" "ILMediaBrowserMovieSplitViewPosition" -int 140
+defaults write "org.videolan.vlc" "VLCFullscreenAssociatedWindowRect" -string "{{0, 0}, {2560, 1600}}"
+defaults write "org.videolan.vlc" "SUSendProfileInfo" -bool False
+defaults write "org.videolan.vlc" "AudioEffectSelectedProfile" -int 0
+defaults write "org.videolan.vlc" "NSWindow Frame open" -string "539 476 602 415 0 0 1680 1050 "
+defaults write "org.videolan.vlc" "NSTableView Supports v2 AudioTable" -bool True
+defaults write "org.videolan.vlc" "NSWindow Frame ErrorsAndWarnings" -string "256 323 397 227 0 0 1680 1050 "
+defaults write "org.virtualbox.app.VirtualBox" "NSFullScreenMenuItemEverywhere" -bool False
+defaults write "org.virtualbox.app.VirtualBox" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 448}"
+defaults write "org.virtualbox.app.VirtualBox" "NSNavLastRootDirectory" -string "~/Downloads"
+defaults write "org.virtualbox.app.VirtualBox" "NSWindow Frame NSNavPanelAutosaveName" -string "870 560 800 448 0 0 2560 1600 "
+defaults write "org.virtualbox.app.VirtualBoxVM" "NSFullScreenMenuItemEverywhere" -bool False
+defaults write "pbs" "ServicesShortcutsPresent" -bool False
+defaults write "sharedfilelistd" "fixupDesktopAndDocumentsCompleted" -bool True
+defaults write "sharedfilelistd" "fixupFileProviderVolumeGroupsV2Completed" -bool True
+defaults write "siriknowledged" "CKStartupTime" -int 1671850479
+defaults write "systemgroup.com.apple.icloud.searchpartyd.sharedsettings" "SPSelfBeaconUUIDKey-00008103-001470A20262001E" -string "86228DB1-B635-4742-91DB-D8C4CB9E7516"
+defaults write "systemgroup.com.apple.icloud.searchpartyd.sharedsettings" "SystemInfoDynamic.lastAutomaticTimeValue" -bool True
+defaults write "tv.airbeam.mirrorforlgtvnm" "enableAudio" -bool True
+defaults write "tv.airbeam.mirrorforlgtvnm" "key_for_1ca354cb-75e7-d52b-d32a-e4596f99f7a4" -string "5997129237478ad01963061fc814010b"
+defaults write "tv.airbeam.mirrorforlgtvnm" "SUSendProfileInfo" -bool False
+defaults write "tv.airbeam.mirrorforlgtvnm" "supportNativePlayers" -bool True
+defaults write "tv.airbeam.mirrorforlgtvnm" "SUHasLaunchedBefore" -bool True
+defaults write "tv.airbeam.mirrorforlgtvnm" "fillTvScreen" -bool True
+defaults write "tv.airbeam.mirrorforlgtvnm" "originalAudioDevice" -int 0
+defaults write "tv.airbeam.mirrorforlgtvnm" "SUEnableAutomaticChecks" -bool True
+defaults write "tv.airbeam.mirrorforlgtvnm" "SUFeedURL" -string "https://s3.amazonaws.com/airbeamtv-nm-mirror-for-lg/MirrorLGTV.xml"
+defaults write "tv.airbeam.mirrorforlgtvnm" "appRunsCount" -int 2
+defaults write "tv.airbeam.mirrorforlgtvnm" "videoStreamHeight" -int 1080
+defaults write "tv.airbeam.mirrorforlgtvnm" "lastUsedMainWindowTab" -int 0
+defaults write "us.electronic.mas.juststream" "PlaybackFinishedEventCount" -int 1
+defaults write "us.electronic.mas.juststream" "WelcomeScreenWasShown" -bool True
+defaults write "us.electronic.mas.juststream" "NSWindow Frame NSColorPanel" -string "0 165 224 278 0 0 1440 900 "
+defaults write "us.electronic.mas.juststream" "ScreenMirroringTipWasShown" -bool True
+defaults write "xyz.gyroflow" "NSTableView Supports v2 AudioTable" -bool True
+defaults write "xyz.gyroflow" "ILMediaBrowserMediaType" -int 0
+defaults write "xyz.gyroflow" "NSNavPanelMediaBrowserTypeForOpenModeKey" -int 0
+defaults write "xyz.gyroflow" "ILMediaBrowserAudioSplitViewPosition" -int 140
+defaults write "xyz.gyroflow" "ILMediaBrowserMovieSplitViewPosition" -int 140
+defaults write "xyz.gyroflow" "NSWindow Frame NSNavPanelAutosaveName" -string "-250 -312 800 512 0 0 1440 900 "
+defaults write "xyz.gyroflow" "NSTableView Supports v2 MovieTable" -bool True
+defaults write "xyz.gyroflow" "ILMediaBrowserImageSplitViewPosition" -int 140
+defaults write "xyz.gyroflow" "NSNavLastRootDirectory" -string "/Volumes/Untitled/DCIM/101MEDIA"
+defaults write "xyz.gyroflow" "ILMovieBrowserListMode" -bool False
+defaults write "xyz.gyroflow" "NSNavPanelExpandedSizeForOpenMode" -string "{800, 512}"
