@@ -20,7 +20,7 @@ command+=" -b /dev -b /proc "
 # /dev/shm is a directory in memory (≈memory disk), which speeds up reading and writing, and does not need to be set.
 command+=" -b /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/archlinux/root:/dev/shm"
 # Optional
-command+=" -b \$ANDROID_DATA"
+#command+=" -b \$ANDROID_DATA"
 command+=" -b \$EXTERNAL_STORAGE"
 command+=" -b \$HOME"
 # It is best not to change the following
