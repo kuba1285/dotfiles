@@ -3,9 +3,11 @@
 mkdir -p $HOME/Do{cuments,wnloads} $HOME/Pictures
 DLDIR="$HOME/Downloads"
 
-if [ -d /data/data/com.termux/files/home/storage/movies ] ; then
-    DLDIR="/data/data/com.termux/files/home/storage/movies"
-fi
+{{ if (.chezmoi.kernel.osrelease | lower | contains "proot") }}
+
+DLDIR="/data/data/com.termux/files/home/storage/movies"
+
+{{ end }}
 
 # TverRec settings
 sed -i -e "/^\$script:downloadBaseDir = ''/c\$script:downloadBaseDir = '$DLDIR'" $HOME/TVerRec*/conf/user_setting.ps1
