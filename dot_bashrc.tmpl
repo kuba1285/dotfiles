@@ -35,7 +35,7 @@ export PATH="$PATH:/usr/local/opt/python@3.12/libexec/bin"
 ##### run command #####
 TMOUT=900
 TRAPALRM() {
-MODELS=($(ls -d $HOME/bin/models/*))
+MODELS=($(ls -d $HOME/Documents/models/*))
 SEC=`date +%S`
 I=$((SEC%$(echo ${#MODELS[@]})+1))
 3d-ascii-viewer -z 120 ${MODELS[$I]}
