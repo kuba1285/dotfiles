@@ -3,11 +3,11 @@
 CORES=$(($(nproc)+1))
 BIN=$HOME/bin
 LISTAPP="$BIN/list-app"
-EXECUTABLE=(
+EXECUTABLE=("
 $(echo $HOME/bin/*)
 $(echo $HOME/.config/bspwm/*)
 $(echo $HOME/.config/polybar/scripts/*)
-)
+")
 SERVICES=(
 sddm
 bluetooth
