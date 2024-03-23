@@ -13,11 +13,11 @@ function col {
 }
 
 function histgrep() {
-    if [[ $# -gt 0 ]]; then
-        history | tac | sort -k2 -u | sort | grep "$@"
-    else
-        history 50
-    fi
+  if [[ $# -gt 0 ]]; then
+      history | tac | sort -k2 -u | sort | grep "$@"
+  else
+      history 50
+  fi
 }
 
 #┌─┐┬  ┬┌─┐┌─┐┌─┐┌─┐
