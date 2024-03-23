@@ -17,25 +17,19 @@ pipx install .
 
 {{ if eq .chezmoi.os "linux" }}
 
-cd
-mkdir powershell && cd powershell
+cd && mkdir powershell && cd powershell
 wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.13/powershell-7.2.13-linux-arm64.tar.gz
 tar xvzf powershell-7.2.13-linux-arm64.tar.gz
 sudo ln -s $HOME/powershell/pwsh /usr/bin/pwsh
 
 {{ end }}
 
-cd
-go install github.com/orangekame3/paclear@latest
-mv ~/go/bin/paclear ~/bin/
+cd && go install github.com/orangekame3/paclear@latest && mv ~/go/bin/paclear ~/bin/
 
-cd
-git clone http://github.com/possatti/pokemonsay
-cd pokemonsay
+cd && git clone http://github.com/possatti/pokemonsay && cd pokemonsay
 ./install.sh
 
-cd
-wget $TVERREC_URL && tar xvzf $ARCHIVE && rm $ARCHIVE
+cd && wget $TVERREC_URL && tar xvzf $ARCHIVE && rm $ARCHIVE
 cd $HOME/TVerRec*/conf/
 cp system_setting.ps1 user_setting.ps1
 cp $HOME/src/keyword.conf > keyword.conf
