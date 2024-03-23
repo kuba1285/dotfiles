@@ -120,10 +120,10 @@ chsh -s $(which zsh) $USER
 {{ end }}
 
 echo "${CYAN}NOTE${RESET} - Installing custom app."
-source $BIN/custom.sh
+source $SCRIPTS/custom.sh
 
 echo "${CYAN}NOTE${RESET} - Setting some configuration."
-source $BIN/stage.sh
-source $BIN/config.sh
+source $SCRIPTS/stage.sh
+source $SCRIPTS/config.sh
 
 echo "${GREEN}OK${RESET} - Please log out and log back in for the changes to take effect."
