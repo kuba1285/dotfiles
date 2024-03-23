@@ -87,4 +87,8 @@ EOF
 # VNC server settings
 vncpasswd $HOME/.vnc/passwd
 
+chmod +x $EXECUTABLE
+sudo gpasswd -a $USER input
+chsh -s $(which zsh) $USER
+
 {{ end }}
