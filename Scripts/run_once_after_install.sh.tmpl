@@ -82,13 +82,6 @@ EOF
 cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
 cd && rm -rf yay
 
-    {{ end }}
-
-# Install listed pacakges
-echo "${CYAN}NOTE${RESET} - Installing apps from list."
-install_list $LISTAPP
-fc-cache -fv
-
 # Setup Nvidia if found
 if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
     yay -S --noconfirm --needed libva libva-nvidia-driver-git linux-headers nvidia-dkms nvidia-settings
@@ -103,6 +96,13 @@ if lsmod | grep cs8409 >/dev/null ; then
     cd && git clone https://github.com/davidjo/snd_hda_macbookpro.git
     cd snd_hda_macbookpro/ && sudo ./install.cirrus.driver.sh
 fi
+
+    {{ end }}
+
+# Install listed pacakges
+echo "${CYAN}NOTE${RESET} - Installing apps from list."
+install_list $LISTAPP
+fc-cache -fv
 
 # Enable services
 echo "${CYAN}NOTE${RESET} - Enabling services."
