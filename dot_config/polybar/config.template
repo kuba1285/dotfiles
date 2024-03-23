@@ -41,6 +41,7 @@ modules-center = xwindow
 modules-right = battery pulseaudio network tray datetime power
 padding = 3
 module-margin = 1.5
+wm-restack = ${wm.name}
 
 ######################################################
 
