@@ -96,10 +96,6 @@ for service in ${SERVICES[@]} ; do
     sleep 2
 done
 
-chmod +x $EXECUTABLE
-sudo gpasswd -a $USER input
-chsh -s $(which zsh) $USER
-
 {{ end }}
 
 echo "${CYAN}NOTE${RESET} - Installing custom app."
