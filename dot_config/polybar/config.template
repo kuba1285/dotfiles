@@ -89,7 +89,7 @@ format = <label>
 format-padding = 2
 label = %title%
 label-maxlen = 40
-label-empty = ~/
+label-empty = ~
 
 ######################################################
 
