@@ -8,6 +8,10 @@ eval "$(starship init $(ps -p $$ -o ucomm=))"
 #└  └─┘┘└┘└─┘ ┴ ┴└─┘┘└┘└─┘
 function cheat() { curl "http://cheat.sh/$1"; }
 
+function col {
+  awk -v col=$1 '{print $col}'
+}
+
 function histgrep() {
     if [[ $# -gt 0 ]]; then
         history | tac | sort -k2 -u | sort | grep "$@"
