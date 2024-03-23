@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -n "PNG name(without extension)?:"
-read filename
+read -e filename
 
 array=(16 32 128 256 512)
 
