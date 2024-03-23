@@ -1,7 +1,6 @@
 #!{{ lookPath "bash" }}
 
 TVERREC_URL=https://github.com/dongaba/TVerRec/archive/refs/tags/v3.0.2.tar.gz
-ARCHIVE=$(basename $(echo $TVERREC_URL))
 
 {{ if eq .chezmoi.os "darwin" }}
 
@@ -28,7 +27,7 @@ cd && go install github.com/orangekame3/paclear@latest && mv ~/go/bin/paclear ~/
 cd && git clone http://github.com/possatti/pokemonsay && cd pokemonsay
 ./install.sh
 
-cd && wget $TVERREC_URL && tar xvzf $ARCHIVE && rm $ARCHIVE
+cd && wget $TVERREC_URL && tar xvzf $(basename $(echo $TVERREC_URL)) && rm $$(basename $(echo $TVERREC_URL))
 cd $HOME/TVerRec*/conf/
 cp system_setting.ps1 user_setting.ps1
 cp $HOME/src/keyword.conf > keyword.conf
