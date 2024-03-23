@@ -112,7 +112,7 @@ if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
 fi
 
 # Install MBP audio driver if CS8409 found
-if aplay --list-device | grep CS8409 >/dev/null ; then
+if lsmod | grep cs8409 >/dev/null ; then
     cd
     git clone https://github.com/davidjo/snd_hda_macbookpro.git
     cd snd_hda_macbookpro/ && sudo ./install.cirrus.driver.sh
