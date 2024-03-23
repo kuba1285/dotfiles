@@ -21,8 +21,7 @@ wal -qi "${WALLPAPERS[$NEXT_INDEX]}"
 cp "${WALLPAPERS[$NEXT_INDEX]}" "$CURRENT_WALLPAPER_FILE"
 
 # Update the SDDM theme.conf file with the new background image path
-sudo sed -i "/^Background=/s|.*$|Background=\"${WALLPAPERS[$NEXT_INDEX]}\"|"
- /usr/share/sddm/themes/sugar-candy/theme.conf
+sudo sed -i "/^Background=/s|.*$|Background=\"${WALLPAPERS[$NEXT_INDEX]}\"|" /usr/share/sddm/themes/sugar-candy/theme.conf
 
 # kitty
 cp ~/.cache/wal/colors-kitty.conf ~/.config/kitty/
