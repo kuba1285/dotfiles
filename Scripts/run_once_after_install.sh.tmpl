@@ -1,9 +1,7 @@
 #!{{ lookPath "bash" }}
 
 CORES=$(($(nproc)+1))
-SCRIPTS=$HOME/Scripts
-DOCUMENTS=$HOME/Documents
-LISTAPP="$DOCUMENTS/list-app"
+LISTAPP="$HOME/Documents/list-app"
 EXECUTABLE=("
 $(echo $HOME/bin/*)
 $(echo $HOME/.config/bspwm/*)
@@ -55,7 +53,7 @@ sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --in
 
 # Install app from Brewfile
 echo "${CYAN}NOTE${RESET} - Installing Brewfile app."
-brew bundle install --file $DOCUMENTS/Brewfile
+brew bundle install --file $HOME/Documents/Brewfile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bashrc
 
 {{ end }}
@@ -120,10 +118,10 @@ chsh -s $(which zsh) $USER
 {{ end }}
 
 echo "${CYAN}NOTE${RESET} - Installing custom app."
-source $SCRIPTS/custom.sh
+source $HOME/Scripts/custom.sh
 
 echo "${CYAN}NOTE${RESET} - Setting some configuration."
-source $SCRIPTS/stage.sh
-source $SCRIPTS/config.sh
+source $HOME/Scripts/stage.sh
+source $HOME/Scripts/config.sh
 
 echo "${GREEN}OK${RESET} - Please log out and log back in for the changes to take effect."
