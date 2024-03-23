@@ -2,7 +2,7 @@
 
 mkdir -p $HOME/Do{cuments,wnloads} $HOME/Pictures
 
-{{ if (.chezmoi.kernel.osrelease | lower | contains "proot") }}
+{{ if eq .chezmoi.osRelease.id "archarm" }}
 
 DLDIR="/data/data/com.termux/files/home/storage/movies"
 
