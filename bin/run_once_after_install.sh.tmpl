@@ -75,15 +75,13 @@ sudo sed -i '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user && echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
 sudo -i -u user bash << EOF
-cd &&
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
+cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
 cd && rm -rf yay
 EOF
 
     {{ else }}
 
-cd &&
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
+cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
 cd && rm -rf yay
 
     {{ end }}
@@ -104,8 +102,7 @@ fi
 
 # Install MBP audio driver if CS8409 found
 if lsmod | grep cs8409 >/dev/null ; then
-    cd
-    git clone https://github.com/davidjo/snd_hda_macbookpro.git
+    cd && git clone https://github.com/davidjo/snd_hda_macbookpro.git
     cd snd_hda_macbookpro/ && sudo ./install.cirrus.driver.sh
 fi
 
