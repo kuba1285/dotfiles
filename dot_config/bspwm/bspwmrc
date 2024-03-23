@@ -23,5 +23,5 @@ bspc rule -a Screenkey manage=off
 	fusuma -d &
 	picom &
 	bash ~/bin/change-wallpaper.sh
-	bash ~/.config/polybar/launch.sh
+	bash ~/bin/launch-polybar.sh
 }
