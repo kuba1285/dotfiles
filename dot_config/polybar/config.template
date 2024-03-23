@@ -99,7 +99,7 @@ content = 
 content-font = 3
 content-foreground = ${colors.primary}
 content-margin = 1
-click-left = "bash ~/bin/change-wallpaper.sh"
+click-left = "bash ~/Scripts/change-wallpaper.sh"
 
 [module/battery]
 type = internal/battery
