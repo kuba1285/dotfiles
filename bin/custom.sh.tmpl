@@ -8,8 +8,7 @@ ARCHIVE=$(basename $(echo $TVERREC_URL))
 pipx install pywal
 pipx ensurepath
 
-cd
-git clone https://github.com/Nellousan/px2ansi.git
+cd && git clone https://github.com/Nellousan/px2ansi.git
 cd px2ansi
 pipx install .
 
@@ -34,8 +33,7 @@ cd $HOME/TVerRec*/conf/
 cp system_setting.ps1 user_setting.ps1
 cp $HOME/src/keyword.conf > keyword.conf
 
-cd
-wget https://github.com/autopawn/3d-ascii-viewer/archive/refs/tags/v1.4.0.tar.gz
+cd && wget https://github.com/autopawn/3d-ascii-viewer/archive/refs/tags/v1.4.0.tar.gz
 tar xvzf v1.4.0.tar.gz && cd 3d-ascii-viewer*
 make
 find ./models -name "*.mtl" -type f | xargs rm
