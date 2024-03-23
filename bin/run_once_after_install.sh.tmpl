@@ -70,12 +70,12 @@ sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
 sudo sed -i "/#MAKEFLAGS/s/2/$CORES/" /etc/makepkg.conf
 sudo sed -i '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
 
+echo "${CYAN}NOTE${RESET} - Configuering AUR."
+
     {{ if (.chezmoi.kernel.osrelease | lower | contains "proot") }}
 
 useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user && echo user:user | chpasswd
 sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
-
-echo "${CYAN}NOTE${RESET} - Configuering AUR."
 sudo -i -u user bash << EOF
 cd &&
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
@@ -84,7 +84,6 @@ EOF
 
     {{ else }}
 
-echo "${CYAN}NOTE${RESET} - Configuering AUR."
 cd &&
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
 cd && rm -rf yay
