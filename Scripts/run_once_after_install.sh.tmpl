@@ -89,21 +89,6 @@ echo "${CYAN}NOTE${RESET} - Installing apps from list."
 install_list $LISTAPP
 fc-cache -fv
 
-# Setup Nvidia if found
-if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
-    yay -S --noconfirm --needed libva libva-nvidia-driver-git linux-headers nvidia-dkms nvidia-settings
-    sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
-    echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
-    echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
-fi
-
-# Install MBP audio driver if CS8409 found
-if lsmod | grep cs8409 >/dev/null ; then
-    cd && git clone https://github.com/davidjo/snd_hda_macbookpro.git
-    cd snd_hda_macbookpro/ && sudo ./install.cirrus.driver.sh
-fi
-
 # Enable services
 echo "${CYAN}NOTE${RESET} - Enabling services."
 for service in ${SERVICES[@]} ; do
