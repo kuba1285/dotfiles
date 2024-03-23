@@ -37,7 +37,7 @@ sudo ln -s $HOME/ $HOME/$USER-ln
 wait_yn "${YELLOW}ACITION${RESET} - Would you like to execute parse-plist?"
 if [[ $YN = y ]] ; then
     echo "${CYAN}NOTE${RESET} - Executing parse-plist."
-    source $DOCUMENTS/parse-plist
+    source $HOME/Documents/parse-plist
 fi
 
 # A bootplug to match the binary format so that yabai can inject code into the Dock of arm64 binaries.
