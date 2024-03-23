@@ -7,7 +7,7 @@ WALLPAPER_DIR="$HOME/Pictures/"
 CURRENT_WALLPAPER_FILE="$WALLPAPER_DIR/wallpaper.rofi"
 
 # Get a list of image files in the directory
-WALLPAPERS=("$WALLPAPER_DIR"/*.jpg "$WALLPAPER_DIR"/*.png)
+WALLPAPERS=("$WALLPAPER_DIR"/*.jpg "$WALLPAPER_DIR"/*.jpeg "$WALLPAPER_DIR"/*.png "$WALLPAPER_DIR"/*.gif)
 
 # Find the index of the next wallpaper in the array
 NEXT_INDEX=$(($(($RANDOM % ${#WALLPAPERS[@]})) - 1))
