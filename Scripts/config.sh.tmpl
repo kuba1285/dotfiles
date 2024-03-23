@@ -1,7 +1,5 @@
 #!{{ lookPath "bash" }}
 
-mkdir -p $HOME/Do{cuments,wnloads} $HOME/Pictures
-
 {{ if eq .chezmoi.osRelease.id "archarm" }}
 
 DLDIR="/data/data/com.termux/files/home/storage/movies"
@@ -11,6 +9,8 @@ DLDIR="/data/data/com.termux/files/home/storage/movies"
 DLDIR="$HOME/Downloads"
 
 {{ end }}
+
+mkdir -p $HOME/Do{cuments,wnloads} $HOME/Pictures
 
 # TverRec settings
 sed -i -e "/^\$script:downloadBaseDir = ''/c\$script:downloadBaseDir = '$DLDIR'" $HOME/TVerRec*/conf/user_setting.ps1
