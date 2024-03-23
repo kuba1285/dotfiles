@@ -63,14 +63,12 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bashrc
 {{ if eq .chezmoi.os "linux" }}
 
 # Configure AUR
-echo "${CYAN}NOTE${RESET} - Updating and install apps for AUR."
+echo "${CYAN}NOTE${RESET} - Configuering AUR."
 pacman -Syyu --noconfirm --needed sudo wget git alsa-utils bat eza git-delta starship base-devel fontconfig
 sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
 sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
 sudo sed -i "/#MAKEFLAGS/s/2/$CORES/" /etc/makepkg.conf
 sudo sed -i '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
-
-echo "${CYAN}NOTE${RESET} - Configuering AUR."
 
     {{ if (.chezmoi.kernel.osrelease | lower | contains "proot") }}
 
