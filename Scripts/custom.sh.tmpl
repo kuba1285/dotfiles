@@ -35,9 +35,9 @@ cd && mkdir powershell && cd powershell
 wget $PWSH && tar xvzf $(basename $(echo $PWSH))
 sudo ln -s $HOME/powershell/pwsh /usr/bin/pwsh
 
-{{ end }}
-
 cd && go install github.com/orangekame3/paclear@latest && mv ~/go/bin/paclear ~/bin/
+
+{{ end }}
 
 cd && git clone http://github.com/possatti/pokemonsay && cd pokemonsay
 ./install.sh
