@@ -1,7 +1,7 @@
  #!/bin/bash
 
  # Get a random image file from the background image folder.
- IMAGE_FILE=$(find /Pictures/ -type f | shuf -n 1)
+ IMAGE_FILE=$(find ~/Pictures/ -type f | shuf -n 1)
  
  # Get the path to the sddm backgrounds folder.
  SDDM_BACKGROUNDS_FOLDER="/usr/share/sddm/themes/sugar-candy/Backgrounds"
