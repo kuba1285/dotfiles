@@ -20,12 +20,6 @@ wal -qi "${WALLPAPERS[$NEXT_INDEX]}"
 # Copy the currently set wallpaper to current_wallpaper.rofi
 cp "${WALLPAPERS[$NEXT_INDEX]}" "$CURRENT_WALLPAPER_FILE"
 
-# Get the path to the sddm backgrounds folder.
-SDDM_BACKGROUNDS_FOLDER="usr/share/sddm/themes/sugar-candy/Backgrounds"
- 
-# Create a symbolic link to the random image file in the sddm backgrounds folder (overwrite with the force flag).
-ln -sf "${WALLPAPERS[$NEXT_INDEX]}" "$SDDM_BACKGROUNDS_FOLDER/randomWallpaper"
-
 # kitty
 cp ~/.cache/wal/colors-kitty.conf ~/.config/kitty/
 cat ~/.cache/wal/sequences
