@@ -8,8 +8,10 @@ tar -xf $HOME/src/extensions.tar.gz -C ~/.vscode/
 
 # Copy the SDDM theme
 sudo mv -f $HOME/src/sugar-candy /usr/share/sddm/themes/sugar-candy
+sudo mv -f $HOME/src/sddm-random-wallpaper.sh /usr/share/sddm/scripts
 sudo chown -R $USER:$USER /usr/share/sddm/themes/sugar-candy
 sudo mkdir /etc/sddm.conf.d
 echo -e "[Theme]\nCurrent=sugar-candy" | sudo tee -a /etc/sddm.conf.d/10-theme.conf
+echo -e " sudo /usr/share/sddm/scripts/sddm-random-wallpaper.sh.sh" | sudo tee -a /usr/share/sddm/scripts/Xstop
 
 {{ end }}
