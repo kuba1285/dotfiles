@@ -6,10 +6,12 @@ $(echo $HOME/.config/bspwm/*)
 $(echo $HOME/.config/polybar/scripts/*)
 ")
 
-{{ if eq .chezmoi.osRelease.id "archarm" }}
+{{ if eq .chezmoi.os "linux" }}
+    {{ if eq .chezmoi.osRelease.id "archarm" }}
 
 DLDIR="/data/data/com.termux/files/home/storage/movies"
 
+    {{ end }}
 {{ else }}
 
 DLDIR="$HOME/Downloads"
