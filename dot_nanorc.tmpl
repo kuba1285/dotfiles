@@ -11,4 +11,15 @@ set titlecolor white,blue
 set numbercolor yellow,black 
 set functioncolor white
 set statuscolor white,red
+
+{{ if eq .chezmoi.os "linux" }}
+
 include /usr/share/nano/*.nanorc
+
+{{ end }}
+
+{{ if eq .chezmoi.os "darwin" }}
+
+include /usr/local/share/nano/*.nanorc
+
+{{ end }}
