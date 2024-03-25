@@ -1,5 +1,17 @@
 #!{{ lookPath "bash" }}
 
+{{ if eq .chezmoi.os "linux" }}
+    {{ if eq .chezmoi.osRelease.id "archarm" }}
+
+DLDIR="/data/data/com.termux/files/home/storage/movies"
+
+    {{ end }}
+{{ else }}
+
+DLDIR="$HOME/Downloads"
+
+{{ end }}
+
 TVERREC=https://github.com/dongaba/TVerRec/archive/refs/tags/v3.0.2.tar.gz
 PWSH=https://github.com/PowerShell/PowerShell/releases/download/v7.2.13/powershell-7.2.13-linux-arm64.tar.gz
 CORES=$(($(nproc)+1))
