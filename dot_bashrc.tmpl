@@ -23,8 +23,8 @@ function histgrep() {
 #┌─┐┬  ┬┌─┐┌─┐┌─┐┌─┐
 #├─┤│  │├─┤└─┐├┤ └─┐
 #┴ ┴┴─┘┴┴ ┴└─┘└─┘└─┘
-alias mlargs='cat << eof | xargs -n 1 $1'
-alias mlgrep='cat << eof | xargs -I {} -n 1 grep {} $1'
+alias multiargs='cat << eof | xargs -n 1 $1'
+alias multigrep='cat << eof | xargs -I {} -n 1 grep {} $1'
 alias less='bat'
 alias late='less $(echo `ls -t | head -n 1`)'
 alias cat='bat --paging=never'
