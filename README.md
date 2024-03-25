@@ -5,7 +5,7 @@ WIP
 yes | pkg upgrade && yes | pkg install curl game-repo tur-repo science-repo root-repo x11-repo
 curl -s https://raw.githubusercontent.com/kuba1285/dotfiles/master/Scripts/termux-init.sh | bash
 ```
-### Run chezmoi
+### chezmoi
 ```sh
 bash -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/bin init --apply kuba1285
 ```
