@@ -72,13 +72,6 @@ Section "InputClass"
 EndSection
 EOF
 
-chmod +x $EXECUTABLES
-sudo gpasswd -a $USER input
-chsh -s $(which zsh) $USER
-
-# VNC server settings
-vncpasswd $HOME/.vnc/passwd
-
     {{ if eq .chezmoi.osRelease.id "archarm" }}
 
 sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
@@ -96,6 +89,13 @@ xrandr -s $(cvt $(echo $RES) | grep -e "Modeline [^(]" | cut -d " " -f 2)
 EOF
 
     {{ end }}
+
+chmod +x $EXECUTABLES
+sudo gpasswd -a $USER input
+chsh -s $(which zsh) $USER
+
+# VNC server settings
+vncpasswd $HOME/.vnc/passwd
 
 # Enable services
 echo "${CYAN}NOTE${RESET} - Enabling services."
