@@ -83,6 +83,14 @@ vncpasswd $HOME/.vnc/passwd
 
     {{ if eq .chezmoi.osRelease.id "archarm" }}
 
+sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
+sudo sed -i '/^twm/s/^/#/' ~/.xinitrc
+sudo sed -i '/^xclock/s/^/#/' ~/.xinitrc
+sudo sed -i '/^xterm/s/^/#/g' ~/.xinitrc
+cat << EOF ~/.xinitrc
+sxhkd & exec bspwm
+EOF
+
 # Remote resolution mode settings
 cat << EOF ~/.xprofile
 #!/bin/sh
