@@ -72,7 +72,7 @@ Section "InputClass"
 EndSection
 EOF
 
-chmod +x $EXECUTABLE
+chmod +x $EXECUTABLES
 sudo gpasswd -a $USER input
 chsh -s $(which zsh) $USER
 
