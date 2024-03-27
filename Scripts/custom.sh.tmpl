@@ -39,7 +39,7 @@ cd && go install github.com/orangekame3/paclear@latest && mv ~/go/bin/paclear ~/
 cd && git clone http://github.com/possatti/pokemonsay && cd pokemonsay
 ./install.sh
 
-cd && wget $TVERREC && tar xvzf $(basename $(echo $TVERREC)) && rm $$(basename $(echo $TVERREC))
+cd && wget $TVERREC && tar xvzf $(basename $(echo $TVERREC)) && rm $(basename $(echo $TVERREC))
 cd $HOME/TVerRec*/conf/
 cp system_setting.ps1 user_setting.ps1
 cp $HOME/src/keyword.conf > keyword.conf
