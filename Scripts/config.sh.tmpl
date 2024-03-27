@@ -96,6 +96,7 @@ cat << EOF ~/.xprofile
 #!/bin/sh
 xrandr --newmode $MODELINE
 xrandr --addmode $DISP $MODERES
+xrandr -s $(cvt $(echo $RES) | grep -e "Modeline [^(]" | cut -d " " -f 2)
 EOF
 
     {{ end }}
