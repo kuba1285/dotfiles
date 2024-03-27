@@ -111,13 +111,6 @@ echo "${CYAN}NOTE${RESET} - Installing apps from $LISTAPP."
 install_list $LISTAPP
 fc-cache -fv
 
-# Enable services
-echo "${CYAN}NOTE${RESET} - Enabling services."
-for service in ${SERVICES[@]} ; do
-    sudo systemctl enable $service
-    sleep 2
-done
-
 {{ end }}
 
 echo "${CYAN}NOTE${RESET} - Installing custom app."
