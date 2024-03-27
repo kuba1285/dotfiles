@@ -49,12 +49,6 @@ sudo sed -i -e '/^ *exec -a/c\exec -a "$0" "$HERE/chrome" "$@" --gtk-version=4 -
 sudo sed -i -e "/^ *#DefaultTimeoutStartSec=90s/c\ DefaultTimeoutStartSec=10s" /etc/systemd/system.conf
 sudo sed -i -e "/^ *#DefaultTimeoutStopSec=90s/c\ DefaultTimeoutStopSec=10s" /etc/systemd/system.conf
 
-cat << EOF ~/.xprofile
-#!/bin/sh
-xrandr --newmode $MODELINE
-xrandr --addmode $DISP $MODERES
-EOF
-
 cat << EOF | sudo tee -a /etc/systemd/network/*.network
 IPv6PrivacyExtensions=true
 IgnoreCarrierLoss=3s
@@ -80,11 +74,21 @@ Section "InputClass"
 EndSection
 EOF
 
-# VNC server settings
-vncpasswd $HOME/.vnc/passwd
-
 chmod +x $EXECUTABLE
 sudo gpasswd -a $USER input
 chsh -s $(which zsh) $USER
 
+    {{ if eq .chezmoi.osRelease.id "archarm" }}
+
+# Remote resolution mode settings
+cat << EOF ~/.xprofile
+#!/bin/sh
+xrandr --newmode $MODELINE
+xrandr --addmode $DISP $MODERES
+EOF
+
+# VNC server settings
+vncpasswd $HOME/.vnc/passwd
+
+    {{ end }}
 {{ end }}
