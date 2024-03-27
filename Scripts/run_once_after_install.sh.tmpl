@@ -87,10 +87,8 @@ brew bundle install --file $HOME/Documents/Brewfile
 # Configure AUR
 echo "${CYAN}NOTE${RESET} - Configuering AUR."
 pacman -Syyu --noconfirm --needed sudo wget git bat eza git-delta starship base-devel fontconfig
-sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" /etc/pacman.conf
-sudo sed -i '/ParallelDownloads/s/^#//g' /etc/pacman.conf
-sudo sed -i "/#MAKEFLAGS/s/2/$CORES/" /etc/makepkg.conf
-sudo sed -i '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
+sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" -e '/ParallelDownloads/s/^#//g' /etc/pacman.conf
+sudo sed -i -e "/#MAKEFLAGS/s/2/$CORES/" -e '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
 
     {{ if eq .chezmoi.osRelease.id "archarm" }}
 
