@@ -20,6 +20,13 @@ function histgrep() {
   fi
 }
 
+function google() {
+  words="$(IFS="+"; echo "${${@:1}[*]}")"
+  if [ "$words" != "" ]; then
+    open "https://google.com/search?q=$words"
+  fi
+}
+
 #┌─┐┬  ┬┌─┐┌─┐┌─┐┌─┐
 #├─┤│  │├─┤└─┐├┤ └─┐
 #┴ ┴┴─┘┴┴ ┴└─┘└─┘└─┘
