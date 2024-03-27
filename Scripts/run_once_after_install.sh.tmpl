@@ -109,7 +109,7 @@ cd && rm -rf yay
     {{ end }}
 
 # Install listed pacakges
-echo "${CYAN}NOTE${RESET} - Installing apps from list."
+echo "${CYAN}NOTE${RESET} - Installing apps from $LISTAPP."
 install_list $LISTAPP
 fc-cache -fv
 
