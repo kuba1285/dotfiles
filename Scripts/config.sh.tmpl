@@ -1,7 +1,5 @@
 #!{{ lookPath "bash" }}
 
-mkdir -p $HOME/Do{cuments,wnloads} $HOME/Pictures
-
 # Write run commands
 cat << EOF >> ~/.bashrc
 bash $HOME/Scripts/change-wallpaper.sh
@@ -9,6 +7,7 @@ neowofetch --gap -30 --ascii "\$(fortune -s | pokemonsay -w 30)"
 EOF
 
 # TverRec settings
+mkdir -p $HOME/Downloads
 sed -i -e "/^\$script:downloadBaseDir = ''/c\$script:downloadBaseDir = '$DLDIR'" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:downloadWorkDir = ''/c\$script:downloadWorkDir = '/tmp'" $HOME/TVerRec*/conf/user_setting.ps1
 sed -i -e "/^\$script:saveBaseDir = ''/c\$script:saveBaseDir = '$DLDIR'" $HOME/TVerRec*/conf/user_setting.ps1
