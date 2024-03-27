@@ -20,6 +20,15 @@ function histgrep() {
   fi
 }
 
+function findext() {
+  CMD='find -type f'
+  for E in $@
+  do
+    CMD=$CMD" -iname \"*.$E\" -or"
+  done
+  echo $CMD | sed -e 's# -or$##' | bash
+}
+
 function google() {
   words="$(IFS="+"; echo "${${@:1}[*]}")"
   if [ "$words" != "" ]; then
