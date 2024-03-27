@@ -78,6 +78,9 @@ chmod +x $EXECUTABLE
 sudo gpasswd -a $USER input
 chsh -s $(which zsh) $USER
 
+# VNC server settings
+vncpasswd $HOME/.vnc/passwd
+
     {{ if eq .chezmoi.osRelease.id "archarm" }}
 
 # Remote resolution mode settings
@@ -86,9 +89,6 @@ cat << EOF ~/.xprofile
 xrandr --newmode $MODELINE
 xrandr --addmode $DISP $MODERES
 EOF
-
-# VNC server settings
-vncpasswd $HOME/.vnc/passwd
 
     {{ end }}
 {{ end }}
