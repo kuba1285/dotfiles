@@ -40,14 +40,12 @@ cd && git clone http://github.com/possatti/pokemonsay && cd pokemonsay
 ./install.sh
 
 cd && wget $TVERREC && tar xvzf $(basename $(echo $TVERREC)) && rm $(basename $(echo $TVERREC))
-cd $HOME/TVerRec*/conf/
-cp system_setting.ps1 user_setting.ps1
+cd $HOME/TVerRec*/conf/ && cp system_setting.ps1 user_setting.ps1
 mv $HOME/src/keyword.conf keyword.conf
 
 cd && wget https://github.com/autopawn/3d-ascii-viewer/archive/refs/tags/v1.4.0.tar.gz
 tar xvzf v1.4.0.tar.gz && cd 3d-ascii-viewer*
 make
 find ./models -name "*.mtl" -type f | xargs rm
-mv 3d-ascii-viewer $HOME/bin/.
-mv models/ $HOME/Documents/.
+mv 3d-ascii-viewer $HOME/bin/. && mv models/ $HOME/Documents/.
 cd && rm -rf 3d-ascii-viewer* v1.4.0.tar.gz
