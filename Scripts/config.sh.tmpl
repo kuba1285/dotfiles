@@ -97,4 +97,12 @@ xrandr -s $(cvt $(echo $RES) | grep -e "Modeline [^(]" | cut -d " " -f 2)
 EOF
 
     {{ end }}
+
+# Enable services
+echo "${CYAN}NOTE${RESET} - Enabling services."
+for service in ${SERVICES[@]} ; do
+    sudo systemctl enable $service
+    sleep 2
+done
+
 {{ end }}
