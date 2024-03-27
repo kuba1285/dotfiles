@@ -10,6 +10,7 @@ MODELINE=$(cvt $(echo $RES) | grep -e "Modeline [^(]" | sed -r 's/.*Modeline (.*
 MODERES=$(echo $MODELINE | grep -o -P '(?<=").*(?=")')
 EXECUTABLE=("
 $(echo $HOME/bin/*)
+$(echo $HOME/Scripts/*)
 $(echo $HOME/.config/bspwm/*)
 $(echo $HOME/.config/polybar/scripts/*)
 $HOME/Scripts/change-wallpaper.app/Contents/MacOS/change-wallpaper.sh
