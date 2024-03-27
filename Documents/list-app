@@ -73,6 +73,7 @@ xfce4-settings
 xorg
 xorg-server
 xorg-xinput
+xorg-xrandr
 wpgtk
 zsh
 zsh-autosuggestions
