@@ -9,6 +9,7 @@ $(echo $HOME/bin/*)
 $(echo $HOME/.config/bspwm/*)
 $(echo $HOME/.config/polybar/scripts/*)
 $(echo $HOME/Scripts/change-wallpaper.app/Contents/MacOS/change-wallpaper.sh)
+")
 
 {{ if eq .chezmoi.os "linux" }}
     {{ if eq .chezmoi.osRelease.id "archarm" }}
@@ -21,7 +22,7 @@ DLDIR="/data/data/com.termux/files/home/storage/movies"
 DLDIR="$HOME/Downloads"
 
 {{ end }}
-")
+
 SERVICES=(
 NetworkManager
 sddm
