@@ -47,6 +47,9 @@ alias clear='paclear -s 5 -c ${PCLRCOLS[$((RANDOM%5 + 1))]}'
 
 
 {{ if eq .chezmoi.os "linux" }}
+
+alias open='xdg-open'
+
     {{ if eq .chezmoi.osRelease.id "archarm" }}
 
 alias avnc='am start --user 0 -n com.gaurav.avnc/com.gaurav.avnc.StartupActivity && vncserver :1 &'
