@@ -83,12 +83,12 @@ vncpasswd $HOME/.vnc/passwd
 
 sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
 sudo sed -i -e '/^twm/s/^/#/ -e '/^xclock/s/^/#/' -e '/^xterm/s/^/#/g' ~/.xinitrc
-cat << EOF ~/.xinitrc
+cat << EOF >> ~/.xinitrc
 sxhkd & exec bspwm
 EOF
 
 # Remote resolution mode settings
-cat < EOF ~/.xprofile
+cat << EOF >> ~/.xprofile
 #!/bin/sh
 xrandr --newmode $MODELINE
 xrandr --addmode $DISP $MODERES
