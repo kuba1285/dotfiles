@@ -1,0 +1,99 @@
+#!{{ lookPath "bash" }}
+
+#┌┬┐┌─┐┌┐┌┌─┐┌─┐┌─┐┌┬┐  ┌─┐┌─┐┌─┐┌─┐
+#│││├─┤│││├─┤│ ┬├┤  ││  ├─┤├─┘├─┘└─┐
+#┴ ┴┴ ┴┘└┘┴ ┴└─┘└─┘─┴┘  ┴ ┴┴  ┴  └─┘
+{{ if eq .chezmoi.os "darwin" }}
+
+# Install Rosetta
+echo "${CYAN}NOTE${RESET} - Installing Rosetta."
+sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license
+
+# Install Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USER/.bashrc && source ~/.zshrc
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Install apps from Brewfile
+echo "${CYAN}NOTE${RESET} - Installing Brewfile-apps."
+brew bundle install --file $HOME/Documents/Brewfile
+
+{{ else if eq .chezmoi.os "linux" }}
+
+# Configure AUR
+echo "${CYAN}NOTE${RESET} - Configuering AUR."
+pacman -Syyu --noconfirm --needed sudo wget git bat eza fzf git-delta starship base-devel xdg-utils fontconfig
+sudo sed -i -e "/^ *#Color$/c\ Color\n\ ILoveCandy" -e '/ParallelDownloads/s/^#//g' /etc/pacman.conf
+sudo sed -i -e "/#MAKEFLAGS/s/2/$(($(nproc)+1))/" -e '/#MAKEFLAGS/s/^#//' /etc/makepkg.conf
+
+    {{ if eq .chezmoi.osRelease.id "archarm" }}
+
+useradd -m -g users -G wheel,audio,video,storage -s /bin/bash user && echo user:user | chpasswd
+sudo sed -i -e "/^ *root ALL=(ALL:ALL) ALL$/c\root ALL=(ALL:ALL) ALL\n\user ALL=(ALL) ALL" /etc/sudoers
+ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && sudo sed -i -e '/#ja_JP.UTF-8 UTF-8/s/^#//' /etc/locale.gen
+locale-gen && echo "LANG=ja_JP.UTF-8" >> /etc/locale.conf
+sudo -i -u user bash << EOF
+cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
+cd && rm -rf yay
+EOF
+
+    {{ else }}
+
+cd && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm &&
+cd && rm -rf yay
+
+    {{ end }}
+
+# Install listed pacakges
+echo "${CYAN}NOTE${RESET} - Installing apps from $LISTAPP."
+install_list $LISTAPP
+fc-cache -fv
+
+{{ end }}
+
+#┌─┐┬ ┬┌─┐┌┬┐┌─┐┌┬┐  ┌─┐┌─┐┌─┐┌─┐
+#│  │ │└─┐ │ │ ││││  ├─┤├─┘├─┘└─┐
+#└─┘└─┘└─┘ ┴ └─┘┴ ┴  ┴ ┴┴  ┴  └─┘
+{{ if eq .chezmoi.os "darwin" }}
+
+pipx install pywal
+pipx ensurepath
+
+cd && git clone https://github.com/Nellousan/px2ansi.git
+cd px2ansi && pipx install .
+
+{{ else if eq .chezmoi.os "linux" }}
+
+cd && mkdir powershell && cd powershell
+wget $PWSH && tar xvzf $(basename $(echo $PWSH))
+sudo ln -s $HOME/powershell/pwsh /usr/bin/pwsh
+
+cd && go install github.com/orangekame3/paclear@latest && mv ~/go/bin/paclear ~/bin/
+
+# Setup Nvidia if found
+if lspci -k | grep -A 2 -E "(VGA|3D)" | grep -iq nvidia ; then
+    yay -S --noconfirm --needed libva libva-nvidia-driver-git linux-headers nvidia-dkms nvidia-settings
+    sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
+    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
+    echo -e "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
+    echo -e "WLR_NO_HARDWARE_CURSORS=1" | sudo tee -a /etc/environment
+fi
+
+# Install MBP audio driver if CS8409 found
+if lsmod | grep cs8409 >/dev/null ; then
+    cd && git clone https://github.com/davidjo/snd_hda_macbookpro.git
+    cd snd_hda_macbookpro/ && sudo ./install.cirrus.driver.sh
+fi
+
+{{ end }}
+
+cd && git clone http://github.com/possatti/pokemonsay && cd pokemonsay && ./install.sh
+
+cd && wget $TVERREC && tar xvzf $(basename $(echo $TVERREC)) && rm $(basename $(echo $TVERREC))
+cd $HOME/TVerRec*/conf/ && cp system_setting.ps1 user_setting.ps1
+mv $HOME/Documents/keyword.conf keyword.conf
+
+cd && wget https://github.com/autopawn/3d-ascii-viewer/archive/refs/tags/v1.4.0.tar.gz
+tar xvzf v1.4.0.tar.gz && cd 3d-ascii-viewer*
+make
+mv 3d-ascii-viewer $HOME/bin/. && cd && rm -rf 3d-ascii-viewer* v1.4.0.tar.gz
