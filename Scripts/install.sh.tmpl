@@ -13,8 +13,6 @@ sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --in
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USER/.bashrc && source ~/.zshrc
 eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Install apps from Brewfile
 echo "${CYAN}NOTE${RESET} - Installing Brewfile-apps."
 brew bundle install --file $HOME/Documents/Brewfile
 
