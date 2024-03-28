@@ -12,14 +12,6 @@ function col {
   awk -v col=$1 '{print $col}'
 }
 
-function histgrep() {
-  if [[ $# -gt 0 ]]; then
-      history | tac | sort -k2 -u | sort | grep "$@"
-  else
-      history 50
-  fi
-}
-
 function findext() {
   CMD='find -type f'
   for E in $@
@@ -33,6 +25,14 @@ function google() {
   words="$(IFS="+"; echo "${${@:1}[*]}")"
   if [ "$words" != "" ]; then
     open "https://google.com/search?q=$words"
+  fi
+}
+
+function histgrep() {
+  if [[ $# -gt 0 ]]; then
+      history | tac | sort -k2 -u | sort | grep "$@"
+  else
+      history 50
   fi
 }
 
@@ -68,7 +68,6 @@ alias ll="eza -aahl --icons --git"
 alias lt="eza -T -L 3 -a -I 'node_modules|.git|.cache' --icons"
 alias lta="eza -T -a -I 'node_modules|.git|.cache' --color=always --icons | less -r"
 alias vc='code' # gui code editor
-PCLRCOLS=(red green blue yellow pink)
 alias clear='paclear -s 5 -c ${PCLRCOLS[$((RANDOM%5 + 1))]}'
 
 {{ if eq .chezmoi.os "linux" }}
@@ -85,6 +84,8 @@ alias gui='am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity && ex
 #┬  ┬┌─┐┬─┐┬┌─┐┌┐ ┬  ┌─┐┌─┐
 #└┐┌┘├─┤├┬┘│├─┤├┴┐│  ├┤ └─┐
 # └┘ ┴ ┴┴└─┴┴ ┴└─┘┴─┘└─┘└─┘
+TMOUT=900
+PCLRCOLS=(red green blue yellow pink)
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.local/bin"
@@ -101,7 +102,6 @@ export PATH="$PATH:/usr/local/opt/python@3.12/libexec/bin"
 #┌─┐┌─┐┌┬┐┌┬┐┌─┐┌┐┌┌┬┐┌─┐
 #│  │ │││││││├─┤│││ ││└─┐
 #└─┘└─┘┴ ┴┴ ┴┴ ┴┘└┘─┴┘└─┘
-TMOUT=900
 TRAPALRM() {
 MODELS=($(ls -d $HOME/Documents/models/*))
 SEC=`date +%S`
