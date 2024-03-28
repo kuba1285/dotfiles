@@ -70,7 +70,6 @@ alias vc='code' # gui code editor
 PCLRCOLS=(red green blue yellow pink)
 alias clear='paclear -s 5 -c ${PCLRCOLS[$((RANDOM%5 + 1))]}'
 
-
 {{ if eq .chezmoi.os "linux" }}
 
 alias open='xdg-open'
@@ -78,14 +77,15 @@ alias open='xdg-open'
     {{ if eq .chezmoi.osRelease.id "archarm" }}
 
 alias avnc='am start --user 0 -n com.gaurav.avnc/com.gaurav.avnc.StartupActivity && (vncserver :1 &) || (vncserver :1 &)'
-alias termux-gui='export DISPLAY=:0 && PULSE_SERVER=tcp:127.0.0.1 && dbus-launch --exit-with-session bspwm &'
+alias gui='PULSE_SERVER=tcp:127.0.0.1 && dbus-launch --exit-with-session bspwm &'
 
     {{ end }}
 {{ end }}
 
-#┌─┐┌─┐┌┬┐┬ ┬
-#├─┘├─┤ │ ├─┤
-#┴  ┴ ┴ ┴ ┴ ┴
+#┬  ┬┌─┐┬─┐┬┌─┐┌┐ ┬  ┌─┐┌─┐
+#└┐┌┘├─┤├┬┘│├─┤├┴┐│  ├┤ └─┐
+# └┘ ┴ ┴┴└─┴┴ ┴└─┘┴─┘└─┘└─┘
+export DISPLAY=:0
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.local/bin"
