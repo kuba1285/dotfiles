@@ -75,7 +75,7 @@ EOF
     {{ if eq .chezmoi.osRelease.id "archarm" }}
 
 sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
-sudo sed -i -e '/^twm/s/^/#/' -e '/^xclock/s/^/#/' -e '/^xterm/s/^/#/g' ~/.xinitrc
+sudo sed -i -e '/^twm/s/^/#/' -e '/^xclock/s/^/#/' -e '/^xterm/s/^/#/g' -e '/^exec/s/^/#/g' ~/.xinitrc
 cat << EOF >> ~/.xinitrc
 sxhkd & exec bspwm
 EOF
