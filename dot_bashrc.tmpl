@@ -77,7 +77,6 @@ alias open='xdg-open'
 
     {{ if eq .chezmoi.osRelease.id "archarm" }}
 
-alias avnc='am start --user 0 -n com.gaurav.avnc/com.gaurav.avnc.StartupActivity && (vncserver :1 &) || (vncserver :1 &)'
 alias gui='am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity && export DISPLAY=:0 && PULSE_SERVER=tcp:127.0.0.1 && dbus-launch --exit-with-session bspwm &'
 
     {{ end }}
