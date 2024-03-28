@@ -30,7 +30,7 @@ if [[ $YN = y ]] ; then
 fi
 
 # A bootplug to match the binary format so that yabai can inject code into the Dock of arm64 binaries.
-if [[ $(uname -m) == 'arm64' ]]; then
+if [[ $(uname -m) == 'arm64' ]] ; then
     sudo nvram boot-args=-arm64e_preview_abi
 fi
 
