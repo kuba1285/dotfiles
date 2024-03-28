@@ -1,0 +1,73 @@
+#!{{ lookPath "bash" }}
+
+TVERREC=https://github.com/dongaba/TVerRec/archive/refs/tags/v3.0.2.tar.gz
+PWSH=https://github.com/PowerShell/PowerShell/releases/download/v7.2.13/powershell-7.2.13-linux-arm64.tar.gz
+LISTAPP="$HOME/Documents/list-app"
+RES="2560 1570 60"
+DISP=$(xrandr | grep -e " connected [^(]" | sed -e "s/\([A-Z0-9]\+\) connected.*/\1/")
+MODELINE=$(cvt $(echo $RES) | grep -e "Modeline [^(]" | sed -r 's/.*Modeline (.*)/\1/')
+MODERES=$(echo $MODELINE | grep -o -P '(?<=").*(?=")')
+EXECUTABLES=("
+$(echo $HOME/bin/*)
+$(echo $HOME/Scripts/*)
+$HOME/Scripts/change-wallpaper.app/Contents/MacOS/change-wallpaper.sh
+$HOME/.config/bspwm/bspwmrc
+$(echo $HOME/.config/polybar/scripts/*)
+")
+
+{{ if eq .chezmoi.os "linux" }}
+    {{ if eq .chezmoi.osRelease.id "archarm" }}
+
+DLDIR="/data/data/com.termux/files/home/storage/movies"
+
+    {{ end }}
+{{ else }}
+
+DLDIR="$HOME/Downloads"
+
+{{ end }}
+
+SERVICES=(
+NetworkManager
+sddm
+bluetooth
+tlp
+mbpfan
+)
+
+function set_colors() {
+    if [ -t 1 ] ; then
+        RED=$(tput setaf 1); GREEN=$(tput setaf 2); YELLOW=$(tput setaf 3); CYAN=$(tput setaf 6); BOLD=$(tput bold); RESET=$(tput sgr0)
+    else
+        RED=""; GREEN=""; YELLOW=""; CYAN=""; BOLD=""; RESET=""
+    fi
+}
+
+function install_list() {
+        while IFS= read -r app ; do yay -S --noconfirm --needed $app; done < "$1"
+}
+
+function wait_yn(){
+    YN=""
+    while [ $YN != 'y' ] && [ $YN != 'n' ] ; do read -p "$1 [y/n]" YN; done
+}
+
+set_colors
+
+# Option to exit
+wait_yn "${YELLOW}ACITION${RESET} - Would you like to start with the install?"
+if [[ $YN = y ]] ; then
+    echo "${CYAN}NOTE${RESET} - Setup starting..."
+else
+    echo "${RED}ATTENTION${RESET} - Aborted. No changes were made to your system."
+    exit
+fi
+
+echo "${CYAN}NOTE${RESET} - Installing apps."
+source $HOME/Scripts/install.sh
+
+echo "${CYAN}NOTE${RESET} - Setting some configuration."
+source $HOME/Scripts/stage.sh
+source $HOME/Scripts/config.sh
+
+echo "${GREEN}OK${RESET} - Please log out and log back in for the changes to take effect."
