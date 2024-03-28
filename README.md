@@ -3,7 +3,7 @@ WIP
 ### Termux (Proot Arch Installation)
 ```sh
 yes | pkg upgrade && yes | pkg install curl {game,tur,science,root,x11}-repo
-curl -s raw.githubusercontent.com/kuba1285/dotfiles/master/Scripts/termux-init.sh | bash
+curl -s https://raw.githubusercontent.com/kuba1285/dotfiles/master/Scripts/termux-init.sh | bash
 ```
 ### chezmoi
 ```sh
