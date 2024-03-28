@@ -21,21 +21,6 @@ function findext() {
   echo $CMD | sed -e 's# -or$##' | bash
 }
 
-function google() {
-  words="$(IFS="+"; echo "${${@:1}[*]}")"
-  if [ "$words" != "" ]; then
-    open "https://google.com/search?q=$words"
-  fi
-}
-
-function histgrep() {
-  if [[ $# -gt 0 ]]; then
-      history | tac | sort -k2 -u | sort | grep "$@"
-  else
-      history 50
-  fi
-}
-
 function look() {
   if [ "$1" = "-a" ]; then
     local find_result=$(find . -type f -o -type l)
