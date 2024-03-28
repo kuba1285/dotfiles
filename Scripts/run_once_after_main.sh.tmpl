@@ -14,7 +14,13 @@ $HOME/Scripts/change-wallpaper.app/Contents/MacOS/change-wallpaper.sh
 $HOME/.config/bspwm/bspwmrc
 $(echo $HOME/.config/polybar/scripts/*)
 ")
-
+SERVICES=(
+NetworkManager
+sddm
+bluetooth
+tlp
+mbpfan
+)
 {{ if eq .chezmoi.os "linux" }}
     {{ if eq .chezmoi.osRelease.id "archarm" }}
 
@@ -26,14 +32,6 @@ DLDIR="/data/data/com.termux/files/home/storage/movies"
 DLDIR="$HOME/Downloads"
 
 {{ end }}
-
-SERVICES=(
-NetworkManager
-sddm
-bluetooth
-tlp
-mbpfan
-)
 
 function set_colors() {
     if [ -t 1 ] ; then
