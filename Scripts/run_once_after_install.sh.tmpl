@@ -10,9 +10,9 @@ MODERES=$(echo $MODELINE | grep -o -P '(?<=").*(?=")')
 EXECUTABLES=("
 $(echo $HOME/bin/*)
 $(echo $HOME/Scripts/*)
+$HOME/Scripts/change-wallpaper.app/Contents/MacOS/change-wallpaper.sh
 $(echo $HOME/.config/bspwm/*)
 $(echo $HOME/.config/polybar/scripts/*)
-$HOME/Scripts/change-wallpaper.app/Contents/MacOS/change-wallpaper.sh
 ")
 
 {{ if eq .chezmoi.os "linux" }}
