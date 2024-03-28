@@ -90,10 +90,6 @@ EOF
 
     {{ end }}
 
-chmod +x $EXECUTABLES
-sudo gpasswd -a $USER input
-chsh -s $(which zsh) $USER
-
 # VNC server settings
 vncpasswd $HOME/.vnc/passwd
 
@@ -104,4 +100,9 @@ for service in ${SERVICES[@]} ; do
     sleep 2
 done
 
+sudo gpasswd -a $USER input
+chsh -s $(which zsh) $USER
+
 {{ end }}
+
+chmod +x $EXECUTABLES
