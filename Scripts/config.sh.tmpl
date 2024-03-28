@@ -17,12 +17,10 @@ mv -f $HOME/src/keyword.conf $HOME/TVerRec*/conf/keyword.conf
 
 {{ if eq .chezmoi.os "darwin" }}
 
-# Generate misc file
 sudo ln -s $HOME/Documents $HOME/Documents-ln
 sudo ln -s $HOME/Downloads $HOME/Downloads-ln
 sudo ln -s $HOME/ $HOME/$USER-ln
 
-# Write default
 source $HOME/Documents/parse-plist
 
 # A bootplug to match the binary format so that yabai can inject code into the Dock of arm64 binaries.
