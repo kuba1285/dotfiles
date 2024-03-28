@@ -10,10 +10,10 @@ echo "${CYAN}NOTE${RESET} - Installing Rosetta."
 sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license
 
 # Install Brew
+echo "${CYAN}NOTE${RESET} - Installing Brew apps."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/$USER/.bashrc && source ~/.zshrc
 eval "$(/opt/homebrew/bin/brew shellenv)"
-echo "${CYAN}NOTE${RESET} - Installing Brewfile-apps."
 brew bundle install --file $HOME/Documents/Brewfile
 
 {{ else if eq .chezmoi.os "linux" }}
