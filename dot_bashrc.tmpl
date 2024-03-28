@@ -76,17 +76,8 @@ alias lt="eza -T -L 3 -a -I 'node_modules|.git|.cache' --icons"
 alias lta="eza -T -a -I 'node_modules|.git|.cache' --color=always --icons | less -r"
 alias vc='code' # gui code editor
 alias clear='paclear -s 5 -c ${PCLRCOLS[$((RANDOM%5 + 1))]}'
-
-{{ if eq .chezmoi.os "linux" }}
-
-alias open='xdg-open'
-
-    {{ if eq .chezmoi.osRelease.id "archarm" }}
-
-alias gui='am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity && export DISPLAY=:0 && PULSE_SERVER=tcp:127.0.0.1 && dbus-launch --exit-with-session bspwm &'
-
-    {{ end }}
-{{ end }}
+alias gui='am start --user 0 -n com.termux.x11/com.termux.x11.MainActivity && export DISPLAY=:0 && \
+PULSE_SERVER=tcp:127.0.0.1 && dbus-launch --exit-with-session bspwm &'
 
 #┬  ┬┌─┐┬─┐┬┌─┐┌┐ ┬  ┌─┐┌─┐
 #└┐┌┘├─┤├┬┘│├─┤├┴┐│  ├┤ └─┐
