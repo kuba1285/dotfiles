@@ -1,11 +1,11 @@
 WIP
 
-### Termux (Proot Arch Installation)
+### Run (If on termux for PRoot installation) :
 ```sh
 yes | pkg upgrade && yes | pkg install curl {game,tur,science,root,x11}-repo
 curl -s https://raw.githubusercontent.com/kuba1285/dotfiles/master/Scripts/termux-init.sh | bash
 ```
-### chezmoi
+### And then :
 ```sh
 bash -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/bin init --apply kuba1285
 ```
