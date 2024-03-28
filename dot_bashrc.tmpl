@@ -52,6 +52,13 @@ function look() {
   vim -p ${target_files[@]}
 }
 
+TRAPALRM() {
+MODELS=($(ls -d $HOME/Documents/models/*))
+SEC=`date +%S`
+I=$((SEC%$(echo ${#MODELS[@]})+1))
+3d-ascii-viewer -z 120 ${MODELS[$I]}
+}
+
 #┌─┐┬  ┬┌─┐┌─┐┌─┐┌─┐
 #├─┤│  │├─┤└─┐├┤ └─┐
 #┴ ┴┴─┘┴┴ ┴└─┘└─┘└─┘
@@ -102,9 +109,3 @@ export PATH="$PATH:/usr/local/opt/python@3.12/libexec/bin"
 #┌─┐┌─┐┌┬┐┌┬┐┌─┐┌┐┌┌┬┐┌─┐
 #│  │ │││││││├─┤│││ ││└─┐
 #└─┘└─┘┴ ┴┴ ┴┴ ┴┘└┘─┴┘└─┘
-TRAPALRM() {
-MODELS=($(ls -d $HOME/Documents/models/*))
-SEC=`date +%S`
-I=$((SEC%$(echo ${#MODELS[@]})+1))
-3d-ascii-viewer -z 120 ${MODELS[$I]}
-}
