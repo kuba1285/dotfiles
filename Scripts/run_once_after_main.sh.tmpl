@@ -1,12 +1,13 @@
 #!{{ lookPath "bash" }}
 
-TVERREC=https://github.com/dongaba/TVerRec/archive/refs/tags/v3.0.2.tar.gz
-PWSH=https://github.com/PowerShell/PowerShell/releases/download/v7.2.13/powershell-7.2.13-linux-arm64.tar.gz
-LISTAPP="$HOME/Documents/list-app"
 RES="2560 1570 60"
 DISP=$(xrandr | grep -e " connected [^(]" | sed -e "s/\([A-Z0-9]\+\) connected.*/\1/")
 MODELINE=$(cvt $(echo $RES) | grep -e "Modeline [^(]" | sed -r 's/.*Modeline (.*)/\1/')
 MODERES=$(echo $MODELINE | grep -o -P '(?<=").*(?=")')
+
+TVERREC=https://github.com/dongaba/TVerRec/archive/refs/tags/v3.0.2.tar.gz
+PWSH=https://github.com/PowerShell/PowerShell/releases/download/v7.2.13/powershell-7.2.13-linux-arm64.tar.gz
+LISTAPP="$HOME/Documents/list-app"
 EXECUTABLES=("
 $(echo $HOME/bin/*)
 $(echo $HOME/Scripts/*)
