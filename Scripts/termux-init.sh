@@ -1,6 +1,6 @@
 cd
 termux-setup-storage
-yes | pkg install termux-keyring termux-api termux-exec git curl which proot proot-distro pulseaudio termux-x11-nightly virglrenderer-android
+yes | pkg install termux-am termux-keyring termux-api termux-exec git curl which proot proot-distro pulseaudio termux-x11-nightly virglrenderer-android
 proot-distro install archlinux
 
 touch ~/.hushlogin
