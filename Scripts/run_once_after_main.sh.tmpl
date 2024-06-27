@@ -5,6 +5,7 @@ DISP=$(xrandr | grep -e " connected [^(]" | sed -e "s/\([A-Z0-9]\+\) connected.*
 MODELINE=$(cvt $(echo $RES) | grep -e "Modeline [^(]" | sed -r 's/.*Modeline (.*)/\1/')
 MODERES=$(echo $MODELINE | grep -o -P '(?<=").*(?=")')
 
+DLDIR="$HOME/Downloads"
 TVERREC=https://github.com/dongaba/TVerRec/archive/refs/tags/v3.0.2.tar.gz
 PWSH=https://github.com/PowerShell/PowerShell/releases/download/v7.2.13/powershell-7.2.13-linux-arm64.tar.gz
 LISTAPP="$HOME/Documents/list-app"
@@ -27,11 +28,6 @@ mbpfan
 
 DLDIR="/data/data/com.termux/files/home/storage/movies"
 LISTAPP="$HOME/Documents/list-termux"
-
-    {{ end }}
-{{ else }}
-
-DLDIR="$HOME/Downloads"
 
 {{ end }}
 
