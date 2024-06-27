@@ -2,10 +2,9 @@
 
 {{ if eq .chezmoi.os "darwin" }}
 
+sudo ln -s $HOME/ $HOME/$USER-ln
 sudo ln -s $HOME/Documents $HOME/Documents-ln
 sudo ln -s $HOME/Downloads $HOME/Downloads-ln
-sudo ln -s $HOME/ $HOME/$USER-ln
-
 source $HOME/Documents/parse-plist
 
 # A bootplug to match the binary format so that yabai can inject code into the Dock of arm64 binaries.
@@ -22,19 +21,19 @@ yabai --start-service && skhd --start-service
 {{ if eq .chezmoi.os "linux" }}
     {{ if eq .chezmoi.osRelease.id "archarm" }}
 
-sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
-sudo sed -i -e '/^twm/s/^/#/' -e '/^xclock/s/^/#/' -e '/^xterm/s/^/#/g' -e '/^exec/s/^/#/' ~/.xinitrc
-cat << EOF >> ~/.xinitrc
-sxhkd & exec bspwm
-EOF
+#sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
+#sudo sed -i -e '/^twm/s/^/#/' -e '/^xclock/s/^/#/' -e '/^xterm/s/^/#/g' -e '/^exec/s/^/#/' ~/.xinitrc
+#cat << EOF >> ~/.xinitrc
+#sxhkd & exec bspwm
+#EOF
 
 # Remote resolution mode settings
-cat << EOF >> ~/.xprofile
-#!/bin/sh
-xrandr --newmode $MODELINE
-xrandr --addmode $DISP $MODERES
-xrandr -s $(cvt $(echo $RES) | grep -e "Modeline [^(]" | cut -d " " -f 2)
-EOF
+#cat << EOF >> ~/.xprofile
+##!/bin/sh
+#xrandr --newmode $MODELINE
+#xrandr --addmode $DISP $MODERES
+#xrandr -s $(cvt $(echo $RES) | grep -e "Modeline [^(]" | cut -d " " -f 2)
+#EOF
 
     {{ end }}
 
