@@ -1,17 +1,13 @@
 cava
-cliphist
 cowfortune
 github-cli
 go
 gotop
-gtk3
-gvfs
 hyfetch
 jq
 linux-headers
 make
 neofetch
-networkmanager
 noto-fonts-cjk
 noto-fonts-emoji
 pacman-contrib 
@@ -20,7 +16,6 @@ python3
 python-pywal
 python-requests
 xclip
-wpgtk
 zsh
 zsh-autosuggestions
 zsh-completions
