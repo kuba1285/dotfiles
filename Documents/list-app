@@ -10,6 +10,7 @@ cliphist
 cowfortune
 dracula-gtk-theme
 dracula-icons-git
+fastfetch
 file-roller
 firefox
 github-cli
@@ -18,7 +19,6 @@ google-chrome
 gotop
 gtk3
 gvfs
-hyfetch
 i3lock
 jq
 kitty
@@ -28,7 +28,6 @@ make
 mako
 mbpfan-git
 mpv
-neofetch
 networkmanager
 noto-fonts-cjk
 noto-fonts-emoji
