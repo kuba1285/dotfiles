@@ -1,6 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
-#
- =====================================================================
+# =====================================================================
 # Even G2「エージェント設定」→ Claude Code 中継サーバー セットアップ（Termux）
 #
 # 【全体の機序】
@@ -49,7 +48,38 @@ touch ~/.hushlogin     # Termux起動時の案内メッセージを非表示
 
 
 # ---------------------------------------------------------------------
-# 2. Claude Code（Android対応版）の導入
+# 2. GitHub接続（ナレッジベースの取得と作業ブランチの準備）
+#    対話が必要な処理なので、最も長い外部インストーラーより前に実行する
+#    （ここを終えれば、以降は手順7のClaudeログインまで基本的に放置できる）
+# ---------------------------------------------------------------------
+# 認証：Termuxはブラウザを自動で開けないため、表示されたワンタイムコードを控え、
+#       スマホのブラウザで https://github.com/login/device を開いて入力する
+#       （ログイン済みなら省略）
+gh auth status >/dev/null 2>&1 || gh auth login --hostname github.com --git-protocol https --web
+
+# git push 時に gh の認証情報を使うよう git に設定（これが無いと push でパスワードを求められる）
+gh auth setup-git
+
+# commit に必要な作成者情報（未設定だと git commit が失敗する）
+git config --global user.name  "$GH_USER"
+git config --global user.email "$GH_USER@users.noreply.github.com"
+
+# clone（既に取得済みならスキップ）
+if [ ! -d "$VAULT_DIR/.git" ]; then
+  gh repo clone "$GH_USER/$VAULT_REPO" "$VAULT_DIR"
+fi
+
+# 作業ブランチへ切替：リモートにあればそれを追跡、無ければ作成して初回push
+if git -C "$VAULT_DIR" ls-remote --exit-code --heads origin "$WORK_BRANCH" >/dev/null 2>&1; then
+  git -C "$VAULT_DIR" switch "$WORK_BRANCH"
+else
+  git -C "$VAULT_DIR" switch -c "$WORK_BRANCH"
+  git -C "$VAULT_DIR" push -u origin "$WORK_BRANCH"
+fi
+
+
+# ---------------------------------------------------------------------
+# 3. Claude Code（Android対応版）の導入
 #    公式SDK同梱バイナリはandroid-arm64向けが無いため、
 #    Android対応の外部インストーラーで claude コマンドを導入する
 #    （導入先: /data/data/com.termux/files/usr/bin/claude）
@@ -59,7 +89,7 @@ bash "$CCA_INSTALLER"
 
 
 # ---------------------------------------------------------------------
-# 3. Termux / nano の使い勝手設定
+# 4. Termux / nano の使い勝手設定
 # ---------------------------------------------------------------------
 # 画面下の補助キー（ESC, CTRL, 矢印など）。反映はTermux再起動後
 cat << EOF > "$HOME/.termux/termux.properties"
@@ -82,8 +112,8 @@ EOF
 
 
 # ---------------------------------------------------------------------
-# 4. Termux起動時に中継サーバーを自動起動
-#    ・.bashrc は上書き（既存の内容は消える）
+# 5. Termux起動時に中継サーバーを自動起動
+#    ・.bashrc は上書き（既存の内容は消える。外部インストーラーのPATH追記も消えるため再記述）
 #    ・ヒアドキュメントが EOF（引用なし）なので、上の変数はここで値に展開されて書き込まれる
 #    ・サーバーはフォアグラウンドで動くため、そのセッションはサーバー専用になる
 #    ・2つ目のセッションを開くと同じポートで起動を試みて失敗（EADDRINUSE）し、
@@ -96,7 +126,7 @@ EOF
 
 
 # ---------------------------------------------------------------------
-# 5. 中継サーバー本体（server.js）
+# 6. 中継サーバー本体（server.js）
 #    ヒアドキュメントが 'EOF'（引用あり）なので、中身はシェル展開されずそのまま書き込まれる
 #    設定値は .bashrc から環境変数で渡す
 # ---------------------------------------------------------------------
@@ -200,35 +230,6 @@ http.createServer((req, res) => {
   });
 }).listen(PORT, '0.0.0.0', () => console.log(`G2 bridge listening on :${PORT} (cwd=${CWD}, branch=${BRANCH})`));
 EOF
-
-
-# ---------------------------------------------------------------------
-# 6. GitHub接続（ナレッジベースの取得と作業ブランチの準備）
-# ---------------------------------------------------------------------
-# 認証：Termuxはブラウザを自動で開けないため、表示されたワンタイムコードを控え、
-#       スマホのブラウザで https://github.com/login/device を開いて入力する
-#       （ログイン済みなら省略）
-gh auth status >/dev/null 2>&1 || gh auth login --hostname github.com --git-protocol https --web
-
-# git push 時に gh の認証情報を使うよう git に設定（これが無いと push でパスワードを求められる）
-gh auth setup-git
-
-# commit に必要な作成者情報（未設定だと git commit が失敗する）
-git config --global user.name  "$GH_USER"
-git config --global user.email "$GH_USER@users.noreply.github.com"
-
-# clone（既に取得済みならスキップ）
-if [ ! -d "$VAULT_DIR/.git" ]; then
-  gh repo clone "$GH_USER/$VAULT_REPO" "$VAULT_DIR"
-fi
-
-# 作業ブランチへ切替：リモートにあればそれを追跡、無ければ作成して初回push
-if git -C "$VAULT_DIR" ls-remote --exit-code --heads origin "$WORK_BRANCH" >/dev/null 2>&1; then
-  git -C "$VAULT_DIR" switch "$WORK_BRANCH"
-else
-  git -C "$VAULT_DIR" switch -c "$WORK_BRANCH"
-  git -C "$VAULT_DIR" push -u origin "$WORK_BRANCH"
-fi
 
 
 # ---------------------------------------------------------------------
