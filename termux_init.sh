@@ -42,7 +42,7 @@ termux-wake-lock       # スリープ中もTermuxのプロセス（中継サー�
 
 # git/gh   : ナレッジベースの取得・commit・push
 # nodejs-lts : 中継サーバー(server.js)とClaude Codeの実行環境
-yes | pkg install git gh nodejs-lts
+yes | pkg install which git gh nodejs-lts
 
 touch ~/.hushlogin     # Termux起動時の案内メッセージを非表示
 
@@ -160,9 +160,13 @@ const CWD        = process.env.G2_CWD || path.join(os.homedir(), 'knowledge-vaul
 const BRANCH     = process.env.G2_BRANCH || 'claude/g2';                            // push先の作業ブランチ
 const TIMEOUT_MS = 90000;                                                           // claude応答の待ち上限
 
-// G2の画面向けに回答を短くする指示 + Git運用ルール（Claude Codeの既定システムプロンプトに追記される）
+// G2の画面向けの回答ルール＋Git運用ルール（Claude Codeの既定システムプロンプトに追記される）
+//   ・回答は短く（G2の表示幅に合わせる）
+//   ・作業は作業用ブランチで行い、mainには直接書かない（mainへの反映は夜間ルーティン）
+//   ・夜間ルーティンでmainが更新されるため、編集前にmainの最新を取り込んで食い違いを防ぐ
 const SYS = 'スマートグラスに表示される。日本語で3文以内、簡潔に答える。'
-  + `Gitの作業は ${BRANCH} ブランチで行い、pushは「git push origin ${BRANCH}」の形で実行する。mainには直接commit・pushしない。`;
+  + `Gitの作業は ${BRANCH} ブランチで行い、pushは「git push origin ${BRANCH}」の形で実行する。mainには直接commit・pushしない。`
+  + 'ナレッジベースを編集する前に、必ず「git pull origin main」で最新化する。競合が起きたら編集を中止し、その旨を伝える。';
 
 // -p（非対話）モードでは承認ダイアログを出せないため、許可が必要なツールは自動でブロックされる。
 // ここに列挙したものだけを事前許可する（会話で「許可」と言っても許可にはならない）。
