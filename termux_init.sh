@@ -42,7 +42,7 @@ termux-wake-lock       # スリープ中もTermuxのプロセス（中継サー�
 
 # git/gh   : ナレッジベースの取得・commit・push
 # nodejs-lts : 中継サーバー(server.js)とClaude Codeの実行環境
-yes | pkg install git gh nodejs-lts
+yes | pkg install termux-api git gh nodejs-lts
 
 touch ~/.hushlogin     # Termux起動時の案内メッセージを非表示
 
