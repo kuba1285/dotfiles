@@ -244,7 +244,7 @@ http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify(buildCompletion(answer, body.model)));
   });
-}).listen(PORT, '0.0.0.0', () => console.log(`G2 bridge listening on :${PORT} (cwd=${CWD}, branch=${BRANCH})`));
+}).listen(PORT, '127.0.0.1', () => console.log(`G2 bridge listening on :${PORT} (cwd=${CWD}, branch=${BRANCH})`));
 EOF
 
 
