@@ -167,11 +167,26 @@ const SYS = 'スマートグラスに表示される。日本語で3文以内、
 // -p（非対話）モードでは承認ダイアログを出せないため、許可が必要なツールは自動でブロックされる。
 // ここに列挙したものだけを事前許可する（会話で「許可」と言っても許可にはならない）。
 const TOOLS = [
-  'Read', 'Edit', 'Write', 'Glob', 'Grep',            // ナレッジベースの閲覧・編集
-  'WebSearch', 'WebFetch',                            // 天気などのWeb情報取得
-  'Bash(git status:*)', 'Bash(git diff:*)', 'Bash(git add:*)',
-  'Bash(git commit:*)', 'Bash(git pull:*)', 'Bash(git switch:*)',
-  `Bash(git push origin ${BRANCH}:*)`,                // pushは作業ブランチ宛てのみ（mainへのpushはブロック）
+  // ナレッジベースの閲覧・編集
+  'Read', 'Edit', 'Write', 'Glob', 'Grep',
+
+  // 天気などのWeb情報取得
+  'WebSearch', 'WebFetch',
+
+  // Git操作（ローカル）
+  'Bash(git status:*)', 'Bash(git diff:*)', 'Bash(git log:*)',
+  'Bash(git add:*)', 'Bash(git commit:*)', 'Bash(git switch:*)',
+
+  // Git操作（リモート）：取得は自由、pushは作業ブランチ宛てのみ（mainへのpushはブロック）
+  'Bash(git fetch:*)', 'Bash(git pull:*)',
+  `Bash(git push origin ${BRANCH}:*)`,
+
+  // Read AI（会議記録の参照のみ。フォルダ作成・削除・共有などの変更系は許可しない）
+  'mcp__claude_ai_Read_AI__list_meetings',
+  'mcp__claude_ai_Read_AI__get_meeting_by_id',
+  'mcp__claude_ai_Read_AI__list_folders',
+  'mcp__claude_ai_Read_AI__get_folder',
+  'mcp__claude_ai_Read_AI__list_folder_items',
 ];
 
 let hasSession = false;                    // 起動後に1回成功したら以降は --continue で文脈を引き継ぐ
