@@ -148,7 +148,7 @@ EOF
 # ---------------------------------------------------------------------
 mkdir -p "$G2_DIR" && cat > "$G2_DIR/server.js" << 'EOF'
 const http = require('http');
-const { spawn } = require('child_process');
+const { spawn, execFile } = require('child_process');
 const os = require('os');
 const path = require('path');
 const fs = require('fs');
@@ -180,10 +180,11 @@ const TOOLS = [
   // Git操作（ローカル）
   'Bash(git status:*)', 'Bash(git diff:*)', 'Bash(git log:*)',
   'Bash(git add:*)', 'Bash(git commit:*)', 'Bash(git switch:*)',
+  'Bash(git mv:*)',   // 「アーカイブして」で 90_archive/ へ移動するために必要（rm系は settings.json で禁止済み）
 
   // Git操作（リモート）：取得は自由、pushは作業ブランチ宛てのみ（mainへのpushはブロック）
   'Bash(git fetch:*)', 'Bash(git pull:*)',
-  `Bash(git push origin ${BRANCH}:*)`,
+  `Bash(git push origin ${BRANCH})`,   // 末尾に :* を付けない＝この形と完全一致のみ許可（--force や ${BRANCH}:main など引数付きは通らない）
 
   // Read AI（会議記録の参照のみ。フォルダ作成・削除・共有などの変更系は許可しない）
   'mcp__claude_ai_Read_AI__list_meetings',
@@ -208,8 +209,21 @@ function lastUserText(body) {
   return '';
 }
 
-// claude -p を子プロセスで起動し、標準出力を回答として受け取る
-function askClaude(prompt) {
+// 質問のたびにナレッジベースを最新化する（夜間ルーティンが main に取り込んだ内容を反映するため）
+//   fetch               : リモートの最新を取得
+//   merge --ff-only     : main に「追いつくだけ」の更新。履歴が分かれていたら何もしない（競合・マージコミットを作らない）
+//   失敗しても回答は続ける（圏外・未取り込みの日中コミットあり、など。編集時は SYS の git pull origin main が補う）
+function syncVault() {
+  return new Promise(resolve => {
+    execFile('sh', ['-c', 'git fetch origin --quiet && git merge --ff-only origin/main --quiet'],
+      { cwd: CWD, timeout: 15000 },
+      (e, so, se) => { if (e) console.error('[sync skipped]', (se || e.message).trim()); resolve(); });
+  });
+}
+
+// claude -p を子プロセスで起動し、標準出力を回答として受け取る（起動前に syncVault で最新化）
+async function askClaude(prompt) {
+  await syncVault();
   return new Promise(resolve => {
     const args = ['-p', prompt, '--append-system-prompt', SYS];
     if (hasSession) args.push('--continue');   // 初回は新規セッション（継続先が無いとエラーになるため）
