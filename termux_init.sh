@@ -42,7 +42,8 @@ termux-wake-lock       # スリープ中もTermuxのプロセス（中継サー�
 
 # git/gh   : ナレッジベースの取得・commit・push
 # nodejs-lts : 中継サーバー(server.js)とClaude Codeの実行環境
-yes | pkg install which git gh nodejs-lts
+# python   : 画像生成スクリプト(40_code/cf-image/generate.py)の実行用（標準ライブラリのみ、3.11以上） ★追加
+yes | pkg install which git gh nodejs-lts python
 
 touch ~/.hushlogin     # Termux起動時の案内メッセージを非表示
 
@@ -112,6 +113,24 @@ EOF
 
 
 # ---------------------------------------------------------------------
+# 4.5 秘密値の置き場 ~/.g2-env（★追加）
+#    ・Cloudflare の認証情報など、リポジトリに置けない値を端末内だけに持たせる
+#    ・雛形だけ作る。値は端末上で nano ~/.g2-env で入力する（スクリプトにも会話にも書かない）
+#    ・既にあれば中身は触らない（2回目以降の実行で値が消えないように）
+#    ・.bashrc が中継サーバー起動の直前に読み込み、claude -p とその子プロセスへ引き継がれる
+#    ・値を変えたら g2stop → Termuxを開き直し、で反映
+# ---------------------------------------------------------------------
+if [ ! -f "$HOME/.g2-env" ]; then
+  umask 077
+  cat << 'EOF' > "$HOME/.g2-env"
+CF_ACCOUNT_ID=
+CF_API_TOKEN=
+EOF
+fi
+chmod 600 "$HOME/.g2-env"
+
+
+# ---------------------------------------------------------------------
 # 5. Termux起動時に中継サーバーを自動起動（バックグラウンド実行＋ログファイル出力）
 #    ・.bashrc は上書き（既存の内容は消える。外部インストーラーのPATH追記も消えるため再記述）
 #    ・ヒアドキュメントが EOF（引用なし）なので、$G2_TOKEN 等はここで値に展開されて書き込まれる
@@ -129,6 +148,9 @@ G2_LOG="$G2_DIR/server.log"              # 中継サーバーのログ出力先
 #   >>    : ログをファイルに追記（2>&1 でエラー出力も同じファイルへ）
 #   &     : バックグラウンド実行 → プロンプトがすぐ戻る
 if ! pgrep -f "node $G2_DIR/server.js" >/dev/null; then
+  # 秘密値（CF_ACCOUNT_ID, CF_API_TOKEN 等）を読み込む。set -a で以降の変数を自動でexportし、     ★追加
+  # 起動するサーバー経由で claude -p とその子プロセス（generate.py）へ引き継ぐ                    ★追加
+  [ -f "\$HOME/.g2-env" ] && { set -a; . "\$HOME/.g2-env"; set +a; }
   G2_TOKEN=$G2_TOKEN PORT=$G2_PORT G2_CWD=$VAULT_DIR G2_BRANCH=$WORK_BRANCH \\
     nohup node $G2_DIR/server.js >> "\$G2_LOG" 2>&1 &
   echo "G2 bridge started (log: \$G2_LOG)"
@@ -164,9 +186,11 @@ const TIMEOUT_MS = 90000;                                                       
 //   ・回答は短く（G2の表示幅に合わせる）
 //   ・作業は作業用ブランチで行い、mainには直接書かない（mainへの反映は夜間ルーティン）
 //   ・夜間ルーティンでmainが更新されるため、編集前にmainの最新を取り込んで食い違いを防ぐ
+//   ・画像生成の保存先はリポジトリの外にする（AGENTS.md：画像をリポジトリに入れない）            ★追加
 const SYS = 'スマートグラスに表示される。日本語で3文以内、簡潔に答える。'
   + `Gitの作業は ${BRANCH} ブランチで行い、pushは「git push origin ${BRANCH}」の形で実行する。mainには直接commit・pushしない。`
-  + 'ナレッジベースを編集する前に、必ず「git pull origin main」で最新化する。競合が起きたら編集を中止し、その旨を伝える。';
+  + 'ナレッジベースを編集する前に、必ず「git pull origin main」で最新化する。競合が起きたら編集を中止し、その旨を伝える。'
+  + '画像を生成するときは、保存先を ~/storage/downloads 配下にし、ナレッジベースのフォルダには保存しない。';
 
 // -p（非対話）モードでは承認ダイアログを出せないため、許可が必要なツールは自動でブロックされる。
 // ここに列挙したものだけを事前許可する（会話で「許可」と言っても許可にはならない）。
@@ -185,6 +209,10 @@ const TOOLS = [
   // Git操作（リモート）：取得は自由、pushは作業ブランチ宛てのみ（mainへのpushはブロック）
   'Bash(git fetch:*)', 'Bash(git pull:*)',
   `Bash(git push origin ${BRANCH})`,   // 末尾に :* を付けない＝この形と完全一致のみ許可（--force や ${BRANCH}:main など引数付きは通らない）
+
+  // 画像生成（Cloudflare Workers AI）。CF_ACCOUNT_ID / CF_API_TOKEN は ~/.g2-env から継承。    ★追加
+  // printenv など環境変数を表示するコマンドは許可しない（値を会話に出さないため）
+  'Bash(python3 40_code/cf-image/generate.py:*)',
 
   // Read AI（会議記録の参照のみ。フォルダ作成・削除・共有などの変更系は許可しない）
   'mcp__claude_ai_Read_AI__list_meetings',
@@ -228,7 +256,7 @@ async function askClaude(prompt) {
     const args = ['-p', prompt, '--append-system-prompt', SYS];
     if (hasSession) args.push('--continue');   // 初回は新規セッション（継続先が無いとエラーになるため）
     args.push('--allowedTools', ...TOOLS);     // 可変長引数なので必ず最後に置く
-    const child = spawn('claude', args, { cwd: CWD });
+    const child = spawn('claude', args, { cwd: CWD });   // env 未指定＝親の環境変数（.g2-env の値を含む）を継承
     let out = '', err = '';
     const timer = setTimeout(() => { child.kill(); resolve('タイムアウトしました。'); }, TIMEOUT_MS);
     child.stdout.on('data', d => out += d);
@@ -287,5 +315,6 @@ EOF
 #    ナレッジベースのフォルダで起動する：ここで表示される「このフォルダを信頼しますか」を承認すると記録される。
 #    中継サーバー経由の claude -p（非対話）は確認を出せず、未承認のフォルダでは
 #    .claude/settings.json の許可（コネクタ等）が無視されるため、ここで必ず承認しておく
+#    ★ログイン後、nano ~/.g2-env で CF_ACCOUNT_ID と CF_API_TOKEN を入力してから Termux を開き直す
 # ---------------------------------------------------------------------
 cd "$VAULT_DIR" && claude
