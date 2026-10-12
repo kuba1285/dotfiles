@@ -114,12 +114,14 @@ EOF
 
 # ---------------------------------------------------------------------
 # 4.5 環境変数の置き場 ~/.g2-env
-#    ・既定の内容は CLAUDE_CODE_PLUGIN_DIRS（Termux上のパス）の1行のみ
-#      指す先は plugin 本体のフォルダ（.claude-plugin/plugin.json があるフォルダ）= jev-router/mod
+#    ・既定の内容は次の2行のみ
+#        CLAUDE_CODE_PLUGIN_DIRS : plugin 本体のフォルダ（.claude-plugin/plugin.json があるフォルダ）= jev-router/mod
+#        KIE_FORCE_IPV4=1        : IPv6 の経路が無い回線で kie.ai への接続が止まるのを避ける（IPv4 のみで接続）
 #    ・API キーなどの秘密値は、このスクリプトでは書き込まない。
 #      Claude Code online の環境設定画面を見ながら、端末上で nano ~/.g2-env に追記する
 #      （例：KIE_API_KEY=...。値をチャットやリポジトリに貼らない。cat ~/.g2-env も画面共有時は避ける）
 #    ・既にあれば中身は触らない（2回目以降の実行で、追記した値が消えないように）
+#      既存のファイルに KIE_FORCE_IPV4=1 が無い場合は、nano ~/.g2-env で1行追記する
 #    ・.bashrc が中継サーバー起動の直前に読み込み、claude -p とその子プロセスへ引き継がれる
 #    ・値を変えたら g2stop → Termuxを開き直し、で反映
 # ---------------------------------------------------------------------
@@ -127,6 +129,7 @@ if [ ! -f "$HOME/.g2-env" ]; then
   umask 077
   cat << 'EOF' > "$HOME/.g2-env"
 CLAUDE_CODE_PLUGIN_DIRS=/data/data/com.termux/files/home/knowledge-vault/40_code/jev-router/mod
+KIE_FORCE_IPV4=1
 EOF
 fi
 chmod 600 "$HOME/.g2-env"
@@ -190,11 +193,13 @@ const TIMEOUT_MS = 90000;                                                       
 //   ・夜間ルーティンでmainが更新されるため、編集前にmainの最新を取り込んで食い違いを防ぐ
 //   ・画像生成の保存先はリポジトリの外にする（AGENTS.md：画像をリポジトリに入れない）
 //   ・画像生成は従量課金のため、概算料金を伝えて同意を得てから --yes を付ける
+//   ・許可リストは前方一致のため、スクリプトは cd せず作業フォルダのルートからの相対パスで呼ぶ
 const SYS = 'スマートグラスに表示される。日本語で3文以内、簡潔に答える。'
   + `Gitの作業は ${BRANCH} ブランチで行い、pushは「git push origin ${BRANCH}」の形で実行する。mainには直接commit・pushしない。`
   + 'ナレッジベースを編集する前に、必ず「git pull origin main」で最新化する。競合が起きたら編集を中止し、その旨を伝える。'
   + '画像を生成するときは、保存先を ~/storage/downloads 配下にし、ナレッジベースのフォルダには保存しない。'
-  + '画像生成は、まず --yes なしで概算料金を利用者に伝え、同意を得てから --yes を付けて実行する。';
+  + '画像生成は、まず --yes なしで概算料金を利用者に伝え、同意を得てから --yes を付けて実行する。'
+  + '画像生成スクリプトは、作業フォルダ（ナレッジベースのルート）から、cd せずに「python3 40_code/kie-image/generate.py …」の形で実行する。';
 
 // -p（非対話）モードでは承認ダイアログを出せないため、許可が必要なツールは自動でブロックされる。
 // ここに列挙したものだけを事前許可する（会話で「許可」と言っても許可にはならない）。
