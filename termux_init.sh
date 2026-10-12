@@ -265,7 +265,7 @@ async function askClaude(prompt) {
     const args = ['-p', prompt, '--append-system-prompt', SYS];
     if (hasSession) args.push('--continue');   // 初回は新規セッション（継続先が無いとエラーになるため）
     args.push('--allowedTools', ...TOOLS);     // 可変長引数なので必ず最後に置く
-    const child = spawn('claude', args, { cwd: CWD });   // env 未指定＝親の環境変数（.g2-env の値を含む）を継承
+    const child = spawn('claude', args, { cwd: CWD, stdio: ['ignore', 'pipe', 'pipe'] });   // env 未指定＝親の環境変数（.g2-env の値を含む）を継承
     let out = '', err = '';
     const timer = setTimeout(() => { child.kill(); resolve('タイムアウトしました。'); }, TIMEOUT_MS);
     child.stdout.on('data', d => out += d);
