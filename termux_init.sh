@@ -115,11 +115,13 @@ EOF
 # ---------------------------------------------------------------------
 # 4.5 環境変数の置き場 ~/.g2-env
 #    ・既定の内容は次の2行のみ
-#        CLAUDE_CODE_PLUGIN_DIRS : plugin 本体のフォルダ（.claude-plugin/plugin.json があるフォルダ）= jev-router/mod
+#        CLAUDE_CODE_PLUGIN_DIRS : plugin 本体のフォルダ（jev-router/mod）。
+#                                  ※ Termux 版の claude は、この環境変数を読み込まない（実測）。
+#                                    実際の読み込みは、server.js が起動引数 --plugin-dir で渡す（手順6）
 #        KIE_FORCE_IPV4=1        : IPv6 の経路が無い回線で kie.ai への接続が止まるのを避ける（IPv4 のみで接続）
 #    ・API キーなどの秘密値は、このスクリプトでは書き込まない。
 #      Claude Code online の環境設定画面を見ながら、端末上で nano ~/.g2-env に追記する
-#      （例：KIE_API_KEY=...。値をチャットやリポジトリに貼らない。cat ~/.g2-env も画面共有時は避ける）
+#      （例：KIE_API_KEY=...、TYPESAFE_API_KEY=...。値をチャットやリポジトリに貼らない。cat ~/.g2-env も画面共有時は避ける）
 #    ・既にあれば中身は触らない（2回目以降の実行で、追記した値が消えないように）
 #      既存のファイルに KIE_FORCE_IPV4=1 が無い場合は、nano ~/.g2-env で1行追記する
 #    ・.bashrc が中継サーバー起動の直前に読み込み、claude -p とその子プロセスへ引き継がれる
@@ -186,6 +188,7 @@ const TOKEN      = process.env.G2_TOKEN || '';                                  
 const CWD        = process.env.G2_CWD || path.join(os.homedir(), 'knowledge-vault'); // Claudeの作業フォルダ
 const BRANCH     = process.env.G2_BRANCH || 'claude/g2';                            // push先の作業ブランチ
 const TIMEOUT_MS = 90000;                                                           // claude応答の待ち上限
+const PLUGIN_DIR = path.join(CWD, '40_code', 'jev-router', 'mod');                  // Jev ルーター（モデルの自動振り分け）
 
 // G2の画面向けの回答ルール＋Git運用ルール（Claude Codeの既定システムプロンプトに追記される）
 //   ・回答は短く（G2の表示幅に合わせる）
@@ -263,9 +266,12 @@ async function askClaude(prompt) {
   await syncVault();
   return new Promise(resolve => {
     const args = ['-p', prompt, '--append-system-prompt', SYS];
+    // Termux 版は環境変数 CLAUDE_CODE_PLUGIN_DIRS を読まないため、引数で渡す（mod が無ければ付けない）
+    if (fs.existsSync(PLUGIN_DIR)) args.push('--plugin-dir', PLUGIN_DIR);
     if (hasSession) args.push('--continue');   // 初回は新規セッション（継続先が無いとエラーになるため）
     args.push('--allowedTools', ...TOOLS);     // 可変長引数なので必ず最後に置く
-    const child = spawn('claude', args, { cwd: CWD, stdio: ['ignore', 'pipe', 'pipe'] });   // env 未指定＝親の環境変数（.g2-env の値を含む）を継承
+    // env 未指定＝親の環境変数（.g2-env の値を含む）を継承。標準入力は接続しない（claude -p が3秒待つのを避ける）
+    const child = spawn('claude', args, { cwd: CWD, stdio: ['ignore', 'pipe', 'pipe'] });
     let out = '', err = '';
     const timer = setTimeout(() => { child.kill(); resolve('タイムアウトしました。'); }, TIMEOUT_MS);
     child.stdout.on('data', d => out += d);
@@ -324,6 +330,6 @@ EOF
 #    ナレッジベースのフォルダで起動する：ここで表示される「このフォルダを信頼しますか」を承認すると記録される。
 #    中継サーバー経由の claude -p（非対話）は確認を出せず、未承認のフォルダでは
 #    .claude/settings.json の許可（コネクタ等）が無視されるため、ここで必ず承認しておく
-#    ★ログイン後、nano ~/.g2-env に必要な環境変数（KIE_API_KEY など）を追記してから Termux を開き直す
+#    ★ログイン後、nano ~/.g2-env に必要な環境変数（KIE_API_KEY、TYPESAFE_API_KEY など）を追記してから Termux を開き直す
 # ---------------------------------------------------------------------
 cd "$VAULT_DIR" && claude
